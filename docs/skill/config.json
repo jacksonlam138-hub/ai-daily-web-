@@ -1,0 +1,41 @@
+{
+  "cron": {
+    "enabled": true,
+    "time": "09:00",
+    "timezone": "Asia/Shanghai"
+  },
+  "sources": {
+    "P0_big3": {
+      "label": "御三家",
+      "items": ["OpenAI", "Anthropic", "Google"]
+    },
+    "P0_agent": {
+      "label": "AI Agent 生态",
+      "items": ["Hermes", "OpenClaw", "MCP", "Dify"]
+    },
+    "P1_dev": {
+      "label": "AI 开发工具",
+      "items": ["Cursor", "Coze", "Windsurf", "Lovable", "Replit", "n8n"]
+    },
+    "P1_focus": {
+      "label": "重点关注产品",
+      "items": ["Lovart", "Seedance"]
+    },
+    "P2_domestic": {
+      "label": "国内大厂",
+      "items": ["智谱", "字节", "阿里", "Minimax"]
+    },
+    "P2_infra": {
+      "label": "基础设施",
+      "items": ["Microsoft", "Meta", "Broadcom"]
+    }
+  },
+  "timeWindow": 2,
+  "focusAreas": ["agent", "mcp", "lowcode", "enterprise"],
+  "collection": {
+    "strategy": "news_first",
+    "maxApiCalls": 5,
+    "primaryTool": "brave_news_search",
+    "fallbackTool": "brave_web_search"
+  }
+}
