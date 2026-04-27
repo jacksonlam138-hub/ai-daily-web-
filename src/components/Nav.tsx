@@ -2,39 +2,72 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const navItems = [
-  { href: '/', label: '首页' },
+  { href: '/', label: '日报' },
   { href: '/search', label: '搜索' },
-  { href: '/dashboard', label: '仪表盘' },
+  { href: '/dashboard', label: '分析' },
 ]
 
 export default function Nav() {
   const pathname = usePathname()
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-white/[0.04]">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-cyan-500 flex items-center justify-center text-white text-sm font-bold">
-            AI
-          </div>
-          <span className="text-base font-semibold tracking-tight">
-            <span className="gradient-text">AI日报</span>
-            <span className="text-zinc-500 text-xs ml-2 font-normal">监测</span>
+    <nav style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      zIndex: 50,
+      background: 'rgba(10, 9, 8, 0.85)',
+      backdropFilter: 'blur(16px)',
+      borderBottom: '1px solid var(--border-subtle)',
+    }}>
+      <div style={{
+        maxWidth: 960,
+        margin: '0 auto',
+        padding: '0 24px',
+        height: 56,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+      }}>
+        <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
+          <span style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: 20,
+            fontStyle: 'italic',
+            color: 'var(--accent)',
+            letterSpacing: '-0.02em',
+          }}>
+            AI 日报
+          </span>
+          <span style={{
+            fontSize: 10,
+            color: 'var(--text-muted)',
+            letterSpacing: '0.08em',
+            textTransform: 'uppercase',
+          }}>
+            Daily Briefing
           </span>
         </Link>
 
-        <div className="flex items-center gap-1">
+        <div style={{ display: 'flex', alignItems: 'center', gap: 2 }}>
           {navItems.map(item => {
             const isActive = pathname === item.href
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                  isActive
-                    ? 'bg-white/[0.08] text-white'
-                    : 'text-zinc-400 hover:text-zinc-200 hover:bg-white/[0.04]'
-                }`}
+                style={{
+                  padding: '6px 14px',
+                  borderRadius: 8,
+                  fontSize: 13,
+                  fontWeight: 500,
+                  color: isActive ? 'var(--text-primary)' : 'var(--text-muted)',
+                  background: isActive ? 'var(--bg-elevated)' : 'transparent',
+                  textDecoration: 'none',
+                  transition: 'color 0.15s, background 0.15s',
+                  letterSpacing: '0.01em',
+                }}
               >
                 {item.label}
               </Link>

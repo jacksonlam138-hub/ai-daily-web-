@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Link from 'next/link'
+import Nav from '@/components/Nav'
 
 interface SourceGroup {
   label: string
@@ -34,108 +34,119 @@ export default function SettingsPage() {
     setTimeout(() => setSaved(false), 2000)
   }
 
-  if (!config) return <main className="min-h-screen grid-bg flex items-center justify-center text-zinc-500">加载中...</main>
+  if (!config) return (
+    <main style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)' }}>
+      加载中...
+    </main>
+  )
 
   return (
-    <main className="min-h-screen grid-bg">
-      <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-white/[0.04]">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-cyan-500 flex items-center justify-center text-white text-sm font-bold">AI</div>
-            <span className="text-base font-semibold tracking-tight">
-              <span className="gradient-text">AI日报</span>
-              <span className="text-zinc-500 text-xs ml-2 font-normal">设置</span>
-            </span>
-          </Link>
-          <div className="flex items-center gap-1">
-            <Link href="/" className="px-4 py-2 rounded-lg text-sm font-medium text-zinc-400 hover:text-zinc-200 hover:bg-white/[0.04] transition-all">首页</Link>
-            <Link href="/settings" className="px-4 py-2 rounded-lg text-sm font-medium bg-white/[0.08] text-white">设置</Link>
-          </div>
+    <main style={{ minHeight: '100vh' }}>
+      <Nav />
+
+      <div style={{ maxWidth: 640, margin: '0 auto', padding: '80px 24px 60px' }}>
+        {/* Header */}
+        <div className="anim-fade-up" style={{ marginBottom: 32 }}>
+          <h1 className="heading-display" style={{ fontSize: 28, marginBottom: 4 }}>
+            <em>设置</em>
+          </h1>
+          <p style={{ fontSize: 13, color: 'var(--text-secondary)' }}>
+            配置数据采集和推送规则
+          </p>
         </div>
-      </nav>
 
-      <div className="pt-24 pb-12 px-6">
-        <div className="max-w-3xl mx-auto space-y-6">
-
-          {/* 定时任务 */}
-          <section className="glass rounded-xl p-6">
-            <h2 className="text-lg font-semibold text-zinc-200 mb-4">定时任务</h2>
-            <div className="space-y-4">
-              <label className="flex items-center gap-3 cursor-pointer">
+        {/* Cron */}
+        <section className="anim-fade-up anim-d1 surface" style={{ padding: 24, marginBottom: 16 }}>
+          <h2 style={{ fontSize: 14, fontWeight: 600, color: 'var(--text-primary)', marginBottom: 16 }}>
+            定时任务
+          </h2>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+            <label style={{ display: 'flex', alignItems: 'center', gap: 10, cursor: 'pointer' }}>
+              <input
+                type="checkbox"
+                checked={config.cron.enabled}
+                onChange={e => setConfig({ ...config, cron: { ...config.cron, enabled: e.target.checked } })}
+                style={{ width: 16, height: 16, accentColor: 'var(--accent)' }}
+              />
+              <span style={{ fontSize: 13, color: 'var(--text-primary)' }}>启用每日自动采集</span>
+            </label>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+              <span style={{ fontSize: 13, color: 'var(--text-secondary)', width: 72 }}>执行时间</span>
+              <input
+                type="time"
+                value={config.cron.time}
+                onChange={e => setConfig({ ...config, cron: { ...config.cron, time: e.target.value } })}
+                className="form-input"
+              />
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+              <span style={{ fontSize: 13, color: 'var(--text-secondary)', width: 72 }}>时效窗口</span>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                <span style={{ fontSize: 12, color: 'var(--text-muted)' }}>±</span>
                 <input
-                  type="checkbox"
-                  checked={config.cron.enabled}
-                  onChange={e => setConfig({ ...config, cron: { ...config.cron, enabled: e.target.checked } })}
-                  className="w-4 h-4 rounded border-zinc-600 bg-zinc-800 text-violet-500 focus:ring-violet-500"
+                  type="number"
+                  min={1}
+                  max={7}
+                  value={config.timeWindow}
+                  onChange={e => setConfig({ ...config, timeWindow: parseInt(e.target.value) || 2 })}
+                  className="form-input"
+                  style={{ width: 48, textAlign: 'center' }}
                 />
-                <span className="text-sm text-zinc-300">启用每日自动采集</span>
-              </label>
-              <div className="flex items-center gap-3">
-                <span className="text-sm text-zinc-400 w-24">执行时间</span>
-                <input
-                  type="time"
-                  value={config.cron.time}
-                  onChange={e => setConfig({ ...config, cron: { ...config.cron, time: e.target.value } })}
-                  className="bg-zinc-800 border border-zinc-700 rounded-lg px-3 py-2 text-sm text-zinc-200 focus:border-violet-500 focus:ring-1 focus:ring-violet-500"
-                />
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-sm text-zinc-400 w-24">时效窗口</span>
-                <div className="flex items-center gap-2">
-                  <span className="text-xs text-zinc-500">±</span>
-                  <input
-                    type="number"
-                    min={1}
-                    max={7}
-                    value={config.timeWindow}
-                    onChange={e => setConfig({ ...config, timeWindow: parseInt(e.target.value) || 2 })}
-                    className="w-12 bg-zinc-800 border border-zinc-700 rounded-lg px-2 py-2 text-sm text-zinc-200 text-center focus:border-violet-500"
-                  />
-                  <span className="text-xs text-zinc-500">天</span>
-                </div>
+                <span style={{ fontSize: 12, color: 'var(--text-muted)' }}>天</span>
               </div>
             </div>
-          </section>
-
-          {/* 数据源 */}
-          <section className="glass rounded-xl p-6">
-            <h2 className="text-lg font-semibold text-zinc-200 mb-4">数据源配置</h2>
-            <div className="space-y-5">
-              {Object.entries(config.sources).map(([key, group]) => (
-                <div key={key}>
-                  <div className="text-xs text-zinc-500 uppercase tracking-wider mb-2">{group.label}</div>
-                  <div className="flex flex-wrap gap-2">
-                    {group.items.map(item => (
-                      <span key={item} className="text-xs px-2.5 py-1.5 rounded-lg bg-violet-500/10 text-violet-300 border border-violet-500/15">
-                        {item}
-                        <button
-                          onClick={() => {
-                            const newSources = { ...config.sources }
-                            newSources[key] = { ...group, items: group.items.filter(i => i !== item) }
-                            setConfig({ ...config, sources: newSources })
-                          }}
-                          className="ml-1.5 text-violet-400/50 hover:text-violet-300"
-                        >x</button>
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* 保存 */}
-          <div className="flex items-center gap-4">
-            <button
-              onClick={save}
-              disabled={saving}
-              className="px-6 py-2.5 rounded-lg bg-violet-600 hover:bg-violet-500 text-white text-sm font-medium transition-colors disabled:opacity-50"
-            >
-              {saving ? '保存中...' : '保存配置'}
-            </button>
-            {saved && <span className="text-sm text-emerald-400">已保存</span>}
           </div>
+        </section>
 
+        {/* Sources */}
+        <section className="anim-fade-up anim-d2 surface" style={{ padding: 24, marginBottom: 24 }}>
+          <h2 style={{ fontSize: 14, fontWeight: 600, color: 'var(--text-primary)', marginBottom: 16 }}>
+            数据源配置
+          </h2>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+            {Object.entries(config.sources).map(([key, group]) => (
+              <div key={key}>
+                <div style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: 8, fontWeight: 600 }}>
+                  {group.label}
+                </div>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                  {group.items.map(item => (
+                    <span key={item} style={{
+                      fontSize: 12,
+                      padding: '4px 10px',
+                      borderRadius: 6,
+                      background: 'var(--accent-dim)',
+                      color: 'var(--accent)',
+                      border: '1px solid rgba(200, 149, 108, 0.15)',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: 6,
+                    }}>
+                      {item}
+                      <button
+                        onClick={() => {
+                          const newSources = { ...config.sources }
+                          newSources[key] = { ...group, items: group.items.filter(i => i !== item) }
+                          setConfig({ ...config, sources: newSources })
+                        }}
+                        style={{ background: 'none', border: 'none', color: 'var(--accent)', opacity: 0.4, cursor: 'pointer', fontSize: 12, padding: 0 }}
+                      >
+                        x
+                      </button>
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Save */}
+        <div className="anim-fade-up anim-d3" style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+          <button onClick={save} disabled={saving} className="btn-primary">
+            {saving ? '保存中...' : '保存配置'}
+          </button>
+          {saved && <span style={{ fontSize: 13, color: '#34d399' }}>已保存</span>}
         </div>
       </div>
     </main>

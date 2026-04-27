@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AI日报监测",
-  description: "每日AI资讯，自动聚合筛选",
+  title: "AI 日报",
+  description: "面向低代码 AI 产品经理的每日资讯，自动聚合筛选",
 };
 
 export default function RootLayout({

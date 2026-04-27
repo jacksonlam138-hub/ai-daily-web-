@@ -1,34 +1,7 @@
 'use client'
 
-import Link from 'next/link'
 import { getStatistics } from '@/lib/store'
-import { SourceBadge } from '@/components/SourceBadge'
-
-const sourceColors: Record<string, string> = {
-  'OpenAI': '#34d399',
-  'Anthropic': '#fb923c',
-  'Google': '#60a5fa',
-  'Minimax': '#a78bfa',
-  '智谱': '#f87171',
-  '字节': '#22d3ee',
-  '阿里': '#fbbf24',
-  'GitHub': '#9ca3af',
-  'ClawHub': '#f472b6',
-  '其他': '#a1a1aa',
-}
-
-const sourceColorBg: Record<string, string> = {
-  'OpenAI': 'bg-emerald-400',
-  'Anthropic': 'bg-orange-400',
-  'Google': 'bg-blue-400',
-  'Minimax': 'bg-violet-400',
-  '智谱': 'bg-red-400',
-  '字节': 'bg-cyan-400',
-  '阿里': 'bg-amber-400',
-  'GitHub': 'bg-gray-400',
-  'ClawHub': 'bg-pink-400',
-  '其他': 'bg-zinc-400',
-}
+import Nav from '@/components/Nav'
 
 export default function DashboardPage() {
   const stats = getStatistics()
@@ -36,180 +9,191 @@ export default function DashboardPage() {
   const maxTagCount = Math.max(...Object.values(stats.tagDistribution), 1)
   const maxTrendCount = Math.max(...stats.dailyTrend.map(d => d.count), 1)
 
-  const topStats = [
-    { label: '总条目', value: stats.totalItems, icon: '◆', color: 'text-violet-400', bg: 'from-violet-500/10 to-transparent' },
-    { label: '数据来源', value: Object.keys(stats.sourceDistribution).length, icon: '◉', color: 'text-cyan-400', bg: 'from-cyan-500/10 to-transparent' },
-    { label: '标签种类', value: Object.keys(stats.tagDistribution).length, icon: '◎', color: 'text-emerald-400', bg: 'from-emerald-500/10 to-transparent' },
-    { label: '覆盖天数', value: stats.dailyTrend.length, icon: '◐', color: 'text-amber-400', bg: 'from-amber-500/10 to-transparent' },
-  ]
+  const sourceColors: Record<string, string> = {
+    'OpenAI': '#10a37f', 'Anthropic': '#d97706', 'Google': '#4285f4',
+    'Minimax': '#a78bfa', '智谱': '#3b82f6', '字节': '#22d3ee', '阿里': '#fb923c',
+    'GitHub': '#8b949e', 'MCP': '#a855f7', 'Hermes': '#ec4899', 'Dify': '#6366f1',
+    'Cursor': '#06b6d4', 'OpenClaw': '#f97316', 'Coze': '#22d3ee', 'Microsoft': '#0078d4',
+    'Meta': '#065fda', 'Broadcom': '#cc0000', '其他': 'var(--text-muted)',
+  }
 
   return (
-    <main className="min-h-screen grid-bg">
-      <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-white/[0.04]">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-cyan-500 flex items-center justify-center text-white text-sm font-bold">AI</div>
-            <span className="text-base font-semibold tracking-tight">
-              <span className="gradient-text">AI日报</span>
-              <span className="text-zinc-500 text-xs ml-2 font-normal">监测</span>
-            </span>
-          </Link>
-          <div className="flex items-center gap-1">
-            <Link href="/" className="px-4 py-2 rounded-lg text-sm font-medium text-zinc-400 hover:text-zinc-200 hover:bg-white/[0.04] transition-all">首页</Link>
-            <Link href="/search" className="px-4 py-2 rounded-lg text-sm font-medium text-zinc-400 hover:text-zinc-200 hover:bg-white/[0.04] transition-all">搜索</Link>
-            <Link href="/dashboard" className="px-4 py-2 rounded-lg text-sm font-medium bg-white/[0.08] text-white">仪表盘</Link>
-          </div>
+    <main style={{ minHeight: '100vh' }}>
+      <Nav />
+
+      <div style={{ maxWidth: 960, margin: '0 auto', padding: '80px 24px 60px' }}>
+        {/* Header */}
+        <div className="anim-fade-up" style={{ marginBottom: 32 }}>
+          <h1 className="heading-display" style={{ fontSize: 28, marginBottom: 4 }}>
+            数据<em>分析</em>
+          </h1>
+          <p style={{ fontSize: 13, color: 'var(--text-secondary)' }}>
+            来源分布 · 趋势分析 · 标签统计 · 质量评分
+          </p>
         </div>
-      </nav>
 
-      <div className="pt-24 pb-12 px-6">
-        <div className="max-w-7xl mx-auto">
-          {/* Header */}
-          <div className="mb-8 animate-fade-in-up">
-            <h1 className="text-2xl font-bold tracking-tight mb-2">
-              <span className="gradient-text">数据分析仪表盘</span>
-            </h1>
-            <p className="text-zinc-500 text-sm">来源分布 · 趋势分析 · 标签统计 · 质量评分</p>
-          </div>
-
-          {/* Top Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-            {topStats.map((stat, i) => (
-              <div
-                key={stat.label}
-                className={`glass rounded-xl p-5 animate-fade-in-up delay-${i + 1} relative overflow-hidden`}
-              >
-                <div className={`absolute inset-0 bg-gradient-to-br ${stat.bg}`} />
-                <div className="relative">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className={`text-sm ${stat.color}`}>{stat.icon}</span>
-                    <span className="text-xs text-zinc-500 uppercase tracking-wider">{stat.label}</span>
-                  </div>
-                  <div className={`text-3xl font-bold font-mono tabular-nums ${stat.color}`}>
-                    {stat.value}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Main Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            {/* Source Distribution */}
-            <div className="glass rounded-xl p-6 animate-fade-in-up delay-5">
-              <h2 className="text-sm font-semibold text-zinc-300 mb-5 flex items-center gap-2">
-                <span className="w-1 h-4 rounded-full bg-violet-500" />
-                来源分布
-              </h2>
-              <div className="space-y-3">
-                {Object.entries(stats.sourceDistribution)
-                  .sort((a, b) => b[1] - a[1])
-                  .map(([source, count]) => (
-                    <div key={source} className="flex items-center gap-3">
-                      <div className="w-16 text-xs text-zinc-400 truncate">{source}</div>
-                      <div className="flex-1 h-5 bg-white/[0.04] rounded-md overflow-hidden relative">
-                        <div
-                          className={`h-full rounded-md transition-all duration-700 ${sourceColorBg[source] || 'bg-zinc-400'}`}
-                          style={{ width: `${(count / maxSourceCount) * 100}%`, opacity: 0.7 }}
-                        />
-                      </div>
-                      <div className="w-6 text-right text-xs font-mono text-zinc-400 tabular-nums">{count}</div>
-                    </div>
-                  ))}
+        {/* Top Stats */}
+        <div className="anim-fade-up anim-d1" style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(4, 1fr)',
+          gap: 12,
+          marginBottom: 24,
+        }}>
+          {[
+            { label: '总条目', value: stats.totalItems, color: 'var(--accent)' },
+            { label: '数据来源', value: Object.keys(stats.sourceDistribution).length, color: '#38bdf8' },
+            { label: '标签种类', value: Object.keys(stats.tagDistribution).length, color: '#34d399' },
+            { label: '覆盖天数', value: stats.dailyTrend.length, color: '#a78bfa' },
+          ].map(stat => (
+            <div key={stat.label} className="surface" style={{ padding: '16px 20px' }}>
+              <div className="stat-value" style={{ color: stat.color, marginBottom: 4 }}>{stat.value}</div>
+              <div style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                {stat.label}
               </div>
             </div>
+          ))}
+        </div>
 
-            {/* Tag Cloud */}
-            <div className="glass rounded-xl p-6 animate-fade-in-up delay-6">
-              <h2 className="text-sm font-semibold text-zinc-300 mb-5 flex items-center gap-2">
-                <span className="w-1 h-4 rounded-full bg-cyan-500" />
-                标签统计
-              </h2>
-              <div className="flex flex-wrap gap-2">
-                {Object.entries(stats.tagDistribution)
-                  .sort((a, b) => b[1] - a[1])
-                  .map(([tag, count]) => {
-                    const ratio = count / maxTagCount
-                    const size = ratio > 0.7 ? 'text-sm px-3 py-1.5' : ratio > 0.4 ? 'text-xs px-2.5 py-1' : 'text-[10px] px-2 py-0.5'
-                    const colorClass = ratio > 0.7
-                      ? 'bg-violet-600/20 text-violet-300 border border-violet-500/20'
-                      : ratio > 0.4
-                        ? 'bg-cyan-600/15 text-cyan-300 border border-cyan-500/15'
-                        : 'bg-white/[0.04] text-zinc-500 border border-white/[0.06]'
-                    return (
-                      <span key={tag} className={`${size} rounded-md ${colorClass} transition-all duration-200 hover:scale-105`}>
-                        {tag} <span className="opacity-50 ml-0.5">{count}</span>
-                      </span>
-                    )
-                  })}
-              </div>
+        {/* Two column grid */}
+        <div className="anim-fade-up anim-d2" style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap: 16,
+        }}>
+          {/* Source Distribution */}
+          <div className="surface" style={{ padding: 24 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 20 }}>
+              <span style={{ width: 3, height: 16, borderRadius: 2, background: 'var(--accent)' }} />
+              <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--text-secondary)' }}>来源分布</span>
             </div>
-
-            {/* Score Analysis */}
-            <div className="glass rounded-xl p-6 animate-fade-in-up delay-7">
-              <h2 className="text-sm font-semibold text-zinc-300 mb-5 flex items-center gap-2">
-                <span className="w-1 h-4 rounded-full bg-emerald-500" />
-                质量评分分析
-              </h2>
-              <div className="space-y-5">
-                {[
-                  { label: '准确性', value: stats.avgScores.accuracy, color: 'bg-emerald-400', text: 'text-emerald-400' },
-                  { label: '时效性', value: stats.avgScores.timeliness, color: 'bg-cyan-400', text: 'text-cyan-400' },
-                  { label: '实用性', value: stats.avgScores.utility, color: 'bg-violet-400', text: 'text-violet-400' },
-                ].map(score => (
-                  <div key={score.label}>
-                    <div className="flex justify-between text-xs mb-1.5">
-                      <span className="text-zinc-500">{score.label}</span>
-                      <span className={`font-mono tabular-nums ${score.text}`}>{score.value}%</span>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+              {Object.entries(stats.sourceDistribution)
+                .sort((a, b) => b[1] - a[1])
+                .map(([source, count]) => (
+                  <div key={source} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                    <span style={{ width: 56, fontSize: 12, color: 'var(--text-secondary)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                      {source}
+                    </span>
+                    <div style={{ flex: 1, height: 20, background: 'var(--bg-deep)', borderRadius: 4, overflow: 'hidden' }}>
+                      <div style={{
+                        height: '100%',
+                        borderRadius: 4,
+                        background: sourceColors[source] || 'var(--text-muted)',
+                        width: `${(count / maxSourceCount) * 100}%`,
+                        opacity: 0.6,
+                        transition: 'width 0.6s ease',
+                      }} />
                     </div>
-                    <div className="h-1.5 bg-white/[0.06] rounded-full overflow-hidden">
-                      <div
-                        className={`h-full ${score.color} rounded-full transition-all duration-700`}
-                        style={{ width: `${score.value}%`, opacity: 0.8 }}
-                      />
-                    </div>
+                    <span style={{ width: 24, textAlign: 'right', fontSize: 11, fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>
+                      {count}
+                    </span>
                   </div>
                 ))}
-                <div className="pt-3 mt-3 border-t border-white/[0.06]">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium text-zinc-300">综合评分</span>
-                    <span className="text-2xl font-bold font-mono tabular-nums text-emerald-400">{stats.avgScores.total}%</span>
+            </div>
+          </div>
+
+          {/* Tag Cloud */}
+          <div className="surface" style={{ padding: 24 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 20 }}>
+              <span style={{ width: 3, height: 16, borderRadius: 2, background: '#38bdf8' }} />
+              <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--text-secondary)' }}>标签统计</span>
+            </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+              {Object.entries(stats.tagDistribution)
+                .sort((a, b) => b[1] - a[1])
+                .map(([tag, count]) => {
+                  const ratio = count / maxTagCount
+                  const size = ratio > 0.7 ? { fontSize: 13, padding: '5px 12px' } : ratio > 0.4 ? { fontSize: 12, padding: '4px 10px' } : { fontSize: 11, padding: '3px 8px' }
+                  const color = ratio > 0.7
+                    ? { bg: 'rgba(200, 149, 108, 0.12)', border: 'rgba(200, 149, 108, 0.2)', text: 'var(--accent-bright)' }
+                    : ratio > 0.4
+                      ? { bg: 'rgba(56, 189, 248, 0.08)', border: 'rgba(56, 189, 248, 0.15)', text: '#38bdf8' }
+                      : { bg: 'var(--bg-deep)', border: 'var(--border-subtle)', text: 'var(--text-muted)' }
+                  return (
+                    <span key={tag} style={{
+                      ...size,
+                      borderRadius: 6,
+                      background: color.bg,
+                      border: `1px solid ${color.border}`,
+                      color: color.text,
+                    }}>
+                      {tag} <span style={{ opacity: 0.5, marginLeft: 2 }}>{count}</span>
+                    </span>
+                  )
+                })}
+            </div>
+          </div>
+
+          {/* Score Analysis */}
+          <div className="surface" style={{ padding: 24 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 20 }}>
+              <span style={{ width: 3, height: 16, borderRadius: 2, background: '#34d399' }} />
+              <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--text-secondary)' }}>质量评分</span>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+              {[
+                { label: '准确性', value: stats.avgScores.accuracy, color: '#34d399' },
+                { label: '时效性', value: stats.avgScores.timeliness, color: '#38bdf8' },
+                { label: '实用性', value: stats.avgScores.utility, color: 'var(--accent)' },
+              ].map(score => (
+                <div key={score.label}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
+                    <span style={{ fontSize: 12, color: 'var(--text-secondary)' }}>{score.label}</span>
+                    <span style={{ fontSize: 12, fontFamily: 'var(--font-mono)', color: score.color }}>{score.value}%</span>
+                  </div>
+                  <div style={{ height: 4, background: 'var(--bg-deep)', borderRadius: 2, overflow: 'hidden' }}>
+                    <div style={{
+                      height: '100%', borderRadius: 2, background: score.color,
+                      width: `${score.value}%`, opacity: 0.7, transition: 'width 0.6s ease',
+                    }} />
                   </div>
                 </div>
+              ))}
+              <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: 16, marginTop: 8, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--text-primary)' }}>综合评分</span>
+                <span style={{ fontSize: 24, fontFamily: 'var(--font-mono)', fontWeight: 700, color: '#34d399' }}>{stats.avgScores.total}%</span>
               </div>
             </div>
+          </div>
 
-            {/* Daily Trend */}
-            <div className="glass rounded-xl p-6 animate-fade-in-up delay-8">
-              <h2 className="text-sm font-semibold text-zinc-300 mb-5 flex items-center gap-2">
-                <span className="w-1 h-4 rounded-full bg-amber-500" />
-                发布趋势
-              </h2>
-              {stats.dailyTrend.length > 0 ? (
-                <div className="flex items-end justify-between h-40 gap-2">
-                  {stats.dailyTrend.map((day) => {
-                    const height = (day.count / maxTrendCount) * 100
-                    return (
-                      <div key={day.date} className="flex-1 flex flex-col items-center gap-2">
-                        <div className="text-[10px] font-mono text-zinc-500 tabular-nums">{day.count}</div>
-                        <div className="flex-1 w-full flex items-end">
-                          <div
-                            className="w-full rounded-t-md bg-gradient-to-t from-violet-600/40 to-cyan-500/40 hover:from-violet-500/60 hover:to-cyan-400/60 transition-all duration-300 cursor-pointer"
-                            style={{ height: `${Math.max(height, 4)}%` }}
-                            title={`${day.date}: ${day.count}条`}
-                          />
-                        </div>
-                        <div className="text-[10px] text-zinc-600 font-mono truncate w-full text-center">
-                          {day.date.slice(5)}
-                        </div>
-                      </div>
-                    )
-                  })}
-                </div>
-              ) : (
-                <div className="h-40 flex items-center justify-center text-zinc-600 text-sm">暂无数据</div>
-              )}
+          {/* Daily Trend */}
+          <div className="surface" style={{ padding: 24 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 20 }}>
+              <span style={{ width: 3, height: 16, borderRadius: 2, background: '#a78bfa' }} />
+              <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--text-secondary)' }}>发布趋势</span>
             </div>
+            {stats.dailyTrend.length > 0 ? (
+              <div style={{ display: 'flex', alignItems: 'flex-end', height: 140, gap: 6 }}>
+                {stats.dailyTrend.map(day => {
+                  const height = (day.count / maxTrendCount) * 100
+                  return (
+                    <div key={day.date} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
+                      <span style={{ fontSize: 10, fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>{day.count}</span>
+                      <div style={{ flex: 1, width: '100%', display: 'flex', alignItems: 'flex-end' }}>
+                        <div
+                          style={{
+                            width: '100%',
+                            borderRadius: '4px 4px 0 0',
+                            background: 'linear-gradient(to top, rgba(200, 149, 108, 0.3), rgba(167, 139, 250, 0.3))',
+                            height: `${Math.max(height, 4)}%`,
+                            transition: 'height 0.6s ease',
+                            cursor: 'pointer',
+                          }}
+                          title={`${day.date}: ${day.count}条`}
+                        />
+                      </div>
+                      <span style={{ fontSize: 9, fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '100%', textAlign: 'center' }}>
+                        {day.date.slice(5)}
+                      </span>
+                    </div>
+                  )
+                })}
+              </div>
+            ) : (
+              <div style={{ height: 140, display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-muted)', fontSize: 13 }}>
+                暂无数据
+              </div>
+            )}
           </div>
         </div>
       </div>
