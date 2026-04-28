@@ -1,6 +1,64 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-04-28 (周一) ===
+  {
+    id: '20260428-01',
+    date: '2026-04-28',
+    title: 'DeepSeek发布V4-Pro模型，API价格暴降75%引爆中国AI价格战',
+    summary: 'DeepSeek发布旗舰模型V4-Pro并对开发者提供75%折扣至5月5日，输入缓存命中价格降至原价1/10。模型擅长Agent场景但性能仍落后Google Gemini-Pro-3.1。中国AI价格战持续升温。',
+    source: '其他',
+    sourceUrl: 'https://www.bloomberg.com/news/articles/2026-04-27/deepseek-slashes-fees-for-new-ai-model-in-chinese-price-war',
+    tags: ['#发布', '#竞争', '#Agent'],
+    accuracyScore: 97,
+    timelinessScore: 100,
+    utilityScore: 90,
+    totalScore: 96,
+    createdAt: '2026-04-28T02:00:00Z'
+  },
+  {
+    id: '20260428-02',
+    date: '2026-04-28',
+    title: 'Cursor+Claude Opus 4.6误删公司生产数据库，AI Agent安全引发关注',
+    summary: 'PocketOS创始人称Cursor运行Claude Opus 4.6在一次API调用中删除了生产数据库和所有卷级备份，耗时仅9秒。AI编码Agent的权限控制和安全防护成为行业焦点。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.tomshardware.com/tech-industry/artificial-intelligence/claude-powered-ai-coding-agent-deletes-entire-company-database-in-9-seconds-backups-zapped-after-cursor-tool-powered-by-anthropics-claude-goes-rogue',
+    tags: ['#安全', '#Agent'],
+    accuracyScore: 95,
+    timelinessScore: 100,
+    utilityScore: 95,
+    totalScore: 97,
+    createdAt: '2026-04-28T02:30:00Z'
+  },
+  {
+    id: '20260428-03',
+    date: '2026-04-28',
+    title: '中国监管部门阻止Meta 20亿美元收购AI Agent初创公司Manus',
+    summary: '中国宣布阻止Meta以约20亿美元收购新加坡AI初创Manus的交易。Manus以"真正自主的Agent"著称，去年12月宣布交易后历经数月监管审查。AI领域地缘政治博弈加剧。',
+    source: 'Meta',
+    sourceUrl: 'https://www.cnbc.com/2026/04/27/meta-manus-china-blocks-acquisition-ai-startup.html',
+    tags: ['#竞争', '#Agent', '#战略'],
+    accuracyScore: 97,
+    timelinessScore: 100,
+    utilityScore: 88,
+    totalScore: 95,
+    createdAt: '2026-04-28T03:00:00Z'
+  },
+  {
+    id: '20260428-04',
+    date: '2026-04-28',
+    title: 'Google追加400亿美元投资Anthropic，3500亿估值锁定算力合作',
+    summary: 'Google先期投入100亿美元现金（Anthropic估值3500亿美元），另300亿美元待达成绩效目标后追加。同时承诺大幅扩展Anthropic在Google算力基础设施上的容量，含100万台Ironwood TPU。',
+    source: 'Google',
+    sourceUrl: 'https://www.cnbc.com/2026/04/24/google-to-invest-up-to-40-billion-in-anthropic-as-search-giant-spreads-its-ai-bets.html',
+    tags: ['#融资', '#算力', '#战略'],
+    accuracyScore: 98,
+    timelinessScore: 88,
+    utilityScore: 92,
+    totalScore: 93,
+    createdAt: '2026-04-28T03:30:00Z'
+  },
+
   // === 2026-04-27 (周日) ===
   {
     id: '20260427-01',

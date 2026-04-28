@@ -5,6 +5,7 @@ const navItems = [
   { href: '/', label: '日报' },
   { href: '/search', label: '搜索' },
   { href: '/dashboard', label: '分析' },
+  { href: '/settings', label: '设置' },
 ]
 
 export default function Nav() {
