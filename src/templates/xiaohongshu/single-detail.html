@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    height: 1440px;
+    background: #0a0908;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+    color: #e8e0d4;
+    overflow: hidden;
+  }
+  .card {
+    width: 1080px;
+    height: 1440px;
+    padding: 72px 64px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: linear-gradient(165deg, #0a0908 0%, #131110 40%, #1a1816 100%);
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.02;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  /* Top section */
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+  .source-pill {
+    padding: 8px 20px;
+    border-radius: 24px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .pill-openai { background: rgba(16,163,127,0.12); color: #10a37f; border: 1px solid rgba(16,163,127,0.2); }
+  .pill-anthropic { background: rgba(217,119,6,0.12); color: #d97706; border: 1px solid rgba(217,119,6,0.2); }
+  .pill-google { background: rgba(66,133,244,0.12); color: #4285f4; border: 1px solid rgba(66,133,244,0.2); }
+  .pill-default { background: rgba(200,149,108,0.10); color: #c8956c; border: 1px solid rgba(200,149,108,0.2); }
+  .score-ring {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "SF Mono", monospace;
+    border: 2px solid rgba(52,211,153,0.3);
+    color: #34d399;
+    background: rgba(52,211,153,0.06);
+  }
+  /* Accent bar */
+  .accent-bar {
+    width: 48px;
+    height: 3px;
+    background: linear-gradient(90deg, #c8956c, transparent);
+    border-radius: 2px;
+    margin-bottom: 40px;
+  }
+  /* Title */
+  .section-label {
+    font-size: 13px;
+    color: #6a6054;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .headline {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #e8e0d4;
+    margin-bottom: 32px;
+    max-width: 900px;
+  }
+  /* Summary */
+  .summary-box {
+    background: rgba(200, 149, 108, 0.04);
+    border: 1px solid rgba(200, 149, 108, 0.08);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 40px;
+  }
+  .summary-text {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #9a8e7e;
+  }
+  /* PM Insight */
+  .pm-section {
+    margin-bottom: auto;
+  }
+  .pm-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .pm-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #c8956c;
+  }
+  .pm-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #c8956c;
+    letter-spacing: 0.05em;
+  }
+  .pm-text {
+    font-size: 18px;
+    line-height: 1.65;
+    color: #9a8e7e;
+    padding-left: 16px;
+  }
+  /* Tags */
+  .tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .tag {
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #6a6054;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid #2a2520;
+  }
+  /* Footer */
+  .footer {
+    padding-top: 32px;
+    border-top: 1px solid #2a2520;
+    text-align: center;
+  }
+  .cta {
+    font-size: 20px;
+    color: #9a8e7e;
+    letter-spacing: 0.05em;
+  }
+  .cta-highlight {
+    color: #c8956c;
+    font-weight: 600;
+  }
+  .bottom-tags {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #6a6054;
+    letter-spacing: 0.08em;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <!-- Top: Source + Score -->
+  <div class="top-bar">
+    <span class="source-pill {{SOURCE_CLASS}}">{{SOURCE}}</span>
+    <div class="score-ring">{{SCORE}}</div>
+  </div>
+
+  <div class="accent-bar"></div>
+
+  <!-- Label -->
+  <div class="section-label">今日焦点</div>
+
+  <!-- Title -->
+  <div class="headline">{{TITLE}}</div>
+
+  <!-- Summary -->
+  <div class="summary-box">
+    <div class="summary-text">{{SUMMARY}}</div>
+  </div>
+
+  <!-- PM Insight -->
+  <div class="pm-section">
+    <div class="pm-label">
+      <div class="pm-dot"></div>
+      <div class="pm-title">PM 视角</div>
+    </div>
+    <div class="pm-text">{{PM_INSIGHT}}</div>
+  </div>
+
+  <!-- Tags -->
+  <div class="tags-row">
+    <span class="tag">{{TAG_1}}</span>
+    <span class="tag">{{TAG_2}}</span>
+    <span class="tag">{{TAG_3}}</span>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="cta"><span class="cta-highlight">关注我</span> · 每天3分钟看懂AI</div>
+    <div class="bottom-tags">#AI日报 #人工智能 #PM视角</div>
+  </div>
+</div>
+</body>
+</html>

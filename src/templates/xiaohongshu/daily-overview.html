@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1080px;
+    height: 1440px;
+    background: #0a0908;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+    color: #e8e0d4;
+    overflow: hidden;
+  }
+  .card {
+    width: 1080px;
+    height: 1440px;
+    padding: 72px 64px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: linear-gradient(165deg, #0a0908 0%, #131110 40%, #1a1816 100%);
+  }
+  /* Noise texture */
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.02;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  /* Warm gradient accent */
+  .accent-bar {
+    width: 48px;
+    height: 3px;
+    background: linear-gradient(90deg, #c8956c, transparent);
+    border-radius: 2px;
+    margin-bottom: 32px;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+  }
+  .header-left {}
+  .logo {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-size: 52px;
+    font-style: italic;
+    color: #c8956c;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    font-size: 18px;
+    color: #9a8e7e;
+    letter-spacing: 0.05em;
+  }
+  .header-right {
+    text-align: right;
+  }
+  .date {
+    font-family: "SF Mono", "Fira Code", monospace;
+    font-size: 18px;
+    color: #9a8e7e;
+    margin-bottom: 8px;
+  }
+  .streak {
+    font-size: 15px;
+    color: #c8956c;
+    letter-spacing: 0.02em;
+  }
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, #2a2520, transparent);
+    margin: 32px 0;
+  }
+  .news-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .news-item {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+  .news-rank {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(200, 149, 108, 0.08);
+    border: 1px solid rgba(200, 149, 108, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #c8956c;
+    font-family: "SF Mono", monospace;
+    flex-shrink: 0;
+  }
+  .news-content {
+    flex: 1;
+  }
+  .news-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .source-badge {
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .badge-openai { background: rgba(16,163,127,0.12); color: #10a37f; }
+  .badge-anthropic { background: rgba(217,119,6,0.12); color: #d97706; }
+  .badge-google { background: rgba(66,133,244,0.12); color: #4285f4; }
+  .badge-default { background: rgba(200,149,108,0.10); color: #c8956c; }
+  .score {
+    font-size: 14px;
+    font-family: "SF Mono", monospace;
+    color: #6a6054;
+  }
+  .news-title {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #e8e0d4;
+    margin-bottom: 6px;
+  }
+  .news-summary {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #9a8e7e;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .footer {
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid #2a2520;
+    text-align: center;
+  }
+  .cta {
+    font-size: 20px;
+    color: #9a8e7e;
+    letter-spacing: 0.05em;
+  }
+  .cta-highlight {
+    color: #c8956c;
+    font-weight: 600;
+  }
+  .tags {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #6a6054;
+    letter-spacing: 0.08em;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="accent-bar"></div>
+
+  <div class="header">
+    <div class="header-left">
+      <div class="logo">AI Daily</div>
+      <div class="subtitle">面向PM的每日AI资讯</div>
+    </div>
+    <div class="header-right">
+      <div class="date">{{DATE}}</div>
+      <div class="streak">{{STREAK}}</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="news-list">
+    <!-- Top 1 -->
+    <div class="news-item">
+      <div class="news-rank">01</div>
+      <div class="news-content">
+        <div class="news-meta">
+          <span class="source-badge {{SOURCE_CLASS_1}}">{{SOURCE_1}}</span>
+          <span class="score">{{SCORE_1}}分</span>
+        </div>
+        <div class="news-title">{{TITLE_1}}</div>
+        <div class="news-summary">{{SUMMARY_1}}</div>
+      </div>
+    </div>
+
+    <!-- Top 2 -->
+    <div class="news-item">
+      <div class="news-rank">02</div>
+      <div class="news-content">
+        <div class="news-meta">
+          <span class="source-badge {{SOURCE_CLASS_2}}">{{SOURCE_2}}</span>
+          <span class="score">{{SCORE_2}}分</span>
+        </div>
+        <div class="news-title">{{TITLE_2}}</div>
+        <div class="news-summary">{{SUMMARY_2}}</div>
+      </div>
+    </div>
+
+    <!-- Top 3 -->
+    <div class="news-item">
+      <div class="news-rank">03</div>
+      <div class="news-content">
+        <div class="news-meta">
+          <span class="source-badge {{SOURCE_CLASS_3}}">{{SOURCE_3}}</span>
+          <span class="score">{{SCORE_3}}分</span>
+        </div>
+        <div class="news-title">{{TITLE_3}}</div>
+        <div class="news-summary">{{SUMMARY_3}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="cta"><span class="cta-highlight">关注我</span> · 每天3分钟看懂AI</div>
+    <div class="tags">#AI日报 #人工智能 #PM视角</div>
+  </div>
+</div>
+</body>
+</html>

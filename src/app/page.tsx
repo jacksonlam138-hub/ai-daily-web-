@@ -63,6 +63,24 @@ export default function Home() {
             面向低代码 AI 产品经理的每日资讯 · PM 视角甄别筛选
           </p>
 
+          {/* Collect button */}
+          {!todayReport && (
+            <div style={{ marginBottom: 24, padding: '16px 20px', borderRadius: 10, background: 'var(--bg-surface)', border: '1px solid var(--border-subtle)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ fontSize: 14, fontWeight: 500, color: 'var(--text-primary)', marginBottom: 4 }}>今日日报尚未采集</div>
+                  <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>在 Claude Code 中运行 <code style={{ fontFamily: 'var(--font-mono)', color: 'var(--accent)' }}>/ai-daily</code> 触发采集</div>
+                </div>
+                <a
+                  href="https://ai-daily-web-livid.vercel.app"
+                  style={{ fontSize: 12, padding: '8px 16px', borderRadius: 8, background: 'var(--accent-dim)', color: 'var(--accent)', fontWeight: 500, textDecoration: 'none', border: '1px solid rgba(200,149,108,0.15)' }}
+                >
+                  刷新页面
+                </a>
+              </div>
+            </div>
+          )}
+
           {/* Warm accent bar */}
           <div className="warm-bar" style={{ width: 48, marginBottom: 32 }} />
         </div>

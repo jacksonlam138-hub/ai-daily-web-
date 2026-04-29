@@ -1,5 +1,9 @@
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import SubscribeModal from './SubscribeModal'
 
 const navItems = [
   { href: '/', label: '日报' },
@@ -10,6 +14,7 @@ const navItems = [
 
 export default function Nav() {
   const pathname = usePathname()
+  const [showSubscribe, setShowSubscribe] = useState(false)
 
   return (
     <nav style={{
@@ -52,6 +57,23 @@ export default function Nav() {
         </Link>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+          <button
+            onClick={() => setShowSubscribe(true)}
+            style={{
+              padding: '6px 14px',
+              borderRadius: 8,
+              fontSize: 13,
+              fontWeight: 500,
+              color: 'var(--accent)',
+              background: 'var(--accent-dim)',
+              border: '1px solid rgba(200,149,108,0.15)',
+              cursor: 'pointer',
+              marginRight: 4,
+              letterSpacing: '0.01em',
+            }}
+          >
+            订阅
+          </button>
           {navItems.map(item => {
             const isActive = pathname === item.href
             return (
@@ -76,6 +98,7 @@ export default function Nav() {
           })}
         </div>
       </div>
+      {showSubscribe && <SubscribeModal onClose={() => setShowSubscribe(false)} />}
     </nav>
   )
 }
