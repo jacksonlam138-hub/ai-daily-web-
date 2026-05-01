@@ -1,6 +1,166 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-05-01 (周四·五一) ===
+  {
+    id: '20260501-01',
+    date: '2026-05-01',
+    title: 'Google Cloud增速超越Azure和AWS，三大云厂商Q1集体超预期，AI需求全面爆发',
+    summary: 'Amazon、Google、Microsoft三大云厂商Q1财报均超预期。Google Cloud增速领跑，Azure增40%，AWS同样加速增长。三家均大幅上调资本支出预期以应对AI需求，合计2026年capex将超$7000亿。',
+    source: 'Google',
+    sourceUrl: 'https://cnbc.com/2026/04/30/google-microsoft-and-amazon-all-report-cloud-beats-in-earnings.html',
+    tags: ['#企业应用', '#算力'],
+    accuracyScore: 95,
+    timelinessScore: 95,
+    utilityScore: 90,
+    totalScore: 93,
+    createdAt: '2026-05-01T01:00:00Z'
+  },
+  {
+    id: '20260501-02',
+    date: '2026-05-01',
+    title: 'Meta放弃Llama开源路线，转向闭源模型Muse Spark，开源AI社区震动',
+    summary: 'Meta宣布放弃开源Llama系列，转向专有模型Muse Spark。这一战略转向意味着AI开源生态失去最大支持者，对依赖Llama的开发者和企业产生深远影响。',
+    source: 'Meta',
+    sourceUrl: 'https://thenewstack.io/meta-abandons-llama-spark/',
+    tags: ['#开源', '#战略'],
+    accuracyScore: 92,
+    timelinessScore: 95,
+    utilityScore: 90,
+    totalScore: 92,
+    createdAt: '2026-05-01T01:30:00Z'
+  },
+  {
+    id: '20260501-03',
+    date: '2026-05-01',
+    title: 'SoftBank拟拆分AI与机器人业务"Roze"赴美IPO，目标估值$1000亿',
+    summary: 'SoftBank计划将AI和机器人业务拆分为独立公司"Roze"，赴美IPO目标估值$1000亿。该计划与其在OpenAI的大规模投资并行，显示软银全面押注AI基础设施。',
+    source: '其他',
+    sourceUrl: 'https://cnbc.com/2026/04/30/softbank-roze-ai-robotics-ipo-100-billion-ft-report.html',
+    tags: ['#融资', '#战略'],
+    accuracyScore: 90,
+    timelinessScore: 90,
+    utilityScore: 82,
+    totalScore: 87,
+    createdAt: '2026-05-01T02:00:00Z'
+  },
+
+  // === 2026-04-30 (周三) ===
+  {
+    id: '20260430-01',
+    date: '2026-04-30',
+    title: 'CNBC：Anthropic洽谈$9000亿估值融资，超越OpenAI成为全球最高估值AI公司',
+    summary: 'Anthropic正与投资者洽谈以$9000亿估值融资，超越OpenAI的$8520亿。Claude Code是增长核心，年化收入达$300亿。Amazon投资$250亿，Google承诺$400亿。Claude Mythos网络安全模型引发政府高层关注。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.cnbc.com/2026/04/29/anthropic-weighs-raising-funds-at-900b-valuation-topping-openai.html',
+    tags: ['#融资', '#竞争', '#战略'],
+    accuracyScore: 97,
+    timelinessScore: 100,
+    utilityScore: 95,
+    totalScore: 97,
+    createdAt: '2026-04-30T01:00:00Z'
+  },
+  {
+    id: '20260430-02',
+    date: '2026-04-30',
+    title: 'Cursor AI曝出严重安全漏洞：扩展可窃取API密钥，AI Agent可被利用静默执行代码',
+    summary: '安全研究员发现Cursor多个高危漏洞（CVE-2026-26268），扩展可从未加密SQLite库窃取API密钥和会话令牌。Git钩子可触发AI Agent静默执行恶意代码。截至4月底仍未发布完整修复。',
+    source: 'Cursor',
+    sourceUrl: 'https://sqmagazine.co.uk/cursor-ai-security-flaw-api-key-theft-code-execution',
+    tags: ['#安全', '#Agent'],
+    accuracyScore: 95,
+    timelinessScore: 95,
+    utilityScore: 95,
+    totalScore: 95,
+    createdAt: '2026-04-30T01:30:00Z'
+  },
+  {
+    id: '20260430-03',
+    date: '2026-04-30',
+    title: 'Microsoft Q3财报：Azure增长40%，Copilot突破2000万席，全年AI支出$1900亿',
+    summary: 'Microsoft Q3营收$828.9亿超预期，Azure增长40%。365 Copilot席位达2000万（1月为1500万）。AI年化收入$370亿，同比+123%。同时结束与OpenAI独家合作，改为非独家许可。',
+    source: 'Microsoft',
+    sourceUrl: 'https://cnbc.com/2026/04/29/microsoft-msft-q3-earnings-report-2026.html',
+    tags: ['#企业应用', '#战略'],
+    accuracyScore: 97,
+    timelinessScore: 95,
+    utilityScore: 88,
+    totalScore: 93,
+    createdAt: '2026-04-30T02:00:00Z'
+  },
+  {
+    id: '20260430-04',
+    date: '2026-04-30',
+    title: 'Lovable推出iOS/Android移动端，Vibe Coding平台全面移动化',
+    summary: 'AI应用构建平台Lovable正式上线移动端App。用户可在手机上通过自然语言构建应用，iOS端暂仅支持预览。Vibe Coding从桌面走向移动，降低AI开发门槛。',
+    source: 'Lovable',
+    sourceUrl: 'https://www.gadgets360.com/ai/news/lovable-mobile-app-launched-android-ios-vibe-coding-platform-features-11424406',
+    tags: ['#低代码', '#发布'],
+    accuracyScore: 90,
+    timelinessScore: 95,
+    utilityScore: 95,
+    totalScore: 93,
+    createdAt: '2026-04-30T02:30:00Z'
+  },
+  {
+    id: '20260430-05',
+    date: '2026-04-30',
+    title: 'MiniMax发布Speech 2.8：10秒声音克隆，原生语气标签让AI语音告别机器人感',
+    summary: 'MiniMax发布Speech 2.8语音模型。支持原生声音标签（叹气、笑声、咳嗽），10秒样本高保真声音克隆，消除跨语言口音串扰。中文-日语对已优化。',
+    source: 'MiniMax',
+    sourceUrl: 'https://www.minimax.io/news/minimax-speech-28',
+    tags: ['#模型', '#发布'],
+    accuracyScore: 92,
+    timelinessScore: 90,
+    utilityScore: 85,
+    totalScore: 89,
+    createdAt: '2026-04-30T03:00:00Z'
+  },
+
+  // === 2026-04-29 (周二) ===
+  {
+    id: '20260429-01',
+    date: '2026-04-29',
+    title: 'WSJ：OpenAI连续多月未达营收目标，在编码和企业市场被Anthropic抢地盘',
+    summary: 'WSJ报道OpenAI今年多次未达月度营收目标，ChatGPT增长放缓，未实现10亿周活目标。在编码和企业市场被Anthropic蚕食份额。Altman和CFO发联合声明称"完全一致"。',
+    source: 'OpenAI',
+    sourceUrl: 'https://www.reuters.com/business/openai-falls-short-revenue-user-targets-it-races-toward-ipo-wsj-reports-2026-04-28/',
+    tags: ['#竞争', '#战略'],
+    accuracyScore: 97,
+    timelinessScore: 100,
+    utilityScore: 92,
+    totalScore: 97,
+    createdAt: '2026-04-29T02:00:00Z'
+  },
+  {
+    id: '20260429-02',
+    date: '2026-04-29',
+    title: 'Apple WWDC 2026海报暗藏AI Siri玄机，Google Gemini将驱动全新Siri',
+    summary: 'Mark Gurman分析WWDC 2026宣传图隐藏AI Siri线索。Apple与Google Gemini合作打造对话式Siri，可能作为独立App推出。iOS 27将于6月8日WWDC发布。',
+    source: 'Google',
+    sourceUrl: 'https://mashable.com/article/apple-wwdc-ai-siri-tease',
+    tags: ['#Agent', '#竞争'],
+    accuracyScore: 90,
+    timelinessScore: 95,
+    utilityScore: 85,
+    totalScore: 90,
+    createdAt: '2026-04-29T02:30:00Z'
+  },
+  {
+    id: '20260429-03',
+    date: '2026-04-29',
+    title: 'XDA横评：Claude Code vs Codex vs Lovable vs Replit，仅一款真正可用于生产',
+    summary: 'XDA编辑实测四大AI编码工具，从想法到可交付原型的全流程对比。结论：只有一款工具达到了"真正可用于实际工作"的标准，AI编码工具差距正在拉大。',
+    source: '其他',
+    sourceUrl: 'https://www.xda-developers.com/tested-claude-code-lovable-and-replit-side-by-side/',
+    tags: ['#低代码', '#Agent', '#竞争'],
+    accuracyScore: 92,
+    timelinessScore: 95,
+    utilityScore: 95,
+    totalScore: 94,
+    createdAt: '2026-04-29T03:00:00Z'
+  },
+
   // === 2026-04-28 (周一) ===
   {
     id: '20260428-01',

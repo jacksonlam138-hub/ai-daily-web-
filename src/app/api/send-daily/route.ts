@@ -27,13 +27,14 @@ async function getSubscribers(): Promise<Subscriber[]> {
   }
 }
 
-export async function POST() {
+export async function POST(request: Request) {
   const resend = getResend()
   if (!resend) {
     return NextResponse.json({ error: 'RESEND_API_KEY not configured', setup: '1. Sign up at resend.com  2. Get API key  3. Add RESEND_API_KEY to .env.local' }, { status: 500 })
   }
 
-  const today = new Date().toISOString().split('T')[0]
+  const dateParam = new URL(request.url).searchParams.get('date')
+  const today = dateParam || new Date().toISOString().split('T')[0]
   const report = getDailyReport(today)
 
   if (!report) {

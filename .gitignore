@@ -46,3 +46,10 @@ AGENTS.md
 
 # claude sessions
 .claude/
+
+# temp files
+research/
+scripts/
+src/templates/xiaohongshu/filled-*.html
+public/cards/*.png
+public/cards/*.jpg
