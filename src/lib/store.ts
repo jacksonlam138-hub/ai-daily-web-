@@ -107,7 +107,7 @@ const sampleItems: DailyItem[] = [
     date: '2026-04-30',
     title: 'MiniMax发布Speech 2.8：10秒声音克隆，原生语气标签让AI语音告别机器人感',
     summary: 'MiniMax发布Speech 2.8语音模型。支持原生声音标签（叹气、笑声、咳嗽），10秒样本高保真声音克隆，消除跨语言口音串扰。中文-日语对已优化。',
-    source: 'MiniMax',
+    source: 'Minimax',
     sourceUrl: 'https://www.minimax.io/news/minimax-speech-28',
     tags: ['#模型', '#发布'],
     accuracyScore: 92,
