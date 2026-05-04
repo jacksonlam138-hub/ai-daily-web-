@@ -1,36 +1,19 @@
 import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
-import { readFile } from 'fs/promises'
-import path from 'path'
 import { getDailyReport } from '@/lib/store'
 import { generateDailyEmail } from '@/lib/email-template'
+import { supabase } from '@/lib/supabase'
 
 function getResend() {
   const key = process.env.RESEND_API_KEY
   if (!key) return null
   return new Resend(key)
 }
-const SUBSCRIBERS_PATH = path.join(process.cwd(), 'src/data/subscribers.json')
-
-interface Subscriber {
-  email: string
-  streak: number
-  subscribedAt: string
-}
-
-async function getSubscribers(): Promise<Subscriber[]> {
-  try {
-    const raw = await readFile(SUBSCRIBERS_PATH, 'utf-8')
-    return JSON.parse(raw)
-  } catch {
-    return []
-  }
-}
 
 export async function POST(request: Request) {
   const resend = getResend()
   if (!resend) {
-    return NextResponse.json({ error: 'RESEND_API_KEY not configured', setup: '1. Sign up at resend.com  2. Get API key  3. Add RESEND_API_KEY to .env.local' }, { status: 500 })
+    return NextResponse.json({ error: 'RESEND_API_KEY not configured' }, { status: 500 })
   }
 
   const dateParam = new URL(request.url).searchParams.get('date')
@@ -41,9 +24,12 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'No report found for today' }, { status: 404 })
   }
 
-  const subscribers = await getSubscribers()
-  if (subscribers.length === 0) {
-    return NextResponse.json({ error: 'No subscribers' }, { status: 400 })
+  const { data: subscribers, error: dbError } = await supabase
+    .from('subscribers')
+    .select('email, streak')
+
+  if (dbError || !subscribers || subscribers.length === 0) {
+    return NextResponse.json({ error: 'No subscribers', details: dbError?.message }, { status: 400 })
   }
 
   const fromEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev'
@@ -54,7 +40,7 @@ export async function POST(request: Request) {
   for (const sub of subscribers) {
     try {
       const html = generateDailyEmail(report.items, today, sub.streak, sub.email)
-      const { data, error } = await resend.emails.send({
+      const { error } = await resend.emails.send({
         from: `AI日报 <${fromEmail}>`,
         to: sub.email,
         subject,

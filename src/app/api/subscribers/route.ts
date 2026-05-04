@@ -1,31 +1,23 @@
 import { NextResponse } from 'next/server'
-import { readFile, writeFile } from 'fs/promises'
-import path from 'path'
-
-const SUBSCRIBERS_PATH = path.join(process.cwd(), 'src/data/subscribers.json')
-
-interface Subscriber {
-  email: string
-  streak: number
-  subscribedAt: string
-}
-
-async function getSubscribers(): Promise<Subscriber[]> {
-  try {
-    const raw = await readFile(SUBSCRIBERS_PATH, 'utf-8')
-    return JSON.parse(raw)
-  } catch {
-    return []
-  }
-}
-
-async function saveSubscribers(subs: Subscriber[]): Promise<void> {
-  await writeFile(SUBSCRIBERS_PATH, JSON.stringify(subs, null, 2), 'utf-8')
-}
+import { supabase } from '@/lib/supabase'
 
 export async function GET() {
-  const subs = await getSubscribers()
-  return NextResponse.json({ count: subs.length, subscribers: subs.map(s => ({ email: s.email, streak: s.streak, subscribedAt: s.subscribedAt })) })
+  const { data, error } = await supabase
+    .from('subscribers')
+    .select('email, streak, subscribed_at')
+
+  if (error) {
+    return NextResponse.json({ error: error.message }, { status: 500 })
+  }
+
+  return NextResponse.json({
+    count: data.length,
+    subscribers: data.map(s => ({
+      email: s.email,
+      streak: s.streak,
+      subscribedAt: s.subscribed_at,
+    })),
+  })
 }
 
 export async function POST(request: Request) {
@@ -34,22 +26,34 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Invalid email' }, { status: 400 })
   }
 
-  const subs = await getSubscribers()
-  if (subs.some(s => s.email === email)) {
-    return NextResponse.json({ error: 'Already subscribed' }, { status: 409 })
-  }
+  const { error } = await supabase
+    .from('subscribers')
+    .insert({ email })
 
-  subs.push({ email, streak: 0, subscribedAt: new Date().toISOString() })
-  await saveSubscribers(subs)
+  if (error) {
+    if (error.code === '23505') {
+      return NextResponse.json({ error: 'Already subscribed' }, { status: 409 })
+    }
+    return NextResponse.json({ error: error.message }, { status: 500 })
+  }
 
   return NextResponse.json({ ok: true, email })
 }
 
 export async function DELETE(request: Request) {
   const { email } = await request.json()
-  const subs = await getSubscribers()
-  const filtered = subs.filter(s => s.email !== email)
-  await saveSubscribers(filtered)
+  if (!email) {
+    return NextResponse.json({ error: 'Email required' }, { status: 400 })
+  }
 
-  return NextResponse.json({ ok: true, removed: subs.length - filtered.length })
+  const { error, count } = await supabase
+    .from('subscribers')
+    .delete({ count: 'exact' })
+    .eq('email', email)
+
+  if (error) {
+    return NextResponse.json({ error: error.message }, { status: 500 })
+  }
+
+  return NextResponse.json({ ok: true, removed: count ?? 0 })
 }
