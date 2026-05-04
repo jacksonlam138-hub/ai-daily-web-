@@ -36,7 +36,7 @@ export function formatTweetThread(items: DailyItem[], date: string): string[] {
 
   // Last tweet: CTA
   tweets.push(
-    `📬 每天收AI日报到邮箱 → ai-daily-web-livid.vercel.app\n\n` +
+    `📬 每天收AI日报到邮箱 → news.lamchung.top\n\n` +
     `#AI日报 #AI #ArtificialIntelligence #PM`
   )
 

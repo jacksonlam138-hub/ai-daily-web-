@@ -14,6 +14,7 @@ export function generateDailyEmail(
   items: DailyItem[],
   date: string,
   streak: number = 0,
+  subscriberEmail: string = '',
 ): string {
   const top3 = items.slice(0, 3)
   const rest = items.slice(3)
@@ -98,7 +99,7 @@ export function generateDailyEmail(
     <table cellpadding="0" cellspacing="0" align="center">
     <tr>
       <td style="background:#c8956c; border-radius:8px; padding:12px 32px;">
-        <a href="https://ai-daily-web-livid.vercel.app" target="_blank" style="color:#0a0908; font-size:15px; font-weight:600; text-decoration:none; letter-spacing:0.02em;">
+        <a href="https://news.lamchung.top" target="_blank" style="color:#0a0908; font-size:15px; font-weight:600; text-decoration:none; letter-spacing:0.02em;">
           查看完整日报
         </a>
       </td>
@@ -109,7 +110,7 @@ export function generateDailyEmail(
   <!-- Footer -->
   <tr><td style="padding-top:16px; border-top:1px solid #1a1816; text-align:center;">
     <div style="font-size:12px; color:#6a6054;">
-      AI日报 · 面向低代码AI产品经理 · <a href="https://ai-daily-web-livid.vercel.app" style="color:#6a6054;">取消订阅</a>
+      AI日报 · 面向低代码AI产品经理 · <a href="https://news.lamchung.top/unsubscribe?email=${encodeURIComponent(subscriberEmail)}" style="color:#6a6054;">取消订阅</a>
     </div>
   </td></tr>
 

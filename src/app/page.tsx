@@ -72,7 +72,7 @@ export default function Home() {
                   <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>在 Claude Code 中运行 <code style={{ fontFamily: 'var(--font-mono)', color: 'var(--accent)' }}>/ai-daily</code> 触发采集</div>
                 </div>
                 <a
-                  href="https://ai-daily-web-livid.vercel.app"
+                  href="https://news.lamchung.top"
                   style={{ fontSize: 12, padding: '8px 16px', borderRadius: 8, background: 'var(--accent-dim)', color: 'var(--accent)', fontWeight: 500, textDecoration: 'none', border: '1px solid rgba(200,149,108,0.15)' }}
                 >
                   刷新页面

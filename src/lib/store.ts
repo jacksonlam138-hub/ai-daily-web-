@@ -1,6 +1,51 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-05-04 (周日) ===
+  {
+    id: '20260504-01',
+    date: '2026-05-04',
+    title: '五角大楼签发机密AI合同：SpaceX、Google、OpenAI等8家中标，Anthropic仍被排除',
+    summary: '美国国防部与8家AI公司签署机密合同，包括SpaceX、Google、OpenAI等。Anthropic因拒绝参与特定军事用途继续被排除在外，凸显AI公司与政府合作中的伦理分歧。',
+    source: 'OpenAI',
+    sourceUrl: 'https://orbitaltoday.com/2026/05/03/8-ai-companies-win-pentagon-classified-contracts-while-anthropic-remains-blacklisted/',
+    tags: ['#战略', '#安全'],
+    accuracyScore: 92,
+    timelinessScore: 95,
+    utilityScore: 90,
+    totalScore: 92,
+    createdAt: '2026-05-04T01:00:00Z'
+  },
+  {
+    id: '20260504-02',
+    date: '2026-05-04',
+    title: 'NYT深度：DeepSeek开源模式成为中国AI软实力武器，已渗透伊朗印度等国选举系统',
+    summary: '纽约时报报道DeepSeek的开源策略正在产生地缘政治影响。其模型被伊朗、印度等国用于选举相关应用，开源AI成为中国软实力输出的新载体。',
+    source: '其他',
+    sourceUrl: 'https://www.nytimes.com/2026/05/03/world/deepseek-china-ai-iran-india-elections.html',
+    tags: ['#开源', '#战略'],
+    accuracyScore: 95,
+    timelinessScore: 95,
+    utilityScore: 85,
+    totalScore: 92,
+    createdAt: '2026-05-04T01:30:00Z'
+  },
+  {
+    id: '20260504-03',
+    date: '2026-05-04',
+    title: '中国法院里程碑裁决：不能以AI替代为由解除劳动合同，为AI时代用工确立先例',
+    summary: '中国法院裁定企业不能以AI替代为由解雇员工，为AI替代人类工作设立了法律先例。这是全球首例AI替代劳动纠纷判决，对企业AI落地有重大影响。',
+    source: '其他',
+    sourceUrl: 'https://news.bitcoin.com/zh/zhong-guo-gong-ren-ying-de-ju-you-li-cheng-bei-yi-yi-de-ren-gong-zhi-neng-ti-dai-an-jian',
+    tags: ['#企业应用', '#安全'],
+    accuracyScore: 88,
+    timelinessScore: 90,
+    utilityScore: 92,
+    totalScore: 90,
+    createdAt: '2026-05-04T02:00:00Z'
+  },
+
+
   // === 2026-05-01 (周四·五一) ===
   {
     id: '20260501-01',

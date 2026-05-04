@@ -47,13 +47,13 @@ export async function POST(request: Request) {
   }
 
   const fromEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev'
-  const html = generateDailyEmail(report.items, today)
   const subject = `AI日报 | ${today.slice(5)} · ${report.items.length}条动态`
 
   const results = []
 
   for (const sub of subscribers) {
     try {
+      const html = generateDailyEmail(report.items, today, sub.streak, sub.email)
       const { data, error } = await resend.emails.send({
         from: `AI日报 <${fromEmail}>`,
         to: sub.email,
