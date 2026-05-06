@@ -1,6 +1,81 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-05-06 (周二) ===
+  {
+    id: '20260506-01',
+    date: '2026-05-06',
+    title: 'Microsoft、Google、xAI同意向美国政府提前开放AI模型做安全审查',
+    summary: '继白宫宣布考虑AI模型发布前审查后，Microsoft、Google和xAI已同意向美国政府提供新模型的早期访问权限用于国家安全测试。这一决定直接源于Anthropic Mythos模型暴露出的大量网络安全漏洞。',
+    source: 'Microsoft',
+    sourceUrl: 'https://www.reuters.com/legal/litigation/microsoft-xai-google-will-share-ai-models-with-us-govt-security-reviews-2026-05-05/',
+    tags: ['#安全', '#战略'],
+    accuracyScore: 95,
+    timelinessScore: 100,
+    utilityScore: 90,
+    totalScore: 95,
+    createdAt: '2026-05-06T01:00:00Z'
+  },
+  {
+    id: '20260506-02',
+    date: '2026-05-06',
+    title: 'Anthropic CEO警告：Mythos发现数万安全漏洞，AI进入网络攻击"危险时刻"',
+    summary: 'Dario Amodei公开警告AI已暴露数万个软件漏洞，创造了一个短暂的"危险窗口期"。软件公司、政府和银行必须在此期间修补漏洞，否则将面临大规模网络攻击风险。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.cnbc.com/2026/05/05/anthropic-ceo-cyber-moment-of-danger-mythos-vulnerabilities.html',
+    tags: ['#安全', '#Agent'],
+    accuracyScore: 95,
+    timelinessScore: 100,
+    utilityScore: 92,
+    totalScore: 96,
+    createdAt: '2026-05-06T01:30:00Z'
+  },
+  {
+    id: '20260506-03',
+    date: '2026-05-06',
+    title: 'CopilotKit获$2700万A轮融资，帮助开发者构建应用内嵌AI Agent',
+    summary: '西雅图初创公司CopilotKit完成$2700万A轮，由Glilot Capital、NFX和SignalFire领投。产品让开发者能在自有应用中快速集成AI Agent，降低AI功能开发门槛。',
+    source: '其他',
+    sourceUrl: 'https://techcrunch.com/2026/05/05/copilotkit-raises-27m-to-help-devs-deploy-app-native-ai-agents',
+    tags: ['#Agent', '#融资', '#低代码'],
+    accuracyScore: 92,
+    timelinessScore: 95,
+    utilityScore: 95,
+    totalScore: 94,
+    createdAt: '2026-05-06T02:00:00Z'
+  },
+
+  // === 2026-05-05 (周一) ===
+  {
+    id: '20260505-01',
+    date: '2026-05-05',
+    title: 'NYT：白宫拟对AI模型实施发布前审查，特朗普政府AI政策180度大转弯',
+    summary: '纽约时报报道，此前坚持不干预AI的特朗普政府正在讨论在AI模型公开发布前进行政府审查。这一政策转向意味着美国可能效仿欧盟AI法案，对前沿模型施加监管。对AI产品发布节奏和合规成本影响深远。',
+    source: '其他',
+    sourceUrl: 'https://www.nytimes.com/2026/05/04/technology/trump-ai-models.html',
+    tags: ['#安全', '#战略'],
+    accuracyScore: 95,
+    timelinessScore: 95,
+    utilityScore: 90,
+    totalScore: 93,
+    createdAt: '2026-05-05T01:00:00Z'
+  },
+  {
+    id: '20260505-02',
+    date: '2026-05-05',
+    title: 'Cisco $4亿收购AI安全初创Astrix，Anthropic参投公司获巨头背书',
+    summary: 'Cisco以$4亿收购以色列AI安全公司Astrix。Astrix专注非人类身份和AI Agent安全风险，获Menlo Ventures和Anthropic投资。标志着AI Agent安全已成为企业刚需赛道。',
+    source: '其他',
+    sourceUrl: 'https://www.calcalistech.com/ctechnews/article/dy5obf581',
+    tags: ['#安全', '#Agent', '#融资'],
+    accuracyScore: 92,
+    timelinessScore: 90,
+    utilityScore: 88,
+    totalScore: 90,
+    createdAt: '2026-05-05T01:30:00Z'
+  },
+
+
   // === 2026-05-04 (周日) ===
   {
     id: '20260504-01',
