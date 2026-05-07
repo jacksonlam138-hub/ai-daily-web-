@@ -1,7 +1,51 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
-  // === 2026-05-06 (周二) ===
+  // === 2026-05-07 (周三) ===
+  {
+    id: '20260507-01',
+    date: '2026-05-07',
+    title: 'OpenAI发布GPT-5.5 Instant：更智能、更清晰、更个性化，ChatGPT和API同步上线',
+    summary: 'OpenAI于5月5日发布GPT-5.5 Instant，定位为更快更个性化的轻量模型。与GPT-5.5 Pro互补，Instant版本主打低延迟和日常对话场景。已在ChatGPT和API中上线。',
+    source: 'OpenAI',
+    sourceUrl: 'https://openai.com/index/introducing-gpt-rosalind/',
+    tags: ['#发布', '#模型'],
+    accuracyScore: 95,
+    timelinessScore: 95,
+    utilityScore: 90,
+    totalScore: 93,
+    createdAt: '2026-05-07T01:00:00Z'
+  },
+  {
+    id: '20260507-02',
+    date: '2026-05-07',
+    title: 'Altman考虑拆分OpenAI机器人/硬件部门为独立公司，聚焦AI软件核心',
+    summary: '据媒体报道，Sam Altman正考虑将OpenAI的机器人与硬件部门拆分为独立公司，以便更聚焦于AI软件核心业务。此举或为IPO铺路，也反映AI公司"做减法"的趋势。',
+    source: 'OpenAI',
+    sourceUrl: 'https://www.bloomberg.com/news/articles/2026-05-05',
+    tags: ['#战略', '#竞争'],
+    accuracyScore: 88,
+    timelinessScore: 90,
+    utilityScore: 85,
+    totalScore: 88,
+    createdAt: '2026-05-07T01:30:00Z'
+  },
+  {
+    id: '20260507-03',
+    date: '2026-05-07',
+    title: 'Anthropic进军华尔街：推出金融行业专用AI Agent，瞄准银行和投行场景',
+    summary: 'Anthropic加速布局金融行业，推出针对银行和投行的AI Agent产品。据报道JPMorgan等华尔街机构已在对接。标志着AI Agent从开发者工具正式进入垂直行业深耕阶段。',
+    source: 'Anthropic',
+    sourceUrl: 'https://fortune.com/2026/05/05/anthropic-wall-street-ai-agents/',
+    tags: ['#Agent', '#企业应用'],
+    accuracyScore: 92,
+    timelinessScore: 92,
+    utilityScore: 92,
+    totalScore: 92,
+    createdAt: '2026-05-07T02:00:00Z'
+  },
+
+
   {
     id: '20260506-01',
     date: '2026-05-06',
