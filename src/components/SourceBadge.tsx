@@ -74,9 +74,9 @@ export function CategoryHeader({ category }: { category: string }) {
   )
 }
 
-export function NewsItemCard({ item }: { item: DailyItem }) {
+export function NewsItemCard({ item, showReason = false, isLast = false }: { item: DailyItem; showReason?: boolean; isLast?: boolean }) {
   return (
-    <div className="news-item">
+    <div className="news-item" style={{ borderBottom: isLast ? 'none' : '1px solid var(--border-subtle)' }}>
       <div style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
         <div style={{ flex: 1, minWidth: 0 }}>
           {/* Source + Tags */}
@@ -109,6 +109,22 @@ export function NewsItemCard({ item }: { item: DailyItem }) {
           }}>
             {item.summary}
           </p>
+          {/* Recommend Reason */}
+          {showReason && item.recommendReason && (
+            <div style={{
+              fontSize: 12,
+              lineHeight: 1.6,
+              color: 'var(--accent)',
+              padding: '8px 12px',
+              marginBottom: 8,
+              borderRadius: 6,
+              background: 'rgba(200,149,108,0.06)',
+              borderLeft: '2px solid var(--accent)',
+            }}>
+              <span style={{ fontWeight: 600, marginRight: 4 }}>PM：</span>
+              {item.recommendReason}
+            </div>
+          )}
           {/* Link */}
           <a
             href={item.sourceUrl}

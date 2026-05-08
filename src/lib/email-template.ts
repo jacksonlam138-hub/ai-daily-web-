@@ -68,6 +68,12 @@ export function generateDailyEmail(
         <div style="font-size:14px; color:#9a8e7e; line-height:1.6;">
           ${item.summary}
         </div>
+        ${item.recommendReason ? `
+        <div style="margin-top:8px; padding:8px 12px; border-left:2px solid #c8956c; background:rgba(200,149,108,0.05); border-radius:0 4px 4px 0;">
+          <span style="font-size:12px; color:#c8956c; font-weight:600;">PM：</span>
+          <span style="font-size:12px; color:#b0a490; line-height:1.5;">${item.recommendReason}</span>
+        </div>
+        ` : ''}
         <a href="${item.sourceUrl}" target="_blank" style="font-size:13px; color:#6a6054; text-decoration:none;">
           原文 →
         </a>

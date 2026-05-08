@@ -14,13 +14,14 @@ const sampleItems: DailyItem[] = [
     timelinessScore: 95,
     utilityScore: 95,
     totalScore: 95,
+    recommendReason: 'Claude Code速率翻倍即日生效，重度用户能直接感受到，轨道算力是长期故事。对PM来说，API限流松绑意味着Agent产品可以更激进地调用Claude。',
     createdAt: '2026-05-08T01:00:00Z'
   },
   {
     id: '20260508-02',
     date: '2026-05-08',
-    title: 'xAI Grok Connectors上线：深度集成Office/Notion/GitHub/Linear，支持BYO MCP',
-    summary: 'xAI在Grok Web上线Connectors功能，端到端打通SharePoint、Outlook、Google Workspace、Notion、GitHub、Linear等工具，可读写编辑。同时推出"自带MCP"功能连接自定义服务。',
+    title: 'Grok Connectors上线：深度集成Office/Notion/GitHub/Linear，支持BYO MCP',
+    summary: 'SpaceXAI在Grok Web上线Connectors功能，端到端打通SharePoint、Outlook、Google Workspace、Notion、GitHub、Linear等工具，可读写编辑。同时推出"自带MCP"功能连接自定义服务。',
     source: '其他',
     sourceUrl: 'https://x.ai/news/grok-connectors',
     tags: ['#Agent', '#MCP', '#发布'],
@@ -28,6 +29,7 @@ const sampleItems: DailyItem[] = [
     timelinessScore: 92,
     utilityScore: 95,
     totalScore: 94,
+    recommendReason: 'Grok这波连接器把Office、GitHub和Notion全打通了，不是演示级挂接而是能直接读写编辑的真集成，外加开放自建MCP。做Agent产品的PM应该立刻试试。',
     createdAt: '2026-05-08T02:00:00Z'
   },
   {
@@ -42,6 +44,7 @@ const sampleItems: DailyItem[] = [
     timelinessScore: 88,
     utilityScore: 88,
     totalScore: 90,
+    recommendReason: 'AI公司并入航天集团史无前例，马斯克从AI参与者变成算力规则制定者。SpaceXAI这名字像PR操作，关键得看Grok团队是真融合还是换个招牌。',
     createdAt: '2026-05-08T02:30:00Z'
   },
   {
@@ -56,6 +59,7 @@ const sampleItems: DailyItem[] = [
     timelinessScore: 90,
     utilityScore: 90,
     totalScore: 90,
+    recommendReason: '大基金第一次押注大模型就给了DeepSeek，等于官方把大模型升格为半导体级国家战略。对整个赛道是强心针，但其他玩家的融资故事恐怕得换个讲法了。',
     createdAt: '2026-05-08T03:00:00Z'
   },
   {
@@ -70,6 +74,7 @@ const sampleItems: DailyItem[] = [
     timelinessScore: 90,
     utilityScore: 92,
     totalScore: 92,
+    recommendReason: '微软把多Agent框架从Azure独占变为开源，Python+.NET双语言覆盖，做企业Agent的团队可以直接上手，不必从零搭建编排层。',
     createdAt: '2026-05-08T03:30:00Z'
   },
   {
@@ -84,6 +89,7 @@ const sampleItems: DailyItem[] = [
     timelinessScore: 90,
     utilityScore: 88,
     totalScore: 87,
+    recommendReason: 'Flash系列定位轻量高效，如果编码真超3.1 Pro，那API成本会大幅下降。做AI功能集成的PM可以提前评估迁移路径。',
     createdAt: '2026-05-08T04:00:00Z'
   },
   {
@@ -98,6 +104,7 @@ const sampleItems: DailyItem[] = [
     timelinessScore: 85,
     utilityScore: 88,
     totalScore: 88,
+    recommendReason: '免费时代结束的信号弹。豆包率先收费，竞品用补贴和免费反击，国内AI应用商业模式进入真刀真枪阶段。做AI产品的PM该思考自己的付费墙怎么设计了。',
     createdAt: '2026-05-08T04:30:00Z'
   },
 

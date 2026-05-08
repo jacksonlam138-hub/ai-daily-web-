@@ -11,6 +11,7 @@ export interface DailyItem {
   timelinessScore: number
   utilityScore: number
   totalScore: number
+  recommendReason?: string
   createdAt: string
 }
 
