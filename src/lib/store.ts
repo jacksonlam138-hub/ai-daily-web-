@@ -1,6 +1,106 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-05-08 (周四) ===
+  {
+    id: '20260508-01',
+    date: '2026-05-08',
+    title: 'Anthropic与SpaceX达成算力合作，Claude Code速率翻倍、取消高峰降速',
+    summary: 'Anthropic宣布获得SpaceX Colossus 1超算全部算力（22万+GPU、300MW）。Claude Code五小时窗口限制翻倍，取消高峰降速，Opus API速率大幅提升。双方还探讨共建吉瓦级轨道算力。',
+    source: 'Anthropic',
+    sourceUrl: 'https://arstechnica.com/ai/2026/05/anthropic-raises-claude-code-usage-limits-credits-new-deal-with-spacex/',
+    tags: ['#Agent', '#算力', '#更新'],
+    accuracyScore: 95,
+    timelinessScore: 95,
+    utilityScore: 95,
+    totalScore: 95,
+    createdAt: '2026-05-08T01:00:00Z'
+  },
+  {
+    id: '20260508-02',
+    date: '2026-05-08',
+    title: 'xAI Grok Connectors上线：深度集成Office/Notion/GitHub/Linear，支持BYO MCP',
+    summary: 'xAI在Grok Web上线Connectors功能，端到端打通SharePoint、Outlook、Google Workspace、Notion、GitHub、Linear等工具，可读写编辑。同时推出"自带MCP"功能连接自定义服务。',
+    source: '其他',
+    sourceUrl: 'https://x.ai/news/grok-connectors',
+    tags: ['#Agent', '#MCP', '#发布'],
+    accuracyScore: 95,
+    timelinessScore: 92,
+    utilityScore: 95,
+    totalScore: 94,
+    createdAt: '2026-05-08T02:00:00Z'
+  },
+  {
+    id: '20260508-03',
+    date: '2026-05-08',
+    title: 'xAI正式并入SpaceX，Grok和X统一归入SpaceXAI品牌',
+    summary: '马斯克宣布xAI不再作为独立实体，Grok和X纳入SpaceX旗下SpaceXAI子品牌。xAI此前已获Anysphere（Cursor母公司）60亿美元收购权。AI与航天合流标志性事件。',
+    source: '其他',
+    sourceUrl: 'https://en.wikipedia.org/wiki/XAI_(company)',
+    tags: ['#战略', '#竞争'],
+    accuracyScore: 92,
+    timelinessScore: 88,
+    utilityScore: 88,
+    totalScore: 90,
+    createdAt: '2026-05-08T02:30:00Z'
+  },
+  {
+    id: '20260508-04',
+    date: '2026-05-08',
+    title: 'DeepSeek估值飙升至450亿美元，国家大基金主导首轮外部融资',
+    summary: '国家集成电路产业投资基金正与DeepSeek洽谈主导首轮融资，投后估值约450亿美元。腾讯有意跟投，创始人梁文锋参与出资。标志国家队首次公开投资大模型公司。',
+    source: '其他',
+    sourceUrl: 'https://www.21jingji.com/article/20260507/herald/be3cf711cdfe8b63a1bdf39c21879cc6.html',
+    tags: ['#融资', '#战略'],
+    accuracyScore: 90,
+    timelinessScore: 90,
+    utilityScore: 90,
+    totalScore: 90,
+    createdAt: '2026-05-08T03:00:00Z'
+  },
+  {
+    id: '20260508-05',
+    date: '2026-05-08',
+    title: 'Microsoft开源Agent Framework（MAF）：支持Python+.NET的生产级多Agent框架',
+    summary: '微软开源MAF框架，支持构建、编排和部署生产级AI Agent及多Agent工作流。含Agent Skills知识库构建、强化学习实验包，与Azure AI Foundry深度集成。',
+    source: 'Microsoft',
+    sourceUrl: 'https://github.com/microsoft/agent-framework',
+    tags: ['#Agent', '#开源', '#发布'],
+    accuracyScore: 95,
+    timelinessScore: 90,
+    utilityScore: 92,
+    totalScore: 92,
+    createdAt: '2026-05-08T03:30:00Z'
+  },
+  {
+    id: '20260508-06',
+    date: '2026-05-08',
+    title: 'Gemini 3.2 Flash泄露：现身iOS应用和AI Studio，编码能力超3.1 Pro',
+    summary: 'Gemini 3.2 Flash被用户在iOS应用、AI Studio模型选择器和LM Arena基准测试中发现。报道称该轻量模型编码能力超越Gemini 3.1 Pro，成本更低。Polymarket押注近期正式发布。',
+    source: 'Google',
+    sourceUrl: 'https://polymarket.com/event/gemini-3pt2-released-by',
+    tags: ['#模型', '#发布'],
+    accuracyScore: 85,
+    timelinessScore: 90,
+    utilityScore: 88,
+    totalScore: 87,
+    createdAt: '2026-05-08T04:00:00Z'
+  },
+  {
+    id: '20260508-07',
+    date: '2026-05-08',
+    title: '豆包宣布收费引发价格战：DeepSeek 2.5折、千问补贴、元宝文心宣布免费',
+    summary: '字节豆包5月4日上线三档付费（68-500元），引发竞品激烈反应。DeepSeek V4-Pro限时2.5折，千问推奶茶补贴活动，元宝和文心一言直接免费。日均Token消耗已达180万亿。',
+    source: '字节',
+    sourceUrl: 'https://www.tmtpost.com/7978796.html',
+    tags: ['#竞争', '#战略'],
+    accuracyScore: 92,
+    timelinessScore: 85,
+    utilityScore: 88,
+    totalScore: 88,
+    createdAt: '2026-05-08T04:30:00Z'
+  },
+
   // === 2026-05-07 (周三) ===
   {
     id: '20260507-01',
