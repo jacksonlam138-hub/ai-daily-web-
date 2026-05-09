@@ -1,6 +1,83 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-05-09 (周五) ===
+  {
+    id: '20260509-01',
+    date: '2026-05-09',
+    title: 'Google Chrome被曝静默安装4GB Gemini Nano模型，引发隐私争议',
+    summary: 'Chrome浏览器被发现在未经用户同意的情况下静默下载4GB的Gemini Nano端侧AI模型。Google回应称已支持在设置中关闭和移除，资源不足时自动卸载。端侧AI部署的隐私边界问题浮出水面。',
+    source: 'Google',
+    sourceUrl: 'https://www.cnet.com/tech/services-and-software/chrome-installing-4gb-ai-model-gemini-nano/',
+    tags: ['#安全', '#模型'],
+    accuracyScore: 92,
+    timelinessScore: 95,
+    utilityScore: 88,
+    totalScore: 92,
+    recommendReason: '端侧AI部署首次引发大规模隐私争议。对PM来说，AI功能"默认开启"还是"用户选择"将成为产品设计的核心博弈点，直接影响用户信任和留存。',
+    createdAt: '2026-05-09T01:00:00Z'
+  },
+  {
+    id: '20260509-02',
+    date: '2026-05-09',
+    title: 'Microsoft Agent 365正式商用：跨云AI Agent治理平台，覆盖AWS和Google Cloud',
+    summary: '微软Agent 365正式GA，提供统一控制平面来发现、治理和管控跨Microsoft、AWS和Google Cloud的AI Agent。含实时监控仪表盘、影子Agent检测拦截、合规审计等功能。已接入n8n等伙伴生态。',
+    source: 'Microsoft',
+    sourceUrl: 'https://futurumgroup.com/insights/microsoft-agent-365-turns-shadow-ai-into-a-governed-asset-class/',
+    tags: ['#Agent', '#企业应用', '#发布'],
+    accuracyScore: 95,
+    timelinessScore: 92,
+    utilityScore: 95,
+    totalScore: 94,
+    recommendReason: 'Agent治理从"可选项"变成"必选项"。微软抢先布局跨云Agent管控层，做企业AI产品的PM必须跟进——你的Agent能不能被Agent 365发现和管理，将成为企业采购的前提条件。',
+    createdAt: '2026-05-09T02:00:00Z'
+  },
+  {
+    id: '20260509-03',
+    date: '2026-05-09',
+    title: 'Apple WWDC 2026前瞻：Siri将变为独立App，向第三方AI提供商开放生态',
+    summary: '据多方消息，Apple将在WWDC 2026上宣布Siri成为独立应用，并开放AI生态给外部提供商。iOS 27将带来Siri从语音助手向自主系统Agent的转型。WWDC 2026可能是Tim Cook最后一届Keynote。',
+    source: '其他',
+    sourceUrl: 'https://borncity.com/news/apple-wwdc-2026-siri-wird-zur-app-ki-revolution-bei-ios-27/',
+    tags: ['#Agent', '#战略'],
+    accuracyScore: 78,
+    timelinessScore: 90,
+    utilityScore: 90,
+    totalScore: 85,
+    recommendReason: 'Siri独立化+开放生态，意味着iOS上的AI Agent入口不再是Apple独占。做移动端AI产品的团队需要提前规划如何在Siri生态中占位，类似当年小程序抢占微信入口。',
+    createdAt: '2026-05-09T03:00:00Z'
+  },
+  {
+    id: '20260509-04',
+    date: '2026-05-09',
+    title: 'AMD发布Instinct MI350P：企业级AI推理加速卡，正面挑战NVIDIA',
+    summary: 'AMD推出Instinct MI350P PCIe加速卡，定位企业AI推理和Agent工作负载。强调开放性、可扩展性和混合云一致性部署。多家合作伙伴（Nutanix等）已表态支持，为NVIDIA主导的AI算力市场提供替代选择。',
+    source: '其他',
+    sourceUrl: 'https://www.amd.com/en/products/accelerators/instinct.html',
+    tags: ['#算力', '#发布'],
+    accuracyScore: 95,
+    timelinessScore: 88,
+    utilityScore: 82,
+    totalScore: 89,
+    recommendReason: 'AI算力市场终于有了NVIDIA之外的成熟选项。MI350P主打推理场景，对做大规模Agent部署的团队来说是降低成本的好时机，可以开始评估AMD方案的TCO。',
+    createdAt: '2026-05-09T04:00:00Z'
+  },
+  {
+    id: '20260509-05',
+    date: '2026-05-09',
+    title: 'Anthropic开放安全工具：Mythos发现数万漏洞，推动AI安全从防御转向基建',
+    summary: 'Anthropic在金融行业活动上披露Mythos安全模型的最新进展。该模型已发现近300个Firefox漏洞和数万其他系统漏洞。Anthropic提出"用AI重写更安全的代码"理念，将安全从补丁模式转向设计阶段。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.bankinfosecurity.com/anthropic-sounds-cyber-alarm-amid-financial-ai-push-a-31617',
+    tags: ['#安全', '#Agent'],
+    accuracyScore: 95,
+    timelinessScore: 85,
+    utilityScore: 88,
+    totalScore: 90,
+    recommendReason: 'AI安全从"发现问题"进化到"重写代码"。Anthropic的思路是让AI帮你把代码写得更安全，而不是等出问题再补。做企业级产品的PM应该把这个理念融入产品叙事。',
+    createdAt: '2026-05-09T05:00:00Z'
+  },
+
   // === 2026-05-08 (周四) ===
   {
     id: '20260508-01',
