@@ -1,6 +1,54 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-05-10 (周六) ===
+  {
+    id: '20260510-01',
+    date: '2026-05-10',
+    title: 'Anthropic签署18亿美元Akamai云计算协议，继SpaceX后持续扩大算力版图',
+    summary: 'Anthropic与Akamai签署18亿美元计算协议，满足激增的AI软件需求。继SpaceX Colossus 1之后，Anthropic通过多云策略持续锁定算力资源，Akamai称其能确保CPU和GPU供应。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.reuters.com/business/anthropic-signs-18-billion-ai-cloud-deal-with-akamai-bloomberg-news-reports-2026-05-08/',
+    tags: ['#算力', '#战略'],
+    accuracyScore: 95,
+    timelinessScore: 88,
+    utilityScore: 85,
+    totalScore: 90,
+    recommendReason: '继SpaceX之后又签Akamai，Anthropic的算力焦虑肉眼可见。对用Claude API的团队是好事——容量越充足，限流越少。多云策略也意味着断线风险更低。',
+    createdAt: '2026-05-10T01:00:00Z'
+  },
+  {
+    id: '20260510-02',
+    date: '2026-05-10',
+    title: 'OpenAI推出ChatGPT"信任联系人"安全功能：检测自伤对话自动通知',
+    summary: 'OpenAI为ChatGPT上线"Trusted Contact"功能。用户可指定一位信任联系人，当AI检测到自伤或自杀倾向的对话时，人工团队1小时内审核并通知。标志AI产品安全责任从被动响应转向主动干预。',
+    source: 'OpenAI',
+    sourceUrl: 'https://www.cnet.com/tech/services-and-software/openai-chatgpt-trusted-contact-feature/',
+    tags: ['#安全', '#更新'],
+    accuracyScore: 95,
+    timelinessScore: 88,
+    utilityScore: 85,
+    totalScore: 90,
+    recommendReason: 'AI产品安全从"免责声明"走向"主动干预"。做C端AI产品的PM应该关注这个模式——你的产品在极端场景下有没有类似的兜底机制？这会成为合规基线。',
+    createdAt: '2026-05-10T02:00:00Z'
+  },
+  {
+    id: '20260510-03',
+    date: '2026-05-10',
+    title: 'JPMorgan将AI投资从实验性R&D重新归类为核心基础设施，2026技术预算198亿美元',
+    summary: '全球最大银行JPMorgan将20亿美元年度AI预算从"可 discretionary 创新"重新归类为与数据中心、支付系统并列的核心基础设施。2000人AI团队，AI每日扫描超10万亿美元交易。',
+    source: '其他',
+    sourceUrl: 'https://crypto.news/jpmorgan-makes-ai-core-infrastructure-spending/',
+    tags: ['#企业应用', '#战略'],
+    accuracyScore: 90,
+    timelinessScore: 82,
+    utilityScore: 90,
+    totalScore: 88,
+    recommendReason: '华尔街把AI从"实验"升级为"基础设施"，这是AI企业应用落地最强烈的信号。做B端AI产品的PM可以用这个案例说服决策层：AI不再是锦上添花，而是水电煤。',
+    createdAt: '2026-05-10T03:00:00Z'
+  },
+
+  // === 2026-05-09 (周五) ===
   // === 2026-05-09 (周五) ===
   {
     id: '20260509-01',
