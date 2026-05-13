@@ -1,6 +1,103 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-05-13 (周二) ===
+  {
+    id: '20260513-01',
+    date: '2026-05-13',
+    title: 'Apple WWDC 2026前瞻：Siri全面重构、开放第三方AI模型、iOS 27多设备AI对齐',
+    summary: 'WWDC 2026定于6月8-12日举办。预计发布iOS 27、更智能的Siri、更广泛的AI模型选项和macOS 27设计更新。Siri能否成为真正的AI助手是本次大会核心看点，被定义为Apple AI的"成败时刻"。',
+    source: '其他',
+    sourceUrl: 'https://www.techrepublic.com/article/news-apple-wwdc-2026-ios-27-siri-ai-preview/',
+    tags: ['#Agent', '#战略'],
+    accuracyScore: 85,
+    timelinessScore: 90,
+    utilityScore: 90,
+    totalScore: 88,
+    recommendReason: 'Apple WWDC是AI入场的年度最大窗口。如果Siri真的开放第三方AI模型，意味着iOS上的Agent入口将重新洗牌。做移动端AI产品的PM必须在6月前完成适配预案。',
+    createdAt: '2026-05-13T01:00:00Z'
+  },
+  {
+    id: '20260513-02',
+    date: '2026-05-13',
+    title: 'Gemini 3.2 Flash仍未正式发布：Google静默测试策略引发关注，I/O大会或正式公布',
+    summary: 'Gemini 3.2 Flash自5月5日被用户在iOS和AI Studio发现后，Google至今未正式宣布。据称编码能力超Gemini 3.1 Pro，定价仅$0.25/百万token。Google I/O大会可能正式发布。',
+    source: 'Google',
+    sourceUrl: 'https://www.buildfastwithai.com/blogs/gemini-3-2-flash-release-2026',
+    tags: ['#模型', '#发布'],
+    accuracyScore: 88,
+    timelinessScore: 85,
+    utilityScore: 88,
+    totalScore: 87,
+    recommendReason: 'Google的"先泄露再发布"策略已成常态。Flash系列如果真比3.1 Pro还强且更便宜，API成本会大幅下降。现在就可以开始评估迁移路径，不用等I/O。',
+    createdAt: '2026-05-13T02:00:00Z'
+  },
+
+  // === 2026-05-12 (周一) ===
+  {
+    id: '20260512-01',
+    date: '2026-05-12',
+    title: 'Anthropic洽谈300-500亿美元融资，估值高达9500亿美元，超越OpenAI',
+    summary: '据NYT报道，Anthropic正洽谈300-500亿美元新融资，估值最高达9500亿美元，为3个月前3800亿估值的2.5倍。年化收入已达300亿美元，Dario称需求年化增速可达80倍。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.nytimes.com/2026/05/12/technology/anthropic-funding-950-billion-valuation.html',
+    tags: ['#融资', '#战略'],
+    accuracyScore: 90,
+    timelinessScore: 95,
+    utilityScore: 88,
+    totalScore: 91,
+    recommendReason: 'Anthropic估值3个月翻2.5倍超越OpenAI，说明Claude Code等企业产品收入爆发。选择AI供应商的PM应该关注：供应商的财务健康度直接影响API稳定性和长期支持。',
+    createdAt: '2026-05-12T01:00:00Z'
+  },
+  {
+    id: '20260512-02',
+    date: '2026-05-12',
+    title: 'Vapi完成5000万美元B轮融资：语音AI Agent基础设施平台，已支持超10亿次通话',
+    summary: '语音AI Agent平台Vapi获5000万美元B轮（Peak XV领投），估值约5亿美元。平台连接AI模型与语音引擎，支持100万+开发者、270万+AI Agent、超10亿次通话。已部署于Amazon Ring。',
+    source: '其他',
+    sourceUrl: 'https://siliconangle.com/2026/05/12/vapi-nabs-50m-make-voice-ai-human/',
+    tags: ['#Agent', '#融资'],
+    accuracyScore: 92,
+    timelinessScore: 92,
+    utilityScore: 90,
+    totalScore: 91,
+    recommendReason: '语音Agent是下一个爆发点。10亿次通话说明语音AI已经过了验证期。做企业客服、销售自动化的PM应该评估Vapi这样的中间件平台，而不是自己从零搭建语音链路。',
+    createdAt: '2026-05-12T02:00:00Z'
+  },
+  {
+    id: '20260512-03',
+    date: '2026-05-12',
+    title: 'Judgment Labs获3200万美元融资：专注AI Agent模型基础设施和评估工具',
+    summary: '旧金山初创公司Judgment Labs获3200万美元种子+A轮合并融资，为"Agent原生"公司提供AI Agent模型的基础设施。资金将用于招聘AI研究员和工程师扩展产品。',
+    source: '其他',
+    sourceUrl: 'https://techstartups.com/2026/05/12/top-startup-and-tech-funding-news-may-12-2025/',
+    tags: ['#Agent', '#融资'],
+    accuracyScore: 90,
+    timelinessScore: 90,
+    utilityScore: 85,
+    totalScore: 88,
+    recommendReason: 'Agent评估和监控工具正在形成独立赛道。当Agent产品规模化后，"怎么知道Agent做对了"会成为核心痛点。关注Agent质量管控的PM可以跟进这类工具。',
+    createdAt: '2026-05-12T03:00:00Z'
+  },
+
+  // === 2026-05-11 (周日) ===
+  {
+    id: '20260511-01',
+    date: '2026-05-11',
+    title: 'Google报告：AI驱动的黑客攻击在3个月内从新兴威胁升级为工业级规模',
+    summary: 'Google发布报告称，AI驱动的网络攻击仅用3个月就从初生问题演变为工业级威胁。犯罪集团和国家级行为者正利用商业化AI模型大规模扩展攻击，AI安全防御窗口期正在急剧缩短。',
+    source: 'Google',
+    sourceUrl: 'https://www.theguardian.com/technology/2026/may/11/ai-powered-hacking-industrial-scale-threat-three-months-google',
+    tags: ['#安全', '#Agent'],
+    accuracyScore: 95,
+    timelinessScore: 92,
+    utilityScore: 90,
+    totalScore: 93,
+    recommendReason: 'AI攻击工业化意味着AI安全产品从"可选"变"必选"。做企业安全或AI产品的PM应该把安全叙事从"合规"升级为"生存"——这是卖安全产品的最佳窗口期。',
+    createdAt: '2026-05-11T01:00:00Z'
+  },
+
+
   // === 2026-05-10 (周六) ===
   {
     id: '20260510-01',
@@ -2399,6 +2496,82 @@ const sampleItems: DailyItem[] = [
     utilityScore: 80,
     totalScore: 85,
     createdAt: '2026-03-25T10:00:00Z'
+  },
+  // === 2026-05-13 (周二) ===
+  {
+    id: '20260513-01',
+    date: '2026-05-13',
+    title: 'Anthropic洽谈$9500亿估值融资300-500亿，即将成为全球估值最高AI公司',
+    summary: '据NYT报道，Anthropic正以约$9500亿估值洽谈$300-500亿新一轮融资。此前4月TechCrunch已报道$9000亿估值的$500亿融资意向。Anthropic估值28个月增长50倍，超越OpenAI的$8520亿，Claude Code和Mythos是增长双引擎。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.nytimes.com/2026/05/12/technology/anthropic-funding-950-billion-valuation.html',
+    tags: ['#融资', '#战略'],
+    accuracyScore: 97,
+    timelinessScore: 95,
+    utilityScore: 88,
+    totalScore: 94,
+    recommendReason: 'Anthropic从$380亿到$9500亿只用了3个月。对PM来说这不仅是融资新闻——Anthropic有足够弹药确保API服务稳定性，重度依赖Claude API的团队可以更放心地做长期产品规划。',
+    createdAt: '2026-05-13T01:00:00Z'
+  },
+  {
+    id: '20260513-02',
+    date: '2026-05-13',
+    title: 'Google警告：AI黑客三个月内从萌芽发展为工业级威胁，已拦截大规模利用事件',
+    summary: 'Google发布报告称AI驱动的黑客攻击在三个月内从新兴问题升级为工业级威胁。Google已拦截一起黑客组织利用AI发现零日漏洞的大规模利用事件。即使没有Anthropic Mythos模型，攻击者也在快速采用AI发现未知漏洞。',
+    source: 'Google',
+    sourceUrl: 'https://www.theguardian.com/technology/2026/may/11/ai-powered-hacking-industrial-scale-threat-three-months-google',
+    tags: ['#安全', '#Agent'],
+    accuracyScore: 95,
+    timelinessScore: 95,
+    utilityScore: 92,
+    totalScore: 94,
+    recommendReason: 'AI安全攻防正式进入军备竞赛阶段。做AI产品的PM必须把安全审计列入产品路线图——不是有空再做，而是上线前提。特别是涉及用户数据的Agent产品，安全漏洞可能导致产品被监管叫停。',
+    createdAt: '2026-05-13T02:00:00Z'
+  },
+  {
+    id: '20260513-03',
+    date: '2026-05-13',
+    title: 'OpenAI向EU开放网络安全模型，Anthropic拒绝开放Mythos引发监管博弈',
+    summary: 'OpenAI宣布向欧盟开放新网络安全模型。Anthropic则拒绝向EU发布Mythos，理由是担心被恶意利用。两家公司在AI安全与开放之间的策略分歧进一步公开化，EU AI法案8月生效前监管博弈加剧。',
+    source: 'OpenAI',
+    sourceUrl: 'https://www.cnbc.com/2026/05/11/openai-eu-cyber-model-anthropic-mythos-gpt.html',
+    tags: ['#安全', '#竞争'],
+    accuracyScore: 95,
+    timelinessScore: 92,
+    utilityScore: 90,
+    totalScore: 92,
+    recommendReason: 'AI公司的安全vs开放路线分歧正在影响区域市场策略。做全球产品的PM要注意：EU AI法案8月生效，你的AI功能在EU能不能用将直接影响国际化策略。Anthropic的保守意味着EU客户可能被迫选OpenAI。',
+    createdAt: '2026-05-13T03:00:00Z'
+  },
+  {
+    id: '20260513-04',
+    date: '2026-05-13',
+    title: 'NYT：中国追求AI自主削弱美芯片封锁效果，DeepSeek成国家战略标杆',
+    summary: '纽约时报分析中国AI自主化进程正在削弱美国芯片封锁效果。DeepSeek成为标杆案例，在受限算力条件下仍持续推出有竞争力的大模型。中美AI差距缩小迫使双方重回谈判桌，Trump-Xi峰会将讨论AI安全议题。',
+    source: '其他',
+    sourceUrl: 'https://www.nytimes.com/2026/05/12/business/china-semiconductor-ai-deepseek.html',
+    tags: ['#战略', '#竞争'],
+    accuracyScore: 95,
+    timelinessScore: 95,
+    utilityScore: 85,
+    totalScore: 92,
+    recommendReason: '芯片封锁没挡住中国AI，反而催生了DeepSeek这种受限创新。对做AI产品的PM来说，全球AI供应链不是单选题——未来可能需要同时适配中美两套AI基础设施，产品架构要为多模型多区域做好准备。',
+    createdAt: '2026-05-13T04:00:00Z'
+  },
+  {
+    id: '20260513-05',
+    date: '2026-05-13',
+    title: '芯片期货市场诞生：AI算力需求催生半导体金融衍生品，交易员可押注芯片价格',
+    summary: 'CNBC报道新的半导体期货市场即将上线，允许交易员对芯片价格进行对冲和投机。AI算力需求持续推高芯片成本，期货市场的出现标志着AI基础设施成本波动已达到需要金融工具管理的程度。',
+    source: '其他',
+    sourceUrl: 'https://www.cnbc.com/2026/05/12/new-futures-market-for-semiconductors-comes-as-ai-drives-costs-skyward.html',
+    tags: ['#算力', '#战略'],
+    accuracyScore: 92,
+    timelinessScore: 92,
+    utilityScore: 85,
+    totalScore: 90,
+    recommendReason: '芯片期货市场的出现说明AI算力成本波动已经大到需要金融工具对冲。做AI产品的PM要关注：如果你的产品严重依赖GPU推理成本，现在可以考虑用期货锁定长期成本，类似航空公司对冲燃油价格。',
+    createdAt: '2026-05-13T05:00:00Z'
   },
 ]
 
