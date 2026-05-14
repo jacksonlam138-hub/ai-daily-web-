@@ -1,6 +1,114 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-05-14 (周三) ===
+  {
+    id: '20260514-01',
+    date: '2026-05-14',
+    title: 'Anthropic免费开放Claude Code课程：涵盖Agent、MCP、API实战，20分钟即可上手',
+    summary: 'Anthropic在Skilljar平台上线免费课程库，包含Claude API开发、Claude Code实战和MCP入门等模块。视频教学+测验+认证，最快20分钟完成一门课。降低AI开发工具的学习门槛。',
+    source: 'Anthropic',
+    sourceUrl: 'https://zdnet.com/article/how-to-learn-claude-code-with-free-anthropic-ai-courses-online',
+    tags: ['#Agent', '#MCP', '#更新'],
+    accuracyScore: 95,
+    timelinessScore: 92,
+    utilityScore: 95,
+    totalScore: 94,
+    recommendReason: 'Anthropic在人才教育上开始发力——免费课程+认证=培养生态粘性。做AI产品的PM应该自己先跑一遍课程，既了解工具链能力边界，也能用来培训团队快速上手。',
+    createdAt: '2026-05-14T01:00:00Z'
+  },
+  {
+    id: '20260514-02',
+    date: '2026-05-14',
+    title: 'OECD数据：中国研发投入首次超越美国，AI三路径叠加优势显现',
+    summary: 'OECD 2026年3月数据显示，按购买力平价计算，2024年中国研发投入1.03万亿美元首次超过美国的1.01万亿。DeepSeek V4自研算法+蒸馏低成本+持续高研发三路径叠加，中国AI竞争力加速。',
+    source: '其他',
+    sourceUrl: 'https://www.huxiu.com/article/4857915.html',
+    tags: ['#战略', '#竞争'],
+    accuracyScore: 92,
+    timelinessScore: 88,
+    utilityScore: 88,
+    totalScore: 90,
+    recommendReason: '研发投入逆转不是象征性事件——它意味着中国AI从"追赶"进入"并行"。做产品规划的PM需要重新评估：哪些AI能力可以用国产模型平替，哪些还必须依赖海外API。',
+    createdAt: '2026-05-14T02:00:00Z'
+  },
+
+
+  {
+    id: '20260514-01',
+    date: '2026-05-14',
+    title: 'TikTok World发布Ads MCP：AI Agent可直接规划、投放、优化广告，广告行业进入Agent原生时代',
+    summary: 'TikTok World大会上发布TikTok Ads MCP，AI Agent可直连广告平台，端到端完成广告策划、投放和优化，无需人工操作Dashboard。Google、Meta、Amazon也已发布各自的MCP Server。行业趋势：大平台抢建Agent原生广告基础设施，控制数据流成为核心竞争点。',
+    source: '其他',
+    sourceUrl: 'https://pymnts.com/news/social-commerce/2026/tiktok-unleashes-ai-agents-on-its-ad-platform/',
+    tags: ['#MCP', '#Agent', '#发布'],
+    accuracyScore: 92,
+    timelinessScore: 95,
+    utilityScore: 92,
+    totalScore: 93,
+    recommendReason: '四大广告平台全部上线MCP Server，说明"Agent原生广告"不再是概念而是基础设施竞赛。做营销SaaS或广告技术的PM必须立即评估MCP集成方案——不接入就会被Agent生态排除在外。',
+    createdAt: '2026-05-14T01:00:00Z'
+  },
+  {
+    id: '20260514-02',
+    date: '2026-05-14',
+    title: 'OpenAI正式上线ChatGPT Ads Manager自助广告平台，2026年目标25亿美元广告收入',
+    summary: 'OpenAI推出ChatGPT Ads Manager自助广告平台Beta版，支持CPC竞价、Conversions API和像素追踪。广告试点扩展至英国、墨西哥、日本、巴西和韩国。已与电通、宏盟、阳狮、WPP合作，2026年广告收入目标25亿美元，2030年目标1000亿美元。',
+    source: 'OpenAI',
+    sourceUrl: 'https://agilebrandguide.com/yesterdays-marketing-technology-ai-news-may-13-2026/',
+    tags: ['#战略', '#竞争', '#发布'],
+    accuracyScore: 90,
+    timelinessScore: 92,
+    utilityScore: 90,
+    totalScore: 91,
+    recommendReason: 'ChatGPT从工具变媒体，广告业务25亿→1000亿的路线图说明OpenAI正在构建完整的商业闭环。做AI产品商业化的PM应该研究ChatGPT Ads的变现模式——AI产品的"免费+广告"路线已经有人跑通了。',
+    createdAt: '2026-05-14T02:00:00Z'
+  },
+  {
+    id: '20260514-03',
+    date: '2026-05-14',
+    title: 'Manifold Security扩展供应链安全工具覆盖7700+MCP Server，填补Agent安全空白',
+    summary: 'Manifold Security扩展Manifest工具至MCP Server安全评估，新增7700+MCP Server评分索引。每个Server获得Manifest Score（来源可信度+安全风险），检测prompt注入等行为风险。当前索引已超206,000项资产。MCP Server暴露HTTP端点、难以验证安全性的问题正在被解决。',
+    source: '其他',
+    sourceUrl: 'https://www.scworld.com/brief/manifold-security-expands-supply-chain-intelligence-to-cover-ai-agent-servers',
+    tags: ['#安全', '#MCP', '#Agent'],
+    accuracyScore: 92,
+    timelinessScore: 90,
+    utilityScore: 88,
+    totalScore: 90,
+    recommendReason: '7700+MCP Server的安全评估说明MCP生态已经大到需要专门的安全工具。企业级Agent产品如果使用第三方MCP Server，必须有安全评估流程。PM应该把MCP Server安全审查纳入产品合规检查清单。',
+    createdAt: '2026-05-14T03:00:00Z'
+  },
+  {
+    id: '20260514-04',
+    date: '2026-05-14',
+    title: 'xAI宣布5月15日退役多款旧版Grok模型，全面迁移至Grok 4.3',
+    summary: 'xAI宣布5月15日12:00 PT退役grok-4-1-fast-reasoning、grok-4-fast-reasoning、grok-4-0709等模型，推荐迁移至Grok 4.3。Grok 4.3被描述为"史上最快最智能模型"，支持reasoning和non-reasoning两种模式。',
+    source: '其他',
+    sourceUrl: 'https://docs.x.ai/developers/migration/may-15-retirement',
+    tags: ['#模型', '#更新'],
+    accuracyScore: 95,
+    timelinessScore: 95,
+    utilityScore: 85,
+    totalScore: 92,
+    recommendReason: 'Grok 4.3全面替代旧版，API迁移窗口只有1天。使用xAI API的团队需要立即检查依赖并完成迁移。从PM视角看，AI模型供应商的迭代速度越来越快，产品架构必须设计好模型切换的抽象层。',
+    createdAt: '2026-05-14T04:00:00Z'
+  },
+  {
+    id: '20260514-05',
+    date: '2026-05-14',
+    title: 'Emberos推出Merchant：AI可见性优化工具，帮品牌在ChatGPT/Claude/Gemini中管理SKU曝光',
+    summary: 'Emberos发布Merchant Agent，为品牌提供SKU级别的AI平台可见性优化。支持ChatGPT、Claude、Gemini、Perplexity等主流AI平台。标志着"AI可见性优化"（AIO）成为独立产品品类——当用户从搜索引擎转向AI助手获取推荐，品牌需要新的曝光管理工具。',
+    source: '其他',
+    sourceUrl: 'https://agilebrandguide.com/yesterdays-marketing-technology-ai-news-may-13-2026/',
+    tags: ['#Agent', '#发布', '#企业应用'],
+    accuracyScore: 88,
+    timelinessScore: 90,
+    utilityScore: 90,
+    totalScore: 89,
+    recommendReason: '"AI可见性优化"是一个全新的产品品类。当用户从Google搜索转向ChatGPT问推荐，传统的SEO工具就失效了。做电商或品牌营销的PM应该关注这个趋势——AI时代的"SEO"正在诞生。',
+    createdAt: '2026-05-14T05:00:00Z'
+  },
   // === 2026-05-13 (周二) ===
   {
     id: '20260513-01',
