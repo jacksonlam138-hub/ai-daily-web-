@@ -213,7 +213,7 @@ const sampleItems: DailyItem[] = [
     timelinessScore: 96,
     utilityScore: 95,
     totalScore: 95,
-    recommendReason: '马维斯是国内首个操作系统级AI Agent，直接对标Claude Computer Use和OpenAI Operator。1+5多Agent架构+跨端控制+端云算力切换是亮点。PM应关注：AI助手正在从"对话窗口"升级为"操作系统层"，腾讯的入局将加速国内Agent生态竞争。',
+    recommendReason: '马维斯是国内首个操作系统级AI Agent（阿里悟空是企业级Agent平台，3月发布），直接对标Claude Computer Use。1+5多Agent架构+跨端控制+端云算力切换是亮点。腾讯QClaw+Marvis双线布局（代码Agent+系统Agent），PM应关注：AI助手正在从"对话窗口"升级为"操作系统层"。',
     createdAt: '2026-05-20T08:00:00Z'
   },
   // === 2026-05-20 (周二) ===
