@@ -1,6 +1,52 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-05-27 (周二) ===
+  {
+    id: '20260527-01',
+    date: '2026-05-27',
+    title: '中国扩大AI人才出境限制：从DeepSeek扩展至阿里等私企，AI人才战进入"人才管制"阶段',
+    summary: '中国将AI人才出境限制从DeepSeek扩展至阿里巴巴等私营科技企业。高级AI研究人员需获出境审批，非正式指导要求避免赴美旅行。限制措施由北京、杭州等科技重镇地方政府执行，源于对技术泄露和国家安全的担忧。',
+    source: '其他',
+    sourceUrl: 'https://www.straitstimes.com/asia/east-asia/china-expands-travel-curbs-to-top-ai-talent-at-private-firms',
+    tags: ['#战略', '#竞争', '#安全'],
+    accuracyScore: 95,
+    timelinessScore: 97,
+    utilityScore: 88,
+    totalScore: 93,
+    recommendReason: 'AI人才出境限制说明AI已被中美双方视为战略级资源。PM应关注：全球AI人才流动正在受限，远程协作和跨国技术合作的难度将上升。如果你的AI团队有中方成员，需评估签证和出行风险对项目的影响。',
+    createdAt: '2026-05-27T02:00:00Z'
+  },
+  {
+    id: '20260527-02',
+    date: '2026-05-27',
+    title: 'Anthropic Project Glasswing月报：Claude Mythos发现10000+漏洞，90.6%真阳性率，50+合作方',
+    summary: 'Anthropic发布Project Glasswing月度更新：Claude Mythos在关键软件中发现超10000个高/危严重性漏洞，真阳性率90.6%，已与约50家组织建立合作。Project Glasswing于4月7日启动，与AWS/Apple/Google/Cisco等共建AI安全防线。Mythos漏洞发现能力远超传统扫描工具。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.helpnetsecurity.com/2026/05/26/anthropic-project-glasswing-update/',
+    tags: ['#安全', '#Agent', '#企业应用'],
+    accuracyScore: 96,
+    timelinessScore: 95,
+    utilityScore: 93,
+    totalScore: 95,
+    recommendReason: '10000+漏洞+90.6%真阳性率说明AI安全检测已超越传统工具的极限。PM应关注：AI安全能力正在从"防御"转向"主动攻击面发现"，这将重塑DevSecOps工具链。低代码平台的安全扫描能力需要重新评估——传统SAST/DAST可能已不够用。',
+    createdAt: '2026-05-26T18:00:00Z'
+  },
+  {
+    id: '20260527-03',
+    date: '2026-05-27',
+    title: 'Gemini 3.5 Flash正式GA：$1.50输入/$9输出每百万tokens，前沿模型价格底线再降',
+    summary: 'Google Gemini 3.5 Flash正式GA，定价$1.50输入/$9输出每百万tokens。超越3.1 Pro基准的同时成本不到一半，输出速度为其他前沿模型4倍。Adobe、Canva、CapCut同步宣布Gemini集成。API现已面向所有开发者开放。',
+    source: 'Google',
+    sourceUrl: 'https://blog.google/innovation-and-ai/technology/ai/',
+    tags: ['#发布', '#模型', '#API'],
+    accuracyScore: 98,
+    timelinessScore: 90,
+    utilityScore: 93,
+    totalScore: 94,
+    recommendReason: 'Gemini 3.5 Flash GA+$1.50定价确立了前沿模型的新价格底线。PM应关注：模型选择不再只是"选最强"而是"选性价比最优"。低代码平台的默认模型配置应该定期重新评估——现在可能用3.5 Flash替代更贵的模型。',
+    createdAt: '2026-05-25T18:00:00Z'
+  },
   // === 2026-05-26 (周一) ===
   {
     id: '20260526-01',
