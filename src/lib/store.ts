@@ -92,6 +92,36 @@ const sampleItems: DailyItem[] = [
     recommendReason: 'AI安全扫描从"模式匹配"升级为"架构级理解"，这是传统安全工具做不到的。PM应关注：AI安全能力正在成为DevSecOps标配。如果你的产品涉及代码生成，内置安全扫描将是差异化能力。',
     createdAt: '2026-05-28T15:00:00Z'
   },
+  {
+    id: '20260528-07',
+    date: '2026-05-28',
+    title: '美团发布"跑腿Skill"：将跑腿下单封装为Skill向AI助手生态开放，用户一句话即可下单',
+    summary: '美团将跑腿下单能力封装为"跑腿Skill"向AI助手生态开放，支持OpenClaw、微信、飞书等平台。用户用自然语言即可完成下单，系统自动处理场景识别、地址匹配、价格预估和订单提交。技术方案已在GitHub开源。',
+    source: '其他',
+    sourceUrl: 'https://www.ithome.com/0/955/356.htm',
+    tags: ['#Agent', '#低代码', '#发布'],
+    accuracyScore: 96,
+    timelinessScore: 90,
+    utilityScore: 95,
+    totalScore: 94,
+    recommendReason: '这是AI Agent Skill生态的里程碑案例——线下服务被封装为标准Skill，任何AI助手都能调用。PM应关注：Skill正在成为连接AI与真实服务的标准协议，低代码平台需要评估是否支持Skill接入，让用户通过AI助手直接触达业务能力。',
+    createdAt: '2026-05-28T16:00:00Z'
+  },
+  {
+    id: '20260528-08',
+    date: '2026-05-28',
+    title: '快手Kling AI视频年化收入突破$5亿，AI视频从技术demo进入规模化商业变现',
+    summary: '快手Kling AI视频生成单元年化收入突破$5亿，Q1收入超6.5亿人民币（同比增300%+）。服务全球超6000万创作者，生成超6亿条视频。快手正为Kling寻求独立融资，可能分拆。',
+    source: '其他',
+    sourceUrl: 'https://www.theinformation.com/briefings/kuaishous-kling-ai-video-unit-reaches-500-million-annualized-revenue',
+    tags: ['#企业应用', '#竞争'],
+    accuracyScore: 95,
+    timelinessScore: 88,
+    utilityScore: 88,
+    totalScore: 91,
+    recommendReason: '$5亿年化收入证明AI视频生成已从技术demo进入真实商业变现。PM应关注：AI视频不再是噱头，而是有付费意愿的产品品类。低代码平台如果集成了AI视频能力，这验证了用户愿意为此付费。',
+    createdAt: '2026-05-28T17:00:00Z'
+  },
   // === 2026-05-27 (周二) ===
   {
     id: '20260527-01',
