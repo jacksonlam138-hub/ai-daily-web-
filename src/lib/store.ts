@@ -1,6 +1,97 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-05-28 (周三) ===
+  {
+    id: '20260528-01',
+    date: '2026-05-28',
+    title: 'KPMG部署Claude至27.6万员工：Big Four三家全部选择Claude，110万顾问成为分发渠道',
+    summary: 'KPMG与Anthropic宣布KPMG Digital Gateway Powered by Claude，覆盖138个国家27.6万专业人员。集成Claude Cowork+Managed Agents，首批覆盖税务/法律/私募股权。加上Deloitte(47万人)和PwC，Big Four三家共110万+顾问将在9月前全面使用Claude。EY尚未宣布，面临竞争压力。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.buildfastwithai.com/blogs/ai-news-today-may-28-2026',
+    tags: ['#Agent', '#企业应用', '#战略'],
+    accuracyScore: 97,
+    timelinessScore: 96,
+    utilityScore: 96,
+    totalScore: 96,
+    recommendReason: 'Big Four三家110万顾问使用Claude，意味着Fortune 500的每家公司都会通过其审计/咨询顾问接触到Claude。这不是营销，是分发渠道。PM应关注：企业AI选型的"推荐"正在从IT部门转移到外部顾问。你的客户可能正在被Big Four顾问"推荐"Claude。',
+    createdAt: '2026-05-28T10:00:00Z'
+  },
+  {
+    id: '20260528-02',
+    date: '2026-05-28',
+    title: 'OpenAI成立$40亿咨询子公司DeployCo：Palantir式前置工程师模式，直接对抗Anthropic+Big Four',
+    summary: 'OpenAI成立DeployCo——$40亿咨询子公司，TPG领投，Goldman Sachs/McKinsey/Bain Capital/Capgemini联合投资。收购Tomoro（150名前置工程师），采用Palantir FDE（前置部署工程师）模式直入客户组织。OpenAI企业API市占率从2023年约50%降至2025年中约25%，DeployCo是夺回企业市场的直接反击。',
+    source: 'OpenAI',
+    sourceUrl: 'https://www.buildfastwithai.com/blogs/ai-news-today-may-28-2026',
+    tags: ['#战略', '#竞争', '#企业应用'],
+    accuracyScore: 96,
+    timelinessScore: 95,
+    utilityScore: 93,
+    totalScore: 95,
+    recommendReason: 'OpenAI用$40亿建咨询公司说明AI竞争的核心已从"模型能力"转向"部署层控制"。PM应关注：AI产品的竞争不再是谁的模型更强，而是谁能把AI嵌入客户的工作流。低代码平台本身就是部署层，这个赛道正在被巨头直接竞争。',
+    createdAt: '2026-05-28T11:00:00Z'
+  },
+  {
+    id: '20260528-03',
+    date: '2026-05-28',
+    title: 'Cohere收购Aleph Alpha：$200亿跨大西洋主权AI巨头诞生，加拿大+德国数据主权联盟',
+    summary: 'Cohere(加拿大)收购Aleph Alpha(德国)，合并估值约$200亿。Schwarz Group(Lidl母公司)投资$6亿。Aleph Alpha带来德国政府/Deutsche Bank/SAP/Bosch关系，Cohere带来RBC/Fujitsu/LG客户+加拿大政府$2.4亿资金。加德两国在慕尼黑安全会议启动"主权技术联盟"，此交易是民间版本。',
+    source: '其他',
+    sourceUrl: 'https://www.buildfastwithai.com/blogs/ai-news-today-may-28-2026',
+    tags: ['#战略', '#竞争', '#安全'],
+    accuracyScore: 95,
+    timelinessScore: 93,
+    utilityScore: 90,
+    totalScore: 93,
+    recommendReason: '主权AI从概念变成生意——$200亿估值说明"数据不出国"正在成为企业刚需。PM应关注：如果你的客户在欧盟或涉及政府数据，主权AI方案将成为合规必需品。低代码平台需要评估是否支持本地部署+数据主权。',
+    createdAt: '2026-05-28T12:00:00Z'
+  },
+  {
+    id: '20260528-04',
+    date: '2026-05-28',
+    title: '加拿大裁定ChatGPT违反隐私法：过度采集+无同意+含儿童数据，首个国家级AI训练数据违规裁决',
+    summary: '加拿大隐私专员联合魁北克/BC/阿尔伯塔省裁定OpenAI开发ChatGPT违反加拿大隐私法。三项违规：过度采集网络个人信息、缺乏有效同意和透明度、对敏感数据(含健康信息和儿童数据)保护不足。联邦层面有条件和解，但三省继续执法。由CAIDP 2023年投诉引发，历时三年调查。',
+    source: 'OpenAI',
+    sourceUrl: 'https://www.buildfastwithai.com/blogs/ai-news-today-may-28-2026',
+    tags: ['#安全', '#战略'],
+    accuracyScore: 95,
+    timelinessScore: 90,
+    utilityScore: 90,
+    totalScore: 92,
+    recommendReason: '首个国家级AI训练数据隐私裁决，标志"公开网络数据=可训练"的法律辩护正在失效。PM应关注：AI产品的数据合规策略需要重新评估。低代码平台如果集成了AI功能，需确保训练数据来源合法，否则可能面临类似风险。',
+    createdAt: '2026-05-28T13:00:00Z'
+  },
+  {
+    id: '20260528-05',
+    date: '2026-05-28',
+    title: 'ChatGPT语音模式用旧模型：Karpathy曝光GPT-4o跑语音vs GPT-5.5跑文本，13个月能力差距',
+    summary: 'Andrej Karpathy指出ChatGPT语音模式运行GPT-4o时代模型（2024年4月知识截止），而文本使用GPT-5.5。$200/月Pro用户在语音和文本间体验13个月的能力差距。技术原因：实时语音需低延迟推理，前沿模型成本无法支撑。Google Gemini Live已用最新3.5 Flash作为对比。',
+    source: 'OpenAI',
+    sourceUrl: 'https://www.buildfastwithai.com/blogs/ai-news-today-may-28-2026',
+    tags: ['#竞争', '#模型'],
+    accuracyScore: 94,
+    timelinessScore: 90,
+    utilityScore: 85,
+    totalScore: 90,
+    recommendReason: '多模态产品的模型一致性正在成为用户新预期。PM应关注：如果你的产品提供语音/文本多模态，用户会默认各模态用同一模型。公开各模态的模型版本将成为产品透明度的标配。',
+    createdAt: '2026-05-28T14:00:00Z'
+  },
+  {
+    id: '20260528-06',
+    date: '2026-05-28',
+    title: 'Claude Security公测：企业级代码库漏洞扫描，Opus 4.7驱动组件交互级安全分析',
+    summary: 'Anthropic发布Claude Security公测版，面向Enterprise客户，基于Opus 4.7。与传统SAST不同，能理解组件间交互关系，发现架构级漏洞、权限提升路径和认证绕过模式。KPMG合作将此能力部署至客户系统，Palo Alto Networks参与Project Glasswing联盟。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.buildfastwithai.com/blogs/ai-news-today-may-28-2026',
+    tags: ['#安全', '#Agent', '#企业应用'],
+    accuracyScore: 95,
+    timelinessScore: 94,
+    utilityScore: 93,
+    totalScore: 94,
+    recommendReason: 'AI安全扫描从"模式匹配"升级为"架构级理解"，这是传统安全工具做不到的。PM应关注：AI安全能力正在成为DevSecOps标配。如果你的产品涉及代码生成，内置安全扫描将是差异化能力。',
+    createdAt: '2026-05-28T15:00:00Z'
+  },
   // === 2026-05-27 (周二) ===
   {
     id: '20260527-01',
