@@ -1,6 +1,69 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+
+  // === 2026-05-29 (周四) ===
+  {
+    id: '20260529-01',
+    date: '2026-05-29',
+    title: 'Anthropic完成$650亿H轮融资，$9650亿估值超越OpenAI成为全球最有价值AI公司',
+    summary: 'Anthropic完成$650亿H轮融资，投后估值$9650亿，由Altimeter Capital、Dragoneer、Greenoaks领投。超越OpenAI约$7300亿估值，数月内从G轮$3800亿估值增长153%。资金将用于算力扩张和企业市场推进。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.cnbc.com/2026/05/28/anthropic-open-ai-startup-value.html',
+    tags: ['#融资', '#战略', '#竞争'],
+    accuracyScore: 98,
+    timelinessScore: 98,
+    utilityScore: 92,
+    totalScore: 96,
+    recommendReason: 'Anthropic估值$9650亿说明资本市场认定"安全优先"路线赢了。PM应关注：AI基础设施选型现在不仅是技术决策，更是投资组合决策——你的客户和投资方都在押注Anthropic生态。低代码平台选择底层模型时，生态势能已成为比模型能力更重要的考量因素。',
+    createdAt: '2026-05-29T02:00:00Z'
+  },
+  {
+    id: '20260529-02',
+    date: '2026-05-29',
+    title: 'Claude Opus 4.8正式发布，同步预告Mythos级网络安全模型数周内面向客户推出',
+    summary: 'Anthropic发布Claude Opus 4.8取代4月发布的Opus 4.7。同时Reuters报道Anthropic将在数周内推出Mythos级模型——此前因网络安全能力过强（SWE-bench 93.9%）而拒绝公开的模型将面向客户发布，标志着AI安全能力商业化的重要节点。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.anthropic.com/claude/opus',
+    tags: ['#模型', '#发布', '#安全'],
+    accuracyScore: 97,
+    timelinessScore: 97,
+    utilityScore: 94,
+    totalScore: 96,
+    recommendReason: 'Mythos级模型的"解禁"意味着Anthropic认为市场已准备好接受更强的AI安全工具。PM应关注：网络安全AI能力正在从"太危险不能发"变成"收费产品"。如果你的产品涉及代码安全审计，这将是直接竞争或集成机会。',
+    createdAt: '2026-05-29T03:00:00Z'
+  },
+  {
+    id: '20260529-03',
+    date: '2026-05-29',
+    title: '微软Build 2026将发布自研AI编码模型：在Claude和Codex双面夹击下的回归尝试',
+    summary: '据The Information报道，微软将在6月2-3日Build 2026大会发布全新自研AI模型套件含编码模型。此前GitHub Copilot已从通用OpenAI模型转向GPT-5.3-Codex，微软正寻求在编码AI赛道构建自主能力，应对Claude Code和OpenAI Codex的双重竞争。',
+    source: 'Microsoft',
+    sourceUrl: 'https://www.reuters.com/business/microsoft-release-new-coding-model-next-week-information-reports-2026-05-28/',
+    tags: ['#竞争', '#战略', '#模型'],
+    accuracyScore: 95,
+    timelinessScore: 96,
+    utilityScore: 93,
+    totalScore: 95,
+    recommendReason: '微软自研编码模型说明编码AI赛道已从"辅助工具"升级为"战略高地"。PM应关注：AI编码正在成为各巨头的核心竞争领域，低代码平台需要在Claude、Codex、Copilot和潜在微软自研模型之间做多模型支持策略。',
+    createdAt: '2026-05-29T04:00:00Z'
+  },
+  {
+    id: '20260529-04',
+    date: '2026-05-29',
+    title: '闪迪CTO：大模型KV缓存与MoE架构趋势正将AI竞赛从算力转向"内存竞赛"',
+    summary: '闪迪CTO指出大模型KV缓存需求和MoE架构趋势正将全球AI竞赛从算力转向内存。HBF（高带宽闪存）产品计划明年推出，解决AI训练和推理中的内存带宽瓶颈。这一趋势将影响AI基础设施成本结构。',
+    source: '其他',
+    sourceUrl: 'https://www.cls.cn/',
+    tags: ['#算力', '#战略'],
+    accuracyScore: 92,
+    timelinessScore: 95,
+    utilityScore: 85,
+    totalScore: 91,
+    recommendReason: 'AI竞赛的瓶颈从GPU算力转向内存，意味着推理成本的下降曲线可能改变。PM应关注：如果内存成为新瓶颈，大模型推理成本可能不会按预期快速下降，影响AI功能的定价策略和产品经济模型。',
+    createdAt: '2026-05-29T05:00:00Z'
+  },
+
   // === 2026-05-28 (周三) ===
   {
     id: '20260528-01',
