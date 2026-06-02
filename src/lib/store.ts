@@ -63,6 +63,84 @@ const sampleItems: DailyItem[] = [
     recommendReason: 'AI竞赛的瓶颈从GPU算力转向内存，意味着推理成本的下降曲线可能改变。PM应关注：如果内存成为新瓶颈，大模型推理成本可能不会按预期快速下降，影响AI功能的定价策略和产品经济模型。',
     createdAt: '2026-05-29T05:00:00Z'
   },
+  // === 2026-06-02 (周一) ===
+  {
+    id: '20260602-01',
+    date: '2026-06-02',
+    title: 'Microsoft Build 2026开幕：自研AI编码模型+Copilot多Agent编排+Claude入驻Azure',
+    summary: 'Microsoft Build 2026在旧金山开幕。核心发布：自研AI编码模型（对标Claude Code/Codex）、GitHub Copilot多Agent编排、Azure AI Foundry正式支持Claude模型、Agent 365企业审计能力。Satya Nadella和Kevin Scott主讲。微软同时允许内部数千员工使用Claude Code。',
+    source: 'Microsoft',
+    sourceUrl: 'https://www.cnbc.com/2026/06/01/microsoft-and-google-take-on-anthropic-and-openai-in-ai-coding-models.html',
+    tags: ['#发布', '#Agent', '#竞争'],
+    accuracyScore: 95,
+    timelinessScore: 98,
+    utilityScore: 95,
+    totalScore: 96,
+    recommendReason: 'Build 2026三大信号：(1)微软自研编码模型说明AI编码赛道已成必争之地；(2)Azure引入Claude说明多模型策略成为主流；(3)多Agent编排说明企业AI从"单Agent"走向"Agent工作流"。PM应关注：低代码平台需要同时支持多模型+多Agent编排。',
+    createdAt: '2026-06-02T16:00:00Z'
+  },
+  // === 2026-06-01 (周日) ===
+  {
+    id: '20260601-01',
+    date: '2026-06-01',
+    title: 'Nvidia发布RTX Spark PC芯片：与微软合作"重新发明PC"，AI Agent本地运行时代来临',
+    summary: 'Nvidia CEO黄仁勋在Computex 2026前夕发布RTX Spark PC芯片，与微软合作三年打造，将AI能力直接带入笔记本电脑和台式机。2026年定位为"Agentic AI转折年"——AI Agent将在本地PC硬件上运行，不再依赖云端。AMD、Intel、Apple、Qualcomm同场竞争。',
+    source: '其他',
+    sourceUrl: 'https://www.reuters.com/world/china/nvidia-ceo-kick-off-dominate-computex-gathering-taipei-2026-05-31/',
+    tags: ['#发布', '#Agent', '#竞争'],
+    accuracyScore: 96,
+    timelinessScore: 97,
+    utilityScore: 93,
+    totalScore: 95,
+    recommendReason: 'AI Agent从云端走向本地PC是重大架构转变。PM应关注：本地Agent意味着更低延迟、更低成本、更好隐私——但也意味着模型能力受限。低代码平台需要同时准备云端和本地两种部署模式。',
+    createdAt: '2026-06-01T06:00:00Z'
+  },
+  {
+    id: '20260601-02',
+    date: '2026-06-01',
+    title: 'SpaceX IPO路演启动：SPCX 6月12日纳斯达克上市，$1.75万亿估值，$750亿融资',
+    summary: 'SpaceX启动IPO路演，6月12日纳斯达道上市（代码SPCX），目标估值$1.75万亿，融资$750亿（史上最大IPO）。Musk持股42%价值超$7350亿。含Starlink+xAI/X+SpaceX三大业务。Anthropic $150亿/年租用Colossus算力是核心收入来源。30%零售份额通过Robinhood/Fidelity/Schwab分配。',
+    source: '其他',
+    sourceUrl: 'https://purepowerpicks.com/spacex-ipo-spcx-everything-you-need-to-know/',
+    tags: ['#融资', '#战略', '#算力'],
+    accuracyScore: 95,
+    timelinessScore: 95,
+    utilityScore: 85,
+    totalScore: 92,
+    recommendReason: 'SPCX上市将首次公开AI算力基础设施的财务数据——Anthropic $150亿/年的算力租金、Colossus运营成本等。PM应关注：公开市场对AI算力基础设施的定价将影响所有AI产品的成本结构。',
+    createdAt: '2026-06-01T12:00:00Z'
+  },
+  // === 2026-05-30 (周五) ===
+  {
+    id: '20260530-01',
+    date: '2026-05-30',
+    title: 'Claude Opus 4.8正式发布：Effort Controls+Claude Code动态工作流+安全接近Mythos级',
+    summary: 'Anthropic发布Claude Opus 4.8，核心更新：(1)Effort Controls——用户可调节Claude投入的推理力度，直接影响token消耗；(2)Claude Code动态工作流——支持并行子Agent、实时验证、结果报告；(3)Messages API实时更新——Agent运行中可修改指令/权限/上下文；(4)安全性接近Mythos Preview级别。保持Opus 4.7定价不变。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.ghacks.net/2026/05/30/anthropic-releases-claude-opus-4-8-with-effort-controls-and-dynamic-workflows-for-claude-code/',
+    tags: ['#发布', '#模型', '#Agent'],
+    accuracyScore: 97,
+    timelinessScore: 98,
+    utilityScore: 96,
+    totalScore: 97,
+    recommendReason: 'Effort Controls是里程碑——AI首次让用户自主选择"想多深"，直接影响成本。PM应关注：按推理深度计费可能成为AI产品定价的新范式。动态工作流让Claude Code从"编码助手"升级为"项目管理工具"。',
+    createdAt: '2026-05-30T14:00:00Z'
+  },
+  {
+    id: '20260530-02',
+    date: '2026-05-30',
+    title: 'Anthropic完成$650亿融资+Opus 4.8同步发布：$9650亿估值，可能是IPO前最后一轮',
+    summary: 'Anthropic同日宣布$650亿H轮融资关闭（TechCrunch确认），估值$9650亿，可能是IPO前最后一轮私人融资。与Opus 4.8发布同步进行，显示"技术+资本"双轮驱动策略。机构投资者曾承诺$50亿只为获得会议机会。Anthropic CFO Krishna Rao主导本轮。',
+    source: 'Anthropic',
+    sourceUrl: 'https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/',
+    tags: ['#融资', '#战略'],
+    accuracyScore: 97,
+    timelinessScore: 95,
+    utilityScore: 90,
+    totalScore: 94,
+    recommendReason: '$9650亿+可能IPO前最后一轮=Anthropic公开市场倒计时开始。PM应关注：Anthropic上市后将面临盈利压力，Claude定价和企业级功能可能调整。如果你的产品深度依赖Claude，需要评估上市后的定价风险。',
+    createdAt: '2026-05-30T10:00:00Z'
+  },
 
   // === 2026-05-28 (周三) ===
   {
