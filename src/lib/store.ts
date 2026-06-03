@@ -1,6 +1,52 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-06-02 (周一) ===
+  {
+    id: '20260602-01',
+    date: '2026-06-02',
+    title: 'Microsoft Build 2026 Day 1：发布7个自研MAI模型+GitHub Copilot编码Agent+开放信任栈',
+    summary: 'Microsoft Build 2026开幕，Satya Nadella和Mustafa Suleyman主讲。核心发布：(1)7个自研MAI模型家族——含MAI-Thinking-1（首个推理模型）、MAI-Image-2.5（图像编辑Arena第2）、语音/转录模型；(2)GitHub Copilot编码Agent——通过分配Issue或Prompt触发自主编码；(3)AI Agent开放信任栈——跨框架安全信任基础设施；(4)Azure托管竞品模型（Grok/Mistral/Black Forest Labs）。微软在AI领域从"依赖OpenAI"转向"多模型自主"。',
+    source: 'Microsoft',
+    sourceUrl: 'https://news.microsoft.com/build-2026/',
+    tags: ['#发布', '#Agent', '#模型', '#竞争'],
+    accuracyScore: 97,
+    timelinessScore: 98,
+    utilityScore: 96,
+    totalScore: 97,
+    recommendReason: 'Build 2026三条主线都很重要：(1)MAI-Thinking-1说明微软加入推理模型竞赛；(2)Copilot编码Agent从"辅助"变为"自主"——直接对标Claude Code/Codex；(3)多模型托管策略说明AI平台化是趋势。PM应关注：低代码平台的AI后端不应绑定单一模型，多模型支持已成为企业级标配。',
+    createdAt: '2026-06-02T17:30:00Z'
+  },
+  {
+    id: '20260602-02',
+    date: '2026-06-02',
+    title: 'Trump签署AI行政令：要求AI公司自愿向政府提供新模型早期访问权限',
+    summary: 'Trump总统签署AI行政令，建立自愿性项目让AI公司在公开发布前向政府分享新模型。聚焦AI网络安全和安全评估。该命令原定5月签署但因白宫内部分歧推迟。这是美国首个要求AI公司"提前共享模型"的行政框架。',
+    source: '其他',
+    sourceUrl: 'https://www.cnbc.com/video/2026/06/02/trump-signs-ai-executive-order-asking-companies-to-give-government-early-access-to-models.html',
+    tags: ['#安全', '#战略'],
+    accuracyScore: 96,
+    timelinessScore: 98,
+    utilityScore: 88,
+    totalScore: 94,
+    recommendReason: 'AI模型"提前共享"框架说明政府正在建立AI安全审查通道。PM应关注：未来AI产品发布可能需要预留政府审查窗口期。如果做企业级AI产品，需关注该行政令的具体实施细则——可能影响产品上市时间线。',
+    createdAt: '2026-06-02T19:00:00Z'
+  },
+  {
+    id: '20260602-03',
+    date: '2026-06-02',
+    title: 'Alphabet宣布$800亿股票发行+已发$200亿债券：2026年AI基础设施支出$1750-1850亿',
+    summary: 'Alphabet（Google母公司）宣布$800亿股权融资计划（首期$100亿，Q3起$400亿递延销售），另已发行$200亿债券。2026年资本支出目标$1750-1850亿，约为上年两倍，全部用于AI基础设施。这是科技公司史上最大规模股权融资之一。Berkshire Hathaway参与。',
+    source: 'Google',
+    sourceUrl: 'https://www.ft.com/content/341f151b-f472-4530-8579-d4b803519257',
+    tags: ['#算力', '#战略', '#融资'],
+    accuracyScore: 96,
+    timelinessScore: 95,
+    utilityScore: 88,
+    totalScore: 93,
+    recommendReason: '$800亿股票+$200亿债券+$1850亿年capex=Google在AI基础设施上的历史性押注。PM应关注：当Google投入如此规模的算力，模型成本将进一步下降，但小公司更难竞争。低代码平台应利用大厂成本下降红利，而非试图自建算力。',
+    createdAt: '2026-06-02T12:00:00Z'
+  },
 
   // === 2026-05-29 (周四) ===
   {
@@ -62,22 +108,6 @@ const sampleItems: DailyItem[] = [
     totalScore: 91,
     recommendReason: 'AI竞赛的瓶颈从GPU算力转向内存，意味着推理成本的下降曲线可能改变。PM应关注：如果内存成为新瓶颈，大模型推理成本可能不会按预期快速下降，影响AI功能的定价策略和产品经济模型。',
     createdAt: '2026-05-29T05:00:00Z'
-  },
-  // === 2026-06-02 (周一) ===
-  {
-    id: '20260602-01',
-    date: '2026-06-02',
-    title: 'Microsoft Build 2026开幕：自研AI编码模型+Copilot多Agent编排+Claude入驻Azure',
-    summary: 'Microsoft Build 2026在旧金山开幕。核心发布：自研AI编码模型（对标Claude Code/Codex）、GitHub Copilot多Agent编排、Azure AI Foundry正式支持Claude模型、Agent 365企业审计能力。Satya Nadella和Kevin Scott主讲。微软同时允许内部数千员工使用Claude Code。',
-    source: 'Microsoft',
-    sourceUrl: 'https://www.cnbc.com/2026/06/01/microsoft-and-google-take-on-anthropic-and-openai-in-ai-coding-models.html',
-    tags: ['#发布', '#Agent', '#竞争'],
-    accuracyScore: 95,
-    timelinessScore: 98,
-    utilityScore: 95,
-    totalScore: 96,
-    recommendReason: 'Build 2026三大信号：(1)微软自研编码模型说明AI编码赛道已成必争之地；(2)Azure引入Claude说明多模型策略成为主流；(3)多Agent编排说明企业AI从"单Agent"走向"Agent工作流"。PM应关注：低代码平台需要同时支持多模型+多Agent编排。',
-    createdAt: '2026-06-02T16:00:00Z'
   },
   // === 2026-06-01 (周日) ===
   {
