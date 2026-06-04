@@ -48,6 +48,68 @@ const sampleItems: DailyItem[] = [
     createdAt: '2026-06-02T12:00:00Z'
   },
 
+  // === 2026-06-04 (周三) ===
+  {
+    id: '20260604-01',
+    date: '2026-06-04',
+    title: 'Microsoft Build Day 2：MAI-Thinking-1匹敌Claude Sonnet 4.6 + Aion本地Agent模型 + Scout跨应用AI Agent + Majorana 2量子2029',
+    summary: 'Build Day 2深度发布：(1)MAI-Thinking-1盲测偏好与Claude Sonnet 4.6持平，将接入365 Copilot Agent Mode；(2)Aion 1.0 Plan——14B参数本地推理模型，支持Windows设备上Agent工作流；(3)Scout——跨应用上下文AI Agent，理解全桌面工作状态；(4)Majorana 2量子处理器，目标2029年可扩展量子计算机；(5)Surface RTX Spark Dev Box（1 PFLOP）+ Microsoft Discovery GA + Mayo Clinic医疗AI合作。',
+    source: 'Microsoft',
+    sourceUrl: 'https://blogs.microsoft.com/blog/2026/06/02/microsoft-build-2026-be-yourself-at-work/',
+    tags: ['#发布', '#Agent', '#模型', '#竞争'],
+    accuracyScore: 97,
+    timelinessScore: 98,
+    utilityScore: 96,
+    totalScore: 97,
+    recommendReason: 'Build Day 2三条线对PM最关键：(1)MAI-Thinking-1达到Sonnet 4.6水平意味着企业选型从"只有Claude"变成"Claude vs MAI"；(2)Aion本地Agent说明Windows正在变成Agent操作系统——低代码平台需要考虑本地Agent集成；(3)Scout跨应用Agent是"OS级AI助手"的首次落地，可能重新定义工作流自动化。',
+    createdAt: '2026-06-03T18:00:00Z'
+  },
+  {
+    id: '20260604-02',
+    date: '2026-06-04',
+    title: 'Meta发布企业级Business AI Agent：组建Enterprise Solutions部门，直接嵌入客户内部',
+    summary: 'Meta于6月3日正式发布企业级AI Business Agent，旨在自动化企业日常运营。同步成立Enterprise Solutions部门，将工程师和产品经理直接嵌入企业客户内部。此前Meta Business AI已周均处理1000万次对话、超80亿广告主使用其GenAI工具。目标是2026年底品牌可仅用AI工具完成完整广告投放。',
+    source: '其他',
+    sourceUrl: 'https://www.pymnts.com/meta/2026/meta-is-coming-for-enterprise-ai/',
+    tags: ['#Agent', '#竞争', '#战略'],
+    accuracyScore: 96,
+    timelinessScore: 98,
+    utilityScore: 92,
+    totalScore: 95,
+    recommendReason: 'Meta从社交广告AI切入企业Agent市场，路径很聪明——已有80亿广告主基础。PM应关注：Meta的"嵌入客户"模式是AI企业服务的新范式，低代码平台如果做企业AI，可能面对客户期望你"驻场"而非纯SaaS。AI Agent市场竞争者从御三家扩展到社交巨头。',
+    createdAt: '2026-06-03T14:00:00Z'
+  },
+  {
+    id: '20260604-03',
+    date: '2026-06-04',
+    title: 'Sam Altman Stargate Michigan访谈：编码模型是AI需求最大驱动力，单数据中心capex $46-56B',
+    summary: 'Sam Altman在Stargate Michigan数据中心接受CNBC采访。核心观点：(1)"编码模型是AI需求最大驱动力，我们严重低估了需求"；(2)Stargate Michigan初始$16B+设备$30-40B=总capex $46-56B——人类史上最贵数据中心；(3)"谈论AI裁员的公司恰恰是AI用得最少的"；(4)OpenAI向密歇根40万学生提供$4500万Codex积分。',
+    source: 'OpenAI',
+    sourceUrl: 'https://www.cnbc.com/2026/06/01/stargate-project-michigan-live-updates.html',
+    tags: ['#战略', '#算力', '#竞争'],
+    accuracyScore: 97,
+    timelinessScore: 95,
+    utilityScore: 93,
+    totalScore: 95,
+    recommendReason: 'Altman明确编码模型=AI最大需求来源，这对低代码/AI开发工具赛道是强信号。PM应关注：(1)编码AI的投入只会加速不会减速；(2)$46-56B单数据中心说明算力成本短期内不会是瓶颈——低代码平台应该积极接入最强编码模型而非担心成本。',
+    createdAt: '2026-06-01T20:00:00Z'
+  },
+  {
+    id: '20260604-04',
+    date: '2026-06-04',
+    title: '经济学人：SpaceX+OpenAI+Anthropic三巨头IPO或向美股新增$4万亿市值，史上最大IPO潮',
+    summary: '经济学人6月1日分析：SpaceX（$1.75万亿）+Anthropic（$9650亿）+OpenAI（~$1万亿）三大IPO如2026年完成，将向美股新增约$4万亿市值——约占美国GDP的13%。机构投资者需抛售现有持仓以认购，可能引发跨板块资金再配置。三家IPO计划时间：SpaceX 6月、OpenAI 9月、Anthropic 10月。',
+    source: '其他',
+    sourceUrl: 'https://www.economist.com/finance-and-economics/2026/06/01/can-the-stockmarket-swallow-anthropic-spacex-and-openai',
+    tags: ['#融资', '#战略', '#竞争'],
+    accuracyScore: 96,
+    timelinessScore: 94,
+    utilityScore: 90,
+    totalScore: 93,
+    recommendReason: '$4万亿IPO潮意味着资本市场正在对AI进行史上最大规模的定价。PM应关注：IPO后的公开市场财务数据将首次揭示AI模型API的真实毛利率和客户留存——这些数据将直接影响所有AI产品的定价策略和商业模式设计。',
+    createdAt: '2026-06-01T08:00:00Z'
+  },
+
   // === 2026-05-29 (周四) ===
   {
     id: '20260529-01',
