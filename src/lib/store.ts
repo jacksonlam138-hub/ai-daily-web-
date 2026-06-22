@@ -1,6 +1,40 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-06-20 (周六) ===
+  {
+    id: '20260620-01',
+    date: '2026-06-20',
+    title: 'Anthropic Claude Code推出ultracode模式：xhigh effort+自动workflow，押注"AI自主完成复杂任务"',
+    summary: 'Anthropic Claude Code 6月20日推出ultracode新模式：通过effort菜单开启，将effort级别提升至xhigh，并由Claude自动判断何时调用workflow处理任务。早期访问用户和Anthropic内部团队已在用此模式做dynamic workflows（动态工作流）。标志Claude Code从"被动响应工具"向"自主任务编排"演进，与Codex/Cursor的agent化路线一致。',
+    source: 'Anthropic',
+    sourceUrl: 'https://releasebot.io/updates/anthropic/claude',
+    tags: ['#Agent', '#更新', '#低代码'],
+    accuracyScore: 93,
+    timelinessScore: 95,
+    utilityScore: 92,
+    totalScore: 93,
+    recommendReason: 'Claude Code进入"自主编排"阶段。PM应关注：(1)ultracode+xhigh effort+auto workflow三件套意味着AI编程工具正从"代码补全"升级为"任务编排"——低代码平台的核心价值"省去编排"被直接冲击，必须重新定位差异化；(2)dynamic workflows是agent从"单步执行"走向"长程任务"的关键能力，与GLM-5.2的"长程任务"叙事同步——长程任务执行是2026下半年AI产品的核心战场；(3)早期用户已在生产环境用，意味着该模式成熟度比预想高，竞品（Cursor/Codex）的反应会在4-8周内出现。',
+    createdAt: '2026-06-20T15:00:00Z'
+  },
+
+  // === 2026-06-18 (周四) ===
+  {
+    id: '20260618-01',
+    date: '2026-06-18',
+    title: 'Manus原投资方（HSG/真格/腾讯）计划以$20亿从Meta回购：中国国安理由解构原交易，目标港股IPO',
+    summary: 'Reuters 6月18日报道：Manus早期中国投资方（HSG、ZhenFund、Tencent）计划以Meta当初支付的同等价格$20亿回购公司，融资$10亿完成交易。中国当局6月引用国家安全理由要求解构原Meta-Manus交易，Manus将重组为中国合资公司。Manus营收已从收购时翻4倍达$4-5亿/年。后续可能在香港IPO。',
+    source: '其他',
+    sourceUrl: 'https://www.reuters.com/world/asia-pacific/manus-original-investors-plan-buy-back-ai-firm-meta-2-billion-information-2026-06-18/',
+    tags: ['#Agent', '#战略', '#竞争'],
+    accuracyScore: 96,
+    timelinessScore: 98,
+    utilityScore: 92,
+    totalScore: 95,
+    recommendReason: 'AI Agent赛道再现"国家级介入"。PM应关注：(1)国安理由强制解构海外AI收购意味着AI Agent已被多国视为战略资产——跨境数据流和团队架构是产品设计前置约束；(2)Manus营收6个月翻4倍（$1亿→$4-5亿）说明AI Agent真实商业化曲线比想象中陡——C端Agent不是泡沫；(3)港股IPO路径说明中国AI Agent公司的资本退出通道正在形成，后续会有更多Agent创业公司获得资本青睐。',
+    createdAt: '2026-06-18T14:00:00Z'
+  },
+
   // === 2026-06-17 (周一) ===
   {
     id: '20260617-01',
@@ -31,6 +65,21 @@ const sampleItems: DailyItem[] = [
     totalScore: 96,
     recommendReason: '数据层企业Agent是新赛道。PM应关注：(1)Genie Ontology实时知识图谱说明"数据上下文"正成为企业Agent的核心壁垒——RAG之外的新范式；(2)App Builder让业务团队vibe-code自定义Agent说明企业级低代码Agent构建已成标配功能；(3)Databricks定位"数据专业化"而非通用Agent，说明Agent市场正在细分——垂类Agent比通用Agent更有落地价值。',
     createdAt: '2026-06-16T12:00:00Z'
+  },
+  {
+    id: '20260617-03',
+    date: '2026-06-17',
+    title: '智谱GLM-5.2上线开源：主攻长程任务，Code Arena全球第一，已完成国产算力适配',
+    summary: '智谱6月17日上线并开源GLM-5.2（Hugging Face + ModelScope，MIT License）。主攻"长程任务"——让AI连续工作数小时、自主跑完完整工程。在全球百万用户盲测的前端开发评估Code Arena上位列可用模型第一。已完成华为昇腾、平头哥、摩尔线程、寒武纪等国产算力平台推理适配。下一步目标是Autonomous Agent System（完全自治智能体系统）。',
+    source: '智谱',
+    sourceUrl: 'https://www.stdaily.com/web/gdxw/2026-06/17/content_533710.html',
+    tags: ['#发布', '#开源', '#Agent', '#模型'],
+    accuracyScore: 95,
+    timelinessScore: 94,
+    utilityScore: 93,
+    totalScore: 94,
+    recommendReason: '国产开源模型从"追"到"超"的转折点。PM应关注：(1)Code Arena全球第一（盲测）说明国产开源模型在垂直任务上已反超闭源旗舰——"国产模型够用"的命题被强化为"国产模型领先"；(2)主攻长程任务是国产模型差异化的明智选择——避开与GPT/Claude在通用能力上的硬碰硬，押注"AI连续工作数小时"这一企业痛点；(3)MIT License+国产算力适配说明智谱在打"自主可控"组合拳——B端采购的国产替代逻辑再添一把火。',
+    createdAt: '2026-06-17T10:00:00Z'
   },
 
   // === 2026-06-16 (周一) ===
