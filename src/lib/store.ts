@@ -62,6 +62,36 @@ const sampleItems: DailyItem[] = [
     recommendReason: 'vibe coding安全债务正在暴雷。PM应关注：(1)50%AI生成代码未通过安全审查说明vibe coding必须升级为"原型+安全审计"双阶段流程——低代码平台需内置安全扫描；(2)认证/支付/敏感数据"不可vibe-code"清单为低代码AI平台划出产品边界——哪些模块自动化、哪些必须人工把关；(3)"vibe code is legacy code"认知正在成型——vibe-coded应用维护成本将高于传统开发，影响低代码平台长期TCO叙事。',
     createdAt: '2026-06-22T11:00:00Z'
   },
+  {
+    id: '20260623-05',
+    date: '2026-06-23',
+    title: 'Alphabet股价盘中暴跌7%、收跌5.9%至$346.30：Noam Shazeer加盟OpenAI引发"Google输掉AI人才战"担忧',
+    summary: '6月22日周一Alphabet股价盘中跌7%、收跌5.9%至$346.30，创一年多最大单日跌幅。导火索是Gemini联合负责人、Transformer作者之一Noam Shazeer上周宣布加盟OpenAI（叠加Jumper同期离职Anthropic的连续事件）。Alphabet官方声明致谢但承认离职。Wedbush分析师Dan Ives直言"无法粉饰，是巨大损失"；DA Davidson分析师Gil Luria指出连续离职引发"Google正在输掉AI前沿人才争夺战"的担忧。6月累计跌幅已达9%。',
+    source: 'Google',
+    sourceUrl: 'https://www.cnbc.com/2026/06/22/alphabet-goog-stock-ai-departures.html',
+    tags: ['#战略', '#竞争'],
+    accuracyScore: 98,
+    timelinessScore: 99,
+    utilityScore: 90,
+    totalScore: 95,
+    recommendReason: 'AI人才战进入"资本市场用脚投票"阶段。PM应关注：(1)Shazeer（Transformer作者、Character.AI创始人）加盟OpenAI标志Google前沿人才护城河出现裂缝——Gemini模型迭代节奏可能受影响，依赖Gemini的产品需评估备用方案；(2)股价单日跌6%说明资本市场对"AI人才=未来市值"的定价已极度敏感，相关AI概念股波动会放大；(3)OpenAI/Anthropic用"高薪+算力承诺+研究自由"挖人模式跑通——国内大厂挖角策略会跟进。',
+    createdAt: '2026-06-22T16:00:00Z'
+  },
+  {
+    id: '20260623-06',
+    date: '2026-06-23',
+    title: 'Tokenmaxxing引爆硅谷工程师文化：OpenAI单人周烧2100亿token，黄仁勋称"AI支出应达薪资50%"',
+    summary: '新浪科技6月22日长文报道"Tokenmaxxing"（最大化AI token消耗）已成为硅谷工程师文化。OpenAI工程师单人周用2100亿token（≈33个维基百科全文），Claude Code工程师单人月烧$15万token。黄仁勋GTC发言："年薪$50万的工程师，AI token支出低于$25万令人担忧。"Y Combinator CEO Garry Tan、迪士尼、Visa、阿里、腾讯、字节均已加入。Meta内部一度流传"token使用量可能影响裁员决策"。文章同时反思失败模式：token消耗≠业务产出，"每天有多少Agent真正在干活"是新指标。',
+    source: '其他',
+    sourceUrl: 'https://finance.sina.com.cn/tech/roll/2026-06-22/doc-inieiatm6871532.shtml',
+    tags: ['#Agent', '#企业应用', '#战略'],
+    accuracyScore: 90,
+    timelinessScore: 95,
+    utilityScore: 94,
+    totalScore: 93,
+    recommendReason: '"AI用量=生产力"叙事正在被工程化。PM应关注：(1)黄仁勋的"50%薪资token预算"言论已成为企业AI支出的"行业锚点"——B端AI工具的定价和销售话术应主动引用；(2)OpenAI/Claude Code工程师的真实token消耗是行业基准——低代码平台AI功能的token预算规划可参考这个量级；(3)文章已开始反思token消耗的失败模式——"每天多少Agent真正在干活"是新指标，低代码平台应主打"有效Agent产出"而非"token消耗量"作为差异化。',
+    createdAt: '2026-06-22T08:00:00Z'
+  },
 
   // === 2026-06-20 (周六) ===
   {
