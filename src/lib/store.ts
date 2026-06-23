@@ -1,6 +1,68 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-06-23 (周一) ===
+  {
+    id: '20260623-01',
+    date: '2026-06-23',
+    title: 'SK海力士市值$1.35万亿超越三星：终结三星26年韩国市值冠军，AI算力供应链权力向上游芯片转移',
+    summary: 'Reuters 6月22日报道：SK海力士市值达$1.35万亿（约2080万亿韩元），超越三星电子成为韩国市值最高公司，终结三星自2000年以来长达26年的霸主地位。SK海力士是Nvidia和Google的高带宽存储（HBM）芯片核心供应商，AI推理算力需求推动其市值飙升。标志AI算力供应链利润分配从终端品牌向芯片供应商转移。',
+    source: '其他',
+    sourceUrl: 'https://www.reuters.com/world/asia-pacific/sk-hynix-overtakes-samsung-become-koreas-most-valuable-company-2026-06-22/',
+    tags: ['#算力', '#战略', '#竞争'],
+    accuracyScore: 96,
+    timelinessScore: 95,
+    utilityScore: 82,
+    totalScore: 91,
+    recommendReason: 'AI供应链权力结构剧变。PM应关注：(1)HBM供应商反超终端巨头说明AI算力利润正向上游芯片环节集中——"谁掌握HBM谁掌握AI利润"；(2)SK海力士市值超过比特币说明AI推理算力已被资本市场定价为比加密货币更基础的资产；(3)三星26年霸主被终结标志AI算力供应链格局重塑，对依赖推理成本曲线的产品决策有长期影响。',
+    createdAt: '2026-06-22T10:00:00Z'
+  },
+  {
+    id: '20260623-02',
+    date: '2026-06-23',
+    title: '微软CEO Nadella警告AI垄断问题：抨击"一边喊白领失业+武器化，一边抢建数据中心"的矛盾叙事',
+    summary: 'The Verge 6月22日报道，微软CEO Nadella公开表示AI垄断是问题，抨击行业矛盾叙事："你不能说白领工作都没了、AI可能是武器，同时又用所有权力去建数据中心。"Nadella提出AI需要"社会许可"（social permission），行业必须"做有用的事"否则将失去耗电建数据中心的公众支持。微软同步推多模型Copilot策略避免单一模型依赖。',
+    source: 'Microsoft',
+    sourceUrl: 'https://www.theverge.com/tech/953371/microsofts-satya-nadella-says-ai-monopolies-are-a-problem-duh',
+    tags: ['#战略', '#竞争', '#安全'],
+    accuracyScore: 94,
+    timelinessScore: 95,
+    utilityScore: 88,
+    totalScore: 92,
+    recommendReason: '微软押"反垄断"叙事争AI道德高地。PM应关注：(1)"社会许可"概念将影响AI产品公关策略——纯效率叙事不够，需证社会价值；(2)多模型Copilot路线说明微软判定单一模型垄断不可持续，低代码平台必须跟进多模型路由；(3)Nadella抨击的"武器化+抢数据中心"矛盾叙事直指OpenAI/Anthropic——巨头分歧公开化意味着AI行业进入合规分化期。',
+    createdAt: '2026-06-22T09:00:00Z'
+  },
+  {
+    id: '20260623-03',
+    date: '2026-06-23',
+    title: '诺贝尔奖得主John Jumper离开Google DeepMind加入Anthropic：AlphaFold核心人才流失，AI人才战再升温',
+    summary: 'Bloomberg/TechCrunch 6月19-20日报道：2024年诺贝尔化学奖得主、AlphaFold联合创建者John Jumper宣布离开工作近9年的Google DeepMind加入Anthropic。Jumper在X上表示将先休息再入职。这是DeepMind核心AI人才重大流失，标志Anthropic在人才争夺中再下一城。背景：Anthropic正与美国政府就Fable 5出口管制博弈，人才流入显示研究声誉吸引力。',
+    source: 'Anthropic',
+    sourceUrl: 'https://techcrunch.com/2026/06/20/nobel-laureate-john-jumper-is-leaving-deepmind-for-rival-anthropic/',
+    tags: ['#战略', '#竞争'],
+    accuracyScore: 96,
+    timelinessScore: 82,
+    utilityScore: 85,
+    totalScore: 88,
+    recommendReason: 'AI人才战标志性事件。PM应关注：(1)诺贝尔级人才从Google流向Anthropic说明"研究声誉+安全叙事"成吸引顶级人才的核心筹码——OpenAI/Google不再垄断人才流向；(2)AlphaFold创建者加入Anthropic暗示其可能拓展科学AI边界，或看中Claude推理/安全潜力；(3)DeepMind人才持续流失（此前Shazeer回流Google再转OpenAI），Google人才留存策略需调整。',
+    createdAt: '2026-06-19T15:00:00Z'
+  },
+  {
+    id: '20260623-04',
+    date: '2026-06-23',
+    title: 'The Verge深度警示：vibe-coded应用成安全噩梦，API密钥泄露+认证/支付模块不可vibe-code',
+    summary: 'The Verge 6月22日深度分析警告：AI生成的"vibe-coded"应用存在系统性安全风险。行业共识：认证系统、支付处理、敏感数据、访问控制等核心组件不应vibe-code。默认输出常暴露API密钥。GitHub 2026安全路线图强调"安全无法vibe-code"。多家安全厂商报告约50%的AI生成代码未通过安全审查。建议vibe-coded应用视为原型，由开发者重构后再上线。',
+    source: '其他',
+    sourceUrl: 'https://www.theverge.com/ai-artificial-intelligence/950844/vibe-coding-security-risks-apps',
+    tags: ['#低代码', '#安全', '#Agent'],
+    accuracyScore: 90,
+    timelinessScore: 93,
+    utilityScore: 93,
+    totalScore: 92,
+    recommendReason: 'vibe coding安全债务正在暴雷。PM应关注：(1)50%AI生成代码未通过安全审查说明vibe coding必须升级为"原型+安全审计"双阶段流程——低代码平台需内置安全扫描；(2)认证/支付/敏感数据"不可vibe-code"清单为低代码AI平台划出产品边界——哪些模块自动化、哪些必须人工把关；(3)"vibe code is legacy code"认知正在成型——vibe-coded应用维护成本将高于传统开发，影响低代码平台长期TCO叙事。',
+    createdAt: '2026-06-22T11:00:00Z'
+  },
+
   // === 2026-06-20 (周六) ===
   {
     id: '20260620-01',
