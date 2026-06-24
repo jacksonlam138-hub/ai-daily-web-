@@ -1,6 +1,68 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-06-24 (周二) ===
+  {
+    id: '20260624-01',
+    date: '2026-06-24',
+    title: 'OpenAI发布Daybreak安全工具套件：GPT-5.5-Cyber全量+Codex Security+Patch the Planet，AI安全从发现转向修复',
+    summary: 'OpenAI 6月22日扩展Daybreak网络安全计划：GPT-5.5-Cyber全量发布（CyberGym 85.6%创新高，ExploitGym 39.5%），Codex Security插件已扫描30M+ commits/30K+代码库并自动修复50万+漏洞。Patch the Planet联合Trail of Bits/HackerOne为cURL/Go/Python等30+开源项目提供AI辅助漏洞修复。Cyber Partner Program携手CrowdStrike/Palo Alto/Wiz等30+厂商。',
+    source: 'OpenAI',
+    sourceUrl: 'https://openai.com/index/daybreak-securing-the-world/',
+    tags: ['#发布', '#模型', '#安全', '#Agent'],
+    accuracyScore: 98,
+    timelinessScore: 90,
+    utilityScore: 95,
+    totalScore: 94,
+    recommendReason: 'AI安全赛道从发现走向修复。PM应关注：(1)Codex Security嵌入开发工作流说明安全Agent正从独立工具变为IDE原生能力——低代码平台的安全模块需跟进扫描+修复一体模式；(2)Patch the Planet用AI给开源维护者减负是AI for Good的样板案例，企业级Agent的价值锚点从降本扩展到减负；(3)30+安全厂商加入Partner Program说明GPT-5.5-Cyber的Trusted Access分发模式已跑通——垂类模型通过合作伙伴渠道分发是新变现路径。',
+    createdAt: '2026-06-22T10:00:00Z'
+  },
+  {
+    id: '20260624-02',
+    date: '2026-06-24',
+    title: 'Superhuman（原Grammarly）收购GPTZero：AI检测赛道整合，19M用户+$30M ARR作价约$88M',
+    summary: 'TechCrunch 6月23日报道：Superhuman（Grammarly收购邮件工具Superhuman后更名而成）宣布收购GPTZero。GPTZero由Princeton毕业生Edward Tian 2023年创建，累计注册用户19M、$30M ARR、融资仅$13.5M。交易金额未披露，外界估计约$88M。Superhuman已有自家AI检测工具，收购逻辑是两个AI检测器比一个好——整合GPTZero技术到Superhuman写作助手，打造AI authenticity layer。',
+    source: '其他',
+    sourceUrl: 'https://techcrunch.com/2026/06/23/superhuman-acquires-ai-detection-startup-gptzero/',
+    tags: ['#战略', '#竞争', '#安全'],
+    accuracyScore: 96,
+    timelinessScore: 95,
+    utilityScore: 82,
+    totalScore: 91,
+    recommendReason: 'AI检测赛道进入寡头整合阶段。PM应关注：(1)$13.5M融资→$88M退出的资本路径说明AI检测已被验证为独立品类——低代码平台内嵌AI生成内容检测成标配功能；(2)Grammarly+Superhuman+GPTZero三方品牌整合说明AI写作助手+检测正在合并为一个产品形态，帮你写+证明你写的形成闭环；(3)19M用户多为教育场景说明AI检测率先在校园渗透，企业级场景（招聘/合规/法律）是下一波增长点。',
+    createdAt: '2026-06-23T21:48:00Z'
+  },
+  {
+    id: '20260624-03',
+    date: '2026-06-24',
+    title: '全球科技股抛售深化：半导体指数暴跌7.9%，AI capex可持续性首次被资本市场集体质疑',
+    summary: 'Reuters/CNN/WSJ 6月23日报道：继6月22日Alphabet单日跌5.9%后，抛售蔓延至整个半导体板块。PHLX半导体指数跌7.9%（Micron、Marvell、Analog Devices重挫），Nasdaq跌2.21%，S&P 500跌1.44%，VIX飙升至一年高位。此轮抛售核心驱动从AI人才流失扩展为AI资本支出可持续性的集体质疑——资本市场首度对万亿级AI capex回报周期按下暂停键。韩国KOSPI受SK海力士拖累同步下挫。',
+    source: 'Reuters',
+    sourceUrl: 'https://www.reuters.com/business/nasdaq-futures-fall-2-tech-worries-fed-hike-bets-2026-06-23/',
+    tags: ['#算力', '#战略', '#竞争'],
+    accuracyScore: 97,
+    timelinessScore: 96,
+    utilityScore: 85,
+    totalScore: 93,
+    recommendReason: 'AI capex叙事出现首次市场级裂痕。PM应关注：(1)半导体指数单日-7.9%标志资本市场从AI信仰定价切换到AI回报验证模式——所有B端AI产品的ROI论证将更严格，用AI不够，要算清楚省了多少；(2)VIX飙升说明AI板块波动率上台阶，依赖AI概念股走势的融资/估值环境会更谨慎；(3)韩国KOSPI同步下挫说明AI供应链是全球共振——单一市场政策变化会通过资本市场快速传导到全球AI产业链。',
+    createdAt: '2026-06-23T20:00:00Z'
+  },
+  {
+    id: '20260624-04',
+    date: '2026-06-24',
+    title: 'Menlo Ventures成立50周年募$30亿：Anthropic早期押注成世纪之投，AI VC信心再获验证',
+    summary: 'Menlo Ventures 6月23日宣布成立50周年之际募资$30亿——公司史上最大基金。Menlo曾领投Anthropic $750M轮次（$15B估值），押注被视为押公司于Anthropic的决定性时刻。同期运营$100M Menlo Anthology Fund（与Anthropic联合）。本轮募资彰显LP对AI赛道长期回报的高度信心，Anthropic单一押注的胜利支撑了Menlo ALL IN AI的新战略定位。',
+    source: '其他',
+    sourceUrl: 'https://menlovc.com/perspective/menlo-turns-50-and-announces-3b-in-fresh-capital-to-go-all-in-on-ai/',
+    tags: ['#融资', '#战略'],
+    accuracyScore: 96,
+    timelinessScore: 94,
+    utilityScore: 85,
+    totalScore: 92,
+    recommendReason: '押公司于Anthropic的胜利正在重塑VC策略。PM应关注：(1)$30亿ALL IN AI基金说明顶级VC判定AI还处于早期阶段而非后期——融资环境对AI创业仍友好，低代码AI平台的融资窗口依然敞开；(2)Menlo Anthology Fund的VC+大模型厂商联合基金模式（类似OpenAI Startup Fund）正在成为标配——直接对接模型厂商资源是AI创业的新溢价点；(3)Anthropic早期$15B→$965B估值的64倍回报案例，会引导更多早期资金涌入AI赛道，竞争加剧。',
+    createdAt: '2026-06-23T18:00:00Z'
+  },
+
   // === 2026-06-23 (周一) ===
   {
     id: '20260623-01',
