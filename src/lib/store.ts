@@ -62,6 +62,36 @@ const sampleItems: DailyItem[] = [
     recommendReason: '押公司于Anthropic的胜利正在重塑VC策略。PM应关注：(1)$30亿ALL IN AI基金说明顶级VC判定AI还处于早期阶段而非后期——融资环境对AI创业仍友好，低代码AI平台的融资窗口依然敞开；(2)Menlo Anthology Fund的VC+大模型厂商联合基金模式（类似OpenAI Startup Fund）正在成为标配——直接对接模型厂商资源是AI创业的新溢价点；(3)Anthropic早期$15B→$965B估值的64倍回报案例，会引导更多早期资金涌入AI赛道，竞争加剧。',
     createdAt: '2026-06-23T18:00:00Z'
   },
+  {
+    id: '20260624-05',
+    date: '2026-06-24',
+    title: 'NVIDIA ISC 2026发布Vera Rubin科学计算平台：单机架TOP500算力，35台欧洲AI超算部署中',
+    summary: 'NVIDIA 6月22日在德国汉堡ISC 2026发布Vera Rubin平台（含Vera Rubin NVL4，单机架最高144 GPU），定位为"科学计算+AI推理"双模硬件，可在同一硬件上无开销切换高精度数值模拟和AI推理。同步宣布35台AI超算正在23个欧洲国家部署——欧洲超算史上最大单年扩容。Bull/Dell/GIGABYTE/HPE/Supermicro推出定制高密度配置，OEM出货目标Q4 2026。',
+    source: '其他',
+    sourceUrl: 'https://nvidianews.nvidia.com/news/latest',
+    tags: ['#算力', '#发布', '#战略'],
+    accuracyScore: 96,
+    timelinessScore: 94,
+    utilityScore: 86,
+    totalScore: 92,
+    recommendReason: 'AI算力硬件进入"双模"时代。PM应关注：(1)Vera Rubin单机架=TOP500说明AI算力密度跨越式提升——AI推理成本曲线下降速度会比预期更快，B端AI产品定价有进一步下探空间；(2)科学计算+AI推理同硬件无开销切换意味着传统HPC用户（科研/制药/金融建模）将成为AI算力新增量市场——低代码AI平台可拓展"科学研究助手"垂类；(3)欧洲35台超算是地缘AI算力自主化的标志，欧盟AI产品合规要求会同步升级。',
+    createdAt: '2026-06-22T14:00:00Z'
+  },
+  {
+    id: '20260624-06',
+    date: '2026-06-24',
+    title: 'Anthropic 7月8日起对Claude消费用户强制身份+年龄验证：需身份证+自拍，企业版和API不受影响',
+    summary: 'Anthropic 6月8日更新隐私政策，7月8日正式生效：Claude Free/Pro/Max消费账户可能被要求身份证+自拍+人脸几何模板验证（通过第三方Persona）。Enterprise和开发者平台不受影响。4月14日已开始小范围测试。背景是Fable 5出口管制事件后监管收紧。fact-check澄清：身份验证并非因Fable 5越狱而推出，4月已开始测试；6月只是政策正式化。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.it-connect.tech/claude-anthropic-will-start-verifying-users-age-and-identity-on-july-8/',
+    tags: ['#安全', '#企业应用', '#战略'],
+    accuracyScore: 95,
+    timelinessScore: 92,
+    utilityScore: 90,
+    totalScore: 92,
+    recommendReason: 'C端AI产品进入"实名化"拐点。PM应关注：(1)消费AI强制KYC意味着C端AI产品的"匿名使用"红利结束——产品注册流程必须重设计，转化率会受影响；(2)企业版/API豁免说明B端AI产品的合规架构比C端更稳健——低代码平台应主动引导用户走企业路径；(3)第三方Persona验证模式或成行业标准，国内豆包/Kimi/智谱C端产品可能跟进类似机制，需提前规划合规成本。',
+    createdAt: '2026-06-23T08:00:00Z'
+  },
 
   // === 2026-06-23 (周一) ===
   {
