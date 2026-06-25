@@ -1,6 +1,68 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-06-25 (周三) ===
+  {
+    id: '20260625-01',
+    date: '2026-06-25',
+    title: 'Anthropic推出Claude Tag on Slack：把Claude当成"团队同事"@进频道，内部65%产品代码已由其生成',
+    summary: 'Anthropic 6月24日发布Claude Tag on Slack（beta）：Claude以团队成员身份加入Slack频道，管理员授权后可连接工具/数据/代码库，频道内任何人都可以@Claude委派任务。Claude自主拆分任务阶段、调工具、在Slack线程回复产出。可调度任务自主持续数小时甚至数天，并行多个Claude同时工作。Anthropic内部65%产品团队代码由内部版Claude Tag创建。Enterprise和Team客户30天内迁移。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.anthropic.com/news/introducing-claude-tag',
+    tags: ['#Agent', '#发布', '#企业应用'],
+    accuracyScore: 98,
+    timelinessScore: 99,
+    utilityScore: 96,
+    totalScore: 98,
+    recommendReason: 'AI Agent从"个人工具"进入"团队同事"阶段。PM应关注：(1)65%产品代码由Claude Tag生成说明Anthropic内部已用Agent作为主流生产力——这是首个公开的"AI员工占多数代码产出"案例，行业冲击大；(2)Slack作为入口是关键卡位——低代码平台必须支持Slack/Teams @agent集成，否则会失去企业IM流量入口；(3)自主工作数小时甚至数天标志"长程Agent"成熟——"任务委派+并行多Claude"工作流是新的产品形态。',
+    createdAt: '2026-06-24T17:00:00Z'
+  },
+  {
+    id: '20260625-02',
+    date: '2026-06-25',
+    title: 'Google又有两位AlphaFold核心研究员跳槽Anthropic：DeepMind→Anthropic流失率是反向的11倍，Anthropic估值$965亿超OpenAI拟秋天IPO',
+    summary: 'LA Times 6月24日报道：Google DeepMind两位顶级AI研究员Adler和Pritzel计划加入Anthropic，二人是上周已宣布跳槽的诺奖得主John Jumper在AlphaFold项目上的前同事。SignalFire 2025行业数据：DeepMind工程师跳槽Anthropic的概率是反向的11倍。Hassabis回应："我们赢了我们应得的份额，研究团队规模仍是最大最广的。"Anthropic估值$965亿超OpenAI，正考虑今年秋天IPO。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.latimes.com/business/story/2026-06-24/google-poised-to-lose-two-more-high-profile-ai-staffers-to-anthropic',
+    tags: ['#战略', '#竞争', '#融资'],
+    accuracyScore: 96,
+    timelinessScore: 97,
+    utilityScore: 88,
+    totalScore: 94,
+    recommendReason: 'AI人才战进入"小组迁徙"阶段。PM应关注：(1)Adler+Pritzel+Jumper三人组同迁说明顶级研究员以"团队"而非"个人"为单位流动——Google AlphaFold核心团队被Anthropic整体挖角，类似事件会改变模型能力分布；(2)11倍流失率数据说明DeepMind已成Anthropic的"人才孵化器"，Google人才留存策略已失效；(3)Anthropic $965亿估值+秋天IPO意味着资本市场正在重新洗牌AI头部——OpenAI的"独家龙头"叙事被打破，多极AI巨头格局成型。',
+    createdAt: '2026-06-24T19:00:00Z'
+  },
+  {
+    id: '20260625-03',
+    date: '2026-06-25',
+    title: 'Claude Code作者Boris Cherny反思：AI写100%代码"有问题"，企业关注ROI是对的',
+    summary: 'Business Insider/Times of India 6月24日报道：Claude Code创造者Boris Cherny在Scale AI主持的fireside chat上承认让AI写100%代码对企业"有问题"（problematic）。直接回应Uber COO Andrew Macdonald近期对AI支出ROI的公开质疑。Cherny强调企业关注ROI是正确的——尤其当token成本持续上升时。澄清loops概念（如/goal命令让AI持续工作直到完成），但承认纯自动化路径需要重新评估。',
+    source: 'Anthropic',
+    sourceUrl: 'https://timesofindia.indiatimes.com/technology/tech-news/claude-code-creator-boris-cherny-who-declared-ai-has-solved-coding-admits-ai-writing-100-code-is-getting-problematic-as-companies-/articleshow/131954700.cms',
+    tags: ['#Agent', '#企业应用', '#战略'],
+    accuracyScore: 94,
+    timelinessScore: 96,
+    utilityScore: 92,
+    totalScore: 94,
+    recommendReason: '"AI写100%代码"叙事首次由内行松口。PM应关注：(1)Claude Code作者亲自承认100%自动化有问题意味着"vibe coding全面接管"叙事被官方降温——低代码平台应转向"人机协作+ROI证明"的产品话术；(2)回应Uber COO的ROI质疑说明企业AI支出已进入"问责期"——B端AI产品必须提供明确的ROI数据，不能再仅靠"用了就有效"叙事；(3)loops（/goal式持续任务）从神坛走下，需重新评估长程Agent的失败模式。',
+    createdAt: '2026-06-24T11:00:00Z'
+  },
+  {
+    id: '20260625-04',
+    date: '2026-06-25',
+    title: 'GPT-5.6 6月发布窗口滑过：预测市场概率从83%暴跌至18%，最可能7月发布',
+    summary: 'FindSkill 6月24日更新：GPT-5.6在6月22-28日窗口发布的预测市场概率从约83%暴跌至18%。OpenAI仍未官宣任何发布日期、产品页或博客。首席科学家Pachocki此前对内称"meaningful improvement"。最新判断：最可能2026年7月发布。对照：GPT-5.5于4月23日发布，若7月发布5.6意味着OpenAI迭代节奏从一年1-2次加速到3个月一次，主要被Anthropic和中国模型驱动。',
+    source: 'OpenAI',
+    sourceUrl: 'https://findskill.ai/blog/gpt-5-6-release-date-what-to-expect/',
+    tags: ['#模型', '#战略'],
+    accuracyScore: 88,
+    timelinessScore: 94,
+    utilityScore: 80,
+    totalScore: 87,
+    recommendReason: 'AI大模型迭代节奏被市场重新定价。PM应关注：(1)预测市场从83%→18%说明GPT-5.6传闻已被市场证伪——产品决策不应基于传闻，所有"等5.6再上线"的策略应调整；(2)OpenAI 3个月迭代节奏（vs历史1-2年）意味着模型版本管理成为产品必修课——API版本绑定策略需重新设计；(3)被Anthropic和中国模型倒逼加速说明OpenAI不再定义节奏，需关注竞品发布日历而非仅OpenAI官方。',
+    createdAt: '2026-06-24T16:00:00Z'
+  },
+
   // === 2026-06-24 (周二) ===
   {
     id: '20260624-01',
