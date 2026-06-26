@@ -1,6 +1,68 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-06-26 (周四) ===
+  {
+    id: '20260626-01',
+    date: '2026-06-26',
+    title: 'OpenAI联手Broadcom发布首款自研AI推理芯片Jalapeño：9个月极速开发，计划年底部署，自建推理算力摆脱NVIDIA依赖',
+    summary: 'OpenAI 6月24日联合Broadcom正式 unveil 首款自研AI推理ASIC "Jalapeño"（辣椒），专为LLM推理优化。Tom\'s Hardware披露为"reticle-sized大芯片"，开发周期仅9个月（行业罕见），开发过程用OpenAI自家模型加速。计划2026年底部署，初期跑ChatGPT等工作负载。官方未公布具体spec（制程/晶体管/带宽）。VentureBeat指出此举为OpenAI 2026 IPO前强化"基础设施自主"叙事，降低对NVIDIA依赖。',
+    source: 'OpenAI',
+    sourceUrl: 'https://openai.com/index/openai-broadcom-jalapeno-inference-chip/',
+    tags: ['#算力', '#发布', '#战略'],
+    accuracyScore: 98,
+    timelinessScore: 95,
+    utilityScore: 88,
+    totalScore: 94,
+    recommendReason: 'AI巨头进入"自研芯片落地"阶段。PM应关注：(1)9个月从立项到流片说明AI芯片开发周期正被AI本身压缩——定制ASIC门槛降低，更多垂类AI产品可考虑专用芯片；(2)OpenAI转向自建推理算力意味着ChatGPT/Codex API成本曲线下探空间打开，B端AI产品定价会继续下移；(3)reticle-sized ASIC放弃通用灵活性换极致推理效率——推理专用芯片成主流，影响低代码平台底层算力选型。',
+    createdAt: '2026-06-24T15:00:00Z'
+  },
+  {
+    id: '20260626-02',
+    date: '2026-06-26',
+    title: 'Qualcomm斥$39亿股票收购AI软件基础设施创业公司Modular：两周内AI芯片投入累计$140亿，押注数据中心+边缘AI',
+    summary: 'Reuters/Bloomberg/WSJ 6月24日报道：Qualcomm宣布以约$39亿股票收购Silicon Valley AI软件/芯片创业公司Modular（由Chris Lattner和Tim Davisen创建，主打Mojo语言+AI推理引擎MAX）。Modular官网自我定位为"开放AI基础设施"。WSJ指出这是Qualcomm近期AI silicon组合重塑的一部分，叠加另一笔交易累计投入超$140亿。目标：让AI更快更便宜，进军数据中心和边缘AI推理市场。',
+    source: '其他',
+    sourceUrl: 'https://www.reuters.com/business/qualcomm-buy-ai-startup-modular-2026-06-24/',
+    tags: ['#算力', '#融资', '#战略', '#竞争'],
+    accuracyScore: 96,
+    timelinessScore: 95,
+    utilityScore: 86,
+    totalScore: 92,
+    recommendReason: 'AI算力供应链垂直整合加速。PM应关注：(1)Chris Lattner（Swift/LLVM之父）创建的Modular被收购说明"AI编译器+运行时"层正在被芯片厂商吸收——独立AI基础设施软件创业公司的退出通道是巨头收购；(2)Qualcomm两周$140亿AI silicon投入说明边缘AI推理市场正在打开——手机/IoT/汽车场景的AI产品会在12-18个月内获得更便宜的推理算力；(3)股票对价占主导说明半导体股估值仍被资本市场看好，AI chip M&A窗口持续开启。',
+    createdAt: '2026-06-24T18:00:00Z'
+  },
+  {
+    id: '20260626-03',
+    date: '2026-06-26',
+    title: 'Patronus AI获$50M B轮融资构建"数字世界"压力测试AI Agent：测试基础设施赛道正式成形，累计融资$70M',
+    summary: 'TechCrunch 6月25日报道：AI Agent测试评估公司Patronus AI宣布$50M Series B，由Greenfield Partners领投，Notable Capital、Lightspeed等参投，累计融资$70M。资金将用于构建"数字世界"（模拟环境）——在AI Agent部署前对多步骤复杂任务进行压力测试。公司押注：AI Agent越自主，部署前测试需求越刚性。标志AI Agent测试基础设施作为独立品类正式获得资本定价。',
+    source: '其他',
+    sourceUrl: 'https://techcrunch.com/2026/06/25/patronus-ai-lands-50m-to-build-digital-worlds-that-stress-test-ai-agents/',
+    tags: ['#Agent', '#融资', '#安全', '#企业应用'],
+    accuracyScore: 95,
+    timelinessScore: 96,
+    utilityScore: 92,
+    totalScore: 94,
+    recommendReason: 'AI Agent测试基础设施成独立品类。PM应关注：(1)"数字世界"模拟测试说明Agent正从单步响应转向多步骤自主任务——低代码平台构建Agent时必须配套测试沙箱，否则上线后行为不可预测；(2)$50M B轮定价说明资本市场认定Agent测试为必需品而非nice-to-have，B端Agent产品会被采购方要求"提供测试报告"作为合规前置；(3)与昨天Agentjacking攻击新闻形成呼应——Agent安全+测试是新基础设施赛道，国产Agent厂商需提前布局。',
+    createdAt: '2026-06-25T15:00:00Z'
+  },
+  {
+    id: '20260626-04',
+    date: '2026-06-26',
+    title: 'The Information：Google DeepMind组建"Strike Team"专攻AI编码能力追赶Claude，Google判定Anthropic而非OpenAI是首要威胁',
+    summary: 'The Information 6月25日报道：Google DeepMind内部已组建编码"Strike Team"（突击队），目标是缩小Gemini编码能力与Anthropic Claude的差距。Google高管内部已将Anthropic（而非OpenAI）判定为编码领域的首要威胁。LA Times 4月报道指出Google的AI编码工具套件碎片化是输掉编码战争的核心原因。背景：Claude Code已用于Anthropic内部65%产品代码生成（参见6/25日报）。',
+    source: 'Google',
+    sourceUrl: 'https://sherwood.news/tech/google-deepmind-builds-strike-team-to-catch-up-to-anthropic-models/',
+    tags: ['#Agent', '#战略', '#竞争'],
+    accuracyScore: 92,
+    timelinessScore: 94,
+    utilityScore: 90,
+    totalScore: 92,
+    recommendReason: 'AI编码Agent竞争格局被重新定义。PM应关注：(1)Google把Anthropic而非OpenAI列为编码头号威胁说明Claude Code已成行业标杆——低代码平台选型时Claude API在编码场景的优先级高于GPT；(2)"Strike Team"模式说明Google内部判定Gemini编码能力落后是组织问题而非技术问题——重组结果会在3-6个月内反映到Gemini API能力；(3)Google编码工具碎片化被点名为败因，低代码平台应警惕"工具矩阵过多反而失焦"的产品陷阱。',
+    createdAt: '2026-06-25T17:00:00Z'
+  },
+
   // === 2026-06-25 (周三) ===
   {
     id: '20260625-01',
