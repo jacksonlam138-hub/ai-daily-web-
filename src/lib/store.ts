@@ -1,6 +1,38 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-06-27 (周五) ===
+  {
+    id: '20260627-01',
+    date: '2026-06-27',
+    title: 'OpenAI发布GPT-5.6系列三档预览：Sol旗舰/Terra均衡/Luna最低价，Terra比GPT-5.5便宜2倍同性能，6月25日预测市场崩盘被打脸',
+    summary: 'OpenAI 6月26日（北京时间6月27日）联合Trump政府自愿审查后启动GPT-5.6系列限量预览：Sol（旗舰，$5/$30 per M tokens）、Terra（均衡，$2.50/$15，性能同GPT-5.5但便宜2倍）、Luna（最低成本，$1/$6）。三档模型在编码、网络安全、生物、长程Agent任务上均有提升。GPT-5.6还引入可预测的prompt caching（显式cache断点+30分钟最短缓存）。The Verge指出Sol定价近Claude Fable 5一半。Engadget确认首批仅向trusted partners开放，未来几周GA。',
+    source: 'OpenAI',
+    sourceUrl: 'https://openai.com/index/previewing-gpt-5-6-sol/',
+    tags: ['#发布', '#模型', '#Agent', '#API'],
+    accuracyScore: 99,
+    timelinessScore: 99,
+    utilityScore: 97,
+    totalScore: 98,
+    recommendReason: '6月25日预测市场还判断GPT-5.6滑到7月概率82%——结果48小时内OpenAI直接放出三档定价。PM应关注：(1)三档模型分层（旗舰+均衡+最低价）说明OpenAI正面应对Anthropic Opus+Sonnet+Haiku产品矩阵，B端API定价战正式开打；(2)Terra比GPT-5.5便宜2倍=中端模型成本曲线再次下移，所有依赖GPT-5.5的产品应立即评估迁移ROI；(3)Trump政府自愿审查后立即发布说明美国AI监管已从"管制"切回"协商"——Mythos 5解禁+GPT-5.6上线同步发生，监管节奏由共和党政府主导，企业AI产品合规路径变清晰。',
+    createdAt: '2026-06-26T17:00:00Z'
+  },
+  {
+    id: '20260627-02',
+    date: '2026-06-27',
+    title: 'Anthropic Mythos 5部分解禁：Trump政府允许100+美国机构与企业重新访问，Fable 5仍全面封锁',
+    summary: 'POLITICO 6月26日报道：Trump政府部分撤销Anthropic出口管制禁令，允许其将Claude Mythos 5重新部署给超过100家"trusted partners"（含企业与联邦机构）。6月12日Lutnick引用ECRA法案全球下线Mythos 5和Fable 5；6月26日Mythos 5解禁，Fable 5仍处封锁状态。Anthropic声明："我们已收到通知，可向cyber defenders和infrastructure providers重新provision Mythos 5。"谈判因Amazon CEO Andy Jassy向财政部长Yellen报告疑似安全漏洞而起。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.politico.com/news/2026/06/26/white-house-makes-peace-with-anthropic-for-now-00965675',
+    tags: ['#安全', '#战略', '#企业应用'],
+    accuracyScore: 97,
+    timelinessScore: 97,
+    utilityScore: 92,
+    totalScore: 95,
+    recommendReason: 'AI出口管制进入"精准解禁"阶段。PM应关注：(1)Mythos 5 vs Fable 5分化处理说明政府正在学习分级管制——按模型能力而非按厂商一刀切，企业AI产品应建立"模型合规分级矩阵"；(2)100+ trusted partners名单含cyber defenders和基础设施商——B端安全/网络防御类Agent是首批受益场景，垂类Agent应主动申请类似资质；(3)出口管制已成为可逆状态（封→解→再封），低代码平台必须把"模型可用性"作为运行时变量而非静态配置，与Multi-Provider Gateway策略强绑定。',
+    createdAt: '2026-06-26T16:00:00Z'
+  },
+
   // === 2026-06-26 (周四) ===
   {
     id: '20260626-01',
