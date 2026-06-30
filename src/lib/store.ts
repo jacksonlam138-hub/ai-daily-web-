@@ -1,6 +1,53 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-06-29 (周日) ===
+  {
+    id: '20260629-01',
+    date: '2026-06-29',
+    title: 'Cursor正式上线iOS App：手机端可启动独立编码Agent、语音对话、审阅diff并合并PR，AI编码主战场从桌面切到移动',
+    summary: 'The Next Web 6月29日报道，Anysphere正式推出Cursor iOS应用。App Store官方页面确认核心能力：从手机启动独立编码Agent实现功能/排查问题、追踪活跃工程任务、审阅变更截图与视频、标注图像反馈、检查diff并合并PR、语音对话、理解陌生代码库。Cursor移动化标志AI编码工具正式突破桌面边界，与GitHub Copilot Mobile、Replit Mobile抢占"随时随地编码"赛道。',
+    source: 'Cursor',
+    sourceUrl: 'https://thenextweb.com/news/cursor-mobile-app-coding-agents-phone',
+    tags: ['#发布', '#Agent', '#API', '#战略'],
+    accuracyScore: 97,
+    timelinessScore: 98,
+    utilityScore: 93,
+    totalScore: 96,
+    recommendReason: 'AI编码工具进入"移动端独立Agent"阶段。PM应关注：(1)手机端能launch独立agent≠简单远程控制——Anysphere把"任务委派+多步骤自主执行+结果可视化审阅"完整搬到移动端，意味着低代码平台移动端必须重新设计Agent委派UX而非套用桌面交互；(2)语音对话+图像标注说明编码Agent的多模态输入已成标配，未来PM评估编码工具时多模态输入权重应上升；(3)Cursor先发Mobile抢占"灵感即时落地"心智，竞品（Copilot/Replit/Windsurf）会跟进，B端AI编码采购清单需新增"移动端成熟度"维度。',
+    createdAt: '2026-06-29T10:00:00Z'
+  },
+  {
+    id: '20260629-02',
+    date: '2026-06-29',
+    title: 'DeepSeek开源DSpark推理加速框架：DeepSeek-V4-Flash单流60 tokens/s（2.3x），开源权重模型推理层红利继续释放',
+    summary: 'VentureBeat 6月29日报道，DeepSeek开源DSpark推测式解码框架，宣称可将LLM推理加速最高85%。开发者Rafael Caricio已在GitHub PR中实测：DeepSeek-V4-Flash单流无spec解码26.33 tokens/s，MTP-1下39.88 tokens/s，DSpark下达60 tokens/s（约MTP-1的1.5x、无spec的2.3x）。DSpark非即插即用——企业需基于自家模型微调专属draft模块，但提供了可复现的"蓝图"。适用于Qwen、Llama、Gemma、Mistral、Granite等开源权重模型。',
+    source: '其他',
+    sourceUrl: 'https://venturebeat.com/orchestration/deepseek-open-sources-dspark-a-new-framework-to-speed-up-llm-inference-by-up-to-85',
+    tags: ['#开源', '#模型', '#API', '#发布'],
+    accuracyScore: 96,
+    timelinessScore: 97,
+    utilityScore: 90,
+    totalScore: 94,
+    recommendReason: '开源模型推理优化进入"企业可落地"阶段。PM应关注：(1)DeepSeek持续开源推理优化（DSpark继MoE之后又一贡献）说明中国大模型开源生态已从"模型权重"延伸到"推理栈"，国产大模型基础设施红利累积；(2)DSpark非即插即用而是"蓝图"——企业需自训draft模块，意味着有自建推理团队的B端先享受红利，中小团队仍需等待vLLM/TGI集成；(3)DeepSeek-V4-Flash模型正式在benchmark中出现说明V4系列已进入开发者实测阶段，B端API采购应主动评估V4 vs GPT-5.6/Claude Fable 5的ROI。',
+    createdAt: '2026-06-29T13:00:00Z'
+  },
+  {
+    id: '20260629-03',
+    date: '2026-06-29',
+    title: '加州政府与Anthropic达成全美首个州级AI合作：Claude 5折供应州机构+免费员工培训，政府AI采购模式从"封锁"切到"补贴"',
+    summary: '加州州长Newsom 6月29日宣布与Anthropic建立全美首个州级AI合作。州机构可以50%折扣访问Claude生产力助手，配套免费员工培训与Anthropic开发者的GenAI技术协助/workflow咨询。Anthropic美洲区负责人Kate Jensen表态："作为加州公司，我们对本州有真实责任。"背景：加州2025年已签行政令要求每个州机构推动效率措施，并成立California Breakthrough Group。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.gov.ca.gov/2026/06/29/governor-newsom-announces-a-first-of-its-kind-partnership-providing-anthropic-tools-to-state-agencies-and-improving-services-for-californians/',
+    tags: ['#企业应用', '#战略', '#Agent'],
+    accuracyScore: 96,
+    timelinessScore: 97,
+    utilityScore: 89,
+    totalScore: 93,
+    recommendReason: '政府AI采购进入"州级战略合作"阶段。PM应关注：(1)全美首个州级AI合作选择Anthropic而非OpenAI/Google——Claude在政企市场的"安全合规"心智已经超越竞品，B端AI产品选型时Claude在政府/金融/医疗等高合规场景份额会继续上升；(2)5折+免费培训模式说明政府AI采购从"封锁管制"（如Trump政府ECRA禁令）切换到"补贴扩散"——B端政府采购窗口已开，垂类Agent应主动对接GSA/State采购框架；(3)加州选择"本地公司"Anthropic暗含产业政策逻辑——国内低代码AI平台可参考此模式与地方政府合作，形成"区域产业集群+AI采购"绑定。',
+    createdAt: '2026-06-29T14:00:00Z'
+  },
+
   // === 2026-06-27 (周五) ===
   {
     id: '20260627-01',
