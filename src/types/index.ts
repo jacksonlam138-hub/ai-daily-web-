@@ -1,3 +1,8 @@
+// 多角色视角（参考 skills/ai-daily/identity.md）
+export type Role = 'pm' | 'investor' | 'brand' | 'beginner'
+
+export type Perspectives = Partial<Record<Role, string>>
+
 // 日报条目
 export interface DailyItem {
   id: string
@@ -12,6 +17,8 @@ export interface DailyItem {
   utilityScore: number
   totalScore: number
   recommendReason?: string
+  // 多角色视角分析（可选，未做 lens pass 的旧条目缺省）
+  perspectives?: Perspectives
   createdAt: string
 }
 
@@ -53,6 +60,7 @@ export type SourceType =
   | 'Microsoft'
   | 'Meta'
   | 'Broadcom'
+  | 'Apple'
   // 开源生态
   | 'GitHub'
   // 媒体
@@ -74,7 +82,7 @@ export function getSourceCategory(source: SourceType): SourceCategory {
   const domestic: SourceType[] = ['Minimax', '智谱', '字节', '阿里', 'Seedance']
   const agentEco: SourceType[] = ['Hermes', 'OpenClaw', 'MCP', 'Dify']
   const devTools: SourceType[] = ['Cursor', 'Coze', 'Windsurf', 'Lovable', 'Replit', 'n8n']
-  const infra: SourceType[] = ['Microsoft', 'Meta', 'Broadcom']
+  const infra: SourceType[] = ['Microsoft', 'Meta', 'Broadcom', 'Apple']
   const projects: SourceType[] = ['GitHub']
   const focusProducts: SourceType[] = ['Lovart']
 

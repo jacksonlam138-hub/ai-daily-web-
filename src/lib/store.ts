@@ -47,6 +47,12 @@ const sampleItems: DailyItem[] = [
     utilityScore: 93,
     totalScore: 96,
     recommendReason: 'AI编码工具进入"移动端独立Agent"阶段。PM应关注：(1)手机端能launch独立agent≠简单远程控制——Anysphere把"任务委派+多步骤自主执行+结果可视化审阅"完整搬到移动端，意味着低代码平台移动端必须重新设计Agent委派UX而非套用桌面交互；(2)语音对话+图像标注说明编码Agent的多模态输入已成标配，未来PM评估编码工具时多模态输入权重应上升；(3)Cursor先发Mobile抢占"灵感即时落地"心智，竞品（Copilot/Replit/Windsurf）会跟进，B端AI编码采购清单需新增"移动端成熟度"维度。',
+    perspectives: {
+      pm: '手机端 launch 独立 agent ≠ 简单远程控制——Anysphere 把"任务委派+多步骤自主执行+结果可视化审阅"完整搬到移动端。低代码平台移动端必须重新设计 Agent 委派 UX，而非套用桌面交互。语音对话+图像标注说明多模态输入已成编码 Agent 标配，B 端编码工具采购清单应新增"移动端成熟度"维度。',
+      investor: 'Anysphere 估值叙事从"AI 编码 IDE"扩展到"全端 AI 工作流平台"——IPO 估值倍数或上修。Copilot/Replit/Windsurf 必跟，移动端功能差距=3-6 个月内估值分化关键。微软 GitHub 内部"生存级风险"警告间接利好 Cursor 抢份额。',
+      brand: '"AI 编码随时随地"叙事进入移动端，Cursor 抢先卡位"灵感即时落地"心智。编程教育 / Indie hacker / 远程团队社群是首波传播杠杆点。国内同类（通灵/CodeBuddy）若 30 天内不出 Mobile 版，叙事差距会被放大。',
+      beginner: '现在可以用手机写代码了。地铁上突然想到一个功能，对着手机说"帮我加个登录页"，Cursor 的 AI 就开始干，回家打开电脑看到结果。适合副业项目 / 远程团队 / Indie hacker。App Store 搜 Cursor 下载。'
+    },
     createdAt: '2026-06-29T10:00:00Z'
   },
   {
@@ -62,6 +68,12 @@ const sampleItems: DailyItem[] = [
     utilityScore: 90,
     totalScore: 94,
     recommendReason: '开源模型推理优化进入"企业可落地"阶段。PM应关注：(1)DeepSeek持续开源推理优化（DSpark继MoE之后又一贡献）说明中国大模型开源生态已从"模型权重"延伸到"推理栈"，国产大模型基础设施红利累积；(2)DSpark非即插即用而是"蓝图"——企业需自训draft模块，意味着有自建推理团队的B端先享受红利，中小团队仍需等待vLLM/TGI集成；(3)DeepSeek-V4-Flash模型正式在benchmark中出现说明V4系列已进入开发者实测阶段，B端API采购应主动评估V4 vs GPT-5.6/Claude Fable 5的ROI。',
+    perspectives: {
+      pm: 'DSpark 非即插即用而是"蓝图"——企业需自训 draft 模块，意味着有自建推理团队的 B 端先享受红利，中小团队仍需等 vLLM/TGI 集成。DeepSeek-V4-Flash 已进开发者实测阶段，B 端 API 采购应主动评估 V4 vs GPT-5.6/Claude Fable 5 的 ROI。推理优化已成"模型权重之外的二次红利"。',
+      investor: 'DeepSeek 持续开源推理优化（继 MoE 后又一贡献）说明中国大模型开源生态已从"权重"延伸到"推理栈"——基础设施红利累积。开源推理优化挤压闭源推理 API 毛利，OpenAI/Anthropic 的 API 收入增速或承压。DeepSeek-V4 实测落地，估值锚点切换到 V4 商业化节奏。',
+      brand: 'DeepSeek 把"中国大模型=便宜+开源"心智从模型层推到推理层，叙事强化。国内厂商应警惕"开源红利集中在头部几家"——中小厂商被边缘化风险上升。海外开发者社群对 DeepSeek 的关注度会再上一波。',
+      beginner: '意思是：用国产 DeepSeek 模型聊天/写代码，速度会变快 2 倍多，成本也降。接下来 1-2 个月会看到一波"接入 DeepSeek 后变便宜变快"的新工具。找工具时优先看是否接入 DeepSeek-V4 就行。'
+    },
     createdAt: '2026-06-29T13:00:00Z'
   },
   {
@@ -77,6 +89,12 @@ const sampleItems: DailyItem[] = [
     utilityScore: 89,
     totalScore: 93,
     recommendReason: '政府AI采购进入"州级战略合作"阶段。PM应关注：(1)全美首个州级AI合作选择Anthropic而非OpenAI/Google——Claude在政企市场的"安全合规"心智已经超越竞品，B端AI产品选型时Claude在政府/金融/医疗等高合规场景份额会继续上升；(2)5折+免费培训模式说明政府AI采购从"封锁管制"（如Trump政府ECRA禁令）切换到"补贴扩散"——B端政府采购窗口已开，垂类Agent应主动对接GSA/State采购框架；(3)加州选择"本地公司"Anthropic暗含产业政策逻辑——国内低代码AI平台可参考此模式与地方政府合作，形成"区域产业集群+AI采购"绑定。',
+    perspectives: {
+      pm: '全美首个州级 AI 合作选择 Anthropic 而非 OpenAI/Google——Claude 在政企市场的"安全合规"心智已超越竞品，B 端 AI 产品选型时 Claude 在政府/金融/医疗等高合规场景份额会继续上升。5 折+免费培训说明政府 AI 采购从"封锁管制"切换到"补贴扩散"——B 端政府采购窗口已开，垂类 Agent 应主动对接 GSA / 州采购框架。',
+      investor: '政府级合作给 Anthropic Q3-Q4 政企营收打开新增长曲线——估值模型可加入"政府订阅"分部。加州"本地公司"逻辑暗含产业政策——其他蓝州可能跟进，形成 Anthropic 在美国州级政企市场的网络效应。OpenAI 在政企份额或被蚕食。',
+      brand: '"加州公司对加州的责任"叙事精准——本地化+合规+公益三位一体。这是 Anthropic 反击 OpenAI"速度叙事"的关键品牌动作。国内 AI 出海厂商可参考：与目标市场地方政府合作绑定"区域产业集群"，比纯商业采购更有护城河。',
+      beginner: '美国加州政府跟 Anthropic（做 Claude 的公司）合作了，州政府员工可以用 Claude 处理公务，5 折优惠。这说明 Claude 在"政府认可的安全度"上赢了 OpenAI。如果你做 To G / 政企产品的 AI 应用，Claude 应该是首选评估对象。'
+    },
     createdAt: '2026-06-29T14:00:00Z'
   },
 
@@ -94,6 +112,12 @@ const sampleItems: DailyItem[] = [
     utilityScore: 97,
     totalScore: 98,
     recommendReason: '6月25日预测市场还判断GPT-5.6滑到7月概率82%——结果48小时内OpenAI直接放出三档定价。PM应关注：(1)三档模型分层（旗舰+均衡+最低价）说明OpenAI正面应对Anthropic Opus+Sonnet+Haiku产品矩阵，B端API定价战正式开打；(2)Terra比GPT-5.5便宜2倍=中端模型成本曲线再次下移，所有依赖GPT-5.5的产品应立即评估迁移ROI；(3)Trump政府自愿审查后立即发布说明美国AI监管已从"管制"切回"协商"——Mythos 5解禁+GPT-5.6上线同步发生，监管节奏由共和党政府主导，企业AI产品合规路径变清晰。',
+    perspectives: {
+      pm: '三档分层说明 OpenAI 正面对标 Claude Opus/Sonnet/Haiku 矩阵——B 端 API 定价战开打。PM 应：(1) 评估 Terra 替代 GPT-5.5 的迁移 ROI（同性能便宜 2 倍）；(2) Multi-Provider Gateway 加 Luna 作为兜底，最低成本场景调用；(3) Trump 政府自愿审查后立即发布说明合规路径清晰，企业 AI 产品可放心接入 GPT-5.6 系列。',
+      investor: '6/25 预测市场判断 GPT-5.6 滑到 7 月概率 82%，48 小时直接打脸——OpenAI IPO 估值或再上修。Terra 比 GPT-5.5 便宜 2 倍挤压独立模型 startup 估值倍数（Together AI / Fireworks / Replicate 中端 API 商业模式承压）。Anthropic Fable 5 仍封锁，OpenAI 抢 B 端份额窗口期打开。',
+      brand: '"自愿审查后立即发布"是关键叙事动作——OpenAI 把"监管合规"从被动约束转化为"信任资产"。Anthropic 加州州政府合作同日宣布，两家在"政企合规品牌"上正面竞争。国产模型应警惕：合规叙事正在成为新的品牌护城河，光有技术不够。',
+      beginner: 'ChatGPT 套壳应用、AI 工具接下来 1-2 个月会普遍变便宜变快。如果你订阅 ChatGPT Plus 或用 OpenAI API，关注控制台是否能切到 Terra 或 Luna——同样效果花更少钱。新手写代码做应用选 GPT-5.6 Terra 性价比最高。'
+    },
     createdAt: '2026-06-26T17:00:00Z'
   },
   {
@@ -109,6 +133,12 @@ const sampleItems: DailyItem[] = [
     utilityScore: 92,
     totalScore: 95,
     recommendReason: 'AI出口管制进入"精准解禁"阶段。PM应关注：(1)Mythos 5 vs Fable 5分化处理说明政府正在学习分级管制——按模型能力而非按厂商一刀切，企业AI产品应建立"模型合规分级矩阵"；(2)100+ trusted partners名单含cyber defenders和基础设施商——B端安全/网络防御类Agent是首批受益场景，垂类Agent应主动申请类似资质；(3)出口管制已成为可逆状态（封→解→再封），低代码平台必须把"模型可用性"作为运行时变量而非静态配置，与Multi-Provider Gateway策略强绑定。',
+    perspectives: {
+      pm: 'Mythos 5 vs Fable 5 分化处理说明监管走向"按模型能力分级"——企业 AI 产品需建立"模型合规分级矩阵"。100+ trusted partners 名单含 cyber defenders 和基础设施商，垂类 Agent 应主动申请类似资质。"模型可用性"已是运行时变量，必须与 Multi-Provider Gateway 强绑定，避免单点被封。',
+      investor: '出口管制进入"精准解禁"阶段——可逆状态（封→解→再封）意味着 Anthropic 估值的不确定性溢价上升。Mythos 5 解禁给 Q2-Q3 营收上修空间。国产 AI 出口管制映射逻辑反向成立：解禁=海外市场打开，对智谱/MiniMax 海外业务是利好参照。',
+      brand: 'Anthropic 在政府关系上从"被压制"反转到"被信任"，品牌叙事走"负责任的公民企业"路线。但 Fable 5 仍封锁=风险未完全消除。B 端客户在采购决策中会加权"政府背书"信号，Anthropic 在 To G / 金融 / 医疗市场份额或继续上升。',
+      beginner: 'Anthropic 的 Claude 高端模型之前被美国政府限制出口，现在部分解禁了。如果你公司用 Claude 做企业应用，可能很快能用上之前下线的 Mythos 5 版本。但更强的 Fable 5 还在被锁——别急着迁移关键业务。'
+    },
     createdAt: '2026-06-26T16:00:00Z'
   },
 
