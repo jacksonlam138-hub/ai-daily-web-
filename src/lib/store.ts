@@ -1,6 +1,38 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-07-01 (周二) ===
+  {
+    id: '20260701-01',
+    date: '2026-07-01',
+    title: 'Anthropic发布Claude Sonnet 5：最Agent化Sonnet，性能逼近Opus 4.8，入门定价$2/$10比标准价便宜33%',
+    summary: 'Anthropic 6月30日发布Claude Sonnet 5，定位为"最Agent化Sonnet"——可自主规划、使用浏览器/终端工具、持续运行，能力逼近Opus 4.8但价格更低。在编码、Agent搜索(BrowseComp)、计算机使用(OSWorld)等评估上大幅超越Sonnet 4.6。入门定价$2/$10 per M tokens（至8月31日），之后恢复$3/$15。注意：新tokenizer使同文本token数增加1.0-1.35x，入门价设计为成本中性过渡。默认启用网络安全防护。已替代成为Free和Pro计划默认模型，同步上线Claude Code和Claude Platform。Lovable、ClickHouse、Pace等合作伙伴给出正面反馈。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.anthropic.com/news/claude-sonnet-5',
+    tags: ['#发布', '#模型', '#Agent', '#API'],
+    accuracyScore: 99,
+    timelinessScore: 99,
+    utilityScore: 97,
+    totalScore: 98,
+    recommendReason: '中端Agent模型进入"Opus级能力+Sonnet级价格"阶段。PM应关注：(1)Sonnet 5性能逼近Opus 4.8说明Agent能力正在"下沉"——低代码平台用中端模型即可驱动复杂多步骤Agent，B端API成本基准再次下移；(2)入门$2/$10比标准$3/$15便宜33%是限时策略，8月31日前是评估迁移的最佳窗口，所有用Sonnet 4.6的产品应立即跑benchmark；(3)新tokenizer导致token数增加1.35x是隐性成本——"入门价成本中性"设计意味着实际支出不会下降，PM算ROI时必须用实际token数而非简单对比单价。',
+    createdAt: '2026-06-30T17:00:00Z'
+  },
+  {
+    id: '20260701-02',
+    date: '2026-07-01',
+    title: 'Alphabet因DeepMind人才流失+数据中心担忧蒸发$269亿市值：Jumper等4人6天内离巢，投资者用脚投票重估AI竞争格局',
+    summary: 'Insider Finance/MarketWatch等多家财经媒体6月底报道：Alphabet因DeepMind高级研究员持续流失至Anthropic和OpenAI，叠加数据中心建设成本担忧，累计蒸发约$269亿市值，创一年来最差单日表现。核心事件链：诺奖得主John Jumper（AlphaFold负责人）宣布加入Anthropic，Jonas Adler和Alexander Pritzel同批离巢，6天内4名高级研究员出走。Google曾斥$2.7B试图带回Noam Shazeer未果。Google反击策略：拟向Anthropic投资至$400亿，强化"打不过就入股"的双轨布局。',
+    source: 'Google',
+    sourceUrl: 'https://www.insiderfinance.io/news/alphabet-shares-plunge-after-nobel-laureate-leaves-deepmind',
+    tags: ['#竞争', '#战略', '#融资'],
+    accuracyScore: 94,
+    timelinessScore: 93,
+    utilityScore: 86,
+    totalScore: 91,
+    recommendReason: 'AI竞争进入"人才即估值"阶段。PM应关注：(1)$269亿市值蒸发反映资本市场正在重新定价"人才护城河"——模型能力不再只看参数和算力，而是看核心研究员的稳定性，B端选型时应将团队稳定性纳入供应商评估；(2)Google拟投Anthropic $400亿说明"打不过就入股"已成巨头AI策略——类似Microsoft投资OpenAI的剧本在Google-Anthropic间重演，多极AI格局通过资本交叉持股固化；(3)Jumper等基础科学研究员（非工程岗）跳槽到Anthropic意味着模型公司正在吸纳跨学科顶尖人才，低代码平台的产品边界会因模型能力向科学领域延伸而被重新定义。',
+    createdAt: '2026-06-30T20:00:00Z'
+  },
+
   // === 2026-06-29 (周日) ===
   {
     id: '20260629-01',
