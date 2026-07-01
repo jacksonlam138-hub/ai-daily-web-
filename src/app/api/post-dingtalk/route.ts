@@ -1,7 +1,16 @@
 import { NextResponse } from 'next/server'
 import crypto from 'crypto'
 import { getDailyReport } from '@/lib/store'
-import type { DailyItem } from '@/types'
+import type { DailyItem, Role } from '@/types'
+
+const ROLE_LABEL: Record<Role, string> = {
+  pm: 'PM',
+  investor: '投资',
+  brand: '品牌',
+  beginner: '小白',
+}
+
+const VALID_ROLES: Role[] = ['pm', 'investor', 'brand', 'beginner']
 
 function getWebhookConfig() {
   const webhookUrl = process.env.DINGTALK_WEBHOOK_URL
@@ -18,11 +27,11 @@ function buildSignedUrl(webhookUrl: string, secret: string): string {
   return `${webhookUrl}${separator}timestamp=${timestamp}&sign=${sign}`
 }
 
-function formatMarkdown(date: string, items: DailyItem[]): string {
+function formatMarkdown(date: string, items: DailyItem[], role?: Role): string {
   const nums = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6️⃣', '7️⃣', '8️⃣', '9️⃣', '🔟']
   const lines: string[] = [
     `## 🆕 AI日报 | ${date}`,
-    `**${items.length} 条新内容已上线**`,
+    `**${items.length} 条新内容已上线**${role ? ` · ${ROLE_LABEL[role]}视角` : ''}`,
     '',
   ]
 
@@ -30,8 +39,10 @@ function formatMarkdown(date: string, items: DailyItem[]): string {
     const num = nums[idx] ?? `${idx + 1}.`
     lines.push(`${num} ${item.title}`)
     lines.push(`> ${item.summary}`)
-    if (item.recommendReason) {
-      lines.push(`> 💡 PM：${item.recommendReason}`)
+    const insight = role ? item.perspectives?.[role] : item.recommendReason
+    if (insight) {
+      const label = role ? ROLE_LABEL[role] : 'PM'
+      lines.push(`> 💡 ${label}：${insight}`)
     }
     lines.push(`> 来源：[${item.source}](${item.sourceUrl})`)
     lines.push('')
@@ -45,6 +56,14 @@ function resolveDate(request: Request): string {
   const fromQuery = new URL(request.url).searchParams.get('date')
   if (fromQuery) return fromQuery
   return new Date().toISOString().split('T')[0]
+}
+
+function resolveRole(request: Request): Role | undefined {
+  const fromQuery = new URL(request.url).searchParams.get('role')
+  if (fromQuery && VALID_ROLES.includes(fromQuery as Role)) {
+    return fromQuery as Role
+  }
+  return undefined
 }
 
 export async function POST(request: Request) {
@@ -67,6 +86,7 @@ export async function POST(request: Request) {
   }
 
   const date = resolveDate(request)
+  const role = resolveRole(request)
   const report = getDailyReport(date)
 
   if (!report) {
@@ -83,7 +103,7 @@ export async function POST(request: Request) {
         msgtype: 'markdown',
         markdown: {
           title: `AI日报 | ${date}`,
-          text: formatMarkdown(date, report.items),
+          text: formatMarkdown(date, report.items, role),
         },
       }),
     })
@@ -101,6 +121,7 @@ export async function POST(request: Request) {
     return NextResponse.json({
       ok: true,
       date,
+      role: role ?? 'default',
       itemCount: report.items.length,
       dingtalkResponse: result,
     })
@@ -112,6 +133,7 @@ export async function POST(request: Request) {
 
 export async function GET(request: Request) {
   const date = resolveDate(request)
+  const role = resolveRole(request)
   const report = getDailyReport(date)
 
   if (!report) {
@@ -120,8 +142,9 @@ export async function GET(request: Request) {
 
   return NextResponse.json({
     date,
+    role: role ?? 'default',
     itemCount: report.items.length,
-    preview: formatMarkdown(date, report.items),
-    note: 'POST to this endpoint to push to DingTalk',
+    preview: formatMarkdown(date, report.items, role),
+    note: 'POST to push. Add ?role=pm|investor|brand|beginner to switch perspective.',
   })
 }
