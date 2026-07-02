@@ -1,6 +1,71 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-07-02 (周三) ===
+  {
+    id: '20260702-01',
+    date: '2026-07-02',
+    title: 'Together AI完成$800M Series C@$8.3B估值：Aramco领投，年订单额$1.15B+，开源模型neocloud进入"千亿估值"前夜',
+    summary: 'TechCrunch 7月1日报道，开源模型托管neocloud Together AI完成$800M Series C，估值$8.3B（16个月前Series B时$3.3B，翻了2.5倍）。Aramco Ventures领投，Vista Equity、General Catalyst、Emergence、Nvidia、March Capital、Pegatron、SentinelOne的S Ventures等跟投。公司宣称年订单额超$1.15B，客户包括Cursor、Cognition、Decagon等数千家。Together AI数据显示过去一年开源模型使用量翻了3倍，企业转向neocloud托管开源模型而非付费闭源frontier model的token溢价。同赛道近期还有Upscale AI（$500M@$2B）和TensorWave（$350M@$1.55B）。',
+    source: '其他',
+    sourceUrl: 'https://techcrunch.com/2026/07/01/neocloud-together-ai-raises-800m-leaps-to-8-3b-valuation/',
+    tags: ['#融资', '#战略', '#开源'],
+    accuracyScore: 97,
+    timelinessScore: 98,
+    utilityScore: 90,
+    totalScore: 95,
+    recommendReason: 'AI基础设施"第二梯队"估值跃迁。PM应关注：(1)Together AI 16个月估值翻2.5倍至$8.3B，反映开源模型托管已成独立赛道——B端AI产品选型时除了OpenAI/Anthropic API，必须把neocloud（Together/Fireworks/Upstage）纳入比价；(2)年订单$1.15B+对比Cursor/Cognition等头部客户群，说明"开源模型+推理优化"的B端商业化已被验证，闭源API毛利承压；(3)Aramco领投标志中东资本进入AI基础设施——地缘资金流向影响供应链，国内厂商对接海外算力时需重新评估合规路径。',
+    perspectives: {
+      pm: '开源 neocloud 已是独立赛道——B 端 AI 产品选型除 OpenAI/Anthropic API 外，必须把 Together/Fireworks/Upstage 纳入比价。Cursor、Cognition 都在用 Together 说明推理成本优化已成开发者默认动作。低代码平台接开源模型（Llama/Qwen/DeepSeek）走 Together API 比 straight 闭源 API 可降本 50%+，但要预留"模型切换"的抽象层。',
+      investor: 'Together AI 16 个月估值翻 2.5 倍，neocloud 赛道独立估值锚点形成——但年订单 $1.15B 对应 $8.3B 估值倍数约 7x，已不便宜。Aramco 领投标志中东主权基金接棒硅谷 VC，AI 基础设施资金结构在重塑。挤压闭源 API 毛利叙事强化，OpenAI/Anthropic 推理收入增速或受抑。',
+      brand: '"开源模型+中东资本"=AI基础设施新版图——Together AI 抄作业：1) 国产 AI 出海厂商别再做"通用闭源 API"叙事，开源托管+区域算力才是差异化；2) To D 开发者品牌立刻投"模型切换教程"内容（Together vs OpenAI 切换 ROI），开发者关心迁移成本；3) 沙特 Aramco 入场预示中东成为下一个 AI 算力叙事场，提前布局区域 KOL 和案例；4) AI 基础设施发布会别只讲"快"，把"年订单额/客户名单/单位经济模型"做成主视觉——B 端采购权重已变；5) 反思：你的品牌定位是"另一个 AI API"？必死，差异化锚定垂直场景（编码/客服/医疗）。',
+      beginner: '有个叫 Together AI 的公司拿到了 8 亿美元投资。它专门帮企业"便宜地跑开源 AI 模型"。意味着接下来用 AI 工具的成本会继续降。如果你公司要接入 AI，可以问问技术同事"考虑过 Together AI 吗"。'
+    },
+    createdAt: '2026-07-01T18:30:00Z'
+  },
+  {
+    id: '20260702-02',
+    date: '2026-07-02',
+    title: '美国全面解除Anthropic Fable 5+Mythos 5出口管制：Lutnick确认，Fable 5恢复全球访问，AI监管从"突击封锁"切回"协议共治"',
+    summary: 'The Guardian 7月1日报道，美国商务部长Howard Lutnick确认全面解除对Anthropic Fable 5和Mythos 5的出口管制。背景链：6月9日Fable 5发布→6月12日政府下令对外籍用户禁用Fable 5+Mythos 5→6月27日（周五）Mythos 5部分解禁给美国"可信赖"机构用于防御性网络安全→7月1日Fable 5全面恢复访问。Lutnick在致Anthropic的公开信中确认Anthropic同意：主动检测/应对模型安全风险、与政府就Mythos/Fable/未来模型协议标准合作、及时通报恶意使用。Anthropic官方发文称已恢复全球客户访问。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.theguardian.com/technology/2026/jul/01/anthropic-fable-mythos-ai-models-us-export-controls-lifted',
+    tags: ['#发布', '#模型', '#安全', '#战略'],
+    accuracyScore: 98,
+    timelinessScore: 99,
+    utilityScore: 92,
+    totalScore: 96,
+    recommendReason: '修正6/27-02"Fable 5仍封锁"判断——出口管制已全面解除。PM应关注：(1)Fable 5恢复全球访问意味着B端可重新把Fable 5纳入生产环境选型，2周窗口的方案搁置可重启；(2)Anthropic与政府签订"主动检测+协议共治"框架，意味着美国AI监管模式从"突击封锁"切到"协议共治"，未来frontier model发布节奏会更可预测；(3)Mythos 5先解禁给"防御性网络安全"用途——网络安防垂类Agent获得独家窗口期，国内安全厂商应关注类似合作模式。',
+    perspectives: {
+      pm: 'Fable 5 全面恢复访问，2 周搁置的 B 端方案可立即重启选型。Anthropic 与政府的"主动检测+协议共治"框架意味着 frontier model 发布节奏更可预测——B 端 AI 产品合规审计可前置。Mythos 5 先解禁给防御性网络安全说明垂类 Agent 有"独家窗口期"，安全/政企场景应主动对接 Anthropic 申请 Mythos 5 访问。',
+      investor: '出口管制解除是 Anthropic 估值修复事件——Q3 营收预期上修。监管模式从"突击封锁"切到"协议共治"降低 frontier model 发布的政策风险溢价，OpenAI/Google 同步受益。"先解禁网络安全用途"暗示垂类解禁路径，关注安全垂类模型公司（Rebind、Robust Intelligence）的并购机会。',
+      brand: 'Anthropic 把"被监管"做成了"政府共谋者"品牌资产——品牌人抄作业：1) 危机公关的标准答案不是道歉，是签"主动检测+共治协议"——把约束变成信任背书；2) To B 发布会立刻加一页"合规资质+政府合作"，权重高于技术参数；3) Mythos 5"先解禁网络安全垂类"是绝佳叙事——你的产品能否找到"高敏感垂类独家窗口"做品牌锚点？4) Lutnick 公开信是品牌资产，截图引用比通稿有 5 倍穿透力；5) 反思：你的品牌危机应对还在"删帖+冷处理"？学 Anthropic 把危机做成估值修复事件。',
+      beginner: '之前美国突然禁止 Anthropic 最强的 Fable 5 模型给外国人用，现在又放开了。说明 Claude 最强模型可以正常用了。如果你用 Claude API，可以去后台试试 Fable 5。'
+    },
+    createdAt: '2026-07-01T10:30:00Z'
+  },
+  {
+    id: '20260702-03',
+    date: '2026-07-02',
+    title: 'Google Gemini Spark登陆macOS：可读写本地文件、跨设备委派任务，配套开放MCP支持——Agent从"对话框"切到"操作系统"',
+    summary: 'AppleInsider 7月1日报道，Google正式将Gemini Spark带到macOS（此前已在iOS/Web）。核心能力：可访问Mac桌面+本地文件，按指令完成"整理Downloads文件夹到桌面分类文件夹""把发票数据汇总到Google Sheets"等多步骤操作；支持手机端委派任务给Mac本地执行（手机不在身边也能完成）；新增Canva、Dropbox、OpenTable等集成；开放自定义MCP（Model Context Protocol）支持以便未来对接其他应用。仅向Google AI Ultra订阅用户（18+）开放Beta。',
+    source: 'Google',
+    sourceUrl: 'https://appleinsider.com/articles/26/07/01/googles-gemini-spark-for-macos-will-work-on-your-local-mac-files',
+    tags: ['#发布', '#Agent', '#更新', '#MCP'],
+    accuracyScore: 95,
+    timelinessScore: 97,
+    utilityScore: 89,
+    totalScore: 94,
+    recommendReason: '操作系统级Agent落地——Gemini Spark从"对话框"切到"Mac桌面"。PM应关注：(1)Google Spark敢碰"本地文件读写+跨设备委派"说明计算机使用Agent的隐私/安全模型已通过内部红线审查——B端计算机使用Agent的产品化路径变清晰；(2)开放MCP支持是关键信号——Google把MCP作为Agent生态对接的"通用插座"，国内低代码Agent平台应同步把MCP支持列入路线图；(3)Google AI Ultra订阅门槛+18+Beta说明商业化走"高端订阅"路径，B端Gemini集成需评估Ultra账号采购方案。',
+    perspectives: {
+      pm: 'Gemini Spark 敢碰"本地文件读写+跨设备委派"说明计算机使用 Agent 的隐私/安全模型已通过红线审查——B 端 computer use Agent 的产品化路径清晰。开放 MCP 是关键信号——Google 把 MCP 当 Agent 生态"通用插座"，国内低代码 Agent 平台应把 MCP 支持列入 Q3 路线图，否则生态对接会落后一代。',
+      investor: 'Google 把 Agent 战场从"对话框"推到"操作系统"——直接对标 Apple Intelligence 和 Microsoft Copilot for PC。Gemini Spark 走 Ultra 订阅路径意味着 ARPU 上行空间。MCP 标准化提速，Anthropic 主导的协议获 Google 背书，生态护城河加深。',
+      brand: 'Gemini Spark 从"对话框"切到"Mac 桌面"——Google 抢"操作系统级 Agent"叙事。品牌人抄作业：1) AI 工具品牌定位从"问答助手"升级到"操作系统级助手"，叙事必须有"跨设备+本地文件"维度；2) MCP 开放是公关钩子，主动产出"我们已支持 MCP"技术博客+demo 视频，开发者社群权重高于通稿；3) 跨设备委派是绝佳场景化视频素材——"地铁上手机说一句，回家电脑已整理好"，60 秒视频胜过 10 篇稿；4) Ultra 订阅门槛做成"稀缺性"叙事而非"贵"，限量 Beta 制造紧迫感；5) 别和 ChatGPT 比"对话"，Gemini 必须锚定"Agent 操作你的电脑"，差异化定位才有护城河。',
+      beginner: 'Gemini 现在可以操作你的 Mac 电脑了。比如手机在外面说"帮我把下载文件夹整理好"，回家发现电脑自己整理完了。需要订阅 Google AI Ultra。如果你用 Mac 且经常被杂事打扰，值得试试。'
+    },
+    createdAt: '2026-07-01T17:30:00Z'
+  },
+
   // === 2026-07-01 (周二) ===
   {
     id: '20260701-01',
