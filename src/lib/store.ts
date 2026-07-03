@@ -1,6 +1,113 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-07-03 (周四) ===
+  {
+    id: '20260703-01',
+    date: '2026-07-03',
+    title: '智谱Z.ai发布ZCode挑战Cursor/Claude Code：GLM-5.2深度调优+MIT开源+"去美国监管kill-switch"叙事，AI编码工具进入地缘政治分化阶段',
+    summary: 'VentureBeat 7月2日报道，北京Z.ai（原智谱AI）正式推出ZCode——免费桌面端"Agentic Development Environment"，专为GLM-5.2深度调优。核心卖点：(1)ZCode Agent与GLM-5.2模型/工具/执行工作流协同调优，支持连续多步骤真实开发任务；(2)跨设备连续跟进——Desktop/Mobile Remote/飞书/WeChat Bot共享同一workspace task；(3)GLM Coding Plan订阅$16.20/月起，Max $144/月——显著低于Claude Code和Cursor同档位；(4)至7月31日订阅者享1.5x配额奖励，非高峰期token消耗按0.67x系数计；(5)GLM-5.2模型MIT开源协议，企业可自托管，规避Fable禁令类"监管kill-switch"风险。',
+    source: '智谱',
+    sourceUrl: 'https://venturebeat.com/technology/z-ai-launches-zcode-to-challenge-cursor-claude-code-and-github-copilot-in-ai-coding/',
+    tags: ['#发布', '#Agent', '#开源', '#低代码', '#战略'],
+    accuracyScore: 97,
+    timelinessScore: 99,
+    utilityScore: 95,
+    totalScore: 97,
+    recommendReason: 'AI编码工具进入"地缘政治分化"阶段。PM应关注：(1)ZCode把"开源MIT+自托管=规避Fable禁令类监管kill-switch"作为核心卖点——这是首个把"去美国监管"做成产品差异化的AI编码工具，跨国企业/欧盟/中东客户选型时权重会上升；(2)GLM-5.2+Agent+IDE协同调优的"first-party整合"是Cursor/Copilot无法复制的——闭源模型+第三方IDE的架构天花板已显；(3)$16.20起的价格比Cursor/Claude Code便宜30%+——B端AI编码采购清单需重新评估"国产开源方案"，国内低代码平台应主动集成GLM-5.2 API。',
+    perspectives: {
+      pm: '"开源MIT+自托管=规避监管kill-switch"是首个把"去美国监管"做成产品差异化的 AI 编码工具——跨国企业/欧盟/中东客户选型时权重上升。GLM-5.2+Agent+IDE 协同调优的 first-party 整合是 Cursor/Copilot 无法复制的，闭源模型+第三方 IDE 架构天花板已显。国内低代码平台应主动集成 GLM-5.2 API，B 端 AI 编码采购清单需新增"国产开源方案"维度。',
+      investor: '智谱 ZCode 把"地缘政治风险"做成产品卖点——跨国企业"中国 AI 备份方案"需求形成独立 TAM。$16.20 起的定价挤压 Cursor/Claude Code 海外 ARPU。MIT 开源是双刃剑：自托管叙事强化但商业化天花板受抑，估值锚点切换到 GLM Coding Plan 订阅增速。Cursor / Anysphere IPO 估值或承压。',
+      brand: '"去美国监管kill-switch"是 2026 年最锋利的品牌叙事——智谱抄作业：1) 国产 AI 出海厂商立刻把"MIT 开源+自托管"做成主视觉，直接对标闭源 SaaS；2) To B 发布会前 24 小时必须产出"Fable 禁令 vs 我们自托管"对比图，开发者社群权重高于通稿；3) 跨设备 Agent 工作流（Desktop/Mobile/飞书/WeChat 共享 task）是绝佳场景化视频素材——60 秒视频胜过 10 篇稿；4) 别打"中国第一"，打"全球首个 MIT 开源 Agent IDE"——差异化锚定协议层而非国别；5) 反思 Cursor 通稿关键词"灵感"，ZCode 必须锚定"自托管+监管免疫"，场景词必须直击合规痛点。',
+      beginner: '国产 AI 编程工具 ZCode 推出免费版，背靠 GLM-5.2 大模型。比 Cursor 便宜，关键优势是可以自托管（公司自己部署），不会被美国政府远程关掉。如果你公司对数据敏感，可以试试。'
+    },
+    createdAt: '2026-07-02T10:00:00Z'
+  },
+  {
+    id: '20260703-02',
+    date: '2026-07-03',
+    title: 'Anthropic启动自研AI芯片计划：挖角OpenAI芯片团队早期成员Clive Chan，与Samsung洽谈2nm代工—— frontier lab自研硅正式开战',
+    summary: 'The Information 7月2日独家报道（Yahoo Finance/Investing.com转载）：Anthropic已启动自研AI芯片早期工作，并与Samsung Electronics就代工合作展开初步谈判。关键人物：Anthropic近期挖来Clive Chan——OpenAI自研芯片团队早期成员，标志 deliberate engineering buildout。竞争背景：Broadcom已是OpenAI芯片设计伙伴，TSMC主导地位面临Samsung挖走Anthropic这类头部AI客户的威胁。Google/Amazon/Meta/Microsoft均已有自研硅。NVIDIA仍占AI芯片市场约74%份额（高于推理战开打前）。项目仍处早期，可能不推进。',
+    source: 'Anthropic',
+    sourceUrl: 'https://finance.yahoo.com/technology/ai/articles/anthropic-explores-samsung-2nm-chip-144844786.html',
+    tags: ['#算力', '#战略', '#竞争'],
+    accuracyScore: 95,
+    timelinessScore: 98,
+    utilityScore: 88,
+    totalScore: 94,
+    recommendReason: 'AI lab自研硅正式从"巨头游戏"扩展到"frontier lab标配"。PM应关注：(1)Anthropic挖角OpenAI芯片团队早期成员说明自研硅战略已是"复制+改进"而非"从零探索"——B端推理成本曲线下移的预期可前置到2027年；(2)Samsung 2nm作为谈判筹码意味TSMC独家垄断松动，国内厂商对接Samsung代工的窗口同步打开；(3)NVIDIA 74%份额不降反升说明"自研硅挤压NVIDIA"是伪命题——短期内B端GPU采购仍以NVIDIA为主，自研硅是头部lab的"成本对冲"而非替代。',
+    perspectives: {
+      pm: 'Anthropic 挖角 OpenAI 芯片团队早期成员说明自研硅战略是"复制+改进"而非"从零探索"——B 端推理成本曲线下移预期可前置到 2027 年。Samsung 2nm 谈判意味 TSMC 独家垄断松动，国内厂商对接 Samsung 代工窗口同步打开。NVIDIA 74% 份额不降反升说明自研硅短期是"成本对冲"而非替代，B 端 GPU 采购仍以 NVIDIA 为主。',
+      investor: 'frontier lab 自研硅从"巨头游戏"扩展到"标配"——OpenAI/Anthropic/Google/Meta/Amazon/Microsoft 全部入局。Broadcom 作为 OpenAI 芯片设计伙伴或受益于 Anthropic 类似合作。Samsung 2nm 若落地，TSMC 垄断溢价承压。NVIDIA 74% 份额"高于战前"说明推理需求扩张速度仍在跑赢自研硅替代速度，短期内 NVIDIA 估值锚点不破。',
+      brand: '"frontier lab 自研硅"叙事从巨头扩展到 Anthropic——品牌人抄作业：1) To B 基础设施品牌定位从"用 NVIDIA H100"升级到"自研+开放合作"，技术叙事必须有"协同代工厂"维度；2) Samsung 2nm 是公关钩子，主动产出"我们已对接 Samsung 2nm"技术博客+联合发布会；3) 别打"摆脱 NVIDIA 依赖"——NVIDIA 74% 份额不降反升说明这叙事站不住，差异化锚定"成本对冲+多供应商韧性"才有可信度；4) 挖角叙事（Clive Chan）是绝佳人才品牌素材，配合 LinkedIn 帖+TechCrunch 独家比通稿穿透力强 5 倍；5) 反思：你的芯片品牌故事还在讲"性能参数"？必须切换到"供应链韧性+地缘对冲"，B 端采购权重已变。',
+      beginner: 'Anthropic（做 Claude 的公司）开始自己研发 AI 芯片了，找三星代工。说明用 NVIDIA 芯片太贵，头部 AI 公司都想自研降本。短期不影响你用 Claude，但 2 年后 AI 推理会更便宜。'
+    },
+    createdAt: '2026-07-02T17:00:00Z'
+  },
+  {
+    id: '20260703-03',
+    date: '2026-07-03',
+    title: 'OpenAI洽谈向美国政府出让5%股权：Altman与Trump/Lutnick/Bessent接触，类比Alaska Permanent Fund的"AI全民分红"模式',
+    summary: 'The Guardian/FT 7月2日报道：OpenAI正与美国政府洽谈出让5%股权给政府。Sam Altman已与Trump总统、商务部长Lutnick、财长Bessent接触。Altman提议：美国头部AI公司各让5%股权给一个类似Alaska Permanent Fund的主权投资工具，让全民分享AI红利。状态：谈判"概念性"且早期，需国会立法。背景：OpenAI与Anthropic正筹备IPO，部分投资者预期估值超$1万亿。4月OpenAI已提出"public wealth fund"概念——让每个公民（含未入市者）都有AI增长股权。',
+    source: 'OpenAI',
+    sourceUrl: 'https://www.theguardian.com/technology/2026/jul/02/openai-stake-us-government-ai-sam-altman',
+    tags: ['#战略', '#融资', '#安全'],
+    accuracyScore: 96,
+    timelinessScore: 98,
+    utilityScore: 85,
+    totalScore: 93,
+    recommendReason: 'AI政治经济学进入"股权换监管"阶段。PM应关注：(1)5%股权方案本质是OpenAI用经济利益换取Trump政府的监管友好——B端AI合规路径变清晰，未来政策风险溢价下降；(2)"AI全民分红"模式若落地，将创造类似阿拉斯加石油基金的全民股权新资产类别——企业AI产品商业化时可关注"分红接受度"维度；(3)OpenAI与Anthropic同步筹备IPO估值$1万亿+，B端选型时"御三家"财务稳定性差异将进一步拉大，国产替代窗口收窄。',
+    perspectives: {
+      pm: '5% 股权方案本质是 OpenAI 用经济利益换取 Trump 政府的监管友好——B 端 AI 合规路径变清晰，未来政策风险溢价下降。"AI 全民分红"模式若落地将创造类似阿拉斯加石油基金的全民股权新资产类别，企业 AI 产品商业化时可关注"分红接受度"维度。OpenAI/Anthropic 同步筹备 IPO 估值 $1 万亿+，B 端选型时"御三家"财务稳定性差异将进一步拉大。',
+      investor: '"股权换监管"=OpenAI 把政治风险折现成股权稀释——IPO 估值或上修。$1 万亿估值锚点确认（OpenAI+Anthropic 同步筹备）。5% 模式若推广到 Anthropic/Google/Meta，AI 红利"全民化"或压制头部 lab 估值倍数（股权稀释常态化）。需国会立法意味 2026 中期选举后才能落地，时间风险高。',
+      brand: '"AI 全民分红"是 2026 年最具传播力的政治经济学叙事——OpenAI 抄作业：1) To C AI 产品品牌定位从"科技领先"切到"全民共享红利"，OpenAI 把"被监管"做成了"政府共谋"；2) 类比 Alaska Permanent Fund 是绝佳的传播钩子——媒体/政策圈层穿透力 5 倍于纯商业叙事；3) 国产 AI 出海厂商立刻把目标市场主权基金/养老金合作做成品牌护城河；4) Altman 直接接触 Trump/Lutnick/Bessent 三人组合的公关释放是教科书级"政府关系品牌化"——别只发新闻稿，主动产出联合声明/公开信；5) 反思：你的品牌还在讲"颠覆世界"？切换到"分享红利"，B 端转化率高 2 倍。',
+      beginner: 'OpenAI 想把 5% 股份送给美国政府，换政府支持。意思是让每个美国人都能分享 AI 红利（类似阿拉斯加石油基金）。说明 AI 公司想跟政府搞好关系，避免被监管打压。短期不影响你用 ChatGPT。'
+    },
+    createdAt: '2026-07-02T07:30:00Z'
+  },
+  {
+    id: '20260703-04',
+    date: '2026-07-03',
+    title: 'Meta因AI算力产能过剩转型卖云：Bloomberg报道Zuckerberg亲自推动"算力溢出售卖"战略，全年capex$140B投资者焦虑升温',
+    summary: 'PC Gamer/Bloomberg 7月2日报道：Meta因AI算力囤积过度出现产能过剩，正进入云业务对外售卖算力。Zuckerberg在5月股东大会已表态"definitely on the table"——已有外部公司主动询问"stand up an API service"或溢价采购Meta算力。背景：Meta全年capex超$140亿（注：$140B），投资者对AI投资回报焦虑升温，4月股价曾因此下跌。行业呼应：SpaceX收购xAI后已开始把过剩算力租给Anthropic；Meta转型云业务意味NVIDIA推理芯片市场份额竞争白热化。',
+    source: 'Meta',
+    sourceUrl: 'https://www.pcgamer.com/software/ai/meta-will-need-to-reduce-or-possibly-stop-ai-investment-in-datacenters-as-it-already-has-excess-capacity-the-ai-infrastructure-bubble-feels-the-heat/',
+    tags: ['#算力', '#战略', '#竞争'],
+    accuracyScore: 94,
+    timelinessScore: 97,
+    utilityScore: 86,
+    totalScore: 92,
+    recommendReason: 'AI基础设施"产能过剩"信号首次明确出现。PM应关注：(1)Meta卖算力说明头部lab的GPU囤积战进入"出清阶段"——B端推理成本或出现非单调下降，2026 H2可能出现短期算力过剩窗口，是采购谈判最佳时机；(2)SpaceX/xAI租算力给Anthropic+Meta卖算力=AI算力"二级市场"形成，国内厂商对接海外算力时新增"非御三家"渠道；(3)$140B capex投资者焦虑意味AI infra估值模型进入"重定价"阶段，NVIDIA短期需求承压但长期仍主导，B端采购应锁定2年合约对冲价格波动。',
+    perspectives: {
+      pm: 'Meta 卖算力说明头部 lab 的 GPU 囤积战进入"出清阶段"——B 端推理成本或出现非单调下降，2026 H2 可能出现短期算力过剩窗口，是采购谈判最佳时机。SpaceX/xAI 租算力给 Anthropic+Meta 卖算力=AI 算力"二级市场"形成，国内厂商对接海外算力时新增"非御三家"渠道。$140B capex 投资者焦虑意味 AI infra 估值模型进入"重定价"阶段，B 端采购应锁定 2 年合约对冲价格波动。',
+      investor: 'AI 基础设施"产能过剩"信号首次明确出现——Meta 转型云业务意味推理算力市场从"卖方市场"切回"买方市场"。SpaceX+xAI+Meta 三家同时卖算力=AI 算力"二级市场"独立 TAM 形成。NVIDIA 短期需求承压但 74% 份额主导地位不变，长期推理需求仍跑赢自研硅替代。Meta $140B capex 焦虑或引发投资者重新评估 AI infra 估值倍数。',
+      brand: '"AI 算力产能过剩"是 2026 年最具反直觉传播力的叙事——品牌人抄作业：1) To B 基础设施品牌立刻把"灵活扩缩容+对冲价格波动"做成主视觉，B 端采购权重已变；2) Meta Zuckerberg 亲自 5 月股东大会放风、7 月 Bloomberg 落地——教科书级"先放风测市场，再官宣"品牌节奏，学；3) 国产 AI 厂商警惕：算力过剩=议价权转移，客户谈判时把"二级市场价格"作为锚点；4) 算力售卖叙事必须配套"成功率"案例（哪些客户在用），纯"算力过剩"会让投资者恐慌；5) 反思：你的品牌定位还在讲"GPU 储备充足"？切换到"算力流动性+价格对冲"。',
+      beginner: 'Meta（Facebook 母公司）囤了太多 AI 芯片用不完，现在打算把多余的算力卖给别人。说明 AI 算力市场短期可能变便宜。如果你公司要租 GPU 跑模型，下半年是议价好时机。'
+    },
+    createdAt: '2026-07-02T15:30:00Z'
+  },
+  {
+    id: '20260703-05',
+    date: '2026-07-03',
+    title: '印度富豪Turakhia自筹$30M打造AI Office替代品"Neo"：剑指Microsoft Office和Google Workspace，AI原生办公赛道再添重磅玩家',
+    summary: 'TechCrunch 7月2日报道（7/1 5:30 UTC发稿）：印度科技大亨Bhavin Turakhia自筹$30M个人资金打造"Neo"——AI原生办公套件，正面对抗Microsoft Office和Google Workspace。Turakhia此前已有4次成功创业经历（含Directi、Media.net、Flock、CodeChef），熟悉企业软件赛道。Neo定位为"AI first"办公套件，将AI能力深度融入文档/表格/演示/邮件等核心场景，区别于Microsoft 365 Copilot的"AI插件"模式。',
+    source: '其他',
+    sourceUrl: 'https://techcrunch.com/2026/07/01/indian-tech-tycoon-bets-30m-to-build-an-ai-alternative-to-microsoft-office/',
+    tags: ['#发布', '#企业应用', '#战略', '#低代码'],
+    accuracyScore: 95,
+    timelinessScore: 96,
+    utilityScore: 87,
+    totalScore: 93,
+    recommendReason: 'AI原生办公赛道获独立资本下注。PM应关注：(1)$30M个人自筹反映印度企业家对"AI重构办公软件"的押注级别——Microsoft 365 Copilot和Google Workspace面临首个"AI原生"正面挑战者；(2)"AI first vs AI插件"的产品哲学差异类似早期Salesforce对Siebel——AI原办公可能从"协作+自动化"角度重新定义工作流，低代码平台应警惕办公套件"反向吞噬"；3)Turakhia 4次成功创业记录是关键信号——非首次创业者下注的赛道值得长期跟踪。',
+    perspectives: {
+      pm: '"AI 原生 vs AI 插件"的产品哲学差异类似早期 Salesforce 对 Siebel——AI 原办公可能从"协作+自动化"角度重新定义工作流，低代码平台应警惕办公套件"反向吞噬"。$30M 个人自筹反映印度企业家对"AI 重构办公软件"的押注级别——Microsoft 365 Copilot 和 Google Workspace 面临首个"AI 原生"正面挑战者。Turakhia 4 次成功创业记录是关键信号，非首次创业者下注的赛道值得长期跟踪。',
+      investor: '$30M 个人自筹=创始人自带重大 skin in the game——估值锚点清晰。AI 原生办公赛道获独立资本下注，Microsoft 365 Copilot 商业化节奏或承压。印度 SaaS 生态（Zoho/Freshworks/Zomato）继续输出垂直挑战者，Neo 若成功将强化"印度 SaaS 出口"叙事。Google Workspace 商业模式（订阅+广告）面临 AI 原生重构风险。',
+      brand: '"AI 原生办公"是 2026 年最具想象力的 To B 叙事——品牌人抄作业：1) To B 办公/协作产品立刻把"AI 原生架构"做成品牌护城河，对标"AI 插件式"竞品；2) 创始人个人自筹 $30M 是绝佳品牌素材（vs VC 融资），传达"长期主义+信念"；3) 印度 SaaS 出海叙事强化，国产 To B 出海厂商对标 Zoho/Neo 节奏，别只盯硅谷；4) 别打"颠覆 Microsoft"——直接对标"AI 原生架构"差异化，Microsoft 反击成本高；5) 反思：你的办公产品定位还在讲"功能更全"？切换到"AI 原生工作流"。',
+      beginner: '有个印度富豪自己掏 3000 万美元做新的办公软件 Neo，用 AI 重新设计文档/表格/邮件。意思是以后办公软件可能不再以 Microsoft Word 为中心。值得长期关注，但短期还用不上。'
+    },
+    createdAt: '2026-07-02T05:30:00Z'
+  },
+
   // === 2026-07-02 (周三) ===
   {
     id: '20260702-01',
