@@ -108,6 +108,113 @@ const sampleItems: DailyItem[] = [
     createdAt: '2026-07-02T05:30:00Z'
   },
 
+  // === 2026-07-06 (周一) ===
+  {
+    id: '20260706-01',
+    date: '2026-07-06',
+    title: 'Grok 4.5进入SpaceX/Tesla内部私测：1.5T V9架构整合Cursor训练数据，性能逼近Claude Opus——xAI剑指前沿模型第一梯队',
+    summary: 'Build Fast With AI 7月4日综合报道，xAI于6月28日宣布Grok 4.5进入"完全私测"阶段，目前仅限SpaceX和Tesla内部使用。核心信息：(1)Grok 4.5采用全新V9架构，参数规模约1.5T，月度迭代节奏——Grok 5已规划6-10T参数；(2)训练数据整合Cursor真实编码交互（xAI收购Cursor后），编码能力成为Grok 4.5的差异化卖点；(3)内部测评显示推理能力接近Claude Opus 4.5水平，但缺少独立第三方基准；(4)xAI继续押注"垂直整合"——自有数据（X平台+Cursor+Tesla驾驶数据）成为模型差异化的护城河；(5)月度发布节奏挑战OpenAI/Anthropic的季度/年度发布周期。',
+    source: '其他',
+    sourceUrl: 'https://newsletter.buildfastwithai.com/p/ai-news-today-july-4-2026',
+    tags: ['#发布', '#模型', '#战略', '#Agent'],
+    accuracyScore: 88,
+    timelinessScore: 95,
+    utilityScore: 90,
+    totalScore: 91,
+    recommendReason: '前沿模型竞争进入"垂直整合+月度迭代"新阶段。PM应关注：(1)Grok 4.5把"自有数据+真实场景训练"做成差异化——X平台+Cursor编码+Tesla驾驶数据是OpenAI/Anthropic无法复制的资产，模型差异化从"参数规模"转向"独家数据+迭代速度"；(2)xAI收购Cursor后整合训练数据的速度极快——M&A后的产品整合窗口被压缩到月级，Cursor用户需警惕API/数据流向变化；(3)月度发布节奏颠覆御三家"年度旗舰"节奏，AI产品规划需假设"模型能力月度跃迁"，不要押注单一模型版本。',
+    perspectives: {
+      pm: 'Grok 4.5 把"自有数据+真实场景训练"做成差异化——X+Cursor+Tesla 是 OpenAI/Anthropic 无法复制的资产。模型差异化从"参数规模"转向"独家数据+迭代速度"。xAI 收购 Cursor 后整合训练数据的速度极快，M&A 整合窗口被压缩到月级，Cursor 用户需重新评估数据合规。月度发布节奏颠覆御三家"年度旗舰"节奏——AI 产品规划必须假设"模型能力月度跃迁"，不要押注单一模型版本。',
+      investor: 'xAI 收购 Cursor 后的垂直整合速度是关键信号——数据飞轮从"用户使用"升级到"独家场景数据反哺"。月度发布节奏挤压 OpenAI/Anthropic 的产品节奏，前沿模型竞争进入"迭代速度"维度。Grok 5 规划 6-10T 参数意味着算力军备竞赛远未触顶。但需警惕：缺少第三方基准、私测不可验证——估值已计入"私测叙事"，回调风险存在。',
+      brand: 'Grok 4.5 月度发布节奏是 2026 年最强品牌叙事——品牌人抄作业：1) 别打"我们更强"——直接打"我们更快"，把月度迭代做成主视觉，对标竞品年度发布；2) "垂直整合"叙事（数据+模型+场景）是绝佳差异化锚点，找到你的独家场景数据反哺故事；3) Cursor 用户群体是 xAI 整合的最敏感观测点，AI 编码工具品牌人立刻产出"Grok 4.5 上线后你的 Cursor 数据会怎样"科普文，抢占心智；4) 月度发布=月度内容机会，把每个 release 做成"产品剧场"；5) 反思：你的品牌节奏还在按季度？切换到月度 release 节奏，慢一拍就掉队。',
+      beginner: '马斯克的 xAI 推出 Grok 4.5 新模型，目前只在 SpaceX 和 Tesla 内部测试。亮点是用了 Cursor 编程数据训练，编码能力接近 Claude Opus。每月迭代一次，比 OpenAI/Anthropic 快很多。普通用户还用不上，等公测。'
+    },
+    createdAt: '2026-07-04T08:00:00Z'
+  },
+  {
+    id: '20260706-02',
+    date: '2026-07-06',
+    title: '美团开源LongCat-2.0：1.6T MoE全链路国产算力训练，SWE-bench Pro 59.5%击败GPT-5.5，"匿名Owl Alpha"身份曝光',
+    summary: 'Build Fast With AI 7月4日报道，美团正式开源LongCat-2.0——1.6万亿参数MoE架构，激活参数48B，上下文窗口1M tokens，MIT协议。关键突破：(1)全链路使用国产AI芯片训练（华为昇腾+寒武纪等），是首个公开确认"去NVIDIA化"的国内万亿参数模型；(2)SWE-bench Pro得分59.5%，超越GPT-5.5和DeepSeek-R2，编码能力国产模型首次正面击败御三家；(3)此前在OpenRouter匿名榜单长期霸榜的"Owl Alpha"被证实即为LongCat-2.0，国产模型首次在海外匿名评测平台登顶；(4)美团开源LongCat标志着本地生活巨头正式加入大模型军备竞赛，与阿里Qwen、字节豆包、智谱GLM形成国内四强格局。',
+    source: '其他',
+    sourceUrl: 'https://newsletter.buildfastwithai.com/p/ai-news-today-july-4-2026',
+    tags: ['#开源', '#发布', '#模型', '#国产算力'],
+    accuracyScore: 90,
+    timelinessScore: 95,
+    utilityScore: 92,
+    totalScore: 92,
+    recommendReason: '"国产算力+万亿参数+开源"三连击重塑国内大模型格局。PM应关注：(1)首个全链路国产芯片训练的万亿模型公开验证可行性——中美AI算力脱钩场景下国内大模型已具备独立演进能力，B端采购国产芯片+开源模型的"去NVIDIA化"方案从政治正确变成工程可行；(2)SWE-bench Pro 59.5%击败GPT-5.5是国产模型首次在编码正面战场获胜——AI编码工具的国产替代叙事进入新阶段；(3)美团下场大模型意味着本地生活/电商/O2O领域将出现AI原生重做，低代码平台需警惕"场景方反向做模型"的降维打击。',
+    perspectives: {
+      pm: '"国产算力+万亿参数+开源"三连击验证了去 NVIDIA 化路径——B 端 AI 采购清单从"政治正确"切换到"工程可行"。SWE-bench Pro 59.5% 击败 GPT-5.5 是国产模型首次在编码正面战场获胜，AI 编码工具国产替代叙事进入新阶段。美团下场意味着本地生活/电商/O2O 将被 AI 原生重做——低代码平台必须警惕"场景方反向做模型"的降维打击，主动找美团类厂商做生态绑定。',
+      investor: '美团开源 LongCat-2.0 是国内大模型格局关键拐点——阿里 Qwen/字节豆包/智谱 GLM/美团 LongCat 四强格局形成。"全链路国产算力"叙事对华为昇腾产业链是重大利好，NVIDIA 国内地份额加速承压。OpenRouter 匿名榜单霸榜事件证明"国产模型海外匿名评测"是有效的出海品牌路径。但需关注：美团核心业务本地生活能否承接大模型商业化，避免重蹈百度文心"投入产出失配"覆辙。',
+      brand: '美团 LongCat-2.0 是 2026 年国产 AI 品牌最佳教材——品牌人抄作业：1) "匿名 Owl Alpha 海外霸榜"的悬念营销路径可复制——国产厂商出海先在 OpenRouter/LMSYS 匿名榜单打磨，登顶后再揭秘，势能放大 10 倍；2) "全链路国产算力"必须做成主视觉，对标 NVIDIA 依赖型竞品，地缘政治叙事权重达到顶峰；3) 美团下场=本地生活 AI 原生重做信号，相关厂商立刻产出"美团 LongCat 对你外卖/到店业务意味着什么"行业报告；4) 别打"中国第一"，打"OpenRouter 匿名榜首+全栈国产"——硬数据+硬叙事；5) 反思：还在讲"国产替代"？切换到"国产超越"，SWE-bench Pro 59.5% 是新叙事锚点。',
+      beginner: '美团开源了 LongCat-2.0 大模型，1.6 万亿参数，全部用国产芯片训练。编程测试击败 GPT-5.5，此前在 OpenRouter 匿名榜单第一叫"Owl Alpha"。说明国产大模型在编程能力上首次正面超过硅谷顶级模型。开发者可以免费用。'
+    },
+    createdAt: '2026-07-04T09:00:00Z'
+  },
+  {
+    id: '20260706-03',
+    date: '2026-07-06',
+    title: 'Anthropic收紧中国企业使用漏洞：蚂蚁新加坡子公司、字节VPN补贴被点名——前沿lab合规执行进入"穿透实体"阶段',
+    summary: 'Financial Times 7月3日报道（Build Fast With AI 7月4日转载），Anthropic正在收紧对旗下Claude模型的中国使用限制，重点封堵此前存在的合规漏洞。关键动作：(1)蚂蚁集团通过新加坡子公司Anoto间接访问Claude API的渠道已被切断，Anthropic引入"实体穿透审查"机制；(2)字节跳动通过VPN补贴让海外工程师访问Claude的做法被点名，Anthropic要求企业级客户签署"无中国境内终端使用"承诺；(3)此举标志着前沿lab从"地理位置封堵"升级到"所有权与控制权穿透"——即使通过新加坡/迪拜/瑞士子公司中转也需审查最终用户；(4)OpenAI在2025年底已采取类似行动，但Anthropic的执行更严格；(5)此举直接影响国内大厂海外分支机构的AI工具选型，加速国产替代需求。',
+    source: 'Anthropic',
+    sourceUrl: 'https://newsletter.buildfastwithai.com/p/ai-news-today-july-4-2026',
+    tags: ['#合规', '#战略', '#企业应用'],
+    accuracyScore: 92,
+    timelinessScore: 95,
+    utilityScore: 88,
+    totalScore: 91,
+    recommendReason: '前沿lab合规从"地理位置"升级到"所有权穿透"。PM应关注：(1)"实体穿透审查"是新的合规范式——国内企业的海外子公司（新加坡/迪拜/瑞士）使用Claude/OpenAI的路径被系统性封堵，跨国企业AI工具选型必须重新评估"全球统一架构"的可行性；(2)字节VPN补贴被点名意味着此前灰色地带已全部失效——出海企业需假设"海外员工使用Claude"也要受合规审查；(3)Anthropic执行比OpenAI更严格——前沿lab之间合规标准不统一，B端采购需把"合规严格度"作为选型维度，国产模型（GLM/Qwen/豆包）的"合规可控"叙事强化。',
+    perspectives: {
+      pm: '"实体穿透审查"是新的合规范式——国内企业海外子公司（新加坡/迪拜/瑞士）使用 Claude/OpenAI 的路径被系统性封堵。跨国企业 AI 工具选型必须重新评估"全球统一架构"的可行性。字节 VPN 补贴被点名意味着灰色地带全部失效，出海企业需假设"海外员工使用 Claude"也要受合规审查。国产模型（GLM/Qwen/豆包）的"合规可控"叙事强化，跨国企业开始配置"全球架构+国内架构"双轨。',
+      investor: 'Anthropic 合规执行比 OpenAI 更严格——前沿 lab 之间的合规标准分化是关键信号，估值锚点开始反映"合规严格度"溢价。蚂蚁/字节被点名直接加速国产替代需求，GLM/Qwen/豆包海外营收或超预期。但需警惕：合规封堵也会反向激活"绕道方案"灰色生态（VPN/中转 API），实际执行效果待观察。',
+      brand: 'Anthropic "穿透实体"合规升级是 2026 年最佳地缘政治品牌素材——品牌人抄作业：1) 国产 AI 厂商立刻把"全球合规可控"做成主视觉，直接对标 Claude/OpenAI 的"穿透审查"——出海企业必看；2) 跨国 To B 厂商必须产出"全球架构+国内架构双轨方案"白皮书，这是新的内容蓝海；3) 字节 VPN 补贴被点名是绝佳案例素材——做"你的企业是否在合规灰色地带"自检 checklist，行业传播力强；4) 别打"我们更安全"，打"我们不被美国监管穿透"——差异化锚定地缘政治；5) 反思：你的合规叙事还在讲 SOC2/ISO27001？切换到"实体穿透合规"，这是 2026 新关键词。',
+      beginner: 'Anthropic（Claude 公司）开始严管中国企业用 Claude。蚂蚁通过新加坡子公司、字节通过 VPN 补贴访问的灰色路径都被封堵。意味着国内公司（含海外分部）用海外 AI 模型的合规风险显著上升，国产替代需求更紧迫。'
+    },
+    createdAt: '2026-07-03T12:00:00Z'
+  },
+  {
+    id: '20260706-04',
+    date: '2026-07-06',
+    title: 'Anthropic推出Claude Enterprise管理面板：支出上限、模型权限、Analytics API——To B治理工具补齐',
+    summary: 'Anthropic 7月3日正式发布Claude Enterprise管理后台三件套：(1)支出上限（Spend Caps）——管理员可按团队/项目设置月度token支出硬上限，避免Uber"tokenmaxxing"式的预算失控事件重演；(2)模型权限（Model Entitlements）——按角色分配Claude Opus/Sonnet/Haiku访问权限，区分工程师/产品/法务的模型使用边界；(3)Analytics API——通过API拉取企业级使用数据（活跃用户/模型分布/token消耗/对话主题分类），可对接Power BI/Tableau/自建BI。此举标志着Anthropic从"个人开发者+小型团队"市场正式切入Microsoft 365 Copilot/Copilot for Microsoft 365主导的企业级市场，To B治理工具栈补齐最后一块拼图。',
+    source: 'Anthropic',
+    sourceUrl: 'https://newsletter.buildfastwithai.com/p/ai-news-today-july-4-2026',
+    tags: ['#企业应用', '#发布', '#API'],
+    accuracyScore: 93,
+    timelinessScore: 95,
+    utilityScore: 90,
+    totalScore: 92,
+    recommendReason: 'Anthropic To B工具栈补齐关键缺口。PM应关注：(1)支出上限+模型权限+Analytics API是企业级AI采购的"基础设施三件套"——此前Microsoft 365 Copilot/Google Workspace的优势正是治理工具成熟，Anthropic补齐后Claude Enterprise成为可正式采购的B端选项；(2)Uber tokenmaxxing事件成为行业拐点——企业CIO开始把"AI支出可控"作为采购硬指标，相关厂商必须把spend caps作为标配功能；(3)Analytics API开放意味着企业AI使用数据进入"可分析时代"——低代码平台可基于此构建"AI ROI分析"增值功能，B端AI产品差异化进入数据驱动阶段。',
+    perspectives: {
+      pm: '支出上限+模型权限+Analytics API 是企业级 AI 采购的"基础设施三件套"——Microsoft 365 Copilot/Google Workspace 此前的优势正是治理工具成熟。Anthropic 补齐后 Claude Enterprise 成为可正式采购的 B 端选项。Uber tokenmaxxing 事件是行业拐点——CIO 把"AI 支出可控"作为采购硬指标，相关厂商必须把 spend caps 作为标配。Analytics API 开放意味着企业 AI 使用数据进入"可分析时代"，低代码平台可基于此构建"AI ROI 分析"增值功能。',
+      investor: 'Anthropic To B 工具栈补齐是 Claude Enterprise 商业化加速信号——企业级 ARR 增速或超预期。Microsoft 365 Copilot 商业化节奏或承压，B 端 AI 治理工具赛道竞争加剧。Analytics API 开放激活"AI 使用分析"赛道，类似 SaaS 时代的 product analytics——值得早期布局。',
+      brand: 'Anthropic 三件套是 2026 年 To B 品牌最佳案例——品牌人抄作业：1) To B AI 厂商立刻产出"企业 AI 治理工具有哪些必备项"内容营销，spend caps/model entitlements/analytics 三件套做成对比图，对标 Microsoft 365 Copilot；2) Uber tokenmaxxing 案例必须反复用——"你的企业会不会重蹈 Uber 覆辙"是最有效的转化文案；3) Analytics API 是绝佳客户故事素材——拉几家头部客户做"我们如何用 Analytics API 优化 AI ROI"案例；4) 别打"功能更全"，打"治理更成熟"——To B 决策者最在意可控；5) 反思：你的产品还在讲"AI 能力"？切换到"AI 治理"，2026 To B 采购清单已变。',
+      beginner: 'Anthropic 给企业用户 Claude 出了三个管理工具：支出上限（防止预算超支）、模型权限（不同员工用不同版本）、数据分析 API。意思是企业用 Claude 可以像用 Microsoft 365 那样规范管理了，对 B 端采购是好消息。'
+    },
+    createdAt: '2026-07-03T15:00:00Z'
+  },
+  {
+    id: '20260706-05',
+    date: '2026-07-06',
+    title: 'Crunchbase H1 2026报告：全球VC $510B，OpenAI+Anthropic占43%（$217B）——AI继续吞噬整体融资盘，"非AI叙事"资本吸引力持续恶化',
+    summary: 'Crunchbase 7月初发布的H1 2026全球VC报告显示：(1)上半年全球VC投资总额$510B，同比2025 H1（$432B）增长18%，但剔除AI后非AI融资仅$293B，同比下滑7%；(2)OpenAI+Anthropic两家合计$217B（OpenAI $200B+ Anthropic约$17B Series F），占全球VC的43%——前沿lab对全球资本的虹吸效应进一步加剧；(3)全球VC TOP 10融资中8笔为AI相关（含xAI、Mistral、Perplexity、Windsurf、Cognition、Scale AI、Cerebras、Groq）；(4)种子轮AI项目占比达78%（2024年约45%），早期项目"非AI难融资"已成行业共识；(5)行业IPO/并购退出端继续萎靡，IPO窗口仍主要向盈利AI基础设施公司开放。',
+    source: '其他',
+    sourceUrl: 'https://newsletter.buildfastwithai.com/p/ai-news-today-july-4-2026',
+    tags: ['#融资', '#战略'],
+    accuracyScore: 92,
+    timelinessScore: 92,
+    utilityScore: 88,
+    totalScore: 90,
+    recommendReason: '"AI吞噬整体融资盘"进入结构化阶段。PM应关注：(1)OpenAI+Anthropic两家占全球VC 43%意味着"非AI叙事"的资本吸引力持续恶化——非AI创业项目融资难度指数级上升，PM做产品决策时需重新评估"AI能力外购vs自研"的优先级；(2)种子轮AI项目占比78%意味着2027-2028年AI应用层将出现严重同质化竞争——AI产品需提前布局差异化护城河，避免"温水煮青蛙"；(3)IPO窗口仅向"盈利AI基础设施"开放——应用层AI公司需重新设计商业化路径，订阅+API+垂直场景的复合模型或成主流。',
+    perspectives: {
+      pm: '"AI 吞噬整体融资盘"进入结构化阶段——OpenAI+Anthropic 占全球 VC 43% 意味着"非 AI 叙事"的资本吸引力持续恶化。PM 做产品决策需重新评估"AI 能力外购 vs 自研"的优先级，非 AI 创业项目融资难度指数级上升。种子轮 AI 项目占比 78% 意味着 2027-2028 年 AI 应用层将出现严重同质化竞争，AI 产品需提前布局差异化护城河。IPO 窗口仅向"盈利 AI 基础设施"开放——应用层公司需重新设计商业化路径。',
+      investor: 'Crunchbase H1 数据是 2026 年 VC 格局关键锚点——OpenAI+Anthropic 占 43% 意味着头部前沿 lab 对资本的虹吸效应已结构化。种子轮 AI 占比 78% 预示 2027-2028 应用层同质化竞争血腥。IPO 窗口仅向盈利 AI 基础设施开放，应用层退出路径受阻——估值倍数或回调。但需关注：非 AI 项目融资下滑或激活"AI 改造传统行业"并购机会。',
+      brand: 'Crunchbase H1 数据是 2026 To B/融资品牌最佳弹药——品牌人抄作业：1) AI 厂商立刻产出"AI 占 VC 43% 意味着什么"行业报告，硬数据驱动的内容传播力远超观点文；2) 非 AI 厂商必须重新审视品牌叙事——找到 AI 改造故事，否则资本吸引力恶化；3) 头部前沿 lab 的"虹吸效应"是绝佳地缘政治素材，做出"OpenAI/Anthropic 占 43% vs 我们国产自主"对比图；4) 种子轮 78% AI 项目=2027 同质化竞争预警，做"AI 应用层差异化护城河"内容矩阵；5) 反思：你的融资/品牌叙事还在讲功能？切换到"AI ROI 数据驱动"，2026 投资人只信硬数据。',
+      beginner: '2026 上半年全球风投 5100 亿美元，OpenAI 和 Anthropic 两家占了 43%。AI 初创项目占种子轮 78%，意味着非 AI 创业融资越来越难。结论：AI 行业资本虹吸效应加剧，2027-2028 AI 应用竞争会很激烈。'
+    },
+    createdAt: '2026-07-04T10:00:00Z'
+  },
+
   // === 2026-07-02 (周三) ===
   {
     id: '20260702-01',
