@@ -215,6 +215,113 @@ const sampleItems: DailyItem[] = [
     createdAt: '2026-07-04T10:00:00Z'
   },
 
+  // === 2026-07-07 (周二) ===
+  {
+    id: '20260707-01',
+    date: '2026-07-07',
+    title: 'Gemini 3.5 Pro二度延期：token效率/编码/长任务推理三大工程问题，Google旗舰模型"宁可延期不发"的工程判断与叙事代价',
+    summary: 'Build Fast With AI 7月6日综合报道（Business Insider/Tech-Insider AU信源）：Gemini 3.5 Pro进入7月第二周仍停留在Vertex AI企业预览，无GA日期、无基准、无定价。这是该模型第二次错过自设截止日——I/O承诺"下个月"、6/30 GA目标均落空。三大工程问题：(1)token效率——企业测试者反馈扩展agentic任务消耗远超预期，规模成本高于基准叙事；(2)编码回归——Gemini 3.5 Flash在编码已超3.1 Pro，但长上下文推理倒退，3.5 Pro未能闭合差距；(3)长任务多步推理未达Pro tier相对Flash的差异化标准。Google选择延期而非带病发布，工程判断合理但叙事代价高——Claude Sonnet 5（6/30）、Fable 5全球恢复（7/1）、GPT-5.6政府预览（6/26）均已完成发布。',
+    source: 'Google',
+    sourceUrl: 'https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026',
+    tags: ['#模型', '#战略', '#发布'],
+    accuracyScore: 92,
+    timelinessScore: 96,
+    utilityScore: 90,
+    totalScore: 92,
+    recommendReason: '前沿lab从"benchmark竞赛"切换到"宁可延期不带病发布"。PM应关注：(1)token效率成为2026年B端采购硬指标——Microsoft已在模型发布卡上公布"每任务平均token消耗"，企业采购从"看分数"切换到"看成本完成度"，低代码平台选型必须要求厂商提供token efficiency数据；(2)长任务多步推理是Pro tier相对Flash的核心差异——单轮SWE-bench已无法区分旗舰模型，SWE-Together等多轮评测成为新标尺；(3)Google延期说明"模型发布节奏"成为竞争维度，Claude/GPT已完成6月发布，Gemini被迫在7月二次延期，AI产品规划不能假设御三家发布同步。',
+    perspectives: {
+      pm: 'token 效率成为 2026 年 B 端采购硬指标——Microsoft 已在模型发布卡公布"每任务平均 token 消耗"，企业采购从"看分数"切换到"看成本完成度"。低代码平台选型必须要求厂商提供 token efficiency 数据，否则账单失控。长任务多步推理是 Pro tier 相对 Flash 的核心差异——单轮 SWE-bench 已无法区分旗舰模型，SWE-Together 等多轮评测成为新标尺。Google 延期说明"模型发布节奏"成为竞争维度，AI 产品规划不能假设御三家发布同步。',
+      investor: 'Gemini 3.5 Pro 二度延期是 Google AI 叙事的关键裂痕——Claude Sonnet 5/Fable 5/GPT-5.6 均已落地，Google 在 6 月发布节奏全败。Microsoft 公开 token 效率数据是行业转折点，前沿模型竞争从"分数战"切换到"成本完成度战"，OpenAI/Anthropic 估值锚点或受影响。但需关注：Google 选择延期而非带病发布是工程文化的体现，长周期看是利好信号。',
+      brand: 'Gemini 3.5 Pro 延期是 2026 年最佳"工程文化"品牌素材——品牌人抄作业：1) AI 厂商立刻产出"我们为何选择延期"内容营销，对标"带病发布"竞品，工程诚实度是新的差异化；2) token 效率是绝佳 To B 转化文案——"你的模型账单失控了吗"比"我们更强"有效 10 倍；3) 多轮评测 vs 单轮评测是思想领导力蓝海，产出"SWE-bench 已死，SWE-Together 当立"行业文章；4) 别打"我们最快"，打"我们最诚实"——延期透明度是品牌资产；5) 反思：你的发布节奏还在追求"按时"？切换到"按质量"，工程诚实度是 2026 关键词。',
+      beginner: 'Google 新模型 Gemini 3.5 Pro 又延期了，本来 6 月底发布，现在 7 月第二周还没出。原因是 token 消耗高、编码和长任务推理没达标。Google 选择继续打磨而不是带病发布，对用户是好事但叙事压力大。'
+    },
+    createdAt: '2026-07-06T02:28:00Z'
+  },
+  {
+    id: '20260707-02',
+    date: '2026-07-07',
+    title: '中国AI伴侣法7/15生效：豆包345M用户Agent功能下线、Qwen无迁移路径——持久记忆Agent与防沉迷规则存在"架构层不可调和"',
+    summary: 'Build Fast With AI 7月6日报道（TechTimes/LLM Stats信源）：中国《人工智能拟人化交互服务管理办法》7/15生效，4月由网信办联发NDRC/MIIT/公安部/市场监管总局。核心条款：(1)防沉迷系统——必须引入使用摩擦、时段限制、会话打断；(2)强制使用通知——超阈值提醒；(3)即时退出机制——用户必须能立即终止AI交互回到默认状态。落地冲击：豆包（345M MAU）7/15下线Agent功能，用户可只读查看配置/对话至10/15后永久删除；Qwen更严重——阿里未提供任何迁移工具，用户数据面临立即永久丢失风险。架构层不可调和：持久记忆Agent设计目标与防沉迷规则根本冲突——防沉迷要"打断"，Agent要"持续"；防沉迷要"超时通知"，Agent要"自治后台"；防沉迷要"立即退出"，Agent要"跨会话延续"。字节/阿里均评估过改造可行性，最终选择关停而非改造。',
+    source: '其他',
+    sourceUrl: 'https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026',
+    tags: ['#合规', '#战略', '#企业应用'],
+    accuracyScore: 92,
+    timelinessScore: 97,
+    utilityScore: 92,
+    totalScore: 94,
+    recommendReason: '持久记忆Agent与防沉迷合规的"架构层不可调和"是2026年最关键的合规信号。PM应关注：(1)豆包345M用户Agent下线意味着字节/阿里选择"关停而非改造"——证明现有持久Agent架构在中国市场已不可持续，AI产品需重新设计"合规优先"的Agent架构；(2)Qwen无迁移工具是用户数据丢失风险信号——C端AI产品必须把"用户数据可导出"作为合规底线，否则监管切换时品牌信任崩塌；(3)合规框架（防沉迷+即时退出）对Agent产品的根本性约束意味着中国C端AI产品形态将与海外分化，国内低代码平台做C端Agent时需假设"防沉迷打断"作为产品默认。',
+    perspectives: {
+      pm: '持久记忆 Agent 与防沉迷合规的"架构层不可调和"是 2026 年最关键合规信号——豆包 345M 用户 Agent 下线证明字节/阿里选择"关停而非改造"，现有持久 Agent 架构在中国市场已不可持续。Qwen 无迁移工具是用户数据丢失风险信号，C 端 AI 产品必须把"用户数据可导出"作为合规底线。合规框架（防沉迷+即时退出）意味着中国 C 端 AI 形态将与海外分化，国内低代码平台做 C 端 Agent 必须假设"防沉迷打断"为产品默认。',
+      investor: '豆包 345M MAU Agent 下线是字节 C 端 AI 叙事重大打击——商业化路径被迫重构。Qwen 无迁移工具或引发用户信任危机，阿里 C 端 AI 估值承压。但需关注：合规优先的 Agent 架构成为新赛道，字节暗示将"独立合规产品"重新推出，先发优势仍存。中国 140 万亿日 token 处理量叙事不变，但 C 端变现窗口被压缩。',
+      brand: '中国 AI 伴侣法是 2026 年 C 端 AI 品牌最大变数——品牌人抄作业：1) C 端 AI 产品立刻产出"防沉迷合规架构"白皮书，把监管约束做成品牌护城河；2) 豆包 345M 用户下线是绝佳案例素材——"你的 C 端 Agent 是否在监管刀口"自检清单，行业传播力强；3) Qwen 无迁移工具被点名是用户信任素材——"你的数据是否能导出"作为品牌承诺；4) 别打"功能更强"，打"合规可控"——C 端 AI 决策者最在意监管风险；5) 反思：你的 C 端 AI 还在做"持久记忆 Agent"？切换到"合规优先架构"，否则 7/15 后被迫下线。',
+      beginner: '中国 7/15 实施 AI 伴侣新规，要求防沉迷+即时退出。豆包（3.45 亿月活）的 Agent 功能会下线，Qwen 没给迁移工具意味着用户数据可能丢。原因是 AI 持久记忆和防沉迷规则本质上冲突——AI 想持续陪伴，规则要求打断。'
+    },
+    createdAt: '2026-07-06T03:00:00Z'
+  },
+  {
+    id: '20260707-03',
+    date: '2026-07-07',
+    title: 'Tesla Robotaxi入驻Miami：第五城，首次无安全员默认运营，2026目标12州——自动驾驶进入"零人类failsafe"公众消费阶段',
+    summary: 'The Information 7月5-6日报道：Tesla在Florida迈阿密推出Robotaxi服务，成为继Austin/Houston/Dallas/Phoenix后第五城，且首次以"无安全员"作为默认配置（前四城均有监督期）。战略要点：(1)Miami为Tesla首座从首日即全无人监督运营的城市，标志FSD技术阈值突破；(2)Tesla目标2026年底扩展至12个美国州，节奏远超Waymo；(3)Florida/Texas均以州级自动驾驶法规运营，绕过联邦NHTSA预批准——监管套利策略成熟；(4)Waymo新市场仍需安全员+测绘监督期，Tesla以车队规模优势（远大于Waymo）形成autonomous miles数据飞轮；(5)风险：消费者权益组织指出"无安全员=无人类failsafe"，边界场景处理失败时无后备。这是公众消费场景中最大规模"AI决策无人类监督"部署。',
+    source: '其他',
+    sourceUrl: 'https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026',
+    tags: ['#发布', '#战略', '#Agent'],
+    accuracyScore: 90,
+    timelinessScore: 96,
+    utilityScore: 88,
+    totalScore: 91,
+    recommendReason: 'Tesla Robotaxi无安全员运营是"AI决策无人类监督"在公众消费场景的最大规模部署。PM应关注：(1)"无安全员"作为默认配置意味着Tesla确认FSD安全阈值已达标——自动驾驶商业化进入"零人类failsafe"阶段，相关产业链（保险/法规/城市交通）需重新设计风险模型；(2)州级法规绕过联邦NHTSA是监管套利模板——其他AI自治系统（无人机/工业机器人）可参考类似路径；(3)Tesla车队规模vs Waymo测绘精度是两条路线之争——AI产品规划从"高精度地图+安全员"切换到"端到端学习+车队数据"，低代码平台做物理世界Agent时需参考此路径。',
+    perspectives: {
+      pm: '"无安全员"作为默认配置意味着 Tesla 确认 FSD 安全阈值已达标——自动驾驶商业化进入"零人类 failsafe"阶段，保险/法规/城市交通需重新设计风险模型。州级法规绕过联邦 NHTSA 是监管套利模板——其他 AI 自治系统（无人机/工业机器人）可参考类似路径。Tesla 车队规模 vs Waymo 测绘精度是两条路线之争——AI 产品规划从"高精度地图+安全员"切换到"端到端学习+车队数据"。',
+      investor: 'Tesla Robotaxi 无安全员扩展至 12 州目标是 FSD 商业化关键里程碑——车队规模优势形成 autonomous miles 数据飞轮，Waymo 监督期策略或被迫加速。监管套利叙事（州级 vs 联邦）是 Tesla 长期 alpha。但需警惕：无安全员 = 无人类 failsafe，首例严重事故或触发监管回滚，估值已计入"零事故"预期。',
+      brand: 'Tesla Robotaxi Miami 无安全员是 2026 年最佳"AI 自治"品牌素材——品牌人抄作业：1) AI 自治产品立刻产出"零人类 failsafe 时代"行业报告，硬场景案例驱动；2) 监管套利叙事（州 vs 联邦）是绝佳差异化锚点——To B 决策者最关心合规路径；3) 车队数据飞轮 vs 高精地图是绝佳路线之争内容——产出"端到端 vs 测绘"对比图；4) 别打"我们更安全"，打"我们更敢部署"——AI 自治品牌的勇气叙事；5) 反思：你的 AI 产品还在讲"人在回路"？切换到"零 failsafe"，2026 是分水岭。',
+      beginner: 'Tesla 在 Miami 推出 Robotaxi，第五城，第一次完全没安全员。计划年底扩到 12 个州。意味着自动驾驶进入"完全无人"阶段。Waymo 还在用安全员+地图，Tesla 走端到端+车队规模路线。'
+    },
+    createdAt: '2026-07-05T20:00:00Z'
+  },
+  {
+    id: '20260707-04',
+    date: '2026-07-07',
+    title: '阿里重组AI为"Token Hub"：通义实验室/Qwen/悟空五单元合并，CEO Eddie Wu亲自挂帅——中国AI进入"token经济"组织重构',
+    summary: 'Fortune 7月5-6日报道：阿里巴巴将整个AI业务重组为"Alibaba Token Hub"（ATH），合并五个此前独立单元——含通义实验室（基础模型研究）、Qwen（开源模型家族）、企业AI事业部悟空，由CEO Eddie Wu直接负责。Wu在内部信中阐述："ATH围绕一个核心使命——创造token、分发token、应用token。"战略含义：(1)阿里承认AI价值创造不在专有模型权重，而在规模token生成；(2)对标字节豆包（345M MAU + 120万亿日token调用），中国token经济规模已达国家级；(3)国家数据局披露中国每日处理140万亿token，较2024年初1000亿增长1400倍；(4)Qwen开源策略已在Hugging Face衍生10万+模型，是阿里云在东南亚/中东增长主驱动；(5)Token Hub整合意在统一AI能力战略与领导结构，准备中国国内+国际开发者双重竞争。',
+    source: '阿里',
+    sourceUrl: 'https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026',
+    tags: ['#战略', '#企业应用', '#模型'],
+    accuracyScore: 92,
+    timelinessScore: 94,
+    utilityScore: 90,
+    totalScore: 92,
+    recommendReason: '阿里"Token Hub"重组是中国AI组织形态切换的关键信号。PM应关注：(1)"创造token/分发token/应用token"作为组织使命意味着大型科技公司从"产品/模型"视角切换到"token经济"——B端AI采购需重新理解厂商组织架构，token生成规模成为议价能力核心；(2)五单元合并打破通义/Qwen/悟空的数据/客户墙——阿里云对企业客户的综合AI服务能力跃升，海外（东南亚/中东）扩张加速；(3)Qwen开源+10万衍生模型是阿里云核心增长引擎——开源生态作为商业化入口的路径被验证，国内低代码平台应主动接入Qwen API进入阿里生态。',
+    perspectives: {
+      pm: '"创造 token/分发 token/应用 token"作为组织使命意味着大型科技公司从"产品/模型"视角切换到"token 经济"——B 端 AI 采购需重新理解厂商组织架构，token 生成规模成为议价能力核心。五单元合并打破通义/Qwen/悟空的数据/客户墙——阿里云综合 AI 服务能力跃升，东南亚/中东扩张加速。Qwen 开源+10 万衍生模型是阿里云核心增长引擎，开源生态作为商业化入口的路径被验证。',
+      investor: '阿里 Token Hub 重组是中国 AI 组织形态关键拐点——五单元合并打破内部数据墙，阿里云综合 AI 能力跃升。"token 经济"叙事对阿里云估值是重大利好，对标字节豆包 120 万亿日 token 调用规模。但需关注：Eddie Wu 直接挂帅意味着战略级 commit，但执行跨度大，Q4 财报前是关键观察窗。',
+      brand: '阿里 Token Hub 是 2026 年中国 AI 品牌最佳组织叙事——品牌人抄作业：1) To B AI 厂商立刻产出"token 经济"行业报告，把客户认知从"模型/产品"切换到"token 规模"，硬数据驱动；2) 五单元合并是绝佳案例素材——"你的 AI 组织是否需要打破内部墙"自检 checklist；3) Qwen 开源+10 万衍生模型必须做成主视觉——开源生态作为商业化入口的叙事权重达到顶峰；4) 别打"我们更懂行业"，打"我们 token 经济规模更大"——硬数据叙事；5) 反思：你的组织还在按"产品线"划分？切换到"token 流水线"，2026 是组织重构分水岭。',
+      beginner: '阿里把整个 AI 业务重组成"Token Hub"，把通义实验室/Qwen/悟空等 5 个独立单元合并，CEO Eddie Wu 直接挂帅。核心思路：AI 价值不在模型本身，而在 token 生成规模。中国每天处理 140 万亿 token，比 2024 年初涨了 1400 倍。'
+    },
+    createdAt: '2026-07-05T22:00:00Z'
+  },
+  {
+    id: '20260707-05',
+    date: '2026-07-07',
+    title: '中国AI模型占OpenRouter 45%流量：Xiaomi MiMo-V2-Pro登顶，21.1%份额碾压OpenAI 7.5%——"匿名霸榜+成本套利"双驱动',
+    summary: 'Digital Applied 7月初Q2 2026报告：中国AI模型在OpenRouter平台占比达45%（一年前不足2%），OpenAI降至7.5%。关键数据：(1)Xiaomi MiMo-V2-Pro以4.21万亿周token处理量占21.1%份额，成为单一最常用模型；(2)驱动因素三连击——免费预览+100万token上下文+单价3-10倍低于美国前沿模型；(3)GLM-5.2定价$1.40/$4.40对比GPT-5.5 $2.50/$15，输入输出均3倍+成本优势；DeepSeek V4-Pro $0.44/$0.87较前沿模型低一个数量级；(4)企业采购三大覆盖盲区：内容限制（台湾/天安门/新疆硬编码拒答）、数据管辖（API走中国司法服务器，除非经OpenRouter/Azure中转）、工具调用JSON schema偶尔不规范；(5)通过Azure/Cloudflare Workers AI中转可解决数据管辖问题同时保留成本优势。MiMo-V2-Pro沿用Meituan LongCat-2.0"匿名霸榜后揭秘"路径——中国AI海外品牌新打法。',
+    source: '其他',
+    sourceUrl: 'https://www.buildfastwithai.com/blogs/ai-news-today-july-6-2026',
+    tags: ['#模型', '#战略', '#开源'],
+    accuracyScore: 91,
+    timelinessScore: 94,
+    utilityScore: 91,
+    totalScore: 92,
+    recommendReason: '中国AI模型在OpenRouter占45%是"成本套利+匿名霸榜"双驱动的结构化成果。PM应关注：(1)Xiaomi MiMo-V2-Pro登顶说明中国AI厂商出海已从"政治叙事"切换到"开发者默认选择"——B端AI选型必须把中国模型作为默认候选而非备选；(2)3-10倍成本优势永久改变AI应用经济学——低代码平台接中国模型走OpenRouter/Azure中转可在保留成本的同时解决合规，但需评估内容限制；(3)匿名霸榜后揭秘（LongCat-2.0"Owl Alpha"+ Xiaomi MiMo）成为中国AI海外品牌新标准打法——品牌建设从"先讲身份"切换到"先证明实力"。',
+    perspectives: {
+      pm: '中国 AI 模型在 OpenRouter 占 45% 是"成本套利+匿名霸榜"双驱动结构化成果——B 端 AI 选型必须把中国模型作为默认候选而非备选。3-10 倍成本优势永久改变 AI 应用经济学——低代码平台接中国模型走 OpenRouter/Azure 中转可保留成本同时解决合规，但需评估内容限制（台湾/天安门/新疆硬编码拒答）。匿名霸榜后揭秘（LongCat-2.0 "Owl Alpha" + Xiaomi MiMo）成为中国 AI 海外品牌标准打法。',
+      investor: '中国 AI 模型占 OpenRouter 45% 是出海结构化胜利——Xiaomi MiMo-V2-Pro 21.1% 份额碾压 OpenAI 7.5%，成本套利叙事对 OpenAI/Anthropic 估值锚点构成持续压力。但需警惕：内容限制+数据管辖+工具调用三大盲区意味着企业级深度使用仍有摩擦，"开发者默认选择"vs "企业默认采购"是两个市场。匿名霸榜成为品牌新打法，小米/美团/智谱均沿用此路径。',
+      brand: '中国 AI 海外"匿名霸榜"是 2026 年最佳出海品牌教材——品牌人抄作业：1) 国产 AI 出海厂商立刻把"OpenRouter 匿名霸榜后揭秘"做成主出海路径，势能放大 10 倍；2) "成本 3-10 倍优势"必须做成 To B 转化主视觉——开发者最在意账单；3) Xiaomi MiMo-V2-Pro 21.1% vs OpenAI 7.5% 是绝佳对比图素材，硬数据驱动；4) 别打"中国第一"，打"开发者首选"——开发者社群权重高于通稿；5) 反思：你的出海品牌还在讲"中国智造"？切换到"OpenRouter 霸榜"，硬实力胜过软叙事。',
+      beginner: '中国 AI 模型在 OpenRouter（开发者常用模型平台）占 45% 流量，超过 OpenAI 的 7.5%。Xiaomi MiMo-V2-Pro 是最常用模型，主要因为便宜 3-10 倍+100 万 token 上下文。说明中国 AI 在海外开发者市场已经结构性胜出。'
+    },
+    createdAt: '2026-07-06T04:00:00Z'
+  },
+
   // === 2026-07-02 (周三) ===
   {
     id: '20260702-01',

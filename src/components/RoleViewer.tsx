@@ -11,6 +11,53 @@ const ROLES: { key: Role; label: string; icon: string; desc: string }[] = [
   { key: 'beginner', label: 'AI 小白', icon: '🌱', desc: '零术语 / 生活化 / 试一下' },
 ]
 
+// 把"前言 1) xxx 2) yyy ..."格式的 brand 行动指南拆成分行结构
+// 每项如果有"关键词：描述"格式（中英冒号），把关键词加粗
+function renderStructuredInsight(text: string) {
+  const matches = [...text.matchAll(/\s\d+\)\s/g)]
+  if (matches.length < 2) {
+    return <span style={{ whiteSpace: 'pre-wrap' }}>{text}</span>
+  }
+
+  const lead = text.slice(0, matches[0].index).trim()
+  const items: { num: string; body: string }[] = []
+  for (let i = 0; i < matches.length; i++) {
+    const start = matches[i].index! + matches[i][0].length
+    const end = i + 1 < matches.length ? matches[i + 1].index! : text.length
+    const num = matches[i][0].trim()
+    const body = text.slice(start, end).trim()
+    items.push({ num, body })
+  }
+
+  return (
+    <div>
+      {lead && (
+        <div style={{ marginBottom: 10, color: 'var(--text-primary)', fontWeight: 500, lineHeight: 1.6 }}>
+          {lead}
+        </div>
+      )}
+      {items.map((item, idx) => {
+        const colonIdx = item.body.search(/[：:]/)
+        const hasKeyword = colonIdx > 0 && colonIdx <= 18
+        const keyword = hasKeyword ? item.body.slice(0, colonIdx) : null
+        const colon = hasKeyword ? item.body[colonIdx] : null
+        const rest = hasKeyword ? item.body.slice(colonIdx + 1) : item.body
+        return (
+          <div key={idx} style={{ marginBottom: idx === items.length - 1 ? 0 : 8, lineHeight: 1.7, display: 'flex', gap: 8 }}>
+            <span style={{ color: 'var(--text-muted)', flexShrink: 0, fontSize: 11 }}>{item.num}</span>
+            <span style={{ flex: 1 }}>
+              {keyword !== null && (
+                <span style={{ fontWeight: 600, color: 'var(--text-primary)' }}>{keyword}{colon}</span>
+              )}
+              {rest}
+            </span>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
 export default function RoleViewer({ items, date }: { items: DailyItem[]; date: string }) {
   const [role, setRole] = useState<Role>('pm')
 
@@ -111,10 +158,9 @@ export default function RoleViewer({ items, date }: { items: DailyItem[]; date: 
                       borderRadius: 6,
                       background: 'rgba(200,149,108,0.06)',
                       borderLeft: '2px solid var(--accent)',
-                      whiteSpace: 'pre-wrap',
                     }}>
                       <span style={{ fontWeight: 600, marginRight: 4 }}>{label}：</span>
-                      {insight}
+                      {renderStructuredInsight(insight)}
                     </div>
                   )}
                   <a
