@@ -14,7 +14,8 @@ const ROLES: { key: Role; label: string; icon: string; desc: string }[] = [
 // 把"前言 1) xxx 2) yyy ..."格式的 brand 行动指南拆成分行结构
 // 每项如果有"关键词：描述"格式（中英冒号），把关键词加粗
 function renderStructuredInsight(text: string) {
-  const matches = [...text.matchAll(/\s\d+\)\s/g)]
+  // 不限定前导字符（空白或中文冒号都可），匹配 "1) " 这种列表标记
+  const matches = [...text.matchAll(/\d+\)\s/g)]
   if (matches.length < 2) {
     return <span style={{ whiteSpace: 'pre-wrap' }}>{text}</span>
   }
