@@ -635,4 +635,11 @@ body::before {
   .role-insight {
     padding: 10px;
   }
+  .score-ring {
+    width: 32px;
+    height: 32px;
+  }
+  .news-meta {
+    gap: 4px;
+  }
 }
