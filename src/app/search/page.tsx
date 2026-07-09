@@ -73,7 +73,7 @@ export default function SearchPage() {
 
           {/* Tags */}
           <div style={{ marginBottom: 16 }}>
-            <div style={{ fontSize: 11, color: 'var(--text-muted)', marginBottom: 8, letterSpacing: '0.06em', textTransform: 'uppercase', fontWeight: 600 }}>
+            <div className="label-uppercase" style={{ marginBottom: 8 }}>
               标签
             </div>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
@@ -91,7 +91,7 @@ export default function SearchPage() {
 
           {/* Sources */}
           <div>
-            <div style={{ fontSize: 11, color: 'var(--text-muted)', marginBottom: 8, letterSpacing: '0.06em', textTransform: 'uppercase', fontWeight: 600 }}>
+            <div className="label-uppercase" style={{ marginBottom: 8 }}>
               来源
             </div>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
@@ -141,7 +141,7 @@ export default function SearchPage() {
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8, flexWrap: 'wrap' }}>
                       <SourceBadge source={item.source} />
-                      <span style={{ fontSize: 11, fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>
+                      <span style={{ fontSize: 'var(--text-xs)', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>
                         {item.date}
                       </span>
                       {item.tags.map(tag => (

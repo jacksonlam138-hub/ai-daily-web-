@@ -60,16 +60,8 @@ export function ScoreIndicator({ score }: { score: number }) {
 
 export function CategoryHeader({ category }: { category: string }) {
   return (
-    <div style={{ marginBottom: 16, paddingBottom: 12, borderBottom: '1px solid var(--border-subtle)' }}>
-      <span style={{
-        fontSize: 11,
-        fontWeight: 600,
-        letterSpacing: '0.1em',
-        textTransform: 'uppercase',
-        color: 'var(--text-muted)',
-      }}>
-        {category}
-      </span>
+    <div className="category-header">
+      <span className="category-header-label">{category}</span>
     </div>
   )
 }
@@ -77,55 +69,29 @@ export function CategoryHeader({ category }: { category: string }) {
 export function NewsItemCard({ item, showReason = false, isLast = false }: { item: DailyItem; showReason?: boolean; isLast?: boolean }) {
   return (
     <div className="news-item" style={{ borderBottom: isLast ? 'none' : '1px solid var(--border-subtle)' }}>
-      <div style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
-        <div style={{ flex: 1, minWidth: 0 }}>
-          {/* Source + Tags */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8, flexWrap: 'wrap' }}>
+      <div className="news-item-row">
+        <div className="news-item-body">
+          <div className="news-meta">
             <SourceBadge source={item.source} />
             {item.tags.map(tag => (
               <span key={tag} className="tag">{tag}</span>
             ))}
           </div>
-          {/* Title */}
-          <h3 style={{
-            fontSize: 15,
-            fontWeight: 500,
-            lineHeight: 1.5,
-            color: 'var(--text-primary)',
-            marginBottom: 6,
-          }}>
-            {item.title}
-          </h3>
-          {/* Summary */}
-          <p style={{
-            fontSize: 13,
-            lineHeight: 1.65,
-            color: 'var(--text-secondary)',
+          <h3 className="news-title">{item.title}</h3>
+          <p className="news-summary" style={{
             display: '-webkit-box',
             WebkitLineClamp: 2,
             WebkitBoxOrient: 'vertical',
             overflow: 'hidden',
-            marginBottom: 8,
           }}>
             {item.summary}
           </p>
-          {/* Recommend Reason */}
           {showReason && item.recommendReason && (
-            <div style={{
-              fontSize: 12,
-              lineHeight: 1.6,
-              color: 'var(--accent)',
-              padding: '8px 12px',
-              marginBottom: 8,
-              borderRadius: 6,
-              background: 'rgba(200,149,108,0.06)',
-              borderLeft: '2px solid var(--accent)',
-            }}>
-              <span style={{ fontWeight: 600, marginRight: 4 }}>PM：</span>
+            <div className="role-insight">
+              <span className="role-insight-label">PM：</span>
               {item.recommendReason}
             </div>
           )}
-          {/* Link */}
           <a
             href={item.sourceUrl}
             target="_blank"
@@ -138,7 +104,6 @@ export function NewsItemCard({ item, showReason = false, isLast = false }: { ite
             </svg>
           </a>
         </div>
-        {/* Score */}
         <ScoreIndicator score={item.totalScore} />
       </div>
     </div>

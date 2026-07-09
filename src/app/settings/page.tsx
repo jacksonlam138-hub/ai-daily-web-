@@ -106,7 +106,7 @@ export default function SettingsPage() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
             {Object.entries(config.sources).map(([key, group]) => (
               <div key={key}>
-                <div style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: 8, fontWeight: 600 }}>
+                <div className="label-uppercase" style={{ marginBottom: 8 }}>
                   {group.label}
                 </div>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>

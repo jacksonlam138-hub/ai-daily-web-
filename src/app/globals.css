@@ -116,7 +116,7 @@ body::before {
   align-items: center;
   padding: 2px 8px;
   border-radius: 6px;
-  font-size: 11px;
+  font-size: var(--text-xs);
   font-weight: 600;
   letter-spacing: 0.01em;
   border: 1px solid transparent;
@@ -152,7 +152,7 @@ body::before {
 .tag {
   display: inline-flex;
   align-items: center;
-  font-size: 11px;
+  font-size: var(--text-xs);
   color: var(--text-muted);
   letter-spacing: 0.02em;
 }
@@ -188,7 +188,7 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: var(--text-xs);
   font-weight: 600;
   font-family: var(--font-mono);
   border: 1.5px solid;
@@ -240,7 +240,7 @@ body::before {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-size: 12px;
+  font-size: var(--text-xs);
   color: var(--text-muted);
   transition: color 0.2s;
 }
@@ -351,6 +351,111 @@ body::before {
 .btn-primary:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+/* ── Shared page typography ── */
+.page-subtitle {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+.back-link {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+.page-footer-text {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* ── Category header (search/dashboard) ── */
+.category-header {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.category-header-label,
+.label-uppercase {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ── Home stats row ── */
+.home-stats {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+.stat-item {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+.stat-num {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--accent);
+  font-family: var(--font-mono);
+}
+.stat-label {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+/* ── Scoring bar ── */
+.scoring-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+.scoring-label {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.scoring-dims { display: flex; gap: 16px; flex-wrap: wrap; }
+.scoring-dim { display: flex; align-items: center; gap: 5px; }
+.scoring-dim-name { font-size: var(--text-xs); color: var(--text-secondary); }
+.scoring-dim-pct { font-size: var(--text-xs); font-family: var(--font-mono); }
+
+/* ── Date divider (home timeline) ── */
+.date-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.date-text {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+.date-text-today { color: var(--accent); }
+.date-text-default { color: var(--text-secondary); }
+.date-line { flex: 1; height: 1px; background: var(--border-subtle); }
+.date-count {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
 }
 
 /* ── Role viewer (daily page) ── */
@@ -502,6 +607,21 @@ body::before {
     flex-direction: column;
     gap: 6px;
     align-items: flex-start !important;
+  }
+  .home-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 16px;
+    padding: 12px 16px;
+  }
+  .scoring-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 16px;
+  }
+  .scoring-dims {
+    gap: 12px;
   }
 }
 

@@ -47,7 +47,7 @@ export default function DashboardPage() {
           ].map(stat => (
             <div key={stat.label} className="surface" style={{ padding: '16px 20px' }}>
               <div className="stat-value" style={{ color: stat.color, marginBottom: 4 }}>{stat.value}</div>
-              <div style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+              <div className="label-uppercase">
                 {stat.label}
               </div>
             </div>
@@ -84,7 +84,7 @@ export default function DashboardPage() {
                         transition: 'width 0.6s ease',
                       }} />
                     </div>
-                    <span style={{ width: 24, textAlign: 'right', fontSize: 11, fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>
+                    <span style={{ width: 24, textAlign: 'right', fontSize: 'var(--text-xs)', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>
                       {count}
                     </span>
                   </div>
@@ -103,7 +103,7 @@ export default function DashboardPage() {
                 .sort((a, b) => b[1] - a[1])
                 .map(([tag, count]) => {
                   const ratio = count / maxTagCount
-                  const size = ratio > 0.7 ? { fontSize: 13, padding: '5px 12px' } : ratio > 0.4 ? { fontSize: 12, padding: '4px 10px' } : { fontSize: 11, padding: '3px 8px' }
+                  const size = ratio > 0.7 ? { fontSize: 'var(--text-sm)', padding: '5px 12px' } : ratio > 0.4 ? { fontSize: 'var(--text-xs)', padding: '4px 10px' } : { fontSize: 'var(--text-xs)', padding: '3px 8px' }
                   const color = ratio > 0.7
                     ? { bg: 'rgba(200, 149, 108, 0.12)', border: 'rgba(200, 149, 108, 0.2)', text: 'var(--accent-bright)' }
                     : ratio > 0.4
@@ -168,7 +168,7 @@ export default function DashboardPage() {
                   const height = (day.count / maxTrendCount) * 100
                   return (
                     <div key={day.date} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
-                      <span style={{ fontSize: 10, fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>{day.count}</span>
+                      <span style={{ fontSize: 'var(--text-xs)', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>{day.count}</span>
                       <div style={{ flex: 1, width: '100%', display: 'flex', alignItems: 'flex-end' }}>
                         <div
                           style={{
@@ -182,7 +182,7 @@ export default function DashboardPage() {
                           title={`${day.date}: ${day.count}条`}
                         />
                       </div>
-                      <span style={{ fontSize: 9, fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '100%', textAlign: 'center' }}>
+                      <span style={{ fontSize: 'var(--text-xs)', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '100%', textAlign: 'center' }}>
                         {day.date.slice(5)}
                       </span>
                     </div>

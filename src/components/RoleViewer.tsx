@@ -45,7 +45,7 @@ function renderStructuredInsight(text: string) {
         const rest = hasKeyword ? item.body.slice(colonIdx + 1) : item.body
         return (
           <div key={idx} style={{ marginBottom: idx === items.length - 1 ? 0 : 8, lineHeight: 1.7, display: 'flex', gap: 8 }}>
-            <span style={{ color: 'var(--text-muted)', flexShrink: 0, fontSize: 11 }}>{item.num}</span>
+            <span style={{ color: 'var(--text-muted)', flexShrink: 0, fontSize: 'var(--text-xs)' }}>{item.num}</span>
             <span style={{ flex: 1 }}>
               {keyword !== null && (
                 <span style={{ fontWeight: 600, color: 'var(--text-primary)' }}>{keyword}{colon}</span>

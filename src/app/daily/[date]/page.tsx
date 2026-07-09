@@ -36,18 +36,11 @@ export default async function DailyPage({
         padding: '48px 24px 0',
       }}>
         <div className="anim-fade-up">
-          <Link href="/" style={{
-            fontSize: 11,
-            color: 'var(--text-muted)',
-            textDecoration: 'none',
-            letterSpacing: '0.04em',
-          }}>
-            ← 返回首页
-          </Link>
+          <Link href="/" className="back-link">← 返回首页</Link>
           <h1 className="heading-display" style={{ fontSize: 28, marginBottom: 6, marginTop: 12 }}>
             AI <em>Daily</em>
           </h1>
-          <p style={{ fontSize: 13, color: 'var(--text-secondary)', marginBottom: 20 }}>
+          <p className="page-subtitle">
             {formatDate(date)} · {report.items.length} 条 · 均分 {avgScore}
           </p>
         </div>
@@ -66,10 +59,8 @@ export default async function DailyPage({
         justifyContent: 'space-between',
         alignItems: 'center',
       }}>
-        <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>
-          AI 日报 · 多角色视角
-        </span>
-        <span style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: '0.03em' }}>
+        <span className="page-footer-text">AI 日报 · 多角色视角</span>
+        <span className="page-footer-text" style={{ letterSpacing: '0.03em' }}>
           Powered by Brave Search + Claude
         </span>
       </footer>

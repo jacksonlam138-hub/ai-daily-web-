@@ -47,7 +47,7 @@ export default function Nav() {
             AI 日报
           </span>
           <span style={{
-            fontSize: 10,
+            fontSize: 'var(--text-xs)',
             color: 'var(--text-muted)',
             letterSpacing: '0.08em',
             textTransform: 'uppercase',

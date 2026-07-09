@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <main style={{ minHeight: '100vh' }}>
       {/* ── Header ── */}
-      <header style={{
+      <header className="page-header page-shell-narrow" style={{
         maxWidth: 720,
         margin: '0 auto',
         padding: '64px 24px 0',
@@ -43,61 +43,38 @@ export default function Home() {
           <h1 className="heading-display" style={{ fontSize: 32, marginBottom: 6 }}>
             AI <em>Daily</em>
           </h1>
-          <p style={{ fontSize: 13, color: 'var(--text-secondary)', marginBottom: 20 }}>
+          <p className="page-subtitle">
             面向低代码 AI 产品经理的每日资讯 · PM 视角甄别筛选
           </p>
 
           {/* Stats row */}
-          <div style={{
-            display: 'flex',
-            gap: 24,
-            marginBottom: 16,
-            padding: '14px 20px',
-            borderRadius: 10,
-            background: 'var(--bg-surface)',
-            border: '1px solid var(--border-subtle)',
-          }}>
+          <div className="home-stats">
             {[
               { label: '条目', value: allItems.length },
               { label: '日报', value: dateCount },
               { label: '数据源', value: sourceCount },
               { label: '均分', value: avgScore },
-            ].map((s, i) => (
-              <div key={s.label} style={{ display: 'flex', alignItems: 'baseline', gap: 6 }}>
-                <span style={{ fontSize: 18, fontWeight: 600, color: 'var(--accent)', fontFamily: 'var(--font-mono)' }}>
-                  {s.value}
-                </span>
-                <span style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: '0.04em' }}>
-                  {s.label}
-                </span>
+            ].map(s => (
+              <div key={s.label} className="stat-item">
+                <span className="stat-num">{s.value}</span>
+                <span className="stat-label">{s.label}</span>
               </div>
             ))}
           </div>
 
           {/* Scoring bar */}
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 20,
-            padding: '10px 20px',
-            marginBottom: 8,
-            borderRadius: 10,
-            background: 'var(--bg-surface)',
-            border: '1px solid var(--border-subtle)',
-          }}>
-            <span style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: '0.06em', textTransform: 'uppercase', fontWeight: 600 }}>
-              评分
-            </span>
-            <div style={{ display: 'flex', gap: 16 }}>
+          <div className="scoring-bar">
+            <span className="scoring-label">评分</span>
+            <div className="scoring-dims">
               {[
                 { name: '准确性', pct: '40%', color: '#34d399' },
                 { name: '时效性', pct: '30%', color: '#38bdf8' },
                 { name: 'PM价值', pct: '30%', color: 'var(--accent)' },
               ].map(dim => (
-                <div key={dim.name} style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+                <div key={dim.name} className="scoring-dim">
                   <span style={{ width: 4, height: 4, borderRadius: '50%', background: dim.color }} />
-                  <span style={{ fontSize: 11, color: 'var(--text-secondary)' }}>{dim.name}</span>
-                  <span style={{ fontSize: 10, fontFamily: 'var(--font-mono)', color: dim.color }}>{dim.pct}</span>
+                  <span className="scoring-dim-name">{dim.name}</span>
+                  <span className="scoring-dim-pct" style={{ color: dim.color }}>{dim.pct}</span>
                 </div>
               ))}
             </div>
@@ -106,36 +83,19 @@ export default function Home() {
       </header>
 
       {/* ── Timeline Feed ── */}
-      <section style={{ maxWidth: 720, margin: '0 auto', padding: '32px 24px 60px' }}>
+      <section className="page-shell-narrow" style={{ maxWidth: 720, margin: '0 auto', padding: '32px 24px 60px' }}>
         {sortedDates.map(date => {
           const items = grouped[date]
           const today = isToday(date)
           return (
             <div key={date} style={{ marginBottom: 40 }}>
               {/* Date divider */}
-              <div style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: 12,
-                marginBottom: 16,
-              }}>
-                <div style={{
-                  fontSize: 13,
-                  fontWeight: 600,
-                  fontFamily: 'var(--font-mono)',
-                  color: today ? 'var(--accent)' : 'var(--text-secondary)',
-                  whiteSpace: 'nowrap',
-                }}>
+              <div className="date-divider">
+                <div className={`date-text ${today ? 'date-text-today' : 'date-text-default'}`}>
                   {today ? `今天 · ${formatDate(date)}` : formatDate(date)}
                 </div>
-                <div style={{ flex: 1, height: 1, background: 'var(--border-subtle)' }} />
-                <span style={{
-                  fontSize: 11,
-                  color: 'var(--text-muted)',
-                  fontFamily: 'var(--font-mono)',
-                }}>
-                  {items.length}条
-                </span>
+                <div className="date-line" />
+                <span className="date-count">{items.length}条</span>
               </div>
 
               {/* Items */}
@@ -150,7 +110,7 @@ export default function Home() {
       </section>
 
       {/* ── Footer ── */}
-      <footer style={{
+      <footer className="page-footer page-shell-narrow" style={{
         borderTop: '1px solid var(--border-subtle)',
         padding: '24px',
         maxWidth: 720,
@@ -159,10 +119,8 @@ export default function Home() {
         justifyContent: 'space-between',
         alignItems: 'center',
       }}>
-        <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>
-          AI 日报 · 自动聚合筛选
-        </span>
-        <span style={{ fontSize: 11, color: 'var(--text-muted)', letterSpacing: '0.03em' }}>
+        <span className="page-footer-text">AI 日报 · 自动聚合筛选</span>
+        <span className="page-footer-text" style={{ letterSpacing: '0.03em' }}>
           Powered by Brave Search + Claude
         </span>
       </footer>
