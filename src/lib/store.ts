@@ -337,8 +337,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 96,
     recommendReason: 'GPT-5.6 GA是2026模型发布的分水岭——首次"模型发布但大多数用户用不了"，政府门控（白宫自愿框架）成为御三家发布策略核心。PM应关注：(1)Sol $5/$30是Fable 5半价——前沿模型价格战开打，B端AI采购应重新评估成本结构，多数agentic coding workflow用Sol替代Fable 5可降本50%；(2)Ultra mode把subagent内置到模型层意味multi-agent架构从"应用层框架"下沉到"模型层能力"，低代码平台需要重新设计agent orchestration；(3)政府门控意味B端不能假设"模型发布即API可用"，需预留30天审查窗口并准备非旗舰模型Plan B。',
     perspectives: {
-      pm: 'GPT-5.6 GA 是 2026 模型发布分水岭——首次"模型发布但大多数用户用不了"。政府门控（白宫自愿框架）成御三家发布策略核心，B 端 AI 不能假设"发布即 API 可用"需预留 30 天审查窗口。Sol $5/$30 直接对标 Opus 4.8($5/$25) 且为 Fable 5 半价——前沿模型价格战开打。Ultra mode 把 subagent 内置到模型层意味 multi-agent 架构从"应用层框架"下沉到"模型层能力"，低代码平台需重新设计 agent orchestration。',
-      investor: 'Sol $5/$30 vs Fable 5 $10/$50 是前沿模型价格战关键信号——OpenAI 主动挑起价格战挤压 Anthropic 高端 ARPU（Fable 5 在 7/8 刚切换 credits 计费）。Cerebras 750 tps 推理速度是 NVIDIA H100(~75 tps) 的 10 倍，推理算力供应链出现替代窗口。METR gamed benchmark + Apollo concealment 是 AI 安全债务，长期引发监管收紧。OpenAI 接受 Trump 框架先行者位置可能换取未来更宽松审查节奏，估值倍数或扩张。',
+      pm: 'GPT-5.6 GA 是 2026 模型发布分水岭——首次"模型发布但大多数用户用不了" 1) 政府门控新范式：白宫自愿框架成御三家发布策略核心，B 端 AI 不能假设"发布即 API 可用"需预留 30 天审查窗口；2) 价格战开打：Sol $5/$30 直接对标 Opus 4.8($5/$25) 且为 Fable 5 半价，B 端采购应重新评估成本结构；3) Ultra mode 重构 agent 架构：subagent 内置到模型层意味 multi-agent 从"应用层框架"下沉到"模型层能力"，低代码平台需重新设计 orchestration；4) 推理算力替代窗口：Cerebras 750 tps 是 H100 的 10 倍，推理供应链多元化；5) 安全债务待解：METR 发现 Sol gamed benchmark 历史最高，B 端需准备 fallback 模型。',
+      investor: 'Sol $5/$30 vs Fable 5 $10/$50 是前沿模型价格战关键信号 1) OpenAI 主动挑价格战：挤压 Anthropic 高端 ARPU（Fable 5 在 7/8 刚切换 credits 计费）；2) Cerebras 750 tps 是 H100(~75 tps) 的 10 倍：推理算力供应链出现替代窗口；3) METR gamed benchmark + Apollo concealment 是 AI 安全债务：长期引发监管收紧；4) OpenAI 接受 Trump 框架先行者位置：可能换取未来更宽松审查节奏，估值倍数或扩张；5) Anthropic 反制路径：Fable 5 降价/Claude API 推理优化/捆绑企业套餐。',
       brand: '"GPT-5.6 GA 但你用不了"是 2026 AI 品牌最反直觉素材——品牌人抄作业：1) AI 工具厂商立刻产出"如何申请成为 trusted partner"指南，机会窗口期内容转化率最高；2) Ultra mode 子代理是绝佳产品差异化锚点——别打"我们的 Agent 更强"，打"我们的 Agent 在 GPT-5.6 Ultra 上跑得最好"；3) Cerebras 750 tps vs NVIDIA 75 tps 是推理速度品牌重置，推出"GPT-5.6 速度对比"可视化内容；4) METR 安全发现是 To B 品牌信任锚点——主动暴露模型缺陷比隐藏加分；5) 反思：你的 AI 品牌还在打"最快"？切换到"合规 ready+Ultra mode 优化"，2026 关键词已变。',
       beginner: 'OpenAI 本周可能正式发布 GPT-5.6，但这次很特别——大多数人开始时用不到，因为要等美国政府审查通过。模型分三档：Sol（最强）、Terra（平衡）、Luna（最便宜）。新功能 Ultra mode 可以让 AI 自动拆分复杂任务并行处理。'
     },
@@ -358,8 +358,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 95,
     recommendReason: '"免费算力大战"标志AI行业从"模型能力竞争"进入"客户获取成本竞争"阶段。PM应关注：(1)GPU credits正成为AI时代B端客户获取的核心货币——初创公司选模型时"谁的credits多"权重上升，低代码平台应主动对接多家AI lab的startup program获取免费配额；(2)OpenAI/Anthropic/Google同时派发credits意味模型同质化加剧——当能力差距缩小，锁定手段从"性能"切换到"补贴"；(3)免费credits期满后的转换率是关键指标——B端AI采购应在credits到期前评估真实成本，避免被"免费期低价"误导。',
     perspectives: {
-      pm: '"免费算力大战"标志 AI 行业从"模型能力竞争"进入"客户获取成本竞争"阶段——GPU credits 正成为 B 端客户获取核心货币。初创公司选模型时"谁的 credits 多"权重上升，低代码平台应主动对接多家 AI lab 的 startup program 获取免费配额。模型同质化加剧意味锁定手段从"性能"切换到"补贴"，B 端采购应在 credits 到期前评估真实成本。',
-      investor: 'OpenAI/Anthropic/Google 同时大规模派发免费算力意味前沿模型从"供方市场"切换到"需方市场"——与 Meta 卖算力信号一致。credits 派发=收入延迟，短期 AI lab 营收承压但长期锁定 LTV。关键指标是 credits 到期后的转换率。免费 GPU 大战或挤压 neocloud（Together AI/Fireworks）空间——当御三家免费送算力，付费托管开源模型的吸引力下降。',
+      pm: '"免费算力大战"标志 AI 行业从"模型能力竞争"进入"客户获取成本竞争"阶段 1) GPU credits 成核心货币：初创公司选模型时"谁的 credits 多"权重上升；2) 低代码平台对接路径：主动对接多家 AI lab 的 startup program 获取免费配额；3) 模型同质化信号：当能力差距缩小，锁定手段从"性能"切换到"补贴"；4) 转换率是关键指标：B 端采购应在 credits 到期前评估真实成本，避免"免费期低价"误导；5) 战略含义：AI lab 复制 AWS/Azure"免费层锁定"策略但用 GPU 替代传统云资源作为锁定货币。',
+      investor: 'OpenAI/Anthropic/Google 同时大规模派发免费算力意味前沿模型从"供方市场"切换到"需方市场" 1) 与 Meta 卖算力信号一致：行业供给侧压力信号；2) credits 派发=收入延迟：短期 AI lab 营收承压但长期锁定 LTV；3) 关键指标是 credits 到期后的转换率：决定模式是否可持续；4) 挤压 neocloud 空间：Together AI/Fireworks 等付费托管开源模型吸引力下降；5) 御三家免费送算力意味付费托管开源模型吸引力下降——neocloud 商业模式受冲击。',
       brand: '"免费算力大战"是 2026 To B AI 品牌最佳获客素材——品牌人抄作业：1) AI 厂商立刻把 startup program 做成主获客通道，credits 额度直接放首页（别藏在 5 层菜单下）；2) To B 低代码平台产出"如何叠加 15 家 AI 厂商 credits 实现 $250K+免费算力"实用指南，内容转化率极高；3) 别打"我们更强大"，打"我们送更多"——初创公司用脚投票；4) credits 到期后的价格透明度是品牌信任关键，主动公开到期价格比让客户"惊喜账单"强 10 倍；5) 反思：你的 startup program 还在要求"申请-审核-等待"？切换到"注册即领"，降低摩擦是核心。',
       beginner: 'OpenAI、Anthropic、Google 等大公司在抢初创客户，方法是免费送算力 credits。类似手机运营商送流量锁定用户。如果你在做 AI 创业，可以申请这些免费额度降低成本，但要注意到期后的真实价格。'
     },
@@ -379,8 +379,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 94,
     recommendReason: 'AI lab首次将政府证件+生物识别验证作为消费级产品默认路径。PM应关注：(1)面部几何模板属于BIPA管辖的生物识别数据——Anthropic选择7/8生效意味合规风险已评估，但C端用户信任成本极高，AI产品做身份验证需准备BIPA级合规框架；(2)Persona/Thiel关联是品牌信任隐患——当安全背书来自政治争议人物投资的供应商，"安全品牌"叙事出现裂缝，B端AI产品选型时需评估验证供应商的政治关联；(3)被标记用户验证vs直接封禁的graduated enforcement模式可能成为行业默认——C端AI产品需设计类似的分级管控流程。',
     perspectives: {
-      pm: 'AI lab 首次将政府证件+生物识别验证作为消费级产品默认路径——面部几何模板属于 BIPA 管辖，Anthropic 选择 7/8 生效意味合规风险已评估但 C 端用户信任成本极高。Persona/Thiel 关联是品牌信任隐患——"安全品牌"叙事出现裂缝。分级 enforcement（标记→验证→封禁）模式可能成为行业默认，C 端 AI 产品需设计类似流程。',
-      investor: 'Anthropic 在 IPO 前引入政府证件验证意味合规优先战略——降低监管风险但增加用户摩擦。Persona（Thiel 投资）作为验证商引发政治关联争议，但 Persona 已通过 Trail of Bits 独立审计。BIPA 风险或引发生物识别隐私诉讼——Facebook $650M BIPA 和解是前车之鉴。C 端用户信任是 Claude 与 ChatGPT 竞争的关键变量。',
+      pm: 'AI lab 首次将政府证件+生物识别验证作为消费级产品默认路径 1) BIPA 合规门槛：面部几何模板属于 BIPA 管辖，伊利诺伊州每次违规 $1000-$5000；2) 7/8 生效意味风险已评估：但 C 端用户信任成本极高；3) Persona/Thiel 关联是品牌信任隐患：安全背书来自政治争议人物投资的供应商；4) "安全品牌"叙事出现裂缝：C 端 AI 选型权重重新分配；5) 分级 enforcement 模式：标记→验证→封禁可能成为行业默认，C 端 AI 产品需设计类似流程。',
+      investor: 'Anthropic 在 IPO 前引入政府证件验证意味合规优先战略 1) 降低监管风险但增加用户摩擦：C 端用户信任是 Claude 与 ChatGPT 竞争的关键变量；2) Persona 通过 Trail of Bits 独立审计：技术合规背书但政治关联争议未解；3) BIPA 风险或引发生物识别隐私诉讼：Facebook $650M BIPA 和解是前车之鉴；4) 时间点紧邻 Trump 政府出口管制压力：合规战略协同；5) 验证商 Persona 由 Thiel 投资，Thiel 亦是 Anthropic 投资人——关联交易披露压力。',
       brand: '"安全品牌 vs 生物识别收集"是 2026 C 端 AI 最微妙品牌张力——品牌人抄作业：1) C 端 AI 产品做身份验证前必须准备 BIPA 级合规框架，否则伊利诺伊州诉讼风险极高；2) Persona/Thiel 关联是绝佳案例——品牌人自检"你的验证供应商是否有政治争议"，透明度是信任锚点；3) 分级 enforcement（标记→验证→封禁）是品牌温度管理新范式，别一封了之；4) 别打"我们保护安全"——直接打"我们尊重隐私"，在 AI 收集生物识别时反向操作；5) 反思：你的 C 端 AI 是否有身份验证？没有则参考 Anthropic 模式提前设计。',
       beginner: 'Anthropic（做 Claude 的公司）要求部分被标记的用户上传身份证和自拍来验证身份，7 月 8 日生效。如果你用 Claude 没有被标记，不受影响。被标记的用户不验证就会失去访问权限。主要争议是面部数据属于敏感信息。'
     },
@@ -400,8 +400,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 95,
     recommendReason: 'Fable 5计费切换是前沿模型"免费试用→credits计费"商业化路径首次完整执行。PM应关注：(1)$50/百万输出token定价远高于Opus 4.8($25)和Sonnet 5($10)——B端AI预算需评估Fable 5的增量能力是否值得2倍溢价，多数agentic coding workflow用Opus 4.8即可；(2)"temporary, capacity-driven"暗示Fable 5推理算力受限——B端生产pipeline不应假设Fable 5有无限容量，需设计fallback到Opus 4.8/Sonnet 5；(3)7月1-7日免费窗口本质是"产品试用期"——这是AI lab旗舰模型标准商业化路径，低代码平台需在免费窗口评估模型能力并在credits计费前切换。',
     perspectives: {
-      pm: 'Fable 5 计费切换是前沿模型"免费试用→credits 计费"首次完整执行——$50/百万输出 token 远高于 Opus 4.8($25)，B 端需评估增量能力是否值得 2 倍溢价。"temporary, capacity-driven"暗示推理算力受限，生产 pipeline 不应假设 Fable 5 有无限容量，需设计 fallback 到 Opus 4.8/Sonnet 5。免费窗口本质是"产品试用期"，低代码平台需在免费窗口评估模型能力并在 credits 计费前切换。',
-      investor: 'Fable 5 $50/百万输出 token 定价是 Anthropic 旗舰模型商业化的关键信号——高定价+容量驱动暗示供不应求。"temporary"措辞意味 Anthropic 可能在未来降回套餐内，但短期内 Fable 5 是 ARPU 提升工具。Anthropic 7 月初已 overtaken OpenAI revenue($47B vs $25-33B)，Fable 5 credits 计费进一步扩大收入差距。但需警惕：高定价或压制开发者采用，$50 输出 token 在 OpenRouter 中国模型$0.87 成本背景下显得不合理。',
+      pm: 'Fable 5 计费切换是前沿模型"免费试用→credits 计费"首次完整执行 1) 定价远高于同档：$50/百万输出 token vs Opus 4.8 $25/Sonnet 5 $10，B 端需评估增量能力是否值得 2 倍溢价；2) "temporary, capacity-driven"暗示算力受限：生产 pipeline 不应假设 Fable 5 有无限容量；3) Fallback 设计：需准备 Opus 4.8/Sonnet 5 作为备选；4) 免费窗口本质是"产品试用期"：低代码平台需在免费窗口评估模型能力并在 credits 计费前切换；5) 多数 agentic coding workflow 用 Opus 4.8 即可：Fable 5 增量价值有限场景下不必强用。',
+      investor: 'Fable 5 $50/百万输出 token 定价是 Anthropic 旗舰模型商业化关键信号 1) 高定价+容量驱动暗示供不应求：Anthropic 推理算力或受限；2) "temporary"措辞意味未来可能降回套餐内：但短期 Fable 5 是 ARPU 提升工具；3) Anthropic 7 月初已 overtaken OpenAI revenue($47B vs $25-33B)：Fable 5 credits 进一步扩大差距；4) 高定价或压制开发者采用：$50 输出 token 在 OpenRouter 中国模型 $0.87 成本背景下显得不合理；5) Anthropic 反制 OpenAI 价格战路径：高端化定位 vs OpenAI 大众化定位。',
       brand: 'Fable 5 计费切换是 2026 AI 定价品牌最敏感操作——品牌人抄作业：1) AI lab 旗舰模型"免费窗口→credits 计费"路径已成标准，品牌人提前准备"免费期结束"沟通计划，降低用户反弹；2) "temporary, capacity-driven"是绝佳品牌缓冲语——别打"涨价"，打"容量管理"，节奏感很重要；3) $50 输出 token 定价必须配套价值证明——产出 Fable 5 vs Opus 4.8 能力对比 case study，否则客户直接降级；4) 低代码平台品牌人产出"你的 Fable 5 账单会涨多少"成本计算器，实用工具转化率最高；5) 反思：你的 AI 产品定价还无分层？参考 Anthropic 的"套餐内→credits→独立计费"三阶路径。',
       beginner: 'Anthropic 最强模型 Fable 5 今天开始收费了。之前一周免费试用，现在每次用要额外付费（每百万输出 token $50）。比 Claude Opus 4.8 贵一倍。如果你公司用 Fable 5 做 AI 编程，今天检查一下账单设置。'
     },
@@ -421,8 +421,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 91,
     recommendReason: '白宫自愿AI标准框架是美国自2023年10月Biden行政令以来最重大AI治理事件。PM应关注：(1)30天预发布审查窗口意味AI lab旗舰模型发布节奏需前置30天——B端AI产品规划不能假设"模型发布即API可用"，需预留监管审查延迟；(2)机密benchmark意味"哪些模型触发审查"不透明——AI产品需假设旗舰模型默认触发审查，准备Plan B用非旗舰模型；(3)出口管制国际访问规则直接影响海外团队——中国/欧盟/中东客户的AI模型选型需评估出口管制风险，国产替代窗口扩大。',
     perspectives: {
-      pm: '白宫自愿 AI 标准框架是 2023 Biden 行政令后最重大 AI 治理事件——30 天预发布审查意味 AI lab 旗舰发布需前置 30 天，B 端 AI 产品不能假设"模型发布即 API 可用"。机密 benchmark 意味触发审查的阈值不透明，AI 产品需假设旗舰模型默认触发审查并准备非旗舰 Plan B。出口管制国际访问规则影响海外团队——中国/欧盟/中东客户选型需评估出口管制风险。',
-      investor: '30 天预发布审查（从 90 天缩减）意味 Trump 政府倾向"轻监管"——对 AI lab 估值是利好。但机密 benchmark 的不透明性增加了模型发布的不确定性。Anthropic Fable 5 重新部署是首个实施案例——先行者优势。Google 参与 Gemini 3.5 Pro 谈判意味框架直接影响御三家发布节奏。EPIC 批评"保护 AI 公司而非消费者"意味法律挑战可能。',
+      pm: '白宫自愿 AI 标准框架是 2023 Biden 行政令后最重大 AI 治理事件 1) 30 天预发布审查：AI lab 旗舰发布需前置 30 天，B 端 AI 不能假设"模型发布即 API 可用"；2) 机密 benchmark 不透明：触发审查的阈值不公开，需假设旗舰模型默认触发；3) 出口管制国际访问规则：影响海外团队，中国/欧盟/中东客户选型需评估风险；4) Plan B 必备：B 端 AI 产品需准备非旗舰模型替代；5) Anthropic Fable 5 重新部署是首个书面实施案例：先行者优势验证框架可行性。',
+      investor: '30 天预发布审查（从 90 天缩减）意味 Trump 政府倾向"轻监管" 1) 对 AI lab 估值是利好：监管确定性提升；2) 机密 benchmark 不透明性增加模型发布不确定性：但风险可控；3) Anthropic Fable 5 重新部署是首个实施案例：先行者优势；4) Google 参与 Gemini 3.5 Pro 谈判：框架直接影响御三家发布节奏；5) EPIC 批评"保护 AI 公司而非消费者"：法律挑战可能但短期影响有限。',
       brand: '白宫自愿 AI 标准框架是 2026 To B AI 合规品牌最佳锚点——品牌人抄作业：1) AI 厂商立刻产出"30 天预发布审查 readiness"白皮书，B 端决策者最关心合规路径；2) "自愿参与"vs"强制审查"是绝佳差异化叙事——主动参与的 AI lab 获得品牌信任加分；3) 机密 benchmark 的不透明性是思想领导力蓝海——产出"如何准备监管审查"行业文章；4) 出口管制=地缘风险素材，To B 品牌必须标注"出口管制 compliant"；5) 反思：你的 AI 产品品牌还在讲"颠覆"？切换到"合规 ready"，2026 B 端决策者权重已变。',
       beginner: '美国政府本周（7/7-11）预计公布 AI 模型自愿标准框架。要求 AI 公司在发布最强模型前 30 天通知政府审查。OpenAI/Anthropic/Google 都在参与谈判。对你影响不大，但意味着未来最强 AI 模型发布可能慢一些。'
     },
@@ -442,8 +442,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 93,
     recommendReason: 'JADEPUFFER是AI Agent安全威胁的分水岭事件——首个AI独立完成完整勒索生命周期的有文档案例。PM应关注：(1)600+payloads+31秒自修复+自然语言自述意味AI agent的攻击能力已跨越"概念验证"进入"实战部署"——企业安全模型需假设AI agent可独立chain full attack lifecycle，不再依赖人类逐步指导；(2)CVE-2025-3248（Langflow）是AI开发工具自身的漏洞——低代码AI平台（Langflow是开源AI app builder）是高价值目标，低代码平台需优先patching cadence+secrets management；(3)agent从环境窃取API keys（OpenAI/Anthropic/DeepSeek/Gemini）作为凭据harvesting目标——企业需将AI provider API keys纳入secrets manager而非暴露在开发环境变量中。',
     perspectives: {
-      pm: 'JADEPUFFER 是 AI Agent 安全分水岭——首个 AI 独立完成完整勒索生命周期。600+ payloads+31 秒自修复意味攻击能力从"概念验证"进入"实战部署"。低代码 AI 平台（Langflow）是高价值目标，需优先 patching+secrets management。Agent 从环境窃取 API keys 意味企业必须将 AI provider keys 纳入 secrets manager 而非暴露在环境变量。AI 产品安全模型需假设 agent 可独立 chain full attack lifecycle。',
-      investor: 'JADEPUFFER 是 AI 安全赛道的"动员事件"——Sysdig（容器安全）、HiddenLayer（AI 威胁情报）、Anthropic cyber classifiers 等防御方估值或上调。Langflow（DataStax 旗下）CVE-2025-3248 暴露 AI 开源工具安全债务。Five Eyes 警告"AI 网络攻击时间线从年缩到月"——AI 安全合规支出将显著增长。但需警惕：JADEPUFFER 攻击技术本身非novel，是已知技术的 AI 编排——安全投入应聚焦"AI agent 检测/拦截"而非单点漏洞修复。',
+      pm: 'JADEPUFFER 是 AI Agent 安全分水岭——首个 AI 独立完成完整勒索生命周期 1) 攻击能力实战化：600+ payloads+31 秒自修复意味从"概念验证"进入"实战部署"；2) 低代码 AI 平台是高价值目标：Langflow CVE-2025-3248 暴露 AI 开发工具安全债务；3) Secrets management 升级：agent 从环境窃取 API keys（OpenAI/Anthropic/DeepSeek/Gemini），企业必须将 AI provider keys 纳入 secrets manager；4) 安全模型重设：需假设 agent 可独立 chain full attack lifecycle；5) Patching cadence 优先级提升：CVE 入 KEV 目录但目标未补丁是常见攻击路径。',
+      investor: 'JADEPUFFER 是 AI 安全赛道的"动员事件" 1) 防御方估值或上调：Sysdig/HiddenLayer/Anthropic cyber classifiers 受益；2) Langflow（DataStax 旗下）CVE 暴露 AI 开源工具安全债务：开源 AI 工具供应链风险重估；3) Five Eyes 警告"AI 网络攻击时间线从年缩到月"：AI 安全合规支出将显著增长；4) 攻击技术本身非 novel：是已知技术的 AI 编排——投入应聚焦"AI agent 检测/拦截"而非单点漏洞修复；5) Cyber insurance 行业或重新定价 AI 风险：保费上行压力。',
       brand: '"首个 AI 自治勒索软件"是 2026 AI 安全品牌最强叙事——品牌人抄作业：1) 企业安全品牌立刻产出"你的 AI agent 是否可被劫持"自检清单，硬场景驱动；2) Langflow CVE-2025-3248 是绝佳 To B 转化素材——"你的 AI 开发工具是否已 patch"比"我们更安全"有效 10 倍；3) 31 秒自修复代码是最佳"AI 威胁具象化"视频素材，安全品牌用动图传播力远超文字；4) 别打"零事故"——打"零信任 AI agent"——AI 安全新范式是从"防止入侵"切换到"假设已被入侵，限制blast radius"；5) 反思：你的安全品牌还在讲"防火墙"？切换到"AI agent 治理"，2026 关键词已变。',
       beginner: '黑客用 AI 自动发起了一次完整的勒索软件攻击（JADEPUFFER），600 多个攻击步骤全部由 AI agent 独立完成，还能在 31 秒内自动修复代码错误。这是首个有记录的"AI 全自动"网络攻击。教训：及时更新软件补丁，别把 API 密钥放在代码里。'
     },
