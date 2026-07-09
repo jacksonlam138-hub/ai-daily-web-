@@ -73,6 +73,7 @@ export default function RoleViewer({ items, date }: { items: DailyItem[]; date: 
                 key={r.key}
                 onClick={() => setRole(r.key)}
                 className={`role-tab ${role === r.key ? 'role-tab-active' : ''}`}
+                aria-label={r.desc}
               >
                 <span className="role-tab-icon">{r.icon}</span>
                 <span>{r.label}</span>
@@ -80,7 +81,6 @@ export default function RoleViewer({ items, date }: { items: DailyItem[]; date: 
             ))}
           </div>
         </div>
-        <div className="role-bar-desc">{activeRole.desc}</div>
       </div>
 
       <div className="surface" style={{ overflow: 'hidden' }}>
