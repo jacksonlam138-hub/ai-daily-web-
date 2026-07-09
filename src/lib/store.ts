@@ -16,8 +16,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 97,
     recommendReason: 'AI编码工具进入"地缘政治分化"阶段。PM应关注：(1)ZCode把"开源MIT+自托管=规避Fable禁令类监管kill-switch"作为核心卖点——这是首个把"去美国监管"做成产品差异化的AI编码工具，跨国企业/欧盟/中东客户选型时权重会上升；(2)GLM-5.2+Agent+IDE协同调优的"first-party整合"是Cursor/Copilot无法复制的——闭源模型+第三方IDE的架构天花板已显；(3)$16.20起的价格比Cursor/Claude Code便宜30%+——B端AI编码采购清单需重新评估"国产开源方案"，国内低代码平台应主动集成GLM-5.2 API。',
     perspectives: {
-      pm: '"开源MIT+自托管=规避监管kill-switch"是首个把"去美国监管"做成产品差异化的 AI 编码工具——跨国企业/欧盟/中东客户选型时权重上升。GLM-5.2+Agent+IDE 协同调优的 first-party 整合是 Cursor/Copilot 无法复制的，闭源模型+第三方 IDE 架构天花板已显。国内低代码平台应主动集成 GLM-5.2 API，B 端 AI 编码采购清单需新增"国产开源方案"维度。',
-      investor: '智谱 ZCode 把"地缘政治风险"做成产品卖点——跨国企业"中国 AI 备份方案"需求形成独立 TAM。$16.20 起的定价挤压 Cursor/Claude Code 海外 ARPU。MIT 开源是双刃剑：自托管叙事强化但商业化天花板受抑，估值锚点切换到 GLM Coding Plan 订阅增速。Cursor / Anysphere IPO 估值或承压。',
+      pm: '"开源MIT+自托管=规避监管kill-switch"是首个把"去美国监管"做成产品差异化的 AI 编码工具 1) 跨国企业/欧盟/中东客户选型时权重上升：合规成为采购硬指标；2) GLM-5.2+Agent+IDE 协同调优的 first-party 整合：Cursor/Copilot 无法复制；3) 闭源模型+第三方 IDE 架构天花板已显：协同调优优势凸显；4) 国内低代码平台应主动集成 GLM-5.2 API：生态对接窗口期；5) B 端 AI 编码采购清单需新增"国产开源方案"维度：替代选项必备。',
+      investor: '智谱 ZCode 把"地缘政治风险"做成产品卖点 1) 跨国企业"中国 AI 备份方案"需求形成独立 TAM；2) $16.20 起的定价挤压 Cursor/Claude Code 海外 ARPU；3) MIT 开源是双刃剑：自托管叙事强化但商业化天花板受抑；4) 估值锚点切换到 GLM Coding Plan 订阅增速；5) Cursor/Anysphere IPO 估值或承压。',
       brand: '"去美国监管kill-switch"是 2026 年最锋利的品牌叙事——智谱抄作业：1) 国产 AI 出海厂商立刻把"MIT 开源+自托管"做成主视觉，直接对标闭源 SaaS；2) To B 发布会前 24 小时必须产出"Fable 禁令 vs 我们自托管"对比图，开发者社群权重高于通稿；3) 跨设备 Agent 工作流（Desktop/Mobile/飞书/WeChat 共享 task）是绝佳场景化视频素材——60 秒视频胜过 10 篇稿；4) 别打"中国第一"，打"全球首个 MIT 开源 Agent IDE"——差异化锚定协议层而非国别；5) 反思 Cursor 通稿关键词"灵感"，ZCode 必须锚定"自托管+监管免疫"，场景词必须直击合规痛点。',
       beginner: '国产 AI 编程工具 ZCode 推出免费版，背靠 GLM-5.2 大模型。比 Cursor 便宜，关键优势是可以自托管（公司自己部署），不会被美国政府远程关掉。如果你公司对数据敏感，可以试试。'
     },
@@ -37,8 +37,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 94,
     recommendReason: 'AI lab自研硅正式从"巨头游戏"扩展到"frontier lab标配"。PM应关注：(1)Anthropic挖角OpenAI芯片团队早期成员说明自研硅战略已是"复制+改进"而非"从零探索"——B端推理成本曲线下移的预期可前置到2027年；(2)Samsung 2nm作为谈判筹码意味TSMC独家垄断松动，国内厂商对接Samsung代工的窗口同步打开；(3)NVIDIA 74%份额不降反升说明"自研硅挤压NVIDIA"是伪命题——短期内B端GPU采购仍以NVIDIA为主，自研硅是头部lab的"成本对冲"而非替代。',
     perspectives: {
-      pm: 'Anthropic 挖角 OpenAI 芯片团队早期成员说明自研硅战略是"复制+改进"而非"从零探索"——B 端推理成本曲线下移预期可前置到 2027 年。Samsung 2nm 谈判意味 TSMC 独家垄断松动，国内厂商对接 Samsung 代工窗口同步打开。NVIDIA 74% 份额不降反升说明自研硅短期是"成本对冲"而非替代，B 端 GPU 采购仍以 NVIDIA 为主。',
-      investor: 'frontier lab 自研硅从"巨头游戏"扩展到"标配"——OpenAI/Anthropic/Google/Meta/Amazon/Microsoft 全部入局。Broadcom 作为 OpenAI 芯片设计伙伴或受益于 Anthropic 类似合作。Samsung 2nm 若落地，TSMC 垄断溢价承压。NVIDIA 74% 份额"高于战前"说明推理需求扩张速度仍在跑赢自研硅替代速度，短期内 NVIDIA 估值锚点不破。',
+      pm: 'Anthropic 挖角 OpenAI 芯片团队早期成员说明自研硅战略是"复制+改进"而非"从零探索" 1) B 端推理成本曲线下移预期可前置到 2027 年；2) Samsung 2nm 谈判意味 TSMC 独家垄断松动；3) 国内厂商对接 Samsung 代工窗口同步打开；4) NVIDIA 74% 份额不降反升说明自研硅短期是"成本对冲"而非替代；5) B 端 GPU 采购仍以 NVIDIA 为主。',
+      investor: 'frontier lab 自研硅从"巨头游戏"扩展到"标配" 1) OpenAI/Anthropic/Google/Meta/Amazon/Microsoft 全部入局；2) Broadcom 作为 OpenAI 芯片设计伙伴或受益于 Anthropic 类似合作；3) Samsung 2nm 若落地，TSMC 垄断溢价承压；4) NVIDIA 74% 份额"高于战前"说明推理需求扩张速度仍跑赢自研硅替代；5) 短期内 NVIDIA 估值锚点不破。',
       brand: '"frontier lab 自研硅"叙事从巨头扩展到 Anthropic——品牌人抄作业：1) To B 基础设施品牌定位从"用 NVIDIA H100"升级到"自研+开放合作"，技术叙事必须有"协同代工厂"维度；2) Samsung 2nm 是公关钩子，主动产出"我们已对接 Samsung 2nm"技术博客+联合发布会；3) 别打"摆脱 NVIDIA 依赖"——NVIDIA 74% 份额不降反升说明这叙事站不住，差异化锚定"成本对冲+多供应商韧性"才有可信度；4) 挖角叙事（Clive Chan）是绝佳人才品牌素材，配合 LinkedIn 帖+TechCrunch 独家比通稿穿透力强 5 倍；5) 反思：你的芯片品牌故事还在讲"性能参数"？必须切换到"供应链韧性+地缘对冲"，B 端采购权重已变。',
       beginner: 'Anthropic（做 Claude 的公司）开始自己研发 AI 芯片了，找三星代工。说明用 NVIDIA 芯片太贵，头部 AI 公司都想自研降本。短期不影响你用 Claude，但 2 年后 AI 推理会更便宜。'
     },
@@ -58,8 +58,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 93,
     recommendReason: 'AI政治经济学进入"股权换监管"阶段。PM应关注：(1)5%股权方案本质是OpenAI用经济利益换取Trump政府的监管友好——B端AI合规路径变清晰，未来政策风险溢价下降；(2)"AI全民分红"模式若落地，将创造类似阿拉斯加石油基金的全民股权新资产类别——企业AI产品商业化时可关注"分红接受度"维度；(3)OpenAI与Anthropic同步筹备IPO估值$1万亿+，B端选型时"御三家"财务稳定性差异将进一步拉大，国产替代窗口收窄。',
     perspectives: {
-      pm: '5% 股权方案本质是 OpenAI 用经济利益换取 Trump 政府的监管友好——B 端 AI 合规路径变清晰，未来政策风险溢价下降。"AI 全民分红"模式若落地将创造类似阿拉斯加石油基金的全民股权新资产类别，企业 AI 产品商业化时可关注"分红接受度"维度。OpenAI/Anthropic 同步筹备 IPO 估值 $1 万亿+，B 端选型时"御三家"财务稳定性差异将进一步拉大。',
-      investor: '"股权换监管"=OpenAI 把政治风险折现成股权稀释——IPO 估值或上修。$1 万亿估值锚点确认（OpenAI+Anthropic 同步筹备）。5% 模式若推广到 Anthropic/Google/Meta，AI 红利"全民化"或压制头部 lab 估值倍数（股权稀释常态化）。需国会立法意味 2026 中期选举后才能落地，时间风险高。',
+      pm: '5% 股权方案本质是 OpenAI 用经济利益换取 Trump 政府的监管友好 1) B 端 AI 合规路径变清晰：政策风险溢价下降；2) "AI 全民分红"模式若落地将创造类似 Alaska Permanent Fund 的全民股权新资产类别；3) 企业 AI 产品商业化时可关注"分红接受度"维度：用户感知变化；4) OpenAI/Anthropic 同步筹备 IPO 估值 $1 万亿+；5) B 端选型时"御三家"财务稳定性差异将进一步拉大。',
+      investor: '"股权换监管"=OpenAI 把政治风险折现成股权稀释 1) IPO 估值或上修：监管确定性提升；2) $1 万亿估值锚点确认（OpenAI+Anthropic 同步筹备）；3) 5% 模式若推广到 Anthropic/Google/Meta：AI 红利"全民化"或压制头部 lab 估值倍数；4) 股权稀释常态化风险：长期估值倍数下行；5) 需国会立法意味 2026 中期选举后才能落地，时间风险高。',
       brand: '"AI 全民分红"是 2026 年最具传播力的政治经济学叙事——OpenAI 抄作业：1) To C AI 产品品牌定位从"科技领先"切到"全民共享红利"，OpenAI 把"被监管"做成了"政府共谋"；2) 类比 Alaska Permanent Fund 是绝佳的传播钩子——媒体/政策圈层穿透力 5 倍于纯商业叙事；3) 国产 AI 出海厂商立刻把目标市场主权基金/养老金合作做成品牌护城河；4) Altman 直接接触 Trump/Lutnick/Bessent 三人组合的公关释放是教科书级"政府关系品牌化"——别只发新闻稿，主动产出联合声明/公开信；5) 反思：你的品牌还在讲"颠覆世界"？切换到"分享红利"，B 端转化率高 2 倍。',
       beginner: 'OpenAI 想把 5% 股份送给美国政府，换政府支持。意思是让每个美国人都能分享 AI 红利（类似阿拉斯加石油基金）。说明 AI 公司想跟政府搞好关系，避免被监管打压。短期不影响你用 ChatGPT。'
     },
@@ -79,8 +79,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 92,
     recommendReason: 'AI基础设施"产能过剩"信号首次明确出现。PM应关注：(1)Meta卖算力说明头部lab的GPU囤积战进入"出清阶段"——B端推理成本或出现非单调下降，2026 H2可能出现短期算力过剩窗口，是采购谈判最佳时机；(2)SpaceX/xAI租算力给Anthropic+Meta卖算力=AI算力"二级市场"形成，国内厂商对接海外算力时新增"非御三家"渠道；(3)$140B capex投资者焦虑意味AI infra估值模型进入"重定价"阶段，NVIDIA短期需求承压但长期仍主导，B端采购应锁定2年合约对冲价格波动。',
     perspectives: {
-      pm: 'Meta 卖算力说明头部 lab 的 GPU 囤积战进入"出清阶段"——B 端推理成本或出现非单调下降，2026 H2 可能出现短期算力过剩窗口，是采购谈判最佳时机。SpaceX/xAI 租算力给 Anthropic+Meta 卖算力=AI 算力"二级市场"形成，国内厂商对接海外算力时新增"非御三家"渠道。$140B capex 投资者焦虑意味 AI infra 估值模型进入"重定价"阶段，B 端采购应锁定 2 年合约对冲价格波动。',
-      investor: 'AI 基础设施"产能过剩"信号首次明确出现——Meta 转型云业务意味推理算力市场从"卖方市场"切回"买方市场"。SpaceX+xAI+Meta 三家同时卖算力=AI 算力"二级市场"独立 TAM 形成。NVIDIA 短期需求承压但 74% 份额主导地位不变，长期推理需求仍跑赢自研硅替代。Meta $140B capex 焦虑或引发投资者重新评估 AI infra 估值倍数。',
+      pm: 'Meta 卖算力说明头部 lab 的 GPU 囤积战进入"出清阶段" 1) B 端推理成本或出现非单调下降；2) 2026 H2 可能出现短期算力过剩窗口：是采购谈判最佳时机；3) SpaceX/xAI 租算力给 Anthropic+Meta 卖算力=AI 算力"二级市场"形成；4) 国内厂商对接海外算力时新增"非御三家"渠道；5) B 端采购应锁定 2 年合约对冲价格波动。',
+      investor: 'AI 基础设施"产能过剩"信号首次明确出现 1) Meta 转型云业务意味推理算力市场从"卖方市场"切回"买方市场"；2) SpaceX+xAI+Meta 三家同时卖算力=AI 算力"二级市场"独立 TAM 形成；3) NVIDIA 短期需求承压但 74% 份额主导地位不变；4) 长期推理需求仍跑赢自研硅替代；5) Meta $140B capex 焦虑或引发投资者重新评估 AI infra 估值倍数。',
       brand: '"AI 算力产能过剩"是 2026 年最具反直觉传播力的叙事——品牌人抄作业：1) To B 基础设施品牌立刻把"灵活扩缩容+对冲价格波动"做成主视觉，B 端采购权重已变；2) Meta Zuckerberg 亲自 5 月股东大会放风、7 月 Bloomberg 落地——教科书级"先放风测市场，再官宣"品牌节奏，学；3) 国产 AI 厂商警惕：算力过剩=议价权转移，客户谈判时把"二级市场价格"作为锚点；4) 算力售卖叙事必须配套"成功率"案例（哪些客户在用），纯"算力过剩"会让投资者恐慌；5) 反思：你的品牌定位还在讲"GPU 储备充足"？切换到"算力流动性+价格对冲"。',
       beginner: 'Meta（Facebook 母公司）囤了太多 AI 芯片用不完，现在打算把多余的算力卖给别人。说明 AI 算力市场短期可能变便宜。如果你公司要租 GPU 跑模型，下半年是议价好时机。'
     },
@@ -100,8 +100,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 93,
     recommendReason: 'AI原生办公赛道获独立资本下注。PM应关注：(1)$30M个人自筹反映印度企业家对"AI重构办公软件"的押注级别——Microsoft 365 Copilot和Google Workspace面临首个"AI原生"正面挑战者；(2)"AI first vs AI插件"的产品哲学差异类似早期Salesforce对Siebel——AI原办公可能从"协作+自动化"角度重新定义工作流，低代码平台应警惕办公套件"反向吞噬"；3)Turakhia 4次成功创业记录是关键信号——非首次创业者下注的赛道值得长期跟踪。',
     perspectives: {
-      pm: '"AI 原生 vs AI 插件"的产品哲学差异类似早期 Salesforce 对 Siebel——AI 原办公可能从"协作+自动化"角度重新定义工作流，低代码平台应警惕办公套件"反向吞噬"。$30M 个人自筹反映印度企业家对"AI 重构办公软件"的押注级别——Microsoft 365 Copilot 和 Google Workspace 面临首个"AI 原生"正面挑战者。Turakhia 4 次成功创业记录是关键信号，非首次创业者下注的赛道值得长期跟踪。',
-      investor: '$30M 个人自筹=创始人自带重大 skin in the game——估值锚点清晰。AI 原生办公赛道获独立资本下注，Microsoft 365 Copilot 商业化节奏或承压。印度 SaaS 生态（Zoho/Freshworks/Zomato）继续输出垂直挑战者，Neo 若成功将强化"印度 SaaS 出口"叙事。Google Workspace 商业模式（订阅+广告）面临 AI 原生重构风险。',
+      pm: '"AI 原生 vs AI 插件"的产品哲学差异类似早期 Salesforce 对 Siebel 1) AI 原办公可能从"协作+自动化"角度重新定义工作流；2) 低代码平台应警惕办公套件"反向吞噬"：边界模糊化风险；3) $30M 个人自筹反映印度企业家对"AI 重构办公软件"的押注级别；4) Microsoft 365 Copilot 和 Google Workspace 面临首个"AI 原生"正面挑战者；5) Turakhia 4 次成功创业记录是关键信号，非首次创业者下注的赛道值得长期跟踪。',
+      investor: '$30M 个人自筹=创始人自带重大 skin in the game 1) 估值锚点清晰：创始人信念度高；2) AI 原生办公赛道获独立资本下注：Microsoft 365 Copilot 商业化节奏或承压；3) 印度 SaaS 生态（Zoho/Freshworks/Zomato）继续输出垂直挑战者；4) Neo 若成功将强化"印度 SaaS 出口"叙事；5) Google Workspace 商业模式（订阅+广告）面临 AI 原生重构风险。',
       brand: '"AI 原生办公"是 2026 年最具想象力的 To B 叙事——品牌人抄作业：1) To B 办公/协作产品立刻把"AI 原生架构"做成品牌护城河，对标"AI 插件式"竞品；2) 创始人个人自筹 $30M 是绝佳品牌素材（vs VC 融资），传达"长期主义+信念"；3) 印度 SaaS 出海叙事强化，国产 To B 出海厂商对标 Zoho/Neo 节奏，别只盯硅谷；4) 别打"颠覆 Microsoft"——直接对标"AI 原生架构"差异化，Microsoft 反击成本高；5) 反思：你的办公产品定位还在讲"功能更全"？切换到"AI 原生工作流"。',
       beginner: '有个印度富豪自己掏 3000 万美元做新的办公软件 Neo，用 AI 重新设计文档/表格/邮件。意思是以后办公软件可能不再以 Microsoft Word 为中心。值得长期关注，但短期还用不上。'
     },
@@ -123,8 +123,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 91,
     recommendReason: '前沿模型竞争进入"垂直整合+月度迭代"新阶段。PM应关注：(1)Grok 4.5把"自有数据+真实场景训练"做成差异化——X平台+Cursor编码+Tesla驾驶数据是OpenAI/Anthropic无法复制的资产，模型差异化从"参数规模"转向"独家数据+迭代速度"；(2)xAI收购Cursor后整合训练数据的速度极快——M&A后的产品整合窗口被压缩到月级，Cursor用户需警惕API/数据流向变化；(3)月度发布节奏颠覆御三家"年度旗舰"节奏，AI产品规划需假设"模型能力月度跃迁"，不要押注单一模型版本。',
     perspectives: {
-      pm: 'Grok 4.5 把"自有数据+真实场景训练"做成差异化——X+Cursor+Tesla 是 OpenAI/Anthropic 无法复制的资产。模型差异化从"参数规模"转向"独家数据+迭代速度"。xAI 收购 Cursor 后整合训练数据的速度极快，M&A 整合窗口被压缩到月级，Cursor 用户需重新评估数据合规。月度发布节奏颠覆御三家"年度旗舰"节奏——AI 产品规划必须假设"模型能力月度跃迁"，不要押注单一模型版本。',
-      investor: 'xAI 收购 Cursor 后的垂直整合速度是关键信号——数据飞轮从"用户使用"升级到"独家场景数据反哺"。月度发布节奏挤压 OpenAI/Anthropic 的产品节奏，前沿模型竞争进入"迭代速度"维度。Grok 5 规划 6-10T 参数意味着算力军备竞赛远未触顶。但需警惕：缺少第三方基准、私测不可验证——估值已计入"私测叙事"，回调风险存在。',
+      pm: 'Grok 4.5 把"自有数据+真实场景训练"做成差异化——X+Cursor+Tesla 是 OpenAI/Anthropic 无法复制的资产 1) 模型差异化从"参数规模"转向"独家数据+迭代速度"；2) xAI 收购 Cursor 后整合训练数据速度极快：M&A 整合窗口被压缩到月级；3) Cursor 用户需重新评估数据合规：API/数据流向变化；4) 月度发布节奏颠覆御三家"年度旗舰"节奏；5) AI 产品规划必须假设"模型能力月度跃迁"，不要押注单一模型版本。',
+      investor: 'xAI 收购 Cursor 后的垂直整合速度是关键信号——数据飞轮从"用户使用"升级到"独家场景数据反哺" 1) 月度发布节奏挤压 OpenAI/Anthropic 的产品节奏；2) 前沿模型竞争进入"迭代速度"维度；3) Grok 5 规划 6-10T 参数意味着算力军备竞赛远未触顶；4) 风险：缺少第三方基准、私测不可验证；5) 估值已计入"私测叙事"，回调风险存在。',
       brand: 'Grok 4.5 月度发布节奏是 2026 年最强品牌叙事——品牌人抄作业：1) 别打"我们更强"——直接打"我们更快"，把月度迭代做成主视觉，对标竞品年度发布；2) "垂直整合"叙事（数据+模型+场景）是绝佳差异化锚点，找到你的独家场景数据反哺故事；3) Cursor 用户群体是 xAI 整合的最敏感观测点，AI 编码工具品牌人立刻产出"Grok 4.5 上线后你的 Cursor 数据会怎样"科普文，抢占心智；4) 月度发布=月度内容机会，把每个 release 做成"产品剧场"；5) 反思：你的品牌节奏还在按季度？切换到月度 release 节奏，慢一拍就掉队。',
       beginner: '马斯克的 xAI 推出 Grok 4.5 新模型，目前只在 SpaceX 和 Tesla 内部测试。亮点是用了 Cursor 编程数据训练，编码能力接近 Claude Opus。每月迭代一次，比 OpenAI/Anthropic 快很多。普通用户还用不上，等公测。'
     },
@@ -144,8 +144,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 92,
     recommendReason: '"国产算力+万亿参数+开源"三连击重塑国内大模型格局。PM应关注：(1)首个全链路国产芯片训练的万亿模型公开验证可行性——中美AI算力脱钩场景下国内大模型已具备独立演进能力，B端采购国产芯片+开源模型的"去NVIDIA化"方案从政治正确变成工程可行；(2)SWE-bench Pro 59.5%击败GPT-5.5是国产模型首次在编码正面战场获胜——AI编码工具的国产替代叙事进入新阶段；(3)美团下场大模型意味着本地生活/电商/O2O领域将出现AI原生重做，低代码平台需警惕"场景方反向做模型"的降维打击。',
     perspectives: {
-      pm: '"国产算力+万亿参数+开源"三连击验证了去 NVIDIA 化路径——B 端 AI 采购清单从"政治正确"切换到"工程可行"。SWE-bench Pro 59.5% 击败 GPT-5.5 是国产模型首次在编码正面战场获胜，AI 编码工具国产替代叙事进入新阶段。美团下场意味着本地生活/电商/O2O 将被 AI 原生重做——低代码平台必须警惕"场景方反向做模型"的降维打击，主动找美团类厂商做生态绑定。',
-      investor: '美团开源 LongCat-2.0 是国内大模型格局关键拐点——阿里 Qwen/字节豆包/智谱 GLM/美团 LongCat 四强格局形成。"全链路国产算力"叙事对华为昇腾产业链是重大利好，NVIDIA 国内地份额加速承压。OpenRouter 匿名榜单霸榜事件证明"国产模型海外匿名评测"是有效的出海品牌路径。但需关注：美团核心业务本地生活能否承接大模型商业化，避免重蹈百度文心"投入产出失配"覆辙。',
+      pm: '"国产算力+万亿参数+开源"三连击验证了去 NVIDIA 化路径 1) B 端 AI 采购清单从"政治正确"切换到"工程可行"；2) SWE-bench Pro 59.5% 击败 GPT-5.5：国产模型首次在编码正面战场获胜；3) AI 编码工具国产替代叙事进入新阶段；4) 美团下场意味着本地生活/电商/O2O 将被 AI 原生重做；5) 低代码平台必须警惕"场景方反向做模型"的降维打击，主动找美团类厂商做生态绑定。',
+      investor: '美团开源 LongCat-2.0 是国内大模型格局关键拐点 1) 阿里 Qwen/字节豆包/智谱 GLM/美团 LongCat 四强格局形成；2) "全链路国产算力"叙事对华为昇腾产业链是重大利好；3) NVIDIA 国内地份额加速承压；4) OpenRouter 匿名榜单霸榜事件证明"国产模型海外匿名评测"是有效的出海品牌路径；5) 风险：美团核心业务本地生活能否承接大模型商业化，避免重蹈百度文心"投入产出失配"覆辙。',
       brand: '美团 LongCat-2.0 是 2026 年国产 AI 品牌最佳教材——品牌人抄作业：1) "匿名 Owl Alpha 海外霸榜"的悬念营销路径可复制——国产厂商出海先在 OpenRouter/LMSYS 匿名榜单打磨，登顶后再揭秘，势能放大 10 倍；2) "全链路国产算力"必须做成主视觉，对标 NVIDIA 依赖型竞品，地缘政治叙事权重达到顶峰；3) 美团下场=本地生活 AI 原生重做信号，相关厂商立刻产出"美团 LongCat 对你外卖/到店业务意味着什么"行业报告；4) 别打"中国第一"，打"OpenRouter 匿名榜首+全栈国产"——硬数据+硬叙事；5) 反思：还在讲"国产替代"？切换到"国产超越"，SWE-bench Pro 59.5% 是新叙事锚点。',
       beginner: '美团开源了 LongCat-2.0 大模型，1.6 万亿参数，全部用国产芯片训练。编程测试击败 GPT-5.5，此前在 OpenRouter 匿名榜单第一叫"Owl Alpha"。说明国产大模型在编程能力上首次正面超过硅谷顶级模型。开发者可以免费用。'
     },
@@ -165,8 +165,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 91,
     recommendReason: '前沿lab合规从"地理位置"升级到"所有权穿透"。PM应关注：(1)"实体穿透审查"是新的合规范式——国内企业的海外子公司（新加坡/迪拜/瑞士）使用Claude/OpenAI的路径被系统性封堵，跨国企业AI工具选型必须重新评估"全球统一架构"的可行性；(2)字节VPN补贴被点名意味着此前灰色地带已全部失效——出海企业需假设"海外员工使用Claude"也要受合规审查；(3)Anthropic执行比OpenAI更严格——前沿lab之间合规标准不统一，B端采购需把"合规严格度"作为选型维度，国产模型（GLM/Qwen/豆包）的"合规可控"叙事强化。',
     perspectives: {
-      pm: '"实体穿透审查"是新的合规范式——国内企业海外子公司（新加坡/迪拜/瑞士）使用 Claude/OpenAI 的路径被系统性封堵。跨国企业 AI 工具选型必须重新评估"全球统一架构"的可行性。字节 VPN 补贴被点名意味着灰色地带全部失效，出海企业需假设"海外员工使用 Claude"也要受合规审查。国产模型（GLM/Qwen/豆包）的"合规可控"叙事强化，跨国企业开始配置"全球架构+国内架构"双轨。',
-      investor: 'Anthropic 合规执行比 OpenAI 更严格——前沿 lab 之间的合规标准分化是关键信号，估值锚点开始反映"合规严格度"溢价。蚂蚁/字节被点名直接加速国产替代需求，GLM/Qwen/豆包海外营收或超预期。但需警惕：合规封堵也会反向激活"绕道方案"灰色生态（VPN/中转 API），实际执行效果待观察。',
+      pm: '"实体穿透审查"是新的合规范式 1) 国内企业海外子公司（新加坡/迪拜/瑞士）使用 Claude/OpenAI 的路径被系统性封堵；2) 跨国企业 AI 工具选型必须重新评估"全球统一架构"的可行性；3) 字节 VPN 补贴被点名意味灰色地带全部失效；4) 出海企业需假设"海外员工使用 Claude"也要受合规审查；5) 国产模型（GLM/Qwen/豆包）的"合规可控"叙事强化，跨国企业开始配置"全球架构+国内架构"双轨。',
+      investor: 'Anthropic 合规执行比 OpenAI 更严格——前沿 lab 之间的合规标准分化是关键信号 1) 估值锚点开始反映"合规严格度"溢价；2) 蚂蚁/字节被点名直接加速国产替代需求；3) GLM/Qwen/豆包海外营收或超预期；4) 风险：合规封堵会反向激活"绕道方案"灰色生态（VPN/中转 API）；5) 实际执行效果待观察。',
       brand: 'Anthropic "穿透实体"合规升级是 2026 年最佳地缘政治品牌素材——品牌人抄作业：1) 国产 AI 厂商立刻把"全球合规可控"做成主视觉，直接对标 Claude/OpenAI 的"穿透审查"——出海企业必看；2) 跨国 To B 厂商必须产出"全球架构+国内架构双轨方案"白皮书，这是新的内容蓝海；3) 字节 VPN 补贴被点名是绝佳案例素材——做"你的企业是否在合规灰色地带"自检 checklist，行业传播力强；4) 别打"我们更安全"，打"我们不被美国监管穿透"——差异化锚定地缘政治；5) 反思：你的合规叙事还在讲 SOC2/ISO27001？切换到"实体穿透合规"，这是 2026 新关键词。',
       beginner: 'Anthropic（Claude 公司）开始严管中国企业用 Claude。蚂蚁通过新加坡子公司、字节通过 VPN 补贴访问的灰色路径都被封堵。意味着国内公司（含海外分部）用海外 AI 模型的合规风险显著上升，国产替代需求更紧迫。'
     },
@@ -186,8 +186,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 92,
     recommendReason: 'Anthropic To B工具栈补齐关键缺口。PM应关注：(1)支出上限+模型权限+Analytics API是企业级AI采购的"基础设施三件套"——此前Microsoft 365 Copilot/Google Workspace的优势正是治理工具成熟，Anthropic补齐后Claude Enterprise成为可正式采购的B端选项；(2)Uber tokenmaxxing事件成为行业拐点——企业CIO开始把"AI支出可控"作为采购硬指标，相关厂商必须把spend caps作为标配功能；(3)Analytics API开放意味着企业AI使用数据进入"可分析时代"——低代码平台可基于此构建"AI ROI分析"增值功能，B端AI产品差异化进入数据驱动阶段。',
     perspectives: {
-      pm: '支出上限+模型权限+Analytics API 是企业级 AI 采购的"基础设施三件套"——Microsoft 365 Copilot/Google Workspace 此前的优势正是治理工具成熟。Anthropic 补齐后 Claude Enterprise 成为可正式采购的 B 端选项。Uber tokenmaxxing 事件是行业拐点——CIO 把"AI 支出可控"作为采购硬指标，相关厂商必须把 spend caps 作为标配。Analytics API 开放意味着企业 AI 使用数据进入"可分析时代"，低代码平台可基于此构建"AI ROI 分析"增值功能。',
-      investor: 'Anthropic To B 工具栈补齐是 Claude Enterprise 商业化加速信号——企业级 ARR 增速或超预期。Microsoft 365 Copilot 商业化节奏或承压，B 端 AI 治理工具赛道竞争加剧。Analytics API 开放激活"AI 使用分析"赛道，类似 SaaS 时代的 product analytics——值得早期布局。',
+      pm: '支出上限+模型权限+Analytics API 是企业级 AI 采购的"基础设施三件套" 1) Microsoft 365 Copilot/Google Workspace 此前的优势正是治理工具成熟；2) Anthropic 补齐后 Claude Enterprise 成为可正式采购的 B 端选项；3) Uber tokenmaxxing 事件是行业拐点：CIO 把"AI 支出可控"作为采购硬指标；4) 相关厂商必须把 spend caps 作为标配；5) Analytics API 开放意味企业 AI 使用数据进入"可分析时代"，低代码平台可基于此构建"AI ROI 分析"增值功能。',
+      investor: 'Anthropic To B 工具栈补齐是 Claude Enterprise 商业化加速信号 1) 企业级 ARR 增速或超预期；2) Microsoft 365 Copilot 商业化节奏或承压；3) B 端 AI 治理工具赛道竞争加剧；4) Analytics API 开放激活"AI 使用分析"赛道；5) 类似 SaaS 时代的 product analytics——值得早期布局。',
       brand: 'Anthropic 三件套是 2026 年 To B 品牌最佳案例——品牌人抄作业：1) To B AI 厂商立刻产出"企业 AI 治理工具有哪些必备项"内容营销，spend caps/model entitlements/analytics 三件套做成对比图，对标 Microsoft 365 Copilot；2) Uber tokenmaxxing 案例必须反复用——"你的企业会不会重蹈 Uber 覆辙"是最有效的转化文案；3) Analytics API 是绝佳客户故事素材——拉几家头部客户做"我们如何用 Analytics API 优化 AI ROI"案例；4) 别打"功能更全"，打"治理更成熟"——To B 决策者最在意可控；5) 反思：你的产品还在讲"AI 能力"？切换到"AI 治理"，2026 To B 采购清单已变。',
       beginner: 'Anthropic 给企业用户 Claude 出了三个管理工具：支出上限（防止预算超支）、模型权限（不同员工用不同版本）、数据分析 API。意思是企业用 Claude 可以像用 Microsoft 365 那样规范管理了，对 B 端采购是好消息。'
     },
@@ -207,8 +207,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 90,
     recommendReason: '"AI吞噬整体融资盘"进入结构化阶段。PM应关注：(1)OpenAI+Anthropic两家占全球VC 43%意味着"非AI叙事"的资本吸引力持续恶化——非AI创业项目融资难度指数级上升，PM做产品决策时需重新评估"AI能力外购vs自研"的优先级；(2)种子轮AI项目占比78%意味着2027-2028年AI应用层将出现严重同质化竞争——AI产品需提前布局差异化护城河，避免"温水煮青蛙"；(3)IPO窗口仅向"盈利AI基础设施"开放——应用层AI公司需重新设计商业化路径，订阅+API+垂直场景的复合模型或成主流。',
     perspectives: {
-      pm: '"AI 吞噬整体融资盘"进入结构化阶段——OpenAI+Anthropic 占全球 VC 43% 意味着"非 AI 叙事"的资本吸引力持续恶化。PM 做产品决策需重新评估"AI 能力外购 vs 自研"的优先级，非 AI 创业项目融资难度指数级上升。种子轮 AI 项目占比 78% 意味着 2027-2028 年 AI 应用层将出现严重同质化竞争，AI 产品需提前布局差异化护城河。IPO 窗口仅向"盈利 AI 基础设施"开放——应用层公司需重新设计商业化路径。',
-      investor: 'Crunchbase H1 数据是 2026 年 VC 格局关键锚点——OpenAI+Anthropic 占 43% 意味着头部前沿 lab 对资本的虹吸效应已结构化。种子轮 AI 占比 78% 预示 2027-2028 应用层同质化竞争血腥。IPO 窗口仅向盈利 AI 基础设施开放，应用层退出路径受阻——估值倍数或回调。但需关注：非 AI 项目融资下滑或激活"AI 改造传统行业"并购机会。',
+      pm: '"AI 吞噬整体融资盘"进入结构化阶段 1) OpenAI+Anthropic 占全球 VC 43% 意味"非 AI 叙事"的资本吸引力持续恶化；2) PM 需重新评估"AI 能力外购 vs 自研"的优先级；3) 非 AI 创业项目融资难度指数级上升；4) 种子轮 AI 项目占比 78% 意味 2027-2028 年 AI 应用层严重同质化竞争；5) IPO 窗口仅向"盈利 AI 基础设施"开放——应用层公司需重新设计商业化路径。',
+      investor: 'Crunchbase H1 数据是 2026 年 VC 格局关键锚点 1) OpenAI+Anthropic 占 43% 意味头部前沿 lab 对资本的虹吸效应已结构化；2) 种子轮 AI 占比 78% 预示 2027-2028 应用层同质化竞争血腥；3) IPO 窗口仅向盈利 AI 基础设施开放，应用层退出路径受阻；4) 估值倍数或回调；5) 机会：非 AI 项目融资下滑或激活"AI 改造传统行业"并购机会。',
       brand: 'Crunchbase H1 数据是 2026 To B/融资品牌最佳弹药——品牌人抄作业：1) AI 厂商立刻产出"AI 占 VC 43% 意味着什么"行业报告，硬数据驱动的内容传播力远超观点文；2) 非 AI 厂商必须重新审视品牌叙事——找到 AI 改造故事，否则资本吸引力恶化；3) 头部前沿 lab 的"虹吸效应"是绝佳地缘政治素材，做出"OpenAI/Anthropic 占 43% vs 我们国产自主"对比图；4) 种子轮 78% AI 项目=2027 同质化竞争预警，做"AI 应用层差异化护城河"内容矩阵；5) 反思：你的融资/品牌叙事还在讲功能？切换到"AI ROI 数据驱动"，2026 投资人只信硬数据。',
       beginner: '2026 上半年全球风投 5100 亿美元，OpenAI 和 Anthropic 两家占了 43%。AI 初创项目占种子轮 78%，意味着非 AI 创业融资越来越难。结论：AI 行业资本虹吸效应加剧，2027-2028 AI 应用竞争会很激烈。'
     },
@@ -230,8 +230,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 92,
     recommendReason: '前沿lab从"benchmark竞赛"切换到"宁可延期不带病发布"。PM应关注：(1)token效率成为2026年B端采购硬指标——Microsoft已在模型发布卡上公布"每任务平均token消耗"，企业采购从"看分数"切换到"看成本完成度"，低代码平台选型必须要求厂商提供token efficiency数据；(2)长任务多步推理是Pro tier相对Flash的核心差异——单轮SWE-bench已无法区分旗舰模型，SWE-Together等多轮评测成为新标尺；(3)Google延期说明"模型发布节奏"成为竞争维度，Claude/GPT已完成6月发布，Gemini被迫在7月二次延期，AI产品规划不能假设御三家发布同步。',
     perspectives: {
-      pm: 'token 效率成为 2026 年 B 端采购硬指标——Microsoft 已在模型发布卡公布"每任务平均 token 消耗"，企业采购从"看分数"切换到"看成本完成度"。低代码平台选型必须要求厂商提供 token efficiency 数据，否则账单失控。长任务多步推理是 Pro tier 相对 Flash 的核心差异——单轮 SWE-bench 已无法区分旗舰模型，SWE-Together 等多轮评测成为新标尺。Google 延期说明"模型发布节奏"成为竞争维度，AI 产品规划不能假设御三家发布同步。',
-      investor: 'Gemini 3.5 Pro 二度延期是 Google AI 叙事的关键裂痕——Claude Sonnet 5/Fable 5/GPT-5.6 均已落地，Google 在 6 月发布节奏全败。Microsoft 公开 token 效率数据是行业转折点，前沿模型竞争从"分数战"切换到"成本完成度战"，OpenAI/Anthropic 估值锚点或受影响。但需关注：Google 选择延期而非带病发布是工程文化的体现，长周期看是利好信号。',
+      pm: 'token 效率成为 2026 年 B 端采购硬指标 1) Microsoft 公布"每任务平均 token 消耗"：企业采购从"看分数"切换到"看成本完成度"；2) 低代码平台选型强制要求：必须要求厂商提供 token efficiency 数据，否则账单失控；3) 长任务多步推理是 Pro tier 核心差异：单轮 SWE-bench 已无法区分旗舰模型；4) 新评测标尺：SWE-Together 等多轮评测成为新标尺；5) "模型发布节奏"成竞争维度：AI 产品规划不能假设御三家发布同步。',
+      investor: 'Gemini 3.5 Pro 二度延期是 Google AI 叙事关键裂痕 1) 6 月发布节奏全败：Claude Sonnet 5/Fable 5/GPT-5.6 均已落地，Google 落后；2) Microsoft 公开 token 效率是行业转折点：从"分数战"切换到"成本完成度战"；3) OpenAI/Anthropic 估值锚点或受影响：成本成为采购核心维度；4) Google 选择延期而非带病发布：工程文化的体现；5) 长周期看是利好信号：质量优先于节奏。',
       brand: 'Gemini 3.5 Pro 延期是 2026 年最佳"工程文化"品牌素材——品牌人抄作业：1) AI 厂商立刻产出"我们为何选择延期"内容营销，对标"带病发布"竞品，工程诚实度是新的差异化；2) token 效率是绝佳 To B 转化文案——"你的模型账单失控了吗"比"我们更强"有效 10 倍；3) 多轮评测 vs 单轮评测是思想领导力蓝海，产出"SWE-bench 已死，SWE-Together 当立"行业文章；4) 别打"我们最快"，打"我们最诚实"——延期透明度是品牌资产；5) 反思：你的发布节奏还在追求"按时"？切换到"按质量"，工程诚实度是 2026 关键词。',
       beginner: 'Google 新模型 Gemini 3.5 Pro 又延期了，本来 6 月底发布，现在 7 月第二周还没出。原因是 token 消耗高、编码和长任务推理没达标。Google 选择继续打磨而不是带病发布，对用户是好事但叙事压力大。'
     },
@@ -251,8 +251,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 94,
     recommendReason: '持久记忆Agent与防沉迷合规的"架构层不可调和"是2026年最关键的合规信号。PM应关注：(1)豆包345M用户Agent下线意味着字节/阿里选择"关停而非改造"——证明现有持久Agent架构在中国市场已不可持续，AI产品需重新设计"合规优先"的Agent架构；(2)Qwen无迁移工具是用户数据丢失风险信号——C端AI产品必须把"用户数据可导出"作为合规底线，否则监管切换时品牌信任崩塌；(3)合规框架（防沉迷+即时退出）对Agent产品的根本性约束意味着中国C端AI产品形态将与海外分化，国内低代码平台做C端Agent时需假设"防沉迷打断"作为产品默认。',
     perspectives: {
-      pm: '持久记忆 Agent 与防沉迷合规的"架构层不可调和"是 2026 年最关键合规信号——豆包 345M 用户 Agent 下线证明字节/阿里选择"关停而非改造"，现有持久 Agent 架构在中国市场已不可持续。Qwen 无迁移工具是用户数据丢失风险信号，C 端 AI 产品必须把"用户数据可导出"作为合规底线。合规框架（防沉迷+即时退出）意味着中国 C 端 AI 形态将与海外分化，国内低代码平台做 C 端 Agent 必须假设"防沉迷打断"为产品默认。',
-      investor: '豆包 345M MAU Agent 下线是字节 C 端 AI 叙事重大打击——商业化路径被迫重构。Qwen 无迁移工具或引发用户信任危机，阿里 C 端 AI 估值承压。但需关注：合规优先的 Agent 架构成为新赛道，字节暗示将"独立合规产品"重新推出，先发优势仍存。中国 140 万亿日 token 处理量叙事不变，但 C 端变现窗口被压缩。',
+      pm: '持久记忆 Agent 与防沉迷合规的"架构层不可调和"是 2026 年最关键合规信号 1) 豆包 345M 用户 Agent 下线：字节/阿里选择"关停而非改造"；2) 现有持久 Agent 架构在中国市场已不可持续：需重新设计合规优先架构；3) Qwen 无迁移工具是用户数据丢失风险信号：C 端 AI 必须把"用户数据可导出"作为合规底线；4) 合规框架（防沉迷+即时退出）使中国 C 端 AI 形态与海外分化；5) 国内低代码平台做 C 端 Agent 必须假设"防沉迷打断"为产品默认。',
+      investor: '豆包 345M MAU Agent 下线是字节 C 端 AI 叙事重大打击 1) 商业化路径被迫重构：345M 用户产品停服；2) Qwen 无迁移工具或引发用户信任危机：阿里 C 端 AI 估值承压；3) 合规优先的 Agent 架构成为新赛道：字节暗示"独立合规产品"重新推出；4) 先发优势仍存：监管切换后合规产品有空间；5) 中国 140 万亿日 token 处理量叙事不变：但 C 端变现窗口被压缩。',
       brand: '中国 AI 伴侣法是 2026 年 C 端 AI 品牌最大变数——品牌人抄作业：1) C 端 AI 产品立刻产出"防沉迷合规架构"白皮书，把监管约束做成品牌护城河；2) 豆包 345M 用户下线是绝佳案例素材——"你的 C 端 Agent 是否在监管刀口"自检清单，行业传播力强；3) Qwen 无迁移工具被点名是用户信任素材——"你的数据是否能导出"作为品牌承诺；4) 别打"功能更强"，打"合规可控"——C 端 AI 决策者最在意监管风险；5) 反思：你的 C 端 AI 还在做"持久记忆 Agent"？切换到"合规优先架构"，否则 7/15 后被迫下线。',
       beginner: '中国 7/15 实施 AI 伴侣新规，要求防沉迷+即时退出。豆包（3.45 亿月活）的 Agent 功能会下线，Qwen 没给迁移工具意味着用户数据可能丢。原因是 AI 持久记忆和防沉迷规则本质上冲突——AI 想持续陪伴，规则要求打断。'
     },
@@ -272,8 +272,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 91,
     recommendReason: 'Tesla Robotaxi无安全员运营是"AI决策无人类监督"在公众消费场景的最大规模部署。PM应关注：(1)"无安全员"作为默认配置意味着Tesla确认FSD安全阈值已达标——自动驾驶商业化进入"零人类failsafe"阶段，相关产业链（保险/法规/城市交通）需重新设计风险模型；(2)州级法规绕过联邦NHTSA是监管套利模板——其他AI自治系统（无人机/工业机器人）可参考类似路径；(3)Tesla车队规模vs Waymo测绘精度是两条路线之争——AI产品规划从"高精度地图+安全员"切换到"端到端学习+车队数据"，低代码平台做物理世界Agent时需参考此路径。',
     perspectives: {
-      pm: '"无安全员"作为默认配置意味着 Tesla 确认 FSD 安全阈值已达标——自动驾驶商业化进入"零人类 failsafe"阶段，保险/法规/城市交通需重新设计风险模型。州级法规绕过联邦 NHTSA 是监管套利模板——其他 AI 自治系统（无人机/工业机器人）可参考类似路径。Tesla 车队规模 vs Waymo 测绘精度是两条路线之争——AI 产品规划从"高精度地图+安全员"切换到"端到端学习+车队数据"。',
-      investor: 'Tesla Robotaxi 无安全员扩展至 12 州目标是 FSD 商业化关键里程碑——车队规模优势形成 autonomous miles 数据飞轮，Waymo 监督期策略或被迫加速。监管套利叙事（州级 vs 联邦）是 Tesla 长期 alpha。但需警惕：无安全员 = 无人类 failsafe，首例严重事故或触发监管回滚，估值已计入"零事故"预期。',
+      pm: '"无安全员"作为默认配置意味 Tesla 确认 FSD 安全阈值已达标 1) 自动驾驶商业化进入"零人类 failsafe"阶段：保险/法规/城市交通需重新设计风险模型；2) 州级法规绕过联邦 NHTSA：监管套利模板成立；3) 其他 AI 自治系统（无人机/工业机器人）可参考类似路径；4) Tesla 车队规模 vs Waymo 测绘精度是两条路线之争；5) AI 产品规划从"高精度地图+安全员"切换到"端到端学习+车队数据"。',
+      investor: 'Tesla Robotaxi 无安全员扩展至 12 州目标是 FSD 商业化关键里程碑 1) 车队规模优势形成 autonomous miles 数据飞轮；2) Waymo 监督期策略或被迫加速：竞争压力下战略调整；3) 监管套利叙事（州级 vs 联邦）是 Tesla 长期 alpha；4) 风险：无安全员=无人类 failsafe，首例严重事故或触发监管回滚；5) 估值已计入"零事故"预期：下行风险大于上行。',
       brand: 'Tesla Robotaxi Miami 无安全员是 2026 年最佳"AI 自治"品牌素材——品牌人抄作业：1) AI 自治产品立刻产出"零人类 failsafe 时代"行业报告，硬场景案例驱动；2) 监管套利叙事（州 vs 联邦）是绝佳差异化锚点——To B 决策者最关心合规路径；3) 车队数据飞轮 vs 高精地图是绝佳路线之争内容——产出"端到端 vs 测绘"对比图；4) 别打"我们更安全"，打"我们更敢部署"——AI 自治品牌的勇气叙事；5) 反思：你的 AI 产品还在讲"人在回路"？切换到"零 failsafe"，2026 是分水岭。',
       beginner: 'Tesla 在 Miami 推出 Robotaxi，第五城，第一次完全没安全员。计划年底扩到 12 个州。意味着自动驾驶进入"完全无人"阶段。Waymo 还在用安全员+地图，Tesla 走端到端+车队规模路线。'
     },
@@ -293,8 +293,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 92,
     recommendReason: '阿里"Token Hub"重组是中国AI组织形态切换的关键信号。PM应关注：(1)"创造token/分发token/应用token"作为组织使命意味着大型科技公司从"产品/模型"视角切换到"token经济"——B端AI采购需重新理解厂商组织架构，token生成规模成为议价能力核心；(2)五单元合并打破通义/Qwen/悟空的数据/客户墙——阿里云对企业客户的综合AI服务能力跃升，海外（东南亚/中东）扩张加速；(3)Qwen开源+10万衍生模型是阿里云核心增长引擎——开源生态作为商业化入口的路径被验证，国内低代码平台应主动接入Qwen API进入阿里生态。',
     perspectives: {
-      pm: '"创造 token/分发 token/应用 token"作为组织使命意味着大型科技公司从"产品/模型"视角切换到"token 经济"——B 端 AI 采购需重新理解厂商组织架构，token 生成规模成为议价能力核心。五单元合并打破通义/Qwen/悟空的数据/客户墙——阿里云综合 AI 服务能力跃升，东南亚/中东扩张加速。Qwen 开源+10 万衍生模型是阿里云核心增长引擎，开源生态作为商业化入口的路径被验证。',
-      investor: '阿里 Token Hub 重组是中国 AI 组织形态关键拐点——五单元合并打破内部数据墙，阿里云综合 AI 能力跃升。"token 经济"叙事对阿里云估值是重大利好，对标字节豆包 120 万亿日 token 调用规模。但需关注：Eddie Wu 直接挂帅意味着战略级 commit，但执行跨度大，Q4 财报前是关键观察窗。',
+      pm: '"创造 token/分发 token/应用 token"作为组织使命意味大型科技公司从"产品/模型"视角切换到"token 经济" 1) B 端 AI 采购需重新理解厂商组织架构：token 生成规模成为议价能力核心；2) 五单元合并打破通义/Qwen/悟空的数据/客户墙：阿里云综合 AI 服务能力跃升；3) 东南亚/中东扩张加速：海外市场借助 Qwen 开源生态；4) Qwen 开源+10 万衍生模型是阿里云核心增长引擎：开源作为商业化入口路径被验证；5) 国内低代码平台应主动接入 Qwen API 进入阿里生态。',
+      investor: '阿里 Token Hub 重组是中国 AI 组织形态关键拐点 1) 五单元合并打破内部数据墙：阿里云综合 AI 能力跃升；2) "token 经济"叙事对阿里云估值是重大利好；3) 对标字节豆包 120 万亿日 token 调用规模：规模差距缩小；4) Eddie Wu 直接挂帅意味战略级 commit：执行跨度大；5) Q4 财报前是关键观察窗：组织重构落地效果待验证。',
       brand: '阿里 Token Hub 是 2026 年中国 AI 品牌最佳组织叙事——品牌人抄作业：1) To B AI 厂商立刻产出"token 经济"行业报告，把客户认知从"模型/产品"切换到"token 规模"，硬数据驱动；2) 五单元合并是绝佳案例素材——"你的 AI 组织是否需要打破内部墙"自检 checklist；3) Qwen 开源+10 万衍生模型必须做成主视觉——开源生态作为商业化入口的叙事权重达到顶峰；4) 别打"我们更懂行业"，打"我们 token 经济规模更大"——硬数据叙事；5) 反思：你的组织还在按"产品线"划分？切换到"token 流水线"，2026 是组织重构分水岭。',
       beginner: '阿里把整个 AI 业务重组成"Token Hub"，把通义实验室/Qwen/悟空等 5 个独立单元合并，CEO Eddie Wu 直接挂帅。核心思路：AI 价值不在模型本身，而在 token 生成规模。中国每天处理 140 万亿 token，比 2024 年初涨了 1400 倍。'
     },
@@ -314,8 +314,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 92,
     recommendReason: '中国AI模型在OpenRouter占45%是"成本套利+匿名霸榜"双驱动的结构化成果。PM应关注：(1)Xiaomi MiMo-V2-Pro登顶说明中国AI厂商出海已从"政治叙事"切换到"开发者默认选择"——B端AI选型必须把中国模型作为默认候选而非备选；(2)3-10倍成本优势永久改变AI应用经济学——低代码平台接中国模型走OpenRouter/Azure中转可在保留成本的同时解决合规，但需评估内容限制；(3)匿名霸榜后揭秘（LongCat-2.0"Owl Alpha"+ Xiaomi MiMo）成为中国AI海外品牌新标准打法——品牌建设从"先讲身份"切换到"先证明实力"。',
     perspectives: {
-      pm: '中国 AI 模型在 OpenRouter 占 45% 是"成本套利+匿名霸榜"双驱动结构化成果——B 端 AI 选型必须把中国模型作为默认候选而非备选。3-10 倍成本优势永久改变 AI 应用经济学——低代码平台接中国模型走 OpenRouter/Azure 中转可保留成本同时解决合规，但需评估内容限制（台湾/天安门/新疆硬编码拒答）。匿名霸榜后揭秘（LongCat-2.0 "Owl Alpha" + Xiaomi MiMo）成为中国 AI 海外品牌标准打法。',
-      investor: '中国 AI 模型占 OpenRouter 45% 是出海结构化胜利——Xiaomi MiMo-V2-Pro 21.1% 份额碾压 OpenAI 7.5%，成本套利叙事对 OpenAI/Anthropic 估值锚点构成持续压力。但需警惕：内容限制+数据管辖+工具调用三大盲区意味着企业级深度使用仍有摩擦，"开发者默认选择"vs "企业默认采购"是两个市场。匿名霸榜成为品牌新打法，小米/美团/智谱均沿用此路径。',
+      pm: '中国 AI 模型在 OpenRouter 占 45% 是"成本套利+匿名霸榜"双驱动结构化成果 1) B 端 AI 选型必须把中国模型作为默认候选而非备选；2) 3-10 倍成本优势永久改变 AI 应用经济学；3) 低代码平台接中国模型走 OpenRouter/Azure 中转：保留成本同时解决合规；4) 内容限制需评估：台湾/天安门/新疆硬编码拒答；5) 匿名霸榜后揭秘（LongCat-2.0"Owl Alpha"+ Xiaomi MiMo）成为中国 AI 海外品牌标准打法。',
+      investor: '中国 AI 模型占 OpenRouter 45% 是出海结构化胜利 1) Xiaomi MiMo-V2-Pro 21.1% 份额碾压 OpenAI 7.5%；2) 成本套利叙事对 OpenAI/Anthropic 估值锚点构成持续压力；3) 三大盲区：内容限制+数据管辖+工具调用意味企业级深度使用仍有摩擦；4) "开发者默认选择"vs"企业默认采购"是两个市场；5) 匿名霸榜成为品牌新打法：小米/美团/智谱均沿用此路径。',
       brand: '中国 AI 海外"匿名霸榜"是 2026 年最佳出海品牌教材——品牌人抄作业：1) 国产 AI 出海厂商立刻把"OpenRouter 匿名霸榜后揭秘"做成主出海路径，势能放大 10 倍；2) "成本 3-10 倍优势"必须做成 To B 转化主视觉——开发者最在意账单；3) Xiaomi MiMo-V2-Pro 21.1% vs OpenAI 7.5% 是绝佳对比图素材，硬数据驱动；4) 别打"中国第一"，打"开发者首选"——开发者社群权重高于通稿；5) 反思：你的出海品牌还在讲"中国智造"？切换到"OpenRouter 霸榜"，硬实力胜过软叙事。',
       beginner: '中国 AI 模型在 OpenRouter（开发者常用模型平台）占 45% 流量，超过 OpenAI 的 7.5%。Xiaomi MiMo-V2-Pro 是最常用模型，主要因为便宜 3-10 倍+100 万 token 上下文。说明中国 AI 在海外开发者市场已经结构性胜出。'
     },
@@ -465,8 +465,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 95,
     recommendReason: 'AI基础设施"第二梯队"估值跃迁。PM应关注：(1)Together AI 16个月估值翻2.5倍至$8.3B，反映开源模型托管已成独立赛道——B端AI产品选型时除了OpenAI/Anthropic API，必须把neocloud（Together/Fireworks/Upstage）纳入比价；(2)年订单$1.15B+对比Cursor/Cognition等头部客户群，说明"开源模型+推理优化"的B端商业化已被验证，闭源API毛利承压；(3)Aramco领投标志中东资本进入AI基础设施——地缘资金流向影响供应链，国内厂商对接海外算力时需重新评估合规路径。',
     perspectives: {
-      pm: '开源 neocloud 已是独立赛道——B 端 AI 产品选型除 OpenAI/Anthropic API 外，必须把 Together/Fireworks/Upstage 纳入比价。Cursor、Cognition 都在用 Together 说明推理成本优化已成开发者默认动作。低代码平台接开源模型（Llama/Qwen/DeepSeek）走 Together API 比 straight 闭源 API 可降本 50%+，但要预留"模型切换"的抽象层。',
-      investor: 'Together AI 16 个月估值翻 2.5 倍，neocloud 赛道独立估值锚点形成——但年订单 $1.15B 对应 $8.3B 估值倍数约 7x，已不便宜。Aramco 领投标志中东主权基金接棒硅谷 VC，AI 基础设施资金结构在重塑。挤压闭源 API 毛利叙事强化，OpenAI/Anthropic 推理收入增速或受抑。',
+      pm: '开源 neocloud 已是独立赛道 1) B 端 AI 产品选型除 OpenAI/Anthropic API 外，必须把 Together/Fireworks/Upstage 纳入比价；2) Cursor、Cognition 都在用 Together 说明推理成本优化已成开发者默认动作；3) 低代码平台接开源模型（Llama/Qwen/DeepSeek）走 Together API：可降本 50%+；4) 必须预留"模型切换"的抽象层：避免 vendor lock-in；5) Together API 比 straight 闭源 API 经济性优势显著。',
+      investor: 'Together AI 16 个月估值翻 2.5 倍，neocloud 赛道独立估值锚点形成 1) 年订单 $1.15B 对应 $8.3B 估值倍数约 7x，已不便宜；2) Aramco 领投标志中东主权基金接棒硅谷 VC；3) AI 基础设施资金结构在重塑：地缘资本流向变化；4) 挤压闭源 API 毛利叙事强化；5) OpenAI/Anthropic 推理收入增速或受抑。',
       brand: '"开源模型+中东资本"=AI基础设施新版图——Together AI 抄作业：1) 国产 AI 出海厂商别再做"通用闭源 API"叙事，开源托管+区域算力才是差异化；2) To D 开发者品牌立刻投"模型切换教程"内容（Together vs OpenAI 切换 ROI），开发者关心迁移成本；3) 沙特 Aramco 入场预示中东成为下一个 AI 算力叙事场，提前布局区域 KOL 和案例；4) AI 基础设施发布会别只讲"快"，把"年订单额/客户名单/单位经济模型"做成主视觉——B 端采购权重已变；5) 反思：你的品牌定位是"另一个 AI API"？必死，差异化锚定垂直场景（编码/客服/医疗）。',
       beginner: '有个叫 Together AI 的公司拿到了 8 亿美元投资。它专门帮企业"便宜地跑开源 AI 模型"。意味着接下来用 AI 工具的成本会继续降。如果你公司要接入 AI，可以问问技术同事"考虑过 Together AI 吗"。'
     },
@@ -486,8 +486,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 96,
     recommendReason: '修正6/27-02"Fable 5仍封锁"判断——出口管制已全面解除。PM应关注：(1)Fable 5恢复全球访问意味着B端可重新把Fable 5纳入生产环境选型，2周窗口的方案搁置可重启；(2)Anthropic与政府签订"主动检测+协议共治"框架，意味着美国AI监管模式从"突击封锁"切到"协议共治"，未来frontier model发布节奏会更可预测；(3)Mythos 5先解禁给"防御性网络安全"用途——网络安防垂类Agent获得独家窗口期，国内安全厂商应关注类似合作模式。',
     perspectives: {
-      pm: 'Fable 5 全面恢复访问，2 周搁置的 B 端方案可立即重启选型。Anthropic 与政府的"主动检测+协议共治"框架意味着 frontier model 发布节奏更可预测——B 端 AI 产品合规审计可前置。Mythos 5 先解禁给防御性网络安全说明垂类 Agent 有"独家窗口期"，安全/政企场景应主动对接 Anthropic 申请 Mythos 5 访问。',
-      investor: '出口管制解除是 Anthropic 估值修复事件——Q3 营收预期上修。监管模式从"突击封锁"切到"协议共治"降低 frontier model 发布的政策风险溢价，OpenAI/Google 同步受益。"先解禁网络安全用途"暗示垂类解禁路径，关注安全垂类模型公司（Rebind、Robust Intelligence）的并购机会。',
+      pm: 'Fable 5 全面恢复访问 1) 2 周搁置的 B 端方案可立即重启选型；2) Anthropic 与政府"主动检测+协议共治"框架意味 frontier model 发布节奏更可预测；3) B 端 AI 产品合规审计可前置：减少发布延迟；4) Mythos 5 先解禁给防御性网络安全：垂类 Agent 有"独家窗口期"；5) 安全/政企场景应主动对接 Anthropic 申请 Mythos 5 访问。',
+      investor: '出口管制解除是 Anthropic 估值修复事件 1) Q3 营收预期上修；2) 监管模式从"突击封锁"切到"协议共治"：政策风险溢价下降；3) OpenAI/Google 同步受益：御三家共同修复估值；4) "先解禁网络安全用途"暗示垂类解禁路径；5) 关注安全垂类模型公司（Rebind、Robust Intelligence）的并购机会。',
       brand: 'Anthropic 把"被监管"做成了"政府共谋者"品牌资产——品牌人抄作业：1) 危机公关的标准答案不是道歉，是签"主动检测+共治协议"——把约束变成信任背书；2) To B 发布会立刻加一页"合规资质+政府合作"，权重高于技术参数；3) Mythos 5"先解禁网络安全垂类"是绝佳叙事——你的产品能否找到"高敏感垂类独家窗口"做品牌锚点？4) Lutnick 公开信是品牌资产，截图引用比通稿有 5 倍穿透力；5) 反思：你的品牌危机应对还在"删帖+冷处理"？学 Anthropic 把危机做成估值修复事件。',
       beginner: '之前美国突然禁止 Anthropic 最强的 Fable 5 模型给外国人用，现在又放开了。说明 Claude 最强模型可以正常用了。如果你用 Claude API，可以去后台试试 Fable 5。'
     },
@@ -507,8 +507,8 @@ const sampleItems: DailyItem[] = [
     totalScore: 94,
     recommendReason: '操作系统级Agent落地——Gemini Spark从"对话框"切到"Mac桌面"。PM应关注：(1)Google Spark敢碰"本地文件读写+跨设备委派"说明计算机使用Agent的隐私/安全模型已通过内部红线审查——B端计算机使用Agent的产品化路径变清晰；(2)开放MCP支持是关键信号——Google把MCP作为Agent生态对接的"通用插座"，国内低代码Agent平台应同步把MCP支持列入路线图；(3)Google AI Ultra订阅门槛+18+Beta说明商业化走"高端订阅"路径，B端Gemini集成需评估Ultra账号采购方案。',
     perspectives: {
-      pm: 'Gemini Spark 敢碰"本地文件读写+跨设备委派"说明计算机使用 Agent 的隐私/安全模型已通过红线审查——B 端 computer use Agent 的产品化路径清晰。开放 MCP 是关键信号——Google 把 MCP 当 Agent 生态"通用插座"，国内低代码 Agent 平台应把 MCP 支持列入 Q3 路线图，否则生态对接会落后一代。',
-      investor: 'Google 把 Agent 战场从"对话框"推到"操作系统"——直接对标 Apple Intelligence 和 Microsoft Copilot for PC。Gemini Spark 走 Ultra 订阅路径意味着 ARPU 上行空间。MCP 标准化提速，Anthropic 主导的协议获 Google 背书，生态护城河加深。',
+      pm: 'Gemini Spark 敢碰"本地文件读写+跨设备委派"说明计算机使用 Agent 的隐私/安全模型已通过红线审查 1) B 端 computer use Agent 的产品化路径清晰；2) 开放 MCP 是关键信号：Google 把 MCP 当 Agent 生态"通用插座"；3) 国内低代码 Agent 平台应把 MCP 支持列入 Q3 路线图；4) 否则生态对接会落后一代：标准化窗口期短；5) Gemini Spark 商业化走"高端订阅"路径：B 端需评估 Ultra 账号采购方案。',
+      investor: 'Google 把 Agent 战场从"对话框"推到"操作系统" 1) 直接对标 Apple Intelligence 和 Microsoft Copilot for PC；2) Gemini Spark 走 Ultra 订阅路径意味 ARPU 上行空间；3) MCP 标准化提速：Anthropic 主导的协议获 Google 背书；4) 生态护城河加深：标准成为竞争维度；5) 计算机使用 Agent 进入操作系统级竞争阶段。',
       brand: 'Gemini Spark 从"对话框"切到"Mac 桌面"——Google 抢"操作系统级 Agent"叙事。品牌人抄作业：1) AI 工具品牌定位从"问答助手"升级到"操作系统级助手"，叙事必须有"跨设备+本地文件"维度；2) MCP 开放是公关钩子，主动产出"我们已支持 MCP"技术博客+demo 视频，开发者社群权重高于通稿；3) 跨设备委派是绝佳场景化视频素材——"地铁上手机说一句，回家电脑已整理好"，60 秒视频胜过 10 篇稿；4) Ultra 订阅门槛做成"稀缺性"叙事而非"贵"，限量 Beta 制造紧迫感；5) 别和 ChatGPT 比"对话"，Gemini 必须锚定"Agent 操作你的电脑"，差异化定位才有护城河。',
       beginner: 'Gemini 现在可以操作你的 Mac 电脑了。比如手机在外面说"帮我把下载文件夹整理好"，回家发现电脑自己整理完了。需要订阅 Google AI Ultra。如果你用 Mac 且经常被杂事打扰，值得试试。'
     },
