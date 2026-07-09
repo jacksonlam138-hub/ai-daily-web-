@@ -61,106 +61,47 @@ function renderStructuredInsight(text: string) {
 
 export default function RoleViewer({ items, date }: { items: DailyItem[]; date: string }) {
   const [role, setRole] = useState<Role>('pm')
+  const activeRole = ROLES.find(r => r.key === role)!
 
   return (
     <>
-      <div style={{
-        position: 'sticky',
-        top: 0,
-        zIndex: 10,
-        background: 'var(--bg)',
-        borderBottom: '1px solid var(--border-subtle)',
-        padding: '12px 0',
-        marginBottom: 20,
-      }}>
-        <div style={{
-          maxWidth: 720,
-          margin: '0 auto',
-          padding: '0 24px',
-          display: 'flex',
-          gap: 6,
-          overflowX: 'auto',
-        }}>
-          {ROLES.map(r => (
-            <button
-              key={r.key}
-              onClick={() => setRole(r.key)}
-              style={{
-                padding: '8px 14px',
-                borderRadius: 8,
-                border: '1px solid',
-                borderColor: role === r.key ? 'var(--accent)' : 'var(--border-subtle)',
-                background: role === r.key ? 'rgba(200,149,108,0.08)' : 'transparent',
-                color: role === r.key ? 'var(--accent)' : 'var(--text-secondary)',
-                cursor: 'pointer',
-                fontSize: 12,
-                fontWeight: 500,
-                whiteSpace: 'nowrap',
-                transition: 'all 0.15s ease',
-                display: 'flex',
-                alignItems: 'center',
-                gap: 6,
-              }}
-            >
-              <span>{r.icon}</span>
-              <span>{r.label}</span>
-            </button>
-          ))}
+      <div className="role-bar">
+        <div className="role-bar-inner">
+          <div className="role-tabs">
+            {ROLES.map(r => (
+              <button
+                key={r.key}
+                onClick={() => setRole(r.key)}
+                className={`role-tab ${role === r.key ? 'role-tab-active' : ''}`}
+              >
+                <span className="role-tab-icon">{r.icon}</span>
+                <span>{r.label}</span>
+              </button>
+            ))}
+          </div>
         </div>
-        <div style={{
-          maxWidth: 720,
-          margin: '6px auto 0',
-          padding: '0 24px',
-          fontSize: 11,
-          color: 'var(--text-muted)',
-        }}>
-          {ROLES.find(r => r.key === role)?.desc}
-        </div>
+        <div className="role-bar-desc">{activeRole.desc}</div>
       </div>
 
       <div className="surface" style={{ overflow: 'hidden' }}>
         {items.map((item, i) => {
           const insight = item.perspectives?.[role] ?? item.recommendReason ?? ''
-          const label = item.perspectives?.[role] ? ROLES.find(r => r.key === role)!.label : 'PM'
+          const label = item.perspectives?.[role] ? activeRole.label : 'PM'
           return (
             <div key={item.id} className="news-item" style={{ borderBottom: i === items.length - 1 ? 'none' : '1px solid var(--border-subtle)' }}>
-              <div style={{ display: 'flex', gap: 16, alignItems: 'flex-start' }}>
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8, flexWrap: 'wrap' }}>
+              <div className="news-item-row">
+                <div className="news-item-body">
+                  <div className="news-meta">
                     <SourceBadge source={item.source} />
                     {item.tags.map(tag => (
                       <span key={tag} className="tag">{tag}</span>
                     ))}
                   </div>
-                  <h3 style={{
-                    fontSize: 15,
-                    fontWeight: 500,
-                    lineHeight: 1.5,
-                    color: 'var(--text-primary)',
-                    marginBottom: 6,
-                  }}>
-                    {item.title}
-                  </h3>
-                  <p style={{
-                    fontSize: 13,
-                    lineHeight: 1.65,
-                    color: 'var(--text-secondary)',
-                    marginBottom: 8,
-                  }}>
-                    {item.summary}
-                  </p>
+                  <h3 className="news-title">{item.title}</h3>
+                  <p className="news-summary">{item.summary}</p>
                   {insight && (
-                    <div style={{
-                      fontSize: 12,
-                      lineHeight: 1.7,
-                      color: 'var(--accent)',
-                      padding: '10px 14px',
-                      marginBottom: 8,
-                      borderRadius: 6,
-                      background: 'rgba(200,149,108,0.06)',
-                      borderLeft: '2px solid var(--accent)',
-                    }}>
-                      <span style={{ fontWeight: 600, marginRight: 4 }}>{label}：</span>
+                    <div className="role-insight">
+                      <span className="role-insight-label">{label}：</span>
                       {renderStructuredInsight(insight)}
                     </div>
                   )}

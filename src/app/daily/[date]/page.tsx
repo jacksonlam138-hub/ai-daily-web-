@@ -30,7 +30,7 @@ export default async function DailyPage({
 
   return (
     <main style={{ minHeight: '100vh' }}>
-      <header style={{
+      <header className="page-header page-shell-narrow" style={{
         maxWidth: 720,
         margin: '0 auto',
         padding: '48px 24px 0',
@@ -53,11 +53,11 @@ export default async function DailyPage({
         </div>
       </header>
 
-      <section style={{ maxWidth: 720, margin: '0 auto', padding: '0 24px 60px' }}>
+      <section className="page-shell-narrow" style={{ maxWidth: 720, margin: '0 auto', padding: '0 24px 60px' }}>
         <RoleViewer items={report.items} date={date} />
       </section>
 
-      <footer style={{
+      <footer className="page-footer page-shell-narrow" style={{
         borderTop: '1px solid var(--border-subtle)',
         padding: '24px',
         maxWidth: 720,
