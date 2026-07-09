@@ -529,6 +529,12 @@ const sampleItems: DailyItem[] = [
     utilityScore: 97,
     totalScore: 98,
     recommendReason: '中端Agent模型进入"Opus级能力+Sonnet级价格"阶段。PM应关注：(1)Sonnet 5性能逼近Opus 4.8说明Agent能力正在"下沉"——低代码平台用中端模型即可驱动复杂多步骤Agent，B端API成本基准再次下移；(2)入门$2/$10比标准$3/$15便宜33%是限时策略，8月31日前是评估迁移的最佳窗口，所有用Sonnet 4.6的产品应立即跑benchmark；(3)新tokenizer导致token数增加1.35x是隐性成本——"入门价成本中性"设计意味着实际支出不会下降，PM算ROI时必须用实际token数而非简单对比单价。',
+    perspectives: {
+      pm: 'Sonnet 5 性能逼近 Opus 4.8，中端 Agent 模型进入"Opus 级能力+Sonnet 级价格"阶段 1) 低代码平台用中端模型即可驱动复杂多步骤 Agent：B 端 API 成本基准再次下移；2) 入门 $2/$10 比标准 $3/$15 便宜 33% 是限时策略：8 月 31 日前是评估迁移的最佳窗口；3) 所有用 Sonnet 4.6 的产品应立即跑 benchmark：迁移评估窗口期；4) 新 tokenizer 导致 token 数增加 1.35x 是隐性成本：实际支出不会下降；5) PM 算 ROI 时必须用实际 token 数而非简单对比单价：成本中性设计识破。',
+      investor: 'Sonnet 5 入门定价 $2/$10 是 Anthropic 抢占中端市场的关键策略 1) Opus 4.8 能力下沉到 Sonnet 价格带：B 端 ARPU 下行压力；2) 限时至 8/31 的入门价是迁移激励：Q3 客户增长或加速；3) 新 tokenizer 1.35x token 数增加是隐性提价：实际客单价维持；4) 入门价"成本中性"意味 Anthropic 用毛利换市场份额：短期营收承压；5) Claude Code/Platform 同步上线意味 Anthropic 全栈中端 Agent 战略落地。',
+      brand: 'Sonnet 5"Opus 级能力+Sonnet 级价格"是 2026 中端 AI 品牌最佳叙事——品牌人抄作业：1) AI 工具厂商立刻产出"Sonnet 5 vs Opus 4.8 能力对比"benchmark：内容转化率最高；2) 限时 $2/$10 入门价是绝佳获客钩子：8/31 前推出迁移工具；3) 新 tokenizer 隐性成本是思想领导力素材：产出"为什么入门价不会降本"分析文；4) 别打"我们用 Sonnet 5"，打"我们用 Sonnet 5 替你省钱"——客户感知差异化；5) 反思：你的 AI 产品定价还在押注单一模型？切换到"模型抽象层+成本中性"。',
+      beginner: 'Anthropic 出了新的中端模型 Claude Sonnet 5，能力接近最强的 Opus 4.8 但价格便宜。8 月 31 日前有入门价 $2/$10。如果你用 Claude API 编程，是迁移评估的好时机，但要注意新 tokenizer 让 token 数变多了，实际支出可能不会降。'
+    },
     createdAt: '2026-06-30T17:00:00Z'
   },
   {
@@ -544,6 +550,12 @@ const sampleItems: DailyItem[] = [
     utilityScore: 86,
     totalScore: 91,
     recommendReason: 'AI竞争进入"人才即估值"阶段。PM应关注：(1)$269亿市值蒸发反映资本市场正在重新定价"人才护城河"——模型能力不再只看参数和算力，而是看核心研究员的稳定性，B端选型时应将团队稳定性纳入供应商评估；(2)Google拟投Anthropic $400亿说明"打不过就入股"已成巨头AI策略——类似Microsoft投资OpenAI的剧本在Google-Anthropic间重演，多极AI格局通过资本交叉持股固化；(3)Jumper等基础科学研究员（非工程岗）跳槽到Anthropic意味着模型公司正在吸纳跨学科顶尖人才，低代码平台的产品边界会因模型能力向科学领域延伸而被重新定义。',
+    perspectives: {
+      pm: 'AI 竞争进入"人才即估值"阶段 1) $269 亿市值蒸发反映资本市场重新定价"人才护城河"；2) 模型能力不只看参数和算力，还要看核心研究员稳定性；3) B 端选型应将团队稳定性纳入供应商评估：LinkedIn 活跃度+论文署名是健康度指标；4) Google 拟投 Anthropic $400 亿说明"打不过就入股"成巨头策略；5) 多极 AI 格局通过资本交叉持股固化。',
+      investor: 'Alphabet 蒸发 $269 亿是资本市场重新定价"AI 人才护城河"信号 1) Jumper 等 4 人 6 天内离巢：DeepMind 人才流失加速；2) Google $2.7B 试带回 Noam Shazeer 未果：人才议价权完全转移到研究员；3) Google 反击拟投 Anthropic $400 亿：复刻 Microsoft-OpenAI 剧本；4) 资本交叉持股固化多极 AI 格局：估值模型重设；5) AI 竞争从"算力军备"切到"人才军备"：长期估值锚点变化。',
+      brand: 'Alphabet $269 亿市值蒸发是 2026 AI 人才战最佳品牌素材——品牌人抄作业：1) AI 厂商立刻把"核心研究员稳定性"做成品牌资产：LinkedIn 活跃度+论文署名是品牌健康度指标；2) Jumper 跳槽是绝佳案例素材——"你的 AI 厂商是否在流失核心人才"自检清单；3) Google 反击拟投 Anthropic $400 亿是品牌公关钩子：行业格局重组的传播窗口；4) 别打"我们人才最多"，打"我们人才最稳定"——稳定性叙事权重上升；5) 反思：你的 AI 厂商品牌还在讲"算力储备"？切换到"人才稳定性"。',
+      beginner: 'Google 母公司 Alphabet 因为 DeepMind（Google 的 AI 子公司）人才流失，单日市值蒸发 269 亿美元。诺奖得主 John Jumper 等核心研究员跳槽到 Anthropic。说明 AI 行业竞争焦点从算力转到了人才。Google 计划投资 Anthropic 400 亿美元"打不过就入股"。'
+    },
     createdAt: '2026-06-30T20:00:00Z'
   },
 
