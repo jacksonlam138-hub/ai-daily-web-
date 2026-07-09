@@ -9,14 +9,19 @@
   --border-subtle: #2a2520;
   --border-medium: #3a3530;
   --text-primary: #e8e0d4;
-  --text-secondary: #9a8e7e;
-  --text-muted: #6a6054;
+  --text-secondary: #a89e8e;
+  --text-muted: #857b6c;
   --accent: #c8956c;
   --accent-dim: rgba(200, 149, 108, 0.12);
   --accent-bright: #dba87f;
   --font-display: "Instrument Serif", "Songti SC", "SimSun", Georgia, serif;
   --font-body: "Plus Jakarta Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
   --font-mono: "SF Mono", "Fira Code", ui-monospace, monospace;
+  --text-xs: 12px;
+  --text-sm: 13px;
+  --text-base: 14px;
+  --text-md: 15px;
+  --text-lg: 17px;
 }
 
 @theme inline {
