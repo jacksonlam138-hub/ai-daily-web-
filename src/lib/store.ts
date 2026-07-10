@@ -450,6 +450,113 @@ const sampleItems: DailyItem[] = [
     createdAt: '2026-07-06T10:00:00Z'
   },
 
+  // === 2026-07-10 (周四) ===
+  {
+    id: '20260710-00',
+    date: '2026-07-10',
+    title: 'GPT-5.6正式GA：CAIS审查通过后Sol/Terra/Luna全量上线，Altman称agentic coding token效率提升54%——"发布→审查→GA"30天路径首次完整执行',
+    summary: '7/9 GPT-5.6 系列 Sol/Terra/Luna 正式通用可用。Center for AI Standards and Innovation（CAIS）完成额外测试后批准，OpenAI 派技术专家驻 DC 配合审查。Altman 告 CNBC：Sol 在 agentic coding 场景 token 效率较上代提升 54%，整体能力"与竞品持平或更优"。Sol/Terra/Luna 定价 $5/$30、$2.50/$15、$1/$6（每百万 token 输入/输出）。',
+    source: 'OpenAI',
+    sourceUrl: 'https://www.cnbc.com/2026/07/09/open-ai-sam-altman-chatgpt-5-6-sol.html',
+    tags: ['#发布', '#模型', '#Agent'],
+    accuracyScore: 96,
+    timelinessScore: 98,
+    utilityScore: 93,
+    totalScore: 96,
+    recommendReason: 'GPT-5.6 GA 标志"发布→CAIS审查→全量上线"30天路径首次完整执行——07-08预览到07-09 GA正好验证白宫自愿框架节奏。PM应关注：(1)54% token效率提升意味agentic coding成本结构直接重算——B端用Sol跑multi-agent pipeline的token开销接近减半，低代码平台需更新定价模型；(2)CAIS额外测试通过意味政府审查窗口可预测（非无限延长）——B端可按"发布日+30天"规划API接入；(3)Sol $5/$30 vs Fable 5 $10/$50意味前沿模型价格战白热化——Anthropic Fable 5仅7/8刚转入credits计费就面临OpenAI半价竞争，B端采购应重新评估合同周期避免锁定高价。',
+    perspectives: {
+      pm: 'GPT-5.6 GA 标志"发布→CAIS审查→全量上线"30天路径首次完整执行 1) 审查窗口可预测：07-08预览到07-09 GA 约1天完成CAIS额外测试，非无限延长——B端可按"发布日+30天"规划API接入；2) 54% token效率意味agentic coding成本结构重算：multi-agent pipeline的token开销接近减半，低代码平台需更新定价模型；3) Sol $5/$30 vs Fable 5 $10/$50 前沿模型价格战白热化：Anthropic Fable 5 仅7/8刚转入credits计费就面临半价竞争；4) B端采购应缩短合同周期避免锁定高价：模型价格每季度在变；5) "as good or better"措辞意味OpenAI将Sol定位为agentic coding首选——与Cursor/Cognition等coding工具的深度集成是下一步。',
+      investor: '54% token效率提升是 GPT-5.6 GA 最硬核商业信号 1) 效率提升直接降低B端推理成本：Sol agentic coding场景的性价比远超Fable 5；2) OpenAI主动挑价格战：Sol $5/$30是Fable 5($10/$50)的半价，挤压Anthropic高端ARPU；3) CAIS审查通过意味政府门控风险de-risked：未来旗舰模型发布节奏可预测；4) "与竞品持平或更优"是Altman对投资者的竞争定位信号；5) agentic coding是OpenAI核心营收驱动力：54%效率提升可能加速企业从人类开发者向AI agent迁移。',
+      brand: 'GPT-5.6 GA 的54%效率提升是2026 AI工具品牌最强性能锚点——品牌人抄作业：1) AI编程工具立刻产出"Sol vs Fable 5 vs Opus 4.8 agentic coding对比"benchmark内容，硬数据驱动转化率最高；2) "CAIS审查通过"是To B合规品牌最佳信任锚——主动标注"政府审查compliant"比"我们更安全"有效10倍；3) 价格战是获客窗口：产出"Sol $5/$30能帮你省多少"成本计算器，实用工具转化率极高；4) 别打"我们的Agent更强"——打"我们在GPT-5.6 Sol上跑得最优化"，从模型层借势；5) 反思：你的AI产品定价还按年签？模型价格季度在变，切换到月度可调。',
+      beginner: 'OpenAI 最新的 GPT-5.6 正式上线了。分三档：Sol（最强）、Terra（平衡）、Luna（最便宜）。亮点：写代码时AI更省token了（效率提升54%），意味着用同样的钱能做更多事。价格比Anthropic的同类产品便宜一半。'
+    },
+    createdAt: '2026-07-10T01:00:00Z'
+  },
+  {
+    id: '20260710-01',
+    date: '2026-07-10',
+    title: 'OpenAI发布GPT-Live语音模型：GPT-Live-1/mini支持同时听说的全双工实时对话，基于GPT-5.5构建——语音交互从"轮替"进入"并发"时代',
+    summary: 'OpenAI 7/8 发布 GPT-Live-1 和 GPT-Live-1 mini 语音模型，支持全双工实时对话（可同时听和说，无需等用户说完才响应）。基于 GPT-5.5 构建，正在向全球 ChatGPT 用户推送。标志语音 AI 从"轮替对话"（ASR→LLM→TTS三段式）进入"并发对话"（端到端实时流）时代。',
+    source: 'OpenAI',
+    sourceUrl: 'https://www.reuters.com/technology/artificial-intelligence/openai-unveils-gpt-live-real-time-voice-models-2026-07-08/',
+    tags: ['#发布', '#模型', '#API'],
+    accuracyScore: 95,
+    timelinessScore: 96,
+    utilityScore: 88,
+    totalScore: 93,
+    recommendReason: 'GPT-Live全双工语音模型是AI交互模态的关键跃迁——从"ASR→LLM→TTS"三段式管线进入端到端实时流。PM应关注：(1)全双工意味用户可随时打断AI、AI可感知语气和停顿——语音AI产品的UX设计需从"对讲机模式"切换到"自然对话模式"，低代码平台的voice agent模板需重写；(2)基于GPT-5.5而非GPT-5.6意味语音模型独立迭代——B端选型时voice capability与text capability已分道扬镳，不能假设"最强文本模型=最强语音模型"；(3)ChatGPT全球推送意味用户对实时语音AI的接受度将快速提升——B端voice agent产品的用户教育成本下降，但竞争加剧。',
+    perspectives: {
+      pm: 'GPT-Live全双工语音模型是AI交互模态关键跃迁 1) 从"轮替"到"并发"：传统voice agent是ASR→LLM→TTS三段式，GPT-Live是端到端实时流，UX设计需从"对讲机模式"切换到"自然对话模式"；2) 低代码voice agent模板需重写：支持打断、语气感知、停顿推理是新交互基线；3) 基于GPT-5.5而非GPT-5.6：voice capability独立迭代，B端选型时不能假设"最强文本模型=最强语音模型"；4) ChatGPT全球推送降低用户教育成本：B端voice agent产品窗口期打开；5) 全双工意味延迟敏感度更高：边缘部署需求或上升。',
+      investor: 'GPT-Live标志语音AI从"管道串联"进入"端到端"阶段 1) 传统voice stack（ASR+LLM+TTS三厂商）受冲击：端到端模型减少中间环节；2) 基于GPT-5.5意味Voice是独立产品线：不跟随旗舰文本模型节奏；3) Google Gemini Live已有全双工能力：OpenAI追平而非领先——语音AI竞争胶着；4) ChatGPT全球推送是消费者voice习惯培养投资：长期降低B端voice agent获客成本；5) voice-first市场（客服、教育、医疗）或加速从文本chatbot迁移。',
+      brand: '"AI可以同时听和说"是2026 voice品牌最强可视化素材——品牌人抄作业：1) 立刻产出"传统voice agent vs GPT-Live全双工"对比视频，可打断+实时反应的视觉冲击力远超文字benchmark；2) 低代码平台品牌人更新voice agent模板页面——展示"支持打断"和"语气感知"是新基线；3) 别打"我们的语音更准"——打"我们的对话更自然"，从"识别率"切换到"对话流畅度"；4) 全双工是客服/教育/医疗场景的最佳品牌锚点——产出场景化case study；5) 反思：你的voice agent还在用ASR→LLM→TTS三段式？2026该切换到端到端了。',
+      beginner: 'OpenAI 发布了新的语音 AI 模型 GPT-Live。最大变化：AI 可以同时听你说话和回复你，不用等你把话说完。像真人打电话一样可以随时打断。正在向所有 ChatGPT 用户推送。'
+    },
+    createdAt: '2026-07-10T02:00:00Z'
+  },
+  {
+    id: '20260710-02',
+    date: '2026-07-10',
+    title: 'Meta正式进入AI编程市场：AI主管Wang称定价"非常激进"，直追Anthropic和OpenAI——AI coding从"双寡头"进入"三足鼎立"',
+    summary: 'CNBC 7/9 报道，Meta 正式进入 AI 编程工具市场，AI 主管 Alexandr Wang 向 CNBC 表态定价将"非常激进"。此举直接挑战 Anthropic（Claude coding）和 OpenAI（Codex）的双寡头格局。Meta 的入局意味 AI coding 市场从"两家主导"进入"三家竞争"，B端采购议价权上升。',
+    source: 'Meta',
+    sourceUrl: 'https://www.cnbc.com/2026/07/09/meta-jumps-into-ai-coding-market-to-chase-anthropic-and-openai.html',
+    tags: ['#战略', '#竞争', '#Agent'],
+    accuracyScore: 94,
+    timelinessScore: 97,
+    utilityScore: 93,
+    totalScore: 95,
+    recommendReason: 'Meta入局AI coding标志市场从"双寡头"进入"三足鼎立"——直接利好B端买家。PM应关注：(1)"非常激进"定价意味Meta将以低价或免费策略获客——类似Meta Llama开源策略在coding工具领域的重演，低代码平台应主动评估Meta方案作为成本平衡选项；(2)AI coding工具竞争白热化加速功能同质化——当Anthropic/OpenAI/Meta都在做coding agent，差异化从"模型能力"切换到"工作流集成"，低代码平台需关注谁的agent与自有pipeline最契合；(3)三足鼎立意味B端不应锁定单一供应商——多模型策略(multi-model)从"可选"变为"必选"，AI采购需设计可切换架构。',
+    perspectives: {
+      pm: 'Meta入局AI coding标志市场从"双寡头"进入"三足鼎立" 1) "非常激进"定价意味低价/免费获客策略：类似Llama开源模式在coding工具领域重演，低代码平台应评估Meta方案作为成本平衡选项；2) 功能同质化加速：差异化从"模型能力"切换到"工作流集成"，需关注谁的agent与自有pipeline最契合；3) 多模型策略从"可选"变为"必选"：B端不应锁定单一供应商，AI采购需设计可切换架构；4) Meta的Llama开源coding模型可能进一步压低API价格：Together AI等neocloud已有低价托管；5) Alexandr Wang（Scale AI创始人）任Meta AI主管意味数据标注+coding的协同。',
+      investor: 'Meta以"非常激进"定价进入AI coding市场是2026 AI竞争格局关键信号 1) 压缩Anthropic/OpenAI coding业务利润率：双寡头定价权松动；2) Meta策略类比Llama开源：用免费/低价抢占生态再变现——coding agent可能成为Llama生态的杀手级应用；3) Alexandr Wang领导意味Meta AI战略从"研究"切换到"产品"：Scale AI的数据标注经验直接迁移到coding场景；4) AI coding市场TAM扩张：三足鼎立意味市场足够大（McKinsey预估$200B+）；5) 开源coding agent冲击Cursor/Cognition等独角兽估值：Meta免费版直接抢用户。',
+      brand: '"Meta入场AI coding"是2026开发者工具品牌最强洗牌信号——品牌人抄作业：1) AI编程工具厂商立刻产出"Anthropic vs OpenAI vs Meta coding能力对比"评测内容，三足鼎立是最佳流量话题；2) 低代码平台品牌人更新"多模型支持"页面——展示"已集成三家coding agent"是新基线；3) 别打"我们更快/更准"——打"我们不锁定你到任何一家"，multi-model是品牌差异化；4) Meta的"激进定价"是成本计算器最佳素材——产出"切换到Meta能省多少"工具；5) 反思：你的AI产品还绑定单一模型供应商？2026该切换到可切换架构。',
+      beginner: 'Facebook母公司Meta正式进入AI写代码市场，和OpenAI、Anthropic竞争。Meta的AI负责人说价格会"非常便宜"。对开发者是好事——竞争压低了价格。如果你用AI写代码，可以关注Meta的新工具。'
+    },
+    createdAt: '2026-07-10T03:00:00Z'
+  },
+  {
+    id: '20260710-03',
+    date: '2026-07-10',
+    title: '豆包+通义千问7/15同步关停用户自建智能体——《暂行办法》施行前夜，国内UGC智能体平台模式正式终结',
+    summary: '字节豆包、阿里通义千问 7/4 同步公告：用户自建智能体功能 7/15 全模块下线，时间点卡准《人工智能拟人化互动服务管理暂行办法》施行日。7/10 千问先关停拟人化互动类功能；豆包给 3 个月数据缓冲期，导流到陪伴产品"猫箱"。',
+    source: '字节',
+    sourceUrl: 'https://finance.sina.com.cn/wm/2026-07-09/doc-inihefve8249089.shtml',
+    tags: ['#监管', '#Agent', '#企业应用', '#战略'],
+    accuracyScore: 95,
+    timelinessScore: 99,
+    utilityScore: 95,
+    totalScore: 96,
+    recommendReason: '豆包/千问同步关停自建智能体是国内 AI 行业 2026 年最大政策性转向——标志 UGC 智能体平台模式在国内彻底终结。PM 应关注：(1)7/15《暂行办法》要求算法备案+年度核验+未成年人分级+连续使用 2 小时弹窗——平台判定 UGC 智能体全链路审核"算不过账"主动砍业务，监管是导火索但成本账是核心动因；(2)豆包导流到"猫箱"、千问直接砍全模块，意味 C 端 AI 产品矩阵策略从"开放平台"切换到"垂直产品+持证上岗"；(3)腾讯元宝/文心一言/Kimi/智谱还在主站保留 UGC 智能体的平台短期压力大，预计 7-8 月跟进关停或重度改造。',
+    perspectives: {
+      pm: '豆包/千问关停自建智能体是国内 AI 2026 最大政策性转向——UGC 智能体平台模式终结 1) 监管成本账：算法备案+年度核验+未成年人分级+2 小时弹窗，平台判定 UGC 全链路审核"算不过账"主动砍业务；2) 产品矩阵策略切换：从"开放平台"到"垂直产品+持证上岗"，豆包导流猫箱、千问直接砍全模块；3) 持证上岗新门槛：备案/风控/未成年人防护三件事跑通才能留在牌桌；4) 跟进预测：腾讯元宝/文心一言/Kimi/智谱 7-8 月大概率跟进关停或重度改造；5) 低代码平台启示：B 端企业自建 agent 不受影响，但 C 端 UGC agent 路径在国内已死，转向 B 端或出海。',
+      investor: '豆包/千问同步关停是国内 AI C 端监管转向关键信号 1) 政策落地从"发文"切换到"倒逼"：7/15 是首个省级以上 AI 监管实质执行日；2) 字节/阿里同步动作意味行业共识：避免单家被约谈，集体合规对冲；3) C 端 UGC agent 商业模式在中国被证伪：监管成本+审核成本 +未成年人保护成本超过 UGC 流量变现收益；4) 受益方：已持牌的垂直陪伴产品（猫箱/星野等）和 B 端 agent 工具商；5) 出海标的估值或上行：国内监管收紧推动 AI 应用创业者转向海外市场。',
+      brand: '"7/15 国内 UGC 智能体终结"是 2026 AI 品牌最现实的一课——品牌人抄作业：1) C 端 AI 产品立刻审视是否触及"拟人化互动"定义——虚拟伴侣/角色扮演/虚拟亲属必须在 7/15 前下线或重度改造；2) To B AI 品牌立刻产出"持证上岗"信任锚：备案号、年度核验、未成年人保护机制主动公开；3) 别打"AI 陪伴"——切换到"工具型 AI"，从情感依赖切换到效率提升；4) 出海品牌窗口打开：监管套利是 2026下半年 AI 创业最佳叙事；5) 反思：你的 AI 产品还有"用户自建智能体"入口？7/15 前必须决策关停、改造还是拆分。',
+      beginner: '字节（豆包）和阿里（通义千问）宣布 7 月 15 日关闭用户自建 AI 智能体功能。原因是国家新规定要求严格审核这类内容、保护未成年人。如果你在用豆包或千问的自建智能体，记得在 7/15 前导出数据。'
+    },
+    createdAt: '2026-07-10T04:00:00Z'
+  },
+  {
+    id: '20260710-04',
+    date: '2026-07-10',
+    title: 'OpenAI 7/9将Codex app合并入ChatGPT桌面端+收购Astral——coding agent从"独立产品"切换到"主app内嵌"，对标Claude Code压力升级',
+    summary: 'OpenAI 7/9 把 Codex 独立 app 合并入 ChatGPT 桌面端，标志 AI coding agent 从独立产品形态切换到主产品内嵌功能。同期收购 Python 工具厂商 Astral 把开发工具链并入 Codex。Reuters 4 月报道此举是 Claude Code 压力下的战略调整。',
+    source: 'OpenAI',
+    sourceUrl: 'https://en.wikipedia.org/wiki/Codex_(AI_agent)',
+    tags: ['#战略', '#Agent', '#竞争', '#企业应用'],
+    accuracyScore: 94,
+    timelinessScore: 97,
+    utilityScore: 92,
+    totalScore: 94,
+    recommendReason: 'Codex 合并 ChatGPT 桌面端是 AI coding 工具分发逻辑重大转向——从"独立专业工具"切换到"主产品内嵌功能"。PM 应关注：(1)Claude Code 已证明独立 coding agent 路径可行，OpenAI 反向选择合并意味 ChatGPT 用户基数（亿级）碾压专业工具用户数（百万级）——coding agent 的分发逻辑从"拉新"切换到"激活存量"；(2)Astral 收购意味 OpenAI 把 Python 工具链（ruff/uv 等）并入 Codex——B 端开发者工具栈整合加速，独立 dev tools 公司生存空间受挤压；(3)对 Cursor/Cognition 等独立 coding 工具压力升级：当 ChatGPT 内嵌 Codex 免费/低价提供，独立厂商必须靠工作流深度集成差异化。',
+    perspectives: {
+      pm: 'Codex 合并 ChatGPT 桌面端是 AI coding 分发逻辑重大转向 1) 从"独立专业工具"到"主产品内嵌"：OpenAI 用亿级 ChatGPT 用户基数碾压专业工具百万级用户，coding 分发逻辑从"拉新"切换到"激活存量"；2) Astral 收购意味 dev tools 整合加速：ruff/uv 等 Python 工具链并入 Codex，独立工具公司生存空间挤压；3) Cursor/Cognition 压力升级：ChatGPT 内嵌 Codex 免费/低价时，独立厂商必须靠工作流深度集成差异化；4) B 端评估维度变化：从"功能强大"切换到"分发便利+成本可控+生态完整"；5) Meta 加入(see 20260710-02)+Codex 整合+Claude Code 三方动作意味 AI coding 进入"基础设施化"阶段。',
+      investor: 'Codex 合并是 OpenAI 应对 Claude Code 压力的关键战略动作 1) Reuters 4 月已报道战略调整：Anthropic Claude Code 商业成功迫使 OpenAI 重心转向 coding；2) ChatGPT 用户基数是 OpenAI 最大分发杠杆：亿级用户内嵌 Codex 直接威胁 Cursor 估值；3) Astral 收购意味 dev tools M&A 加速：ruff/uv 是 Python 生态事实标准，整合后竞品难以替换；4) OpenAI $852B 估值需要 coding 业务支撑：agentic coding 是 2026 核心营收驱动；5) 独立 coding 工具独角兽（Cursor/Cognition）估值或承压——面临"OpenAI 内嵌免费版"和"Claude Code 企业版"两线夹击。',
+      brand: '"Codex 进 ChatGPT 桌面端"是 2026 AI 工具品牌最强分发叙事——品牌人抄作业：1) AI 编程工具立刻评估"是否还要独立 app"——若主流量平台（如 ChatGPT）已内嵌竞品，独立 app 路径边际收益递减；2) 低代码平台品牌人产出"我们在 Cursor/Claude Code/Codex 都跑得最好"三栖适配内容，多模型/多工具是品牌差异化；3) 别打"我们是最强 coding agent"——打"我们与你现有工作流无缝集成"，从"工具替换"切换到"工具增强"；4) Astral/ruff/uv 用户基数被 OpenAI 收编是 dev tools 独立品牌警示：早期接受战略收购比独立成长回报更高；5) 反思：你的 AI 工具还在单打独斗？2026 该评估"接入 ChatGPT/Claude 生态"路径。',
+      beginner: 'OpenAI 把写代码的工具 Codex 合并进了 ChatGPT 桌面版。意思是：以后用 ChatGPT 就能直接用 Codex，不用装两个 app。OpenAI 还收购了一家做 Python 工具的公司（Astral）来增强 Codex。如果你是程序员，可以期待 ChatGPT 里直接写代码的体验。'
+    },
+    createdAt: '2026-07-10T05:00:00Z'
+  },
+
   // === 2026-07-02 (周三) === (周三) ===
   {
     id: '20260702-01',
