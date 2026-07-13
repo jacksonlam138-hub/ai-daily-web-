@@ -1,6 +1,134 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-07-12 (周日) ===
+  {
+    id: '20260712-01',
+    date: '2026-07-12',
+    title: 'GPT-5.6 Sol Ultra用64个并行子代理1小时证明Cycle Double Cover Conjecture——首个frontier AI独立解决50年未解数学难题，"Ultra"层级multi-subagent模式浮出水面',
+    summary: '7/10 OpenAI在自家CDN发布PDF论文，作者署名仅为"GPT-5.6 Sol Ultra"（Codex协助撰写），给出Cycle Double Cover Conjecture（1973年Szekeres/1979年Seymour独立提出）的机器验证证明。Sol Ultra在1小时内调度64个subagent并行攻克不同子任务完成证明。这是首个frontier AI独立解决人类50年未解数学问题的公开案例，印证Sol的"Ultra"层级="多子代理并行"架构。',
+    source: 'OpenAI',
+    sourceUrl: 'https://cryptobriefing.com/openai-gpt-5-6-sol-ultra-math-proof/',
+    tags: ['#模型', '#Agent', '#发布'],
+    accuracyScore: 95,
+    timelinessScore: 96,
+    utilityScore: 90,
+    totalScore: 94,
+    recommendReason: '首个frontier AI独立解决50年未解数学难题的公开案例，且"Ultra=64并行子代理"的架构披露是multi-subagent编排模式的最佳参考实现。PM应关注：(1)"Max=单问题深挖，Ultra=多子代理并行"的官方分层意味agent任务复杂度可被显式调度——低代码agent平台需新增"并行度"配置维度；(2)64 subagent 1小时完成意味agent任务成本可预测——按"子代理数×时长"定价的模型呼之欲出，B端可前置设计agent预算控制；(3)机器验证证明+模型独立署名意味AI生成内容的"可验证性"路径已通——低代码平台生成的代码/文档可借鉴Lean/Coq验证思路。',
+    perspectives: {
+      pm: '"Ultra=64并行子代理"是multi-subagent编排的最佳参考实现 1) 低代码agent平台需新增"并行度"配置维度：从单线程agent升级到可调度N个subagent；2) agent任务成本可预测：按"子代理数×时长"定价模型呼之欲出，B端可前置设计预算控制；3) 机器验证证明路径打通：AI生成代码/文档可借鉴Lean思路做自动验证；4) "模型独立署名"意味AI生成内容作者权首次被学术界默许——B端内容生产pipeline需更新版权策略；5) 数学能力跃迁意味STEM类垂直agent（科研/金融建模）的产品可行性窗口打开。',
+      investor: 'frontier AI独立解决50年数学难题是2026模型能力最强信号 1) GPT-5.6 Sol Ultra的"Ultra"层级=多子代理并行=新计费维度：OpenAI ARPU上行；2) 机器验证证明意味AI在"可验证领域"（数学/代码）商业化路径最短；3) 与Claude Opus 4.8/Gemini 3 Pro的差距在数学推理维度拉开：竞争壁垒；4) 64 subagent 1小时的算力消耗意味token消耗增速不减——利好NVIDIA和neocloud；5) "模型署名"是AI content IP权利首次被默许，长期利好AI生成内容赛道估值。',
+      brand: '"AI解决50年数学难题"是2026最具传播力的AI能力锚点——品牌人抄作业：1) 立刻产出"我们的agent在GPT-5.6 Sol Ultra上能解决什么问题"案例内容，硬数据驱动转化率最高；2) 别打"我们的AI更强"——打"我们的multi-subagent编排更高效"，从模型层借势；3) "64并行子代理"是绝佳可视化素材：产出subagent协同动画，60秒视频胜过10篇稿；4) 低代码平台立刻更新"agent并行度"配置页面，展示"可调度N个子代理"是新基线；5) 反思：你的AI产品还在卖"对话能力"？切换到"多代理协同"，差异化锚定编排层而非模型层。',
+      beginner: 'OpenAI的GPT-5.6 Sol Ultra在1小时内解决了一个50年来没人能解的数学难题。它用了64个"小助手"（子代理）同时工作，每个负责一部分。这说明AI现在不仅能聊天，还能做高难度的科研工作。'
+    },
+    createdAt: '2026-07-11T10:00:00Z'
+  },
+  {
+    id: '20260712-02',
+    date: '2026-07-12',
+    title: 'Meta Muse Spark 1.1发布：Coding Index 71.3超GLM-5.2，每任务$0.26仅为GPT-5.4三成，幻觉率3个月从73%暴降至38%，1M上下文——开源编码模型价格战白热化',
+    summary: '7/11 Artificial Analysis数据：Meta Muse Spark 1.1 Intelligence Index 51（与GLM-5.2/GPT-5.4/GPT-5.6 Luna并列），Coding Index 71.3超GLM-5.2（68.8），仅次GPT-5.6 Luna（71.4）。每任务成本$0.26，对比GLM-5.2 $0.37、GPT-5.4 $0.89。3个月内Intelligence Index涨8分，幻觉率从73%降到38%（更倾向拒答而非编造）。上下文扩4倍至100万token，仅Meta API可用。',
+    source: 'Meta',
+    sourceUrl: 'https://the-decoder.com/metas-muse-spark-1-1-outperforms-glm-5-2-in-coding-and-costs-slightly-less/',
+    tags: ['#发布', '#模型', '#竞争', '#开源'],
+    accuracyScore: 94,
+    timelinessScore: 97,
+    utilityScore: 92,
+    totalScore: 94,
+    recommendReason: 'Muse Spark 1.1是2026开源/低价编码模型价格战的关键节点——Coding Index直接对标GLM-5.2且成本降30%。PM应关注：(1)Muse Spark 1.1 $0.26/task vs GPT-5.4 $0.89/task意味中端编码任务价差3.4倍——B端编码agent选型必须把Meta API纳入比价；(2)幻觉率3个月从73%降到38%（拒答>编造）意味模型行为可被工程化矫正——低代码平台的"拒答 fallback" UX设计可前置；(3)1M上下文+仅Meta API可用意味Meta走"Llama开源获客+Muse Spark闭源变现"双轨，B端不应假设Meta模型默认开源。',
+    perspectives: {
+      pm: 'Muse Spark 1.1是开源/低价编码模型价格战关键节点 1) B端编码agent选型必须把Meta API纳入比价：$0.26/task是GPT-5.4的3成；2) 幻觉率从73%降到38%（拒答>编造）意味模型行为可工程化矫正——低代码平台"拒答fallback"UX设计可前置；3) 1M上下文+仅Meta API可用意味Meta走"Llama开源+Muse闭源"双轨，B端不应假设默认开源；4) Coding Index与GLM-5.2/GPT-5.6 Luna同档意味编码能力商品化加速——差异化从模型切换到工作流集成；5) 中端编码任务可考虑Muse Spark跑主力、Sol/Fable兜底复杂任务的分层架构。',
+      investor: 'Meta Muse Spark 1.1挤压中端编码模型定价 1) $0.26/task对标GLM-5.2 $0.37和GPT-5.4 $0.89：Meta主动挑价格战挤压OpenAI/智谱中端ARPU；2) 仅Meta API可用意味Meta用Llama开源引流、Muse Spark闭源变现的双轨策略；3) 幻觉率3个月降35个百分点意味Meta在RLHF/拒答工程上投入显著；4) 1M上下文对标Gemini——长上下文已成基础设施级能力；5) 编码能力商品化加速意味纯coding agent初创（Cursor/Cognition）必须在工作流层差异化否则被价格战挤压。',
+      brand: '"Muse Spark 1.1 = GLM-5.2的能力+更低价"是2026开源编码模型最强成本锚点——品牌人抄作业：1) 立刻产出"Muse Spark vs GLM-5.2 vs Sol"成本计算器，实用工具转化率极高；2) 低代码平台更新"多模型支持"页面：展示已集成Muse Spark是新基线；3) 别打"我们更准"——打"我们更省"，从"性能"切换到"性价比"；4) Meta双轨（Llama开源+Muse闭源）是品牌警示：不要假设Meta模型默认开源，采购合同必须明确license条款；5) 反思：你的AI产品定价还按"行业均价"？切换到"Muse Spark基准+20%"定价才有竞争力。',
+      beginner: 'Meta发布了新AI模型Muse Spark 1.1。在编程能力上超过了之前很火的GLM-5.2，但价格只有GPT-5.4的三成。还能处理100万token的上下文（相当于一本厚书）。如果你的公司用AI写代码，这个模型值得试试。'
+    },
+    createdAt: '2026-07-11T11:00:00Z'
+  },
+  {
+    id: '20260712-03',
+    date: '2026-07-12',
+    title: '腾讯洽谈按$20亿估值收购Manus多数股权：Beijing强制Meta解构后中国资本接盘，腾讯计划把Agent嵌入WeChat——中国AI Agent战略资产化',
+    summary: 'FT 7/11报道，腾讯正与Manus及其他早期投资方（ZhenFund/HSG）洽谈按$20亿估值收购Manus多数股权，融资$20亿完成从Meta回购。Manus继续以新加坡为总部独立运营，年营收近$5亿（半年翻4倍）。美国Benchmark不参与此轮。腾讯计划把Manus Agent嵌入WeChat（覆盖14亿用户）。4月中国以"阴谋性掏空中国技术基础"为由阻止Meta原$20亿收购并对创始人肖弘下出口禁令。',
+    source: '其他',
+    sourceUrl: 'https://www.tomshardware.com/tech-industry/artificial-intelligence/tencent-is-reportedly-in-talks-to-acquire-manus-from-meta-following-beijing-intervention-company-expects-to-remain-independent-of-chinese-tech-giant',
+    tags: ['#Agent', '#战略', '#竞争', '#融资'],
+    accuracyScore: 95,
+    timelinessScore: 97,
+    utilityScore: 91,
+    totalScore: 94,
+    recommendReason: '腾讯接盘Manus意味中国AI Agent已被视为"国家级战略资产"，且首个WeChat原生Agent即将诞生——C端Agent分发达14亿用户量级。PM应关注：(1)Manus年营收$5亿（半年翻4倍）意味C端Agent真实商业化曲线陡峭——B端Agent创业窗口同步打开；(2)腾讯把Agent嵌入WeChat意味超级App+Agent的分发模式确立，国内低代码平台需评估"超级App内嵌Agent"作为分发渠道；(3)Benchmark不参与意味美中资本在AI Agent赛道彻底脱钩——跨境Agent创业必须二选一市场。',
+    perspectives: {
+      pm: '腾讯接盘Manus并嵌入WeChat是中国AI Agent分发的关键节点 1) 超级App+Agent的分发模式确立：WeChat 14亿用户原生Agent意味C端Agent获客成本断崖式下降；2) Manus年营收$5亿半年翻4倍意味C端Agent商业化曲线已验证——B端Agent创业窗口同步打开；3) 国内低代码平台需评估"接入WeChat Agent生态"作为分发渠道，类似小程序2017年的窗口；4) 美中资本在AI Agent赛道脱钩：跨境Agent创业必须二选一市场；5) 新加坡独立运营+中国资本控股意味"出海注册+国内资本"成AI创业标准架构。',
+      investor: '腾讯按$20亿估值接盘Manus意味中国AI Agent战略资产化 1) 半年翻4倍的营收曲线（$1亿→$5亿）印证C端Agent非泡沫；2) Benchmark不参与意味美国资本彻底退出——中国AI Agent估值锚点将独立于硅谷；3) WeChat嵌入意味腾讯把Agent作为超级App核心交互升级——微信生态估值重估；4) 同$20亿估值回购意味Manus股价6个月未涨：商业化曲线虽陡但估值已不便宜；5) 创始人肖弘出口禁令意味核心团队锁定中国——人才流失风险下降但国际化受限。',
+      brand: '"WeChat原生Agent"是2026中国C端AI最强品牌叙事——品牌人抄作业：1) 国内低代码平台立刻评估接入WeChat Agent生态的窗口，类似2017小程序红利；2) 出海AI品牌警惕：美中资本脱钩意味跨境品牌必须做"双市场"叙事，单一市场叙事投资者会扣分；3) "新加坡总部+中国资本"是2026 AI创业标准架构——品牌注册前置考虑；4) 腾讯把Agent嵌入WeChat意味"超级App+AI"成中国C端AI分发主路径，独立C端AI app获客成本将飙升；5) 反思：你的AI品牌还在做"独立App"？必须评估"接入超级App"路径。',
+      beginner: '腾讯正在谈收购一个叫Manus的AI Agent公司，价格约20亿美元。之前Meta（Facebook母公司）想买但被中国政府阻止了。腾讯打算把Manus的AI助手放进微信，以后你可能在微信里直接用AI Agent帮你做事。'
+    },
+    createdAt: '2026-07-11T12:00:00Z'
+  },
+  {
+    id: '20260712-04',
+    date: '2026-07-12',
+    title: 'OpenAI砍掉Atlas浏览器仅8个月后并入ChatGPT+推出桌面"Computer Use"——产品策略从"独立app矩阵"切换到"主产品内嵌"，对标Claude Computer Use',
+    summary: 'The Decoder 7/10报道，OpenAI砍掉2025年10月发布的Atlas AI浏览器（仅8个月），功能并入Chrome扩展可在侧栏直接跑ChatGPT。同步推出桌面端"Computer Use"功能：ChatGPT可在后台点击/输入/移动文件/跨应用跨浏览器操作，支持一次性或周期性任务。标志OpenAI产品策略从"独立app矩阵"切换到"主产品内嵌"，与Claude Computer Use直接对标。Atlas加入plugins/Sora等被砍产品名单。',
+    source: 'OpenAI',
+    sourceUrl: 'https://the-decoder.com/openai-kills-its-atlas-browser-after-just-eight-months-and-folds-everything-into-chatgpt/',
+    tags: ['#战略', '#Agent', '#竞争', '#企业应用'],
+    accuracyScore: 94,
+    timelinessScore: 96,
+    utilityScore: 92,
+    totalScore: 94,
+    recommendReason: 'Atlas被砍+Computer Use推出意味OpenAI产品策略重大转向——从"独立app矩阵"切换到"ChatGPT主产品内嵌"。PM应关注：(1)Computer Use直接对标Claude Computer Use——AI agent操控桌面的"computer-as-a-tool"模式确立，低代码平台的UI自动化层需评估接入；(2)ChatGPT侧栏扩展意味OpenAI放弃挑战Chrome——AI浏览器的"独立app"路径被证伪，B端AI产品集成Chrome扩展比自建浏览器更现实；(3)Atlas加入plugins/Sora等"砍产品名单"意味OpenAI产品迭代fail rate上升——B端集成OpenAI新功能时应等待6个月以上的存活验证。',
+    perspectives: {
+      pm: 'OpenAI产品策略从"独立app矩阵"切换到"ChatGPT主产品内嵌"是2026分发逻辑关键转向 1) Computer Use对标Claude Computer Use：AI agent操控桌面的"computer-as-a-tool"模式确立，低代码平台UI自动化层需评估接入；2) ChatGPT侧栏扩展意味OpenAI放弃挑战Chrome——AI浏览器独立app路径被证伪，B端集成Chrome扩展更现实；3) Atlas加入plugins/Sora砍产品名单意味OpenAI产品fail rate上升——B端集成新功能应等6个月存活验证；4) Computer Use后台周期性任务意味"无人值守AI agent"商业化窗口打开，B端RPA替代场景浮现；5) 跨应用跨浏览器操作意味OS层agent架构首次大规模民用——需关注权限和安全模型。',
+      investor: 'Atlas被砍是OpenAI产品策略的关键转向信号 1) 放弃挑战Chrome意味OpenAI承认浏览器赛道不可破——Google浏览数据护城河稳固；2) Computer Use对标Claude Computer Use意味computer-as-a-tool成AI agent标配——Anthropic先发优势被追平；3) "砍产品名单"（plugins/Sora/Agent/Atlas）意味OpenAI产品迭代fail rate高于市场预期——$852B估值的产品多元化叙事承压；4) ChatGPT主产品内嵌意味OpenAI把亿级用户基数作为最大杠杆——Cursor/Cognition等独立工具压力升级；5) 周期性后台任务意味"AI agent订阅"成新商业模式——重复性RPA场景的token消耗可预测。',
+      brand: '"Atlas被砍+Computer Use推出"是2026 AI产品策略最强警示——品牌人抄作业：1) AI工具品牌立刻评估"独立app vs 主产品内嵌"路径：若主流量平台已内嵌竞品，独立app边际收益递减；2) Computer Use是绝佳场景化视频素材：产出"AI自动操作桌面完成N步任务"60秒视频；3) 别打"我们的AI浏览器"——AI浏览器独立app路径已被OpenAI证伪，切换到"Chrome扩展+主产品内嵌"；4) "砍产品名单"是品牌信任警示：宣传OpenAI新功能时配套"6个月存活验证"承诺，B端转化率更高；5) 反思：你的AI产品还在做"功能矩阵"？2026切换到"主产品深耕"，集中度>多元化。',
+      beginner: 'OpenAI把它的AI浏览器Atlas砍掉了（只活了8个月），功能并进了Chrome扩展。同时推出了"Computer Use"功能——AI可以在你电脑后台自动点击、打字、操作各种应用。类似于之前Anthropic的Claude Computer Use。'
+    },
+    createdAt: '2026-07-10T15:00:00Z'
+  },
+  {
+    id: '20260712-05',
+    date: '2026-07-12',
+    title: 'Apple起诉OpenAI系统性挖角+窃取trade secret：硬件 chief Tang Tan被告，400+前Apple员工+面试"show and tell"窃密，OpenAI硬件战略面临IPO前夜重大法律风险',
+    summary: 'CNBC/Bloomberg 7/10报道，Apple在加州北区联邦法院起诉OpenAI系统性挖角和窃取未发布产品trade secret。诉状指控：(1)400+前Apple员工现就职OpenAI；(2)OpenAI硬件 chief Tang Tan（前Apple VP）被告，指控他指导Apple员工面试时带"actual parts"做"show and tell"以套取机密；(3)前员工Chang Liu被指控偷走Apple笔记本；(4)OpenAI教练离职员工规避Apple安全流程。诉讼时机敏感：OpenAI正筹备IPO，Tang Tan负责的硬件首产品预计2027最早不会出货。',
+    source: 'Apple',
+    sourceUrl: 'https://www.cnbc.com/2026/07/10/apple-openai-lawsuit-trade-secrets.html',
+    tags: ['#战略', '#竞争', '#安全'],
+    accuracyScore: 96,
+    timelinessScore: 97,
+    utilityScore: 82,
+    totalScore: 92,
+    recommendReason: 'Apple诉OpenAI是2026 AI行业最大劳动诉讼——直接影响OpenAI硬件战略节奏，并触发AI人才战的合规边界重定义。PM应关注：(1)Tang Tan被告+400+前Apple员工意味OpenAI硬件战略严重依赖Apple人才——若法院判禁令OpenAI硬件节奏或推迟1-2年，B端硬件集成ChatGPT的规划需对冲；(2)"面试show and tell"被指控窃密意味AI行业人才战的合规边界在收紧——B端挖角时必须更新合规流程；(3)IPO前夜重大诉讼意味OpenAI估值锚点或下修——B端选型时OpenAI的财务稳定性变量上升。',
+    perspectives: {
+      pm: 'Apple诉OpenAI是2026 AI劳动诉讼标志性案件 1) OpenAI硬件战略严重依赖Apple人才：法院禁令可能推迟硬件节奏1-2年，B端硬件集成ChatGPT规划需对冲；2) "面试show and tell"被指控意味AI人才战合规边界收紧——B端挖角必须更新合规流程，面试时禁止讨论现任雇主机密；3) IPO前夜重大诉讼意味OpenAI估值锚点或下修：B端选型时财务稳定性变量上升；4) Tang Tan个人被告意味高管个人法律责任风险上升——AI公司高管需评估D&O保险；5) 400+前Apple员工规模意味OpenAI硬件团队本质是"Apple分舵"——技术栈选型会延续Apple路径。',
+      investor: 'Apple诉OpenAI直接冲击IPO估值锚点 1) 诉讼在IPO前夜意味OpenAI估值或下修10-20%：法律不确定性溢价；2) Tang Tan被告意味OpenAI硬件战略核心人物风险上升：2027产品出货或推迟；3) 400+前Apple员工规模印证OpenAI硬件严重依赖Apple人才：技术独立性问题；4) "面试show and tell"如坐实意味AI行业人才战潜规则被打破：合规成本上升；5) 对比Elon Musk诉讼已胜诉：OpenAI法律团队经验丰富但此案证据更强。',
+      brand: '"Apple诉OpenAI"是2026 AI人才战品牌最强警示——品牌人抄作业：1) AI公司立刻审视挖角流程：更新合规培训，明确"禁止讨论现任雇主机密"，主动公开合规承诺；2) 雇主品牌从"我们给期权多"切换到"我们合规干净"：高端人才（尤其Apple/Google背景）更看重合规风险；3) Tang Tan个人被告是高管个人法律责任警示：AI公司高管必须评估D&O保险，个人品牌资产需对冲；4) 别打"我们有Apple团队基因"——切换到"我们有多元背景团队"，单一公司背景集中度是法律风险信号；5) 反思：你的雇主品牌还在做"硅谷顶薪"？切换到"合规+多元+长期"，B端高端人才转化率更高。',
+      beginner: 'Apple起诉OpenAI，说OpenAI系统性地挖Apple员工、偷Apple的机密。OpenAI的硬件负责人Tang Tan（以前是Apple副总裁）被告了。这个时间点很敏感，因为OpenAI正准备上市。短期不影响你用ChatGPT，但可能影响OpenAI做硬件的计划。'
+    },
+    createdAt: '2026-07-10T18:00:00Z'
+  },
+  {
+    id: '20260712-06',
+    date: '2026-07-12',
+    title: 'Anthropic Claude Code企业化升级：Bedrock/Vertex/Foundry默认auto模式+升级Opus 4.8，reflection内测dashboard+API key过期+hash-chained审计日志——企业级AI coding合规护城河',
+    summary: 'Releasebot 7/11聚合Anthropic 7月多份release notes：(1)Claude Code在AWS Bedrock/Google Vertex/Azure Foundry三大企业云默认开启auto模式，Bedrock模型默认升级到Claude Opus 4.8，/code-review在opus-4-8全effort级别优化；(2)Claude内测"reflection dashboard"——可视化usage pattern、设置quiet hours、AI使用提醒；(3)API key支持过期时间配置；(4)管理操作记录在hash-chained审计日志，敏感操作需"两人审批"（two-person approval）。',
+    source: 'Anthropic',
+    sourceUrl: 'https://releasebot.io/updates/anthropic',
+    tags: ['#更新', '#Agent', '#企业应用', '#安全'],
+    accuracyScore: 93,
+    timelinessScore: 95,
+    utilityScore: 91,
+    totalScore: 93,
+    recommendReason: 'Anthropic多份release notes共同指向"企业级AI coding合规护城河"——把审计/quiet hours/两人审批做成产品默认。PM应关注：(1)Bedrock/Vertex/Foundry默认auto模式意味Claude Code企业部署门槛大幅降低——B端云原生集成Claude Code无需额外配置，是Cursor/Cognition等独立工具无法复制的企业分发优势；(2)reflection dashboard的quiet hours+usage insight意味"AI健康使用"成产品维度——C端AI产品需跟进，B端可借鉴做"员工AI使用健康度"看板；(3)hash-chained审计日志+two-person approval意味Anthropic把金融级合规做成AI coding标配——金融/医疗B端选型的关键差异点。',
+    perspectives: {
+      pm: 'Anthropic多份release notes共同指向"企业级AI coding合规护城河" 1) Bedrock/Vertex/Foundry默认auto模式意味Claude Code企业部署门槛大幅降低——B端云原生集成无需额外配置；2) reflection dashboard的quiet hours+usage insight意味"AI健康使用"成产品维度——C端AI产品需跟进，B端可借鉴做"员工AI使用健康度"看板；3) hash-chained审计日志+two-person approval意味金融级合规成AI coding标配——金融/医疗B端选型关键差异点；4) API key过期配置意味密钥生命周期管理进入AI产品默认能力——B端IT管理成本下降；5) /code-review质量在Opus 4.8全effort优化意味Claude Code的"代码审查"场景商业化提速。',
+      investor: 'Anthropic企业化升级是Claude Code商业化的关键加速 1) 三大云默认集成意味Claude Code企业分发优势是Cursor/Cognition无法复制——护城河；2) 合规能力（审计日志/两人审批）意味金融/医疗B端选型的关键差异点——TAM扩张；3) reflection dashboard意味Anthropic把"AI健康使用"做成产品维度——C端差异化；4) Bedrock升级Opus 4.8意味AWS渠道Claude Code能力同步首发——企业客户无需等；5) IPO前夜Anthropic强化企业合规叙事：估值锚点切换到企业ARPU。',
+      brand: '"企业级AI coding合规护城河"是Anthropic 2026最强B端品牌叙事——品牌人抄作业：1) AI工具品牌立刻审视合规能力：审计日志/密钥过期/两人审批是B端新基线，主动公开比通稿有效10倍；2) "reflection dashboard"是绝佳C端健康品牌素材：产出"AI健康使用"内容，与"AI沉迷"对立叙事；3) 别打"我们的AI更强"——打"我们的AI更可控"，从"性能"切换到"治理"；4) Bedrock/Vertex/Foundry默认集成是B端品牌最强信任锚：主动标注"三大企业云原生支持"；5) 反思：你的AI产品还在做"功能更强"？切换到"治理更可控"，金融/医疗B端转化率翻倍。',
+      beginner: 'Anthropic（做Claude的公司）升级了Claude Code的企业版。现在在三大云平台（AWS/Google/Azure）默认开启，还加了审计日志、API密钥过期、双人审批这些企业级功能。如果你公司在金融或医疗行业用AI写代码，Claude Code的企业版值得考虑。'
+    },
+    createdAt: '2026-07-11T15:00:00Z'
+  },
+
   // === 2026-07-03 (周四) ===
   {
     id: '20260703-01',
@@ -555,6 +683,113 @@ const sampleItems: DailyItem[] = [
       beginner: 'OpenAI 把写代码的工具 Codex 合并进了 ChatGPT 桌面版。意思是：以后用 ChatGPT 就能直接用 Codex，不用装两个 app。OpenAI 还收购了一家做 Python 工具的公司（Astral）来增强 Codex。如果你是程序员，可以期待 ChatGPT 里直接写代码的体验。'
     },
     createdAt: '2026-07-10T05:00:00Z'
+  },
+
+  // === 2026-07-13 (周日) ===
+  {
+    id: '20260713-01',
+    date: '2026-07-13',
+    title: 'xAI改名为SpaceXAI同步发布Grok 4.5：与Cursor联合训练，coding agent成本降至GPT-5.5一半，但幻觉率显著高于Fable 5',
+    summary: 'Epoch Times 7/12报道，xAI 7/8发布Grok 4.5后于7/12正式更名为SpaceXAI（合并SpaceX上市主体SPCX）。Grok 4.5基于自研1.5T参数V9基础模型，整合Cursor平台训练数据。Artificial Analysis测评：编码能力76分（与GPT-5.5 Codex持平），单任务成本$2.49（GPT-5.5 $5.07/Fable 5 $11.80），但幻觉率明显更高。',
+    source: 'Cursor',
+    sourceUrl: 'https://theepochtimes.com/tech/xai-rebrands-as-spacexai-launches-new-grok-4-5-model-6059463',
+    tags: ['#发布', '#模型', '#Agent', '#战略', '#竞争'],
+    accuracyScore: 95,
+    timelinessScore: 98,
+    utilityScore: 95,
+    totalScore: 97,
+    recommendReason: 'xAI→SpaceXAI是2026 AI战略整合标志性事件——Musk把Grok/Cursor/SpaceX三块拼成完整闭环 1) Grok 4.5 + Cursor训练数据 = xAI首次拥有可与Claude Code抗衡的coding agent训练数据池；2) Cursor $60B收购完成后首次协同产品化——开发者工具栈必须把"Musk集团"视为完整选项；3) cost 80%降本是OpenAI/Anthropic最大压力：$2.49/task直接威胁GPT-5.5 Codex $5.07和Fable 5 $11.80；4) SpaceX上市主体+xAI改名意味资本结构整合；5) 但幻觉率是软肋：Artificial Analysis评分仅第四——前沿能力不足是Grok 4.5持续风险。',
+    perspectives: {
+      pm: 'xAI→SpaceXAI改名+Grok 4.5发布意味Musk AI战略正式整合 1) Cursor $60B收购后首次产品协同：Grok 4.5用Cursor训练数据，意味Musk集团拥有可与Claude Code抗衡的coding agent数据池；2) 成本降本80%是价格战延续：Grok 4.5 $2.49/task vs GPT-5.5 $5.07 vs Fable 5 $11.80——前沿模型token单价继续下探；3) 1.5T参数V9基础模型是xAI首次正式公开参数规模——意味Musk走"算力碾压"路线（vs Anthropic走"对齐优先"）；4) 幻觉率显著高于Fable 5是软肋：Artificial Analysis评分仅第四——前沿能力vs成本之间是核心权衡；5) Cursor/Grok Build/Grok 4.5三件套意味Musk集团瞄准开发者工作流入口——和ChatGPT Codex内嵌、Claude Code形成三足鼎立。',
+      investor: 'SpaceXAI改名+Grok 4.5是Musk AI资本整合关键信号 1) SpaceX上市主体（SPCX）+ xAI改名为SpaceXAI——AI业务与航天绑定融资能力升级；2) Cursor $60B收购4/21 xAI公告→6/16 SpaceX行权→7/12 Grok 4.5协同发布：Musk集团整合节奏紧凑（90天完成）；3) Coding Agent Index 76分（与GPT-5.5 Codex持平）+ $2.49/task成本意味xAI直接威胁OpenAI Codex高端ARPU；4) 但Artificial Intelligence Index第四（落后Fable 5/GPT-5.5/Opus 4.8）+幻觉率高是估值软肋——Musk AI估值溢价靠"Cursor流量入口"而非"模型领先"；5) Grok 4.5训练数据来自Cursor：意味$60B收购的核心资产不是IDE而是"训练语料"——Musk实质买的是数据。',
+      brand: '"SpaceXAI+Grok 4.5+Cursor"三件套是2026开发者工具品牌格局重塑信号——品牌人抄作业：1) 别再单押Anthropic或OpenAI：多模型BYOK是必然——Cursor/ZCode/Continue等支持BYOK的工具是品牌安全网；2) "Grok 4.5训练数据来自Cursor"意味开发者的代码数据正在成为模型训练资产——B端必须重新评估IDE使用条款（数据归属）；3) Musk集团品牌叙事是"挑战者整合"——SPACE/X/Cursor/Grok共享一个故事：从大公司撕开开发者入口；4) 内容营销产出"Grok 4.5 vs Claude Code vs Codex coding agent横评"——三足鼎立话题是2026 H2最大流量入口；5) 反思：你的AI工具品牌定位是否依赖单一模型供应商？三足鼎立下"中立/可切换"是品牌资产。',
+      beginner: '马斯克旗下的AI公司xAI改名为SpaceXAI（和SpaceX同步），并发布了新模型Grok 4.5。这个模型跟Cursor（写代码的AI工具）一起训练的，写代码能力跟GPT-5.5持平，但价格只有一半。缺点是更容易"胡说八道"（幻觉率高）。Cursor之前被SpaceX花$600亿收购了。'
+    },
+    createdAt: '2026-07-13T01:00:00Z'
+  },
+  {
+    id: '20260713-02',
+    date: '2026-07-13',
+    title: 'OpenAI因GPT-5.6 Sol需求激增临时放松限额：GA后48小时突破原有capacity预期，further压力测试意味5.6系列成ChatGPT主流量模型',
+    summary: 'BleepingComputer 7/13报道，OpenAI因过去48小时需求激增临时放松GPT-5.6 Sol限额。Sol是7/9刚GA的最强5.6系列旗舰模型。OpenAI未公布具体数字，但称"暂时调整"以应对ChatGPT Plus/Pro/Team用户请求峰值。',
+    source: 'OpenAI',
+    sourceUrl: 'https://www.bleepingcomputer.com/news/artificial-intelligence/openai-temporarily-relaxes-gpt-56-sol-usage-limits/',
+    tags: ['#发布', '#更新', '#模型'],
+    accuracyScore: 93,
+    timelinessScore: 98,
+    utilityScore: 90,
+    totalScore: 92,
+    recommendReason: 'GPT-5.6 Sol限额放松是GA后真实需求验证信号 1) GA后48小时即破限额意味Sol实际需求远超OpenAI内部预测——54% token效率提升叙事带动B端+C端双线切换；2) 限额放松≠永久取消：OpenAI措辞"暂时"意味供给端仍紧（算力or安全）；3) 这是ChatGPT主流量模型切换关键节点：从GPT-5.5→GPT-5.6 Sol是ChatGPT默认模型变化；4) 对Cursor/Cognition/Claude Code等竞品压力升级；5) PM应关注用户行为数据：Sol实际使用时长/任务完成率是否兑现54% token效率承诺。',
+    perspectives: {
+      pm: 'Sol限额放松是GA后需求验证关键节点 1) GA后48h即破限额意味5.6系列实际需求远超内部预测——50% token效率叙事带动B端+C端双线切换；2) 限额"暂时放松"≠永久取消：OpenAI措辞意味供给端仍紧（算力or安全）；3) ChatGPT主流量模型从GPT-5.5→Sol切换的拐点：用户基数（亿级）全面迁移意味OpenAI的标准就是行业标准；4) 对Cursor/Cognition/Claude Code压力升级：ChatGPT用户大规模用Sol时，独立工具必须证明不可替代；5) 应追踪用户行为数据：Sol实际使用时长/任务完成率是否兑现54% token效率承诺。',
+      investor: 'Sol限额放松是OpenAI 5.6系列需求验证信号 1) GA 48h即破限额意味GPT-5.6是OpenAI历史上需求最强首发：5.5→5.6切换加速；2) 限额"暂时放松"反映推理算力供给端压力——OpenAI资本开支预期继续上调；3) ChatGPT主流量模型切换意味OpenAI ARR继续加速：$87B→$100B+节奏；4) Sol实际消耗token数可能远高于预期（用户更高频使用更强模型）：ARPU上行；5) 对Anthropic Fable 5压力升级：当ChatGPT用户基数全面迁移到Sol，Claude高端ARPU必须证明差异化价值。',
+      brand: 'Sol限额放松是ChatGPT主流量模型切换品牌事件——品牌人抄作业：1) AI工具品牌立刻产出"Sol vs 5.5实测对比"：用户最关心切换是否值得；2) "限额放松"叙事是OpenAI的稀缺感营销——品牌人可学习这种"需求驱动供给"叙事；3) ChatGPT Plus/Pro/Team用户体验差异化是品牌资产：限制松动意味高级会员价值感稀释，需重新定义Pro价值主张；4) 内容营销产出"Sol上线后第一批实测case"——首发评测流量是2026 H2最大入口；5) 反思：你的AI工具是否过度依赖ChatGPT模型？主流量切换意味必须做BYOK准备。',
+      beginner: 'GPT-5.6发布后48小时内太多人想用，OpenAI临时提高了使用上限。说明这个模型很受欢迎，特别是写代码的能力。如果你用ChatGPT Plus/Pro，可能已经感受到5.6的能力。'
+    },
+    createdAt: '2026-07-13T02:00:00Z'
+  },
+  {
+    id: '20260713-03',
+    date: '2026-07-13',
+    title: 'Z.ai（原智谱）推出ZCode开源coding agent：MIT协议+BYOK，瞄准Cursor/Claude Code闭源生态缺口',
+    summary: 'Flowtivity 7/12报道，Z.ai（原智谱AI）发布ZCode桌面端agentic IDE，专为GLM-5.2模型设计。MIT开源协议，支持BYOK（自带Claude/Gemini/Codex/OpenAI API key）。GLM-5.2拥有100万token上下文，Code Arena全球第二，模型权重同步在Hugging Face MIT协议开源。',
+    source: '智谱',
+    sourceUrl: 'https://flowtivity.ai/blog/zcode-glm-coding-agent-harness/',
+    tags: ['#开源', '#Agent', '#发布'],
+    accuracyScore: 94,
+    timelinessScore: 96,
+    utilityScore: 94,
+    totalScore: 95,
+    recommendReason: 'ZCode开源是中国AI厂商首次系统性挑战Cursor/Claude Code闭源生态 1) MIT协议+桌面IDE+BYOK：直击开发者"工具锁定+模型锁定"双重焦虑，开源策略比Cursor闭源+Claude Code闭源更激进取向；2) GLM-5.2 Code Arena全球第二+100万上下文是硬实力背书：性能差距与闭源前沿模型已不显著；3) Z.ai改名（原智谱）+ZCode发布+GLM-5.2开源=中国AI国际化战略升级；4) BYOK支持意味ZCode不强依赖GLM——开发者可继续用Claude/OpenAI模型，但工具栈是开源的；5) 对中国B端是关键选项：避免Claude Code监控风险，同时拥有可控的开源工具栈。',
+    perspectives: {
+      pm: 'ZCode开源是中国AI首次系统性挑战Cursor/Claude Code闭源生态 1) MIT协议+桌面IDE+BYOK直击开发者"工具锁定+模型锁定"双重焦虑；2) GLM-5.2 Code Arena全球第二+100万上下文是硬实力背书：性能差距与闭源前沿已不显著；3) Z.ai改名（原智谱）+ZCode+GLM-5.2开源=中国AI国际化战略升级；4) BYOK不强依赖GLM意味ZCode工具栈本身是开源核心资产——开发者可继续用Claude/OpenAI；5) 对中国B端是关键选项：避免Claude Code监控风险（see 7/9中国官方警告）+拥有可控开源工具栈。',
+      investor: 'ZCode开源是Z.ai国际化关键信号 1) Z.ai改名（原智谱）+ZCode+GLM-5.2开源=中国AI厂商首次系统性瞄准全球开源生态；2) Code Arena全球第二+100万上下文意味GLM-5.2已具备挑战Claude Sonnet 4.6/GPT-5.5能力；3) MIT协议是激进攻势：与Llama协议（Custom Commercial License）相比限制更少；4) Cursor $60B估值 vs ZCode开源意味工具层价值从"闭源流量入口"切换到"开源生态入口"；5) 但商业化路径不清：Z.ai仍靠GLM API收入，ZCode开源意味工具层不直接变现——通过模型API变现。',
+      brand: '"ZCode开源"是2026 AI工具品牌"去锁定"叙事最强信号——品牌人抄作业：1) "BYOK+开源"是品牌资产：开发者最焦虑"工具+模型双锁定"，ZCode直接解决；2) 中国AI厂商首次系统性挑战国际闭源生态：品牌叙事从"中国版Cursor"切换到"开源版Cursor"——国际化策略升级；3) 内容营销产出"ZCode+Claude API"实测组合：BYOK是品牌差异化最强钩子；4) 别打"我们是最强coding agent"——打"我们是最自由coding agent"，开源叙事比性能叙事更可持续；5) 反思：你的AI工具是否过度依赖单一闭源？MIT开源是品牌长期信任锚。',
+      beginner: '原来叫"智谱AI"的Z.ai出了个开源的写代码工具ZCode。跟Cursor不一样的是，它开源（MIT协议），还能用自己的Claude/OpenAI API key。背后的GLM-5.2模型写代码的能力全球第二。如果你担心Cursor被收购后绑定Musk集团，可以考虑这个开源替代。'
+    },
+    createdAt: '2026-07-13T03:00:00Z'
+  },
+  {
+    id: '20260713-04',
+    date: '2026-07-13',
+    title: '中国官方风险警示Claude Code内置监控机制自动传输用户位置与身份信息——B端应优先评估开源替代',
+    summary: 'NaturalNews 7/12报道，中国官方7/9发布风险警示：多个版本的Anthropic Claude Code AI编程工具内置监控机制，自动向远程服务器传输用户地理位置、身份标识等敏感数据，未经用户同意。Anthropic自2月以来指控阿里等中国AI实验室非法蒸馏Claude模型，互相指控模式升级。部分美国政府承包商正探索以DeepSeek等中国模型替代Claude。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.naturalnews.com/2026-07-12-chinese-authority-warns-ip-theft-anthropics-claude-ai.html',
+    tags: ['#安全', '#竞争', '#战略'],
+    accuracyScore: 92,
+    timelinessScore: 95,
+    utilityScore: 94,
+    totalScore: 94,
+    recommendReason: '中国官方警示Claude Code监控机制是2026 AI工具安全合规关键节点 1) 监控机制指控意味Claude Code不再是"安全中立工具"——B端必须重新评估代码数据流向；2) 与Anthropic指控中国厂商蒸馏形成"互相指责"格局：IP盗用vs数据监控是2026中美AI主旋律；3) 美国政府承包商探索DeepSeek替代意味采购逻辑从"性能优先"切换到"地缘安全优先"；4) 中国B端应优先评估开源替代（ZCode/GLM-5.2/Qwen Code）——避免国际审查+数据主权风险；5) Anthropic fair use双重标准（抗议别人蒸馏vs自己监控）是品牌信任重大挑战。',
+    perspectives: {
+      pm: '中国官方警示Claude Code监控机制是2026 AI工具安全合规关键节点 1) 监控机制指控意味Claude Code不再是"安全中立工具"——B端必须重新评估代码数据流向；2) 与Anthropic指控中国厂商蒸馏形成"互相指责"格局：IP盗用vs数据监控是中美AI主旋律；3) 美国政府承包商探索DeepSeek替代意味采购逻辑从"性能优先"切换到"地缘安全优先"；4) 中国B端应优先评估开源替代（ZCode/GLM-5.2/Qwen Code）避免国际审查+数据主权风险；5) Anthropic fair use双重标准（抗议别人蒸馏vs自己监控）是品牌信任挑战。',
+      investor: 'Claude Code监控机制指控是Anthropic重大风险事件 1) 中国官方风险警示意味Claude Code在中国市场实质禁运——B端采购自动剔除；2) 监控机制vs蒸馏指控形成中美AI双向不信任：Anthropic在中国的To B收入归零；3) 美国政府承包商探索DeepSeek替代意味Anthropic在美国政府采购也可能受限——双向承压；4) OpenAI可能跟进受益：若Claude Code被广泛质疑监控，ChatGPT Codex内嵌或成B端首选；5) Anthropic fair use双重标准（抗议别人蒸馏vs自己监控）是品牌信任重大挑战——长期估值溢价或受压。',
+      brand: 'Claude Code监控机制指控是2026 AI工具品牌信任关键事件——品牌人抄作业：1) AI工具品牌必须主动披露"数据流向"：监控机制指控比性能质疑杀伤力大10倍；2) Anthropic fair use双重标准（抗议别人蒸馏vs自己监控）意味品牌叙事不能自相矛盾——一旦被坐实双标，信任崩塌；3) 中国B端品牌叙事必须包含"数据主权"：考虑ZCode/GLM/Qwen Code自部署；4) 内容营销产出"Claude Code vs开源工具的数据流向对比"：B端决策点正在切换；5) 反思：你的AI工具是否还在用Claude Code？至少评估开源替代方案作为应急。',
+      beginner: '中国官方警告：Anthropic的Claude Code（写代码的AI工具）有些版本内置了"监控机制"，会自动上传用户的位置和身份信息。同时Anthropic自己也在指责中国公司（比如阿里）"偷学"他们的模型。两边互相指责。如果你用Claude Code，可以考虑换成开源的ZCode。'
+    },
+    createdAt: '2026-07-13T04:00:00Z'
+  },
+  {
+    id: '20260713-05',
+    date: '2026-07-13',
+    title: 'Sierra完成$950M融资@$15B估值：Bret Taylor客服AI agent平台，7季度达$100M ARR后2季度再翻倍',
+    summary: 'Memeburn 7/12报道，前Salesforce co-CEO Bret Taylor创立的客服AI agent平台Sierra完成$950M融资，估值$15B。公司7个季度达$100M ARR，再2季度翻倍至$200M ARR。同期全球AI创投H1 2026达$510B，AI占Q2全部VC 70%+，OpenAI+Anthropic独占43%。',
+    source: '其他',
+    sourceUrl: 'https://memeburn.com/ai-startup-revenue-growth',
+    tags: ['#融资', '#Agent', '#企业应用'],
+    accuracyScore: 92,
+    timelinessScore: 93,
+    utilityScore: 88,
+    totalScore: 90,
+    recommendReason: 'Sierra $15B估值是2026企业AI agent落地标志性事件 1) Bret Taylor品牌（Salesforce co-CEO+OpenAI前board chair）+200M ARR=企业AI agent已验证商业化路径；2) 7季度→2季度翻倍的节奏意味企业AI采购从"POC测试"切换到"规模化部署"；3) $15B估值意味客服AI agent赛道天花板远高于传统SaaS（ARR multiple ~75x）；4) H1 2026 $510B AI VC占70%+数据意味非AI创业融资窗口进一步收窄；5) OpenAI+Anthropic独占43%意味"基础设施层"已固化，应用层（Sierra/Decagon/Cognition）才是2026主战场。',
+    perspectives: {
+      pm: 'Sierra $15B估值是企业AI agent落地标志性事件 1) Bret Taylor品牌（Salesforce co-CEO+OpenAI前board chair）+200M ARR验证企业AI agent商业化路径可行；2) 7季度→2季度翻倍节奏意味企业AI采购从"POC测试"切换到"规模化部署"；3) $15B估值意味客服AI agent天花板远高于传统SaaS（ARR multiple ~75x）；4) H1 2026 $510B AI VC占70%+数据意味非AI创业融资窗口进一步收窄；5) OpenAI+Anthropic独占43%意味"基础设施层"已固化，应用层（Sierra/Decagon/Cognition）才是2026主战场。',
+      investor: 'Sierra $15B估值是企业AI agent投资关键信号 1) 7季度$100M ARR→2季度翻倍至$200M ARR：增长曲线J型，企业AI agent进入指数级放量；2) $15B估值意味ARR multiple ~75x：远高于传统SaaS（10-20x），市场给予AI agent巨大溢价；3) Bret Taylor品牌（Salesforce+OpenAI board chair前任）是估值溢价关键：创始人品牌=获客成本下降；4) 全球AI VC H1 2026 $510B中OpenAI+Anthropic占43%：意味应用层（Sierra/Decagon/Cognition）是剩余57%主战场；5) 客服是AI agent首个验证场景：下一步是销售/HR/法务agent。',
+      brand: 'Sierra $15B估值是2026企业AI品牌叙事最强模板——品牌人抄作业：1) 创始人品牌是估值溢价关键：Bret Taylor（Salesforce+OpenAI前chair）=客户信任成本下降50%——品牌叙事应充分利用创始人背景；2) 7→2季度翻倍节奏是品牌营销最强素材："增长加速"比"增长平稳"更有话题；3) 客服AI agent是企业AI首个验证场景：下一个hot sector是销售/HR/法务——品牌人应提前布局；4) H1 2026 AI VC占70%+意味"AI-native"是品牌必备叙事：传统SaaS不再获得资本支持；5) 反思：你的企业服务品牌是否还在打"AI赋能"？切换到"AI-native"。',
+      beginner: 'Bret Taylor（前Salesforce联合CEO、OpenAI前董事会主席）创办的AI客服公司Sierra刚融了$9.5亿，估值$150亿。他们的AI帮企业自动处理客户咨询，增长很快——前7个季度做到$1亿年收入，之后只用了2个季度就翻倍到$2亿。说明企业真的开始大规模用AI客服了。'
+    },
+    createdAt: '2026-07-13T05:00:00Z'
   },
 
   // === 2026-07-02 (周三) === (周三) ===
