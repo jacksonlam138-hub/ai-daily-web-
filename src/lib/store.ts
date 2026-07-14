@@ -1,6 +1,113 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-07-14 (周一) ===
+  {
+    id: '20260714-01',
+    date: '2026-07-14',
+    title: 'Google DeepMind全面重构Gemini 3.5 Pro并定档7/17：原版因递归工具调用与SVG生成结构性失败被推翻，2M上下文与定价均未确认',
+    summary: 'TechTimes 7/13报道，Google DeepMind确认Gemini 3.5 Pro重新构建后目标7/17发布（距现有报道4天）。原模型因工程师发现递归工具调用（recursive tool-calling）与SVG生成的结构性失败被推翻。2百万token上下文窗口、定价、具体发布日期均"未确认"。',
+    source: 'Google',
+    sourceUrl: 'https://techtimes.com/articles/320308/20260713/gemini-35-pro-targets-july-17-after-full-rebuild-every-spec-remains-unconfirmed.htm',
+    tags: ['#发布', '#模型', '#更新', '#竞争'],
+    accuracyScore: 94,
+    timelinessScore: 97,
+    utilityScore: 94,
+    totalScore: 95,
+    recommendReason: 'Gemini 3.5 Pro重构是2026 frontier model竞赛"质量门槛升级"标志 1) 原版因递归工具调用+SVG生成结构性失败被推翻——意味agent场景下的工具调用稳定性已成为frontier model的核心评价指标（不只是benchmark分数）；2) Google公开承认重构是品牌策略升级：与其发布有缺陷版本，不如推迟保口碑——OpenAI/Anthropic历史上较少这样透明；3) 7/17发布意味Google抢占下周新闻周期，与GPT-5.6 Sol（7/9 GA）+Fable 5（延长访问）形成三方混战；4) 2M上下文窗口若属实将刷新frontier上下文记录（当前Claude 1M/GPT 1M）；5) 递归工具调用失败是agent平台重要警示：低代码Agent工具链需测试深嵌套场景。',
+    perspectives: {
+      pm: 'Gemini 3.5 Pro重构是frontier model竞赛"质量门槛升级"标志 1) 原版因递归工具调用+SVG生成结构性失败——意味agent场景下的工具调用稳定性已成为frontier model核心评价指标（不只是benchmark分数）；2) Google公开承认重构是品牌策略升级：与其发布有缺陷版本不如推迟保口碑——OpenAI/Anthropic历史上较少这样透明；3) 7/17发布意味Google抢占下周新闻周期，与GPT-5.6 Sol（7/9 GA）+Fable 5（延长访问）形成三方混战；4) 2M上下文窗口若属实将刷新frontier记录（Claude/GPT当前1M）；5) 递归工具调用失败是agent平台重要警示：低代码Agent工具链需测试深嵌套场景。',
+      investor: 'Gemini 3.5 Pro重构是Google AI品牌策略关键转折 1) 公开承认"原版结构性失败"+推迟发布：Google一改过去"抢首发"姿态——意味frontier model市场从"发布节奏"切换到"质量门槛"竞争；2) 推迟4天对短期股价影响有限，但保住的是长期信任资产——OpenAI/Anthropic过去因发布半成品损失的品牌价值更大；3) 2M上下文窗口若属实意味Google在长文本场景夺回领先：长上下文是企业RAG/代码库分析的核心需求；4) Gemini 3.5 Pro+Android XR+Gemini Live形成Google AI产品矩阵；5) 但"未确认"措辞意味Google仍可能再次推迟——市场预期管理仍是风险。',
+      brand: 'Google公开承认Gemini 3.5 Pro重构是2026 AI品牌"透明度"叙事最强案例——品牌人抄作业：1) "承认失败+推迟发布"比"发布半成品"品牌价值更高：Google这波赢得的是长期信任；2) frontier model品牌叙事从"首发优势"切换到"质量门槛"——别再抢首发，抢的是"无bug发布"；3) "递归工具调用失败"是技术透明度营销的金矿：把工程文化讲清楚比讲参数规模更有说服力；4) 内容营销产出"3.5 Pro重构背后：Google工程师发现了什么"——技术透明度内容是2026最强信任钩子；5) 反思：你的AI产品发布是否过度承诺？推迟+透明解释比硬发更好。',
+      beginner: 'Google原本要发的Gemini 3.5 Pro模型，因为发现"递归工具调用"和"SVG生成"两个功能有结构性bug，决定全部推倒重做，目标7月17日重新发布。据说这个版本支持2百万token的上下文窗口（远超现在的1百万）。Google这次主动承认失败并推迟，是为了避免发布有缺陷的产品。'
+    },
+    createdAt: '2026-07-14T01:00:00Z'
+  },
+  {
+    id: '20260714-02',
+    date: '2026-07-14',
+    title: 'Apple正式起诉OpenAI系统性窃取知识产权：直击OpenAI设备计划，起诉前已多次私下警告未果',
+    summary: 'Bloomberg/Fortune 7/13报道，Apple正式起诉OpenAI系统性窃取知识产权，目标直指OpenAI设备计划。诉讼前Apple已多次私下警告未果。同期Musk与Altman相互指责对方"诈骗投资者"——SpaceX/OpenAI IPO竞赛背景下，Apple-OpenAI诉讼+Musk-Altman口水战同时爆发。',
+    source: '其他',
+    sourceUrl: 'https://www.bloomberg.com/news/articles/2026-07-13/how-apple-s-lawsuit-threatens-to-disrupt-openai-s-bid-to-rival-the-iphone',
+    tags: ['#竞争', '#安全', '#战略', '#Agent'],
+    accuracyScore: 95,
+    timelinessScore: 96,
+    utilityScore: 93,
+    totalScore: 93,
+    recommendReason: 'Apple诉OpenAI是2026 AI产业链重构关键事件 1) 诉讼直击OpenAI设备计划（Jony Ive+OpenAI硬件项目）——意味Apple把OpenAI视为iPhone下一代威胁；2) 系统性IP窃取指控比单点专利诉讼杀伤力大：Apple掌握App Store+开发者生态数据，可能基于实际代码/产品对比；3) 同期Musk-Altman相互"诈骗投资者"指责：意味AI头部公司创始人关系全面破裂——产业化竞争白热化；4) 对B端意味OpenAI品牌信任挑战：若诉讼坐实，Apple生态开发者可能优先选Anthropic/Google；5) PM应关注AI能力采购"地缘+法律"双风险。',
+    perspectives: {
+      pm: 'Apple诉OpenAI是2026 AI产业链重构关键事件 1) 诉讼直击OpenAI设备计划（Jony Ive+OpenAI硬件项目）——意味Apple把OpenAI视为iPhone下一代威胁；2) 系统性IP窃取指控比单点专利诉讼杀伤力大：Apple掌握App Store+开发者生态数据，可能基于实际代码/产品对比；3) 同期Musk-Altman相互"诈骗投资者"指责意味AI头部公司创始人关系全面破裂——产业化竞争白热化；4) 对B端意味OpenAI品牌信任挑战：若诉讼坐实，Apple生态开发者可能优先选Anthropic/Google；5) PM应关注AI能力采购"地缘+法律"双风险。',
+      investor: 'Apple诉OpenAI是2026 AI产业最大法律风险事件 1) 系统性IP窃取指控意味诉讼周期可能3-5年：OpenAI设备计划或被迫推迟；2) Apple掌握App Store+开发者数据是核心证据优势——OpenAI反击难度大；3) 同期Musk-Altman口水战意味SpaceX/OpenAI IPO双重不确定性上升：投资人优先级降低；4) 若OpenAI败诉：赔偿可能数十亿美元+品牌信任受损+设备战略受挫三重打击；5) 受益方是Anthropic（企业避险首选）和Google（Gemini生态成熟）——市场份额或重新分配。',
+      brand: 'Apple诉OpenAI是2026 AI品牌"信任战"白热化标志——品牌人抄作业：1) AI品牌"系统性IP窃取"指控比性能质疑杀伤力大10倍：B端采购会立刻切换；2) Apple起诉前"多次私下警告未果"是品牌叙事策略：先礼后兵比直接诉讼更获得舆论同情；3) Musk-Altman相互"诈骗投资者"指责意味AI头部创始人品牌信任受损——2026 H2 AI品牌叙事从"增长神话"切换到"合规与可信"；4) 内容营销产出"Apple-OpenAI诉讼时间线+对开发者的影响"：B端决策点正在切换；5) 反思：你的AI产品是否有清晰的IP来源说明？这是2026品牌必备资产。',
+      beginner: 'Apple正式起诉OpenAI"系统性偷知识产权"，主要针对OpenAI要做硬件设备的计划（Apple认为这威胁到了iPhone）。起诉前Apple已经私下警告OpenAI好几次都没用。同一时间，马斯克和Sam Altman（OpenAI CEO）也在互相指责对方"诈骗投资者"。AI圈子的大佬们撕起来了。'
+    },
+    createdAt: '2026-07-14T02:00:00Z'
+  },
+  {
+    id: '20260714-03',
+    date: '2026-07-14',
+    title: 'SpaceXAI+Cursor联合模型Composer 2.5本周或发布：双模型架构对标Anthropic，瞄准$22.7万亿企业AI市场',
+    summary: 'The Elec 7/13报道，SpaceXAI（原xAI）与Cursor联合开发的Composer 2.5模型本周可能发布。采用类似Anthropic的双模型架构（推理模型+协调模型）。若以SpaceXAI品牌发布并整合Grok，将直接竞争OpenAI/Anthropic，扩展到估算$22.7万亿企业AI市场。Cursor用户基数是核心分发优势。',
+    source: 'Cursor',
+    sourceUrl: 'https://www.thelec.net/news/articleView.html?idxno=12109',
+    tags: ['#发布', '#模型', '#Agent', '#竞争', '#战略'],
+    accuracyScore: 93,
+    timelinessScore: 95,
+    utilityScore: 95,
+    totalScore: 95,
+    recommendReason: 'Composer 2.5是SpaceXAI+Cursor整合后首份协同产品落地 1) 双模型架构（推理+协调）直接对标Anthropic Fable 5+Sonnet分工模式——意味agent架构是行业共识；2) $22.7万亿企业AI市场定位意味Cursor+Grok组合瞄准B端：不只是开发者工具，而是企业软件入口；3) Cursor用户基数是SpaceXAI的核心分发杠杆——比OpenAI Codex内嵌ChatGPT更聚焦开发者场景；4) 7/12 SpaceXAI改名+Grok 4.5发布→7/14 Composer 2.5发布节奏紧凑（90天完成Cursor收购整合）；5) PM应关注Composer 2.5是否开源或BYOK——影响整个coding agent赛道定价。',
+    perspectives: {
+      pm: 'Composer 2.5是SpaceXAI+Cursor整合后首份协同产品落地 1) 双模型架构（推理+协调）直接对标Anthropic Fable 5+Sonnet分工模式——意味agent架构是行业共识；2) $22.7万亿企业AI市场定位意味Cursor+Grok组合瞄准B端：不只是开发者工具，而是企业软件入口；3) Cursor用户基数是SpaceXAI的核心分发杠杆——比OpenAI Codex内嵌ChatGPT更聚焦开发者场景；4) 7/12 SpaceXAI改名+Grok 4.5→7/14 Composer 2.5节奏紧凑（90天完成Cursor收购整合）；5) PM应关注Composer 2.5是否开源或BYOK——影响整个coding agent赛道定价。',
+      investor: 'Composer 2.5是SpaceXAI+Cursor整合估值验证关键节点 1) 双模型架构+企业AI定位意味Cursor品牌从"开发者IDE"升级到"企业AI入口"——估值天花板打开；2) 90天内完成Cursor收购整合+联合模型发布：Musk集团执行速度超预期；3) 若Composer 2.5走Anthropic双模型路线意味SpaceXAI产品策略直接学习竞品（推理+协调分工）——快速跟随而非创新；4) $22.7万亿企业AI市场是远期TAM叙事：短期Composer 2.5收入仍来自Cursor订阅；5) 关键变量是OpenAI Codex内嵌ChatGPT的反应：若ChatGPT集成coding agent升级，Cursor用户基数优势被削弱。',
+      brand: 'Composer 2.5是2026 coding agent品牌格局重塑关键节点——品牌人抄作业：1) "Cursor+SpaceXAI双品牌"是品牌联盟最强素材：两个独立品牌协同比单品牌叙事更有话题；2) 双模型架构（推理+协调）意味agent产品品牌叙事需要清晰分工：用户需要知道"哪个模型做什么"；3) $22.7万亿企业AI市场叙事是B端品牌升级关键：从"开发者工具"切换到"企业软件入口"；4) 内容营销产出"Composer 2.5 vs Fable 5 vs Codex coding agent横评"——三足鼎立话题是2026 H2流量入口；5) 反思：你的AI工具品牌是否还在单押？双模型/多模型组合是2026 H2标配。',
+      beginner: 'SpaceXAI（原来的xAI）和Cursor（写代码的AI工具，被SpaceX收购了）联合做的模型叫Composer 2.5，本周可能发布。这个模型用了类似Anthropic双模型的设计（一个负责推理，一个负责协调）。Cursor的庞大用户群是它最大的优势——直接威胁OpenAI Codex和Claude Code。'
+    },
+    createdAt: '2026-07-14T03:00:00Z'
+  },
+  {
+    id: '20260714-04',
+    date: '2026-07-14',
+    title: 'Satya Nadella罕见警告企业AI买家：大型AI实验室是"特洛伊木马"——proprietary模型厂商或成买家的最大长期风险',
+    summary: 'TechCrunch 7/13报道，Microsoft董事长Satya Nadella对使用AI的企业发出"惊人警告"：大型AI实验室（OpenAI/Anthropic等）出售的proprietary模型或成"特洛伊木马"。这是Nadella迄今最强烈的蒸馏双重标准批评——Microsoft既投资OpenAI又自有Phi系列小模型，立场微妙。',
+    source: 'Microsoft',
+    sourceUrl: 'https://techcrunch.com/2026/07/13/satya-nadella-has-issued-a-shocking-warning-to-companies-using-ai',
+    tags: ['#战略', '#竞争', '#安全', '#企业应用'],
+    accuracyScore: 92,
+    timelinessScore: 94,
+    utilityScore: 90,
+    totalScore: 91,
+    recommendReason: 'Nadella"特洛伊木马"警告是2026企业AI采购逻辑关键转折信号 1) Microsoft董事长公开警告proprietary模型厂商——意味Microsoft-OpenAI联盟内部张力升级：Microsoft既投资OpenAI又推Phi系列，立场微妙；2) "特洛伊木马"措辞直指OpenAI/Anthropic：proprietary模型可能成为长期供应商锁定+数据控制+定价权被动风险；3) Nadella此前已被批"双重标准"（自家也卖proprietary模型）——这次警告意味Microsoft战略重心切换到自有Phi+开源生态；4) 对B端意味AI采购必须建立"多供应商+开源备份"策略；5) PM应关注Microsoft Phi-5+Llama/GPT-5.5混合架构的Azure AI Foundry路线。',
+    perspectives: {
+      pm: 'Nadella"特洛伊木马"警告是企业AI采购逻辑关键转折信号 1) Microsoft董事长公开警告proprietary模型厂商——意味Microsoft-OpenAI联盟内部张力升级：Microsoft既投资OpenAI又推Phi系列，立场微妙；2) "特洛伊木马"措辞直指OpenAI/Anthropic：proprietary模型可能成为长期供应商锁定+数据控制+定价权被动风险；3) Nadella此前已被批"双重标准"（自家也卖proprietary模型）——这次警告意味Microsoft战略重心切换到自有Phi+开源生态；4) 对B端意味AI采购必须建立"多供应商+开源备份"策略；5) PM应关注Microsoft Phi-5+Llama/GPT-5.5混合架构的Azure AI Foundry路线。',
+      investor: 'Nadella警告是Microsoft-OpenAI联盟关键风险信号 1) Microsoft董事长公开质疑proprietary模型意味联盟内部张力升级：OpenAI估值溢价或受压；2) Microsoft既投资OpenAI又推Phi系列是历史性"对冲"：若OpenAI出问题，Microsoft仍有自有模型；3) "特洛伊木马"叙事若被广泛接受，OpenAI/Anthropic的To B品牌溢价承压——企业避险情绪上升；4) 受益方是开源生态（Llama/Phi/GLM）+neocloud（Together/Fireworks）：B端AI买家分散采购；5) Nadella这次警告或意味Microsoft下一阶段战略重心从"OpenAI优先"切换到"自有模型+多供应商"——长期合作模式生变。',
+      brand: 'Nadella"特洛伊木马"警告是2026企业AI品牌叙事最大变量——品牌人抄作业：1) AI供应商品牌叙事从"性能领先"切换到"长期可信"：proprietary模型供应商锁定风险是企业最关心的话题；2) Microsoft自相矛盾立场（既投OpenAI又批proprietary）是品牌双刃剑：短期或损害品牌一致性，但长期对冲策略清晰；3) 内容营销产出"特洛伊木马风险：企业AI多供应商策略指南"：B端决策点正在切换；4) 开源AI品牌（Llama/Phi/GLM/Qwen）叙事价值上升：避免锁定的核心选项；5) 反思：你的企业AI品牌是否过度承诺单一供应商？多供应商+开源备份是2026 H2标配。',
+      beginner: '微软董事长Satya Nadella（微软CEO）对使用AI的企业发了一个"惊人警告"：那些卖闭源AI模型的大公司（比如OpenAI、Anthropic）可能是"特洛伊木马"——意思是表面帮你，实际可能长期控制你。讽刺的是，微软自己也是OpenAI的最大投资者之一，同时微软自己也卖闭源模型（Phi系列），所以被批"双重标准"。'
+    },
+    createdAt: '2026-07-14T04:00:00Z'
+  },
+  {
+    id: '20260714-05',
+    date: '2026-07-14',
+    title: 'ECC（Enhanced Claude Code）开源agent harness突破228K stars：跨工具支持Claude Code/Codex CLI/Cursor/Gemini/Copilot，agent harness成独立品类',
+    summary: 'TechTimes 7/13报道，开源agent harness项目ECC（Enhanced Claude Code）GitHub星数突破228K。v2.0.0（6月）已扩展原生支持Claude Code、OpenAI Codex CLI、Cursor、OpenCode、Gemini、Zed、GitHub Copilot等主流coding工具。架构从Claude Code配置升级为跨工具通用agent harness层。',
+    source: 'GitHub',
+    sourceUrl: 'https://www.techtimes.com/articles/320269/20260713/agent-harness-ecc-tops-228k-stars-free-tool-turns-claude-code-full-dev-team.htm',
+    tags: ['#开源', '#Agent', '#发布'],
+    accuracyScore: 92,
+    timelinessScore: 90,
+    utilityScore: 92,
+    totalScore: 91,
+    recommendReason: 'ECC 228K星意味agent harness成为2026独立品类 1) 跨工具支持Claude Code/Codex CLI/Cursor/Gemini/Copilot意味agent harness层抽象出来——开发者不再深度绑定单一工具；2) 228K星数（远超Cursor自身）意味开源生态对"配置/扩展层"需求强烈：proprietary工具锁定越深，开源harness价值越大；3) ECC从Claude Code配置升级为通用agent harness：意味"工具+模型+流程"三层解耦趋势加速；4) 对低代码AI PM意味agent harness是新一层产品形态：低代码平台必须决定"是否提供harness能力"；5) 开源社区信号：agent平台创业窗口从"做agent"切换到"做agent harness"。',
+    perspectives: {
+      pm: 'ECC 228K星意味agent harness成为2026独立品类 1) 跨工具支持Claude Code/Codex CLI/Cursor/Gemini/Copilot意味agent harness层抽象出来——开发者不再深度绑定单一工具；2) 228K星数（远超Cursor自身）意味开源生态对"配置/扩展层"需求强烈：proprietary工具锁定越深，开源harness价值越大；3) ECC从Claude Code配置升级为通用agent harness：意味"工具+模型+流程"三层解耦趋势加速；4) 对低代码AI PM意味agent harness是新一层产品形态：低代码平台必须决定"是否提供harness能力"；5) 开源社区信号：agent平台创业窗口从"做agent"切换到"做agent harness"。',
+      investor: 'ECC 228K星是agent harness独立品类投资信号 1) agent harness层（配置+扩展+跨工具）正在独立于底层工具和模型——是新投资窗口；2) ECC开源（免费）意味商业化路径不清晰，但品类验证明确：闭源proprietary harness（如Warp+模式）或成创业机会；3) 228K星远超Cursor自身（约70K）意味开发者更看重"扩展能力"而非"工具本身"——Cursor商业护城河被高估；4) 类比：VSCode扩展生态是harness层先例（VSCode本身开源，扩展层变现）——agent harness或重演此模式；5) 关注中国对标项目：GLM-ZCode等开源工具是否提供类似harness能力。',
+      brand: 'ECC 228K星意味agent harness是2026 AI品牌叙事新热点——品牌人抄作业：1) agent harness品牌叙事"工具+模型解耦"是开发者最关心话题：proprietary锁定越深，harness价值越大；2) 开源harness品牌（ECC/Cursor扩展）是长期信任锚：闭源proprietary工具风险对冲；3) 内容营销产出"ECC vs Warp vs Cursor Extensions横评"：harness层横评是2026 H2新流量入口；4) "工具+模型+流程三层解耦"是2026最强架构叙事：低代码平台必须建立harness能力；5) 反思：你的AI产品是否有harness能力？跨工具/跨模型支持是2026必备。',
+      beginner: '一个叫ECC（Enhanced Claude Code）的开源项目在GitHub上拿到了22.8万颗星（非常多）。它原本是给Claude Code做配置的，现在已经升级成一个"跨工具通用agent harness"——可以同时支持Claude Code、OpenAI Codex CLI、Cursor、Gemini、GitHub Copilot等主流写代码的AI工具。这意味着开发者不需要深度绑定某一个工具，可以通过ECC同时管理多个AI工具。'
+    },
+    createdAt: '2026-07-14T05:00:00Z'
+  },
+
   // === 2026-07-12 (周日) ===
   {
     id: '20260712-01',
