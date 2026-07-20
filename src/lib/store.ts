@@ -1,6 +1,224 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-07-20 (周一) ===
+  {
+    id: '20260720-01',
+    date: '2026-07-20',
+    title: 'Meta多线押注AI模型+半导体制造+预测市场：扎克伯格用"垄断性投入"换AI产业定义权，半导体自主化战略首次落地',
+    summary: 'Motley Fool 7/20报道，Meta近期密集动作包括Muse Spark 1.1模型迭代、自研半导体产能扩张、新设预测市场平台。多线投入标志Meta从社交公司向AI基础设施玩家战略转向。',
+    source: 'Meta',
+    sourceUrl: 'https://fool.com/investing/2026/07/19/meta-makes-big-moves-around-ai-models-and-chip-production',
+    tags: ['#战略', '#算力', '#模型', '#竞争'],
+    accuracyScore: 90,
+    timelinessScore: 95,
+    utilityScore: 90,
+    totalScore: 91,
+    recommendReason: 'Meta从社交AI切换到AI基础设施玩家是2026最重大战略转型之一——半导体自主化意味Meta正面对标Google TPU+Nvidia双轨 1) 自研芯片产能落地意味Meta算力成本曲线被进一步压低；2) 预测市场平台是Meta用AI能力反向定义新业务品类的尝试；3) 多线作战对Meta执行能力是巨大考验——历史上Meta多线押注翻车案例不少（NPE、Diem）。',
+    perspectives: {
+      pm: 'Meta多线押注是低代码AI PM 必须重新评估Meta生态战略地位的信号 1) Muse Spark 1.1+自研芯片意味Meta AI能力从"自家应用"切换到对外基础设施——若Meta开放API，低代码平台可能多一个低成本选项；2) 预测市场平台是AI+交易品类创新——PM可关注是否开放API做agent prediction market；3) Meta多线投入意味Llama开源路线可能延续——自托管开源模型仍是低代码平台差异化选项；4) 但Meta执行多线能力历史记录不佳（NPE/Diem），PM应等真正落地再决策；5) PM应立即评估：你的AI供应商清单是否过度依赖御三家？Meta能否作为备选？',
+      investor: 'Meta多线押注是2026 H2 Meta估值逻辑重塑关键节点 1) 半导体自主化=Meta算力成本曲线被结构性压低——长期毛利率或上修；2) 但多线投入意味短期capex激增——free cash flow短期内承压，估值倍数或下修；3) 预测市场平台若落地意味Meta进入"AI+金融"新赛道——但监管不确定性极高（Polymarket美国合规问题前车之鉴）；4) Meta叙事从"AI for social"切换到"AI infrastructure"——估值倍数或从social media倍数切换到cloud infrastructure倍数，长期利好；5) 风险：Meta多线执行历史记录不佳，需独立观察落地节奏。',
+      brand: 'Meta多线押注是2026 Meta品牌叙事从"社交公司"切换到"AI基础设施玩家"的关键节点——品牌人抄作业：1) Meta品牌叙事重定位——从"Facebook母公司"切换到"AI infrastructure leader"，brand repositioning是2026最强叙事资产；2) 半导体自研是品牌实力最强信号——比Model benchmark更难复制，是品牌壁垒；3) 预测市场平台是Meta用AI定义新品类的尝试——品牌人可借鉴"AI+传统品类"的创新打法；4) 内容营销产出"Meta半导体布局背后：扎克伯格的AI产业定义权野心"——战略叙事类内容是B端品牌最强钩子；5) 反思：你的品牌叙事是否还停留在单一品类？多线叙事是2026 H2品牌升级核心路径。',
+      beginner: 'Meta（Facebook母公司）最近同时做了三件大事：升级自家AI模型、自己造芯片、新开了一个预测市场（就是押注未来事件结果的平台）。简单说就是Meta想从"做社交软件的公司"变成"做AI基础设施的公司"——就像Google既做搜索又做云又做AI一样。你可以关注的实际行动：Meta的AI模型Muse Spark如果开源了可以免费试用，比OpenAI便宜很多。'
+    },
+    createdAt: '2026-07-20T01:00:00Z'
+  },
+
+  // === 2026-07-17 (周四) ===
+  {
+    id: '20260717-01',
+    date: '2026-07-17',
+    title: 'Moonshot发布Kimi K3：2.8万亿参数MoE+前端编码LMArena #1+GPQA 93.5%，7/27开源权重将填补"开源frontier"空白',
+    summary: 'BBC 7/17报道，Moonshot发布Kimi K3，2.8T参数MoE架构。Artificial Analysis Intelligence Index 57分排第四（Fable 5 ~60、GPT-5.6 Sol ~59、Opus 4.8 ~56），但LMArena前端编码跃居#1（K2.6 #18→#1），GPQA Diamond 93.5%开源最佳。7/27开源权重。',
+    source: '其他',
+    sourceUrl: 'https://www.bbc.com/news/articles/cy9w4q8pgp0o',
+    tags: ['#发布', '#模型', '#开源', '#Agent', '#竞争'],
+    accuracyScore: 94,
+    timelinessScore: 96,
+    utilityScore: 95,
+    totalScore: 95,
+    recommendReason: 'Kimi K3是中国lab首次在frontier Index进入前四+开源权重落地——PM必须重新评估"开源大模型不够强"的旧判断 1) 前端编码#1超越Fable 5意味实战维度已不输闭源frontier；2) 7/27开源权重意味自托管frontier模型成为现实选项；3) GPQA 93.5%意味推理任务可用；4) 性价比低于Opus 4.8/GPT-5.6意味企业可大幅降本；5) 但GDPval/AA-Briefcase高风险agent仍输Fable 5——分场景判断。',
+    perspectives: {
+      pm: 'Kimi K3是低代码AI PM 重新评估开源模型的里程碑事件 1) 前端编码LMArena #1意味K3可承担低代码平台的代码生成模块——自托管成本可控、数据主权强；2) 7/27开源权重落地后，PM可评估迁移成本——从API调用切到自托管，长期成本下降一个数量级；3) GPQA 93.5%意味K3能跑推理任务，可作为低代码平台的"思考"层；4) 但高风险长程agent（GDPval）仍输Fable 5——关键决策路径仍需闭源兜底；5) PM应立即启动K3 PoC：选1个非核心业务线，跑迁移ROI测算。',
+      investor: 'Kimi K3是中国AI lab首次在frontier Index进入前四+开源权重——2026 AI产业格局分水岭 1) K3综合57分 vs Fable 5 60分——分差3分但单项反超（前端#1）意味"开源frontier"叙事正式成立；2) 7/27开源意味"中国开源模型"品类崛起——DeepSeek+Kimi+Qwen三角成型，对Llama开源垄断地位形成挑战；3) K3性价比低于Opus 4.8意味企业AI算账逻辑被改写——Anthropic/OpenAI估值倍数或承压；4) 但K3高风险agent仍输Fable 5——产业核心决策路径仍由闭源主导，"开源颠覆"叙事不能过度乐观；5) 长期看好：开源frontier崛起意味中国AI从"应用层创新"切换到"基础设施层创新"。',
+      brand: 'Kimi K3是中国AI品牌首次在全球frontier Index进入前四的破圈事件——品牌人抄作业：1) Moonshot品牌叙事从"中国OpenAI"切换到"全球开源frontier领导者"——这是2026最强品牌重定位案例；2) "前端编码#1"是品牌最强传播点——超越Fable 5的事实比"综合第四"更有传播力，单品突破比综合评分更出圈；3) 7/27开源权重日期是品牌事件营销钩子——"开源日"做成开发者节日是有效打法；4) 内容营销产出"K3 vs Fable 5前端编码对决实测"——实测类内容是开发者圈最强流量入口；5) 反思：你的AI品牌叙事是否还停留在"中国版X"？切换到"全球Y品类领导者"是品牌升级核心路径。',
+      beginner: '中国公司Moonshot（月之暗面）发布了新AI模型叫Kimi K3，2.8万亿参数规模很大。它在前端编码（写网页代码）这个具体任务上排名全球第一，超过了OpenAI和Anthropic的旗舰模型，而且7月27日会免费公开模型权重（意味着你可以下载到自己电脑或服务器上跑）。简单说：现在有个不输国际顶级AI的中国模型，而且可以免费自己用——这对想用AI又不想被美国公司绑死的人和企业是好消息。'
+    },
+    createdAt: '2026-07-17T01:00:00Z'
+  },
+  {
+    id: '20260717-02',
+    date: '2026-07-17',
+    title: 'Google Gemini 3.5 Pro重构后重新发布：上下文2M token+推理改进，目标夺回frontier Index榜首',
+    summary: 'Startup Fortune 7/17报道，Google Gemini 3.5 Pro在base model推倒重训后于7/17重新发布。上下文窗口2M token，推理任务表现改进。Google目标是夺回Artificial Analysis Intelligence Index榜首（被GPT-5.6/Fable 5超越后）。',
+    source: 'Google',
+    sourceUrl: 'https://startupfortune.com/google-delays-gemini-35-pro-launch-to-july-17-after-scrapping-its-base-model/',
+    tags: ['#发布', '#模型', '#更新', '#竞争'],
+    accuracyScore: 92,
+    timelinessScore: 95,
+    utilityScore: 92,
+    totalScore: 93,
+    recommendReason: 'Gemini 3.5 Pro重新发布是Google 2026 H2重夺frontier榜首的关键尝试——PM需重新评估Google API在采购清单中的位置 1) 2M context意味长文档/RAG场景Google有结构性优势；2) 但Google此前Gemini 3.5发布失败重训已损害开发者信任——重新发布需独立eval验证；3) 推理改进意味agent任务可用性提升；4) 与Kimi K3/Fable 5正面竞争——价格或下行；5) PM应等独立eval 1-2周再决策采购。',
+    perspectives: {
+      pm: 'Gemini 3.5 Pro重新发布是低代码AI PM 必须重新评估Google生态价值的触发点 1) 2M context窗口意味长文档处理/RAG场景Google有结构性优势——低代码平台长上下文场景应优先评估Google；2) 但首次发布失败重训已损害信任——PM需等独立eval（Artificial Analysis、LMArena）1-2周再决策；3) Google Distribution（Workspace+Android+Vertex）意味一旦能力追平，企业采购倾向Google；4) 价格战加剧——K3开源+Fable 5闭源+Gemini 3.5重启意味低代码平台token成本持续下行；5) PM应启动多供应商评估：Gemini 3.5（长上下文）+ Fable 5（高风险agent）+ K3（成本兜底）三角组合。',
+      investor: 'Gemini 3.5 Pro重新发布是Google 2026 H2 AI叙事的关键拐点 1) 首次发布失败→推倒重训→重新发布——Google AI叙事从"领先"切换到"追赶"，估值倍数或短期承压；2) 但若重夺Index榜首——AI叙事重回正轨，估值修复空间打开；3) 2M context是结构性差异化——长期RAG场景Google或夺份额；4) 价格战（K3开源、Gemini 3.5定价激进）意味整个AI lab毛利率或下行——OpenAI/Anthropic估值倍数或承压；5) 关键观察：7月底独立eval——若Gemini 3.5未夺榜首，Google AI叙事或继续低迷。',
+      brand: 'Gemini 3.5 Pro重构后重新发布是Google AI品牌"透明度叙事"的延续——品牌人抄作业：1) Google主动承认失败+推倒重训+定档重新发布——"承认错误"比"硬发烂品"品牌价值更高，2026最值得抄的透明度案例；2) 重新发布会是品牌事件营销关键时刻——Google应做"工程师复盘直播"或"重构背后的故事"，技术透明度内容是开发者圈最强信任钩子；3) frontier Index榜首重夺是品牌核心KPI——若夺榜首，品牌叙事重写"Google AI领先"；4) 内容营销产出"Gemini 3.5 Pro重构：从失败到重新发布的52天"——失败到翻盘的故事比单纯发布稿强10倍；5) 反思：你的AI品牌是否过度承诺？推迟+透明解释比硬发烂品强。',
+      beginner: 'Google原本要发的Gemini 3.5 Pro模型，因为发现结构性bug，把基础模型推倒重新训练了一遍，现在重新发布了。它支持200万token的上下文窗口（相当于能一次读3000页的文档，远超之前的100万）。Google这次主动承认失败并重做，是为了避免发布有缺陷的产品。你可以关注：Google官方有免费试用入口，长文档分析场景可以试试。'
+    },
+    createdAt: '2026-07-17T02:00:00Z'
+  },
+
+  // === 2026-07-16 (周三) ===
+  {
+    id: '20260716-01',
+    date: '2026-07-16',
+    title: '三大AI教父CEO首次同步主张紧急监管frontier模型：Hassabis+Altman+Anthropic CEO在同一周口径一致',
+    summary: 'Axios 7/16报道，Google DeepMind的Hassabis、OpenAI的Altman、Anthropic CEO在同一周公开主张对frontier AI模型的紧急监管。三大lab首次在监管口径上同步，意味产业incumbents主动寻求"监管护城河"。',
+    source: '其他',
+    sourceUrl: 'https://axios.com/2026/07/16/ai-regulations-openai-anthropic-google',
+    tags: ['#安全', '#协议', '#战略', '#竞争'],
+    accuracyScore: 92,
+    timelinessScore: 93,
+    utilityScore: 90,
+    totalScore: 92,
+    recommendReason: '三大CEO首次同步主张监管frontier是2026 AI政策格局关键拐点 1) 三家同步口径意味incumbents合谋推动"监管护城河"——抬高新进入者门槛；2) 但监管落地节奏缓慢意味短期影响有限；3) 中小lab（Mistral/DeepSeek/Kimi）或被边缘化；4) 对低代码PM意味合规成本将上行；5) 长期看可能催生"regulatory moat"——frontier模型供应商集中度上升。',
+    perspectives: {
+      pm: '三大CEO同步主张监管是低代码AI PM 必须前置评估合规风险的信号 1) frontier模型监管意味企业采购清单倾向"已合规"vendor——OpenAI/Anthropic/Google巩固市场份额，中小lab被边缘化；2) 合规成本上行——PM应在采购合同加"合规责任条款"，避免被vendor合规风险反噬；3) 中小lab（Kimi K3/DeepSeek）或面临监管不确定性——PM应保留多供应商切换能力；4) 监管落地节奏通常慢于产业预期——PM不必恐慌，但应预留合规预算；5) PM应启动"合规Ready"评估：数据驻留、模型审计、用户隐私保护三件套前置部署。',
+      investor: '三大CEO同步主张监管是2026 AI产业格局集中化关键拐点 1) frontier模型监管=incumbents合谋推动"监管护城河"——OpenAI/Anthropic/Google市场份额或巩固；2) 中小lab（Mistral/DeepSeek/Kimi/Qwen）估值倍数或承压——监管不确定性意味商业化路径变窄；3) 监管落地节奏通常以年计——短期估值影响有限，但长期集中度上升意味frontier lab估值上修；4) 监管合规成为新壁垒——AI infra公司（合规/审计/红队）或出现新一波投资机会；5) 风险：监管过度或抑制创新——PM应关注立法节奏，避免过度反应。',
+      brand: '三大CEO同步主张监管是2026 AI品牌"责任感叙事"集中爆发——品牌人抄作业：1) 三家同步口径意味"AI责任感"成为新品牌必备叙事——B端AI品牌无责任感叙事将被淘汰；2) 监管主张是品牌实力信号——能参与监管讨论的lab才是"frontier player"，品牌地位被强化；3) 中小lab面临品牌叙事挑战——需快速跟进"责任感"叙事否则被边缘化；4) 内容营销产出"AI监管时代：企业如何选合规vendor"——合规焦虑是2026 H2 B端最强流量入口；5) 反思：你的AI品牌是否有"责任感叙事"？合规能力是2026 H2 B端品牌核心资产。',
+      beginner: 'Google DeepMind、OpenAI、Anthropic这三家做最强AI的公司老板，在同一周公开说要紧急监管最强大的AI模型（叫frontier model）。简单说就是：最强的AI公司主动要求政府来管自己。这听起来奇怪，但其实有商业逻辑——监管会让小公司更难进入这个领域，大公司反而能保住位置。如果你关心AI发展，可以关注：政府真的开始监管后，可能有些小公司的AI工具用不了了。'
+    },
+    createdAt: '2026-07-16T01:00:00Z'
+  },
+  {
+    id: '20260716-02',
+    date: '2026-07-16',
+    title: '国行Apple Intelligence完成备案：合作方含阿里，国行iPhone AI功能将正式上线',
+    summary: '新浪/网信中国7/15公告，Apple技术开发（上海）的"Apple 智能"大模型7/8已完成备案。合作方含阿里（通义）。国行iPhone用户将正式获得AI功能。标志外资AI在华合规路径走通。',
+    source: '阿里',
+    sourceUrl: 'https://news.sina.com.cn/s/2026-07-15/doc-inihwrrf7924378.shtml',
+    tags: ['#企业应用', '#战略', '#协议', '#竞争'],
+    accuracyScore: 93,
+    timelinessScore: 90,
+    utilityScore: 92,
+    totalScore: 92,
+    recommendReason: '国行Apple Intelligence备案完成是2026外资AI在华合规关键里程碑 1) 阿里成合作方意味苹果选阿里通义作为国行AI后端——阿里获得2亿+iPhone用户流量入口；2) 走通外资AI备案路径意味后续Microsoft Copilot、Google Workspace或跟进；3) 国行iPhone AI上线意味移动端AI分发格局重塑——国内厂商面临苹果系统级AI竞争；4) 数据驻留+合规要求意味苹果需在国行版做架构隔离；5) PM应评估：你的AI产品是否符合国行合规路径？',
+    perspectives: {
+      pm: '国行Apple Intelligence备案完成是低代码AI PM 必须重新评估移动端AI分发格局的信号 1) 苹果选阿里通义作为国行AI后端意味阿里获得2亿+iPhone用户流量入口——PM若做iOS端AI应用需考虑与阿里通义竞合；2) 走通外资AI备案路径意味Microsoft Copilot、Google Workspace或跟进——PM应提前评估外资AI合规风险；3) 国行iPhone AI上线意味系统级AI分发能力——第三方AI App面临"被系统吞噬"风险；4) 数据驻留+合规意味国行版架构需隔离——PM应预留国行版独立开发资源；5) PM应启动"国行合规Ready"评估：备案路径、数据驻留、合作方选择三件套前置布局。',
+      investor: '国行Apple Intelligence备案完成是2026中国AI产业格局重塑关键节点 1) 阿里成合作方意味通义获得2亿+iPhone用户流量入口——阿里AI估值叙事或上修；2) 苹果选阿里而非百度/讯飞意味阿里在大模型赛道获得关键品牌背书——通义品牌价值显著提升；3) 外资AI备案路径走通意味Microsoft/Google或跟进——中国AI市场开放度上行，但国内lab面临更强竞争；4) 国行iPhone AI上线意味国内AI App面临系统级竞争——第三方AI App估值倍数或承压；5) 长期看好：阿里AI生态位巩固，但需观察实际用户使用率。',
+      brand: '国行Apple Intelligence备案完成是2026中外AI品牌合作最具标志性的案例——品牌人抄作业：1) 苹果选阿里作为国行AI合作方——阿里通义品牌获得"苹果背书"是2026最强品牌资产；2) 数据驻留+合规意味国行版Apple Intelligence品牌叙事需独立设计——"为中国用户定制"是有效钩子；3) 外资品牌入华合规路径走通——Microsoft/Google品牌或跟进；4) 内容营销产出"苹果为何选阿里而非百度"——中外AI品牌合作解构类内容是B端品牌最强流量入口；5) 反思：你的品牌是否有"苹果级"合作背书？顶级品牌背书是2026品牌升级最强路径。',
+      beginner: '苹果的AI功能（叫Apple Intelligence）在中国大陆的版本终于通过政府备案可以用了。合作方是阿里巴巴（用阿里的通义大模型作为后端）。这意味着国内用iPhone的用户可以用苹果的AI功能了——比如Siri升级版、智能写作辅助等。简单说：苹果为了在中国卖AI功能，找了阿里合作，过了政府审核。如果你用国行iPhone，最近系统更新后应该能看到这些AI功能。'
+    },
+    createdAt: '2026-07-16T02:00:00Z'
+  },
+
+  // === 2026-07-15 (周二) ===
+  {
+    id: '20260715-01',
+    date: '2026-07-15',
+    title: 'Google+Microsoft+Salesforce+Snowflake+ServiceNow组建企业Agent协议联盟对抗MCP：五巨头争夺企业AI"管道层"标准控制权',
+    summary: 'The Information 7/13报道，Google、Microsoft、Salesforce、Snowflake、ServiceNow达成共享AI后端软件协议，明确针对Anthropic+OpenAI。MCP 18个月已成事实标准，五巨头联盟是企业incumbents的反击。协议控制者将获企业AI部署默认地位。',
+    source: 'Google',
+    sourceUrl: 'https://www.buildfastwithai.com/blogs/ai-news-today-july-13-2026',
+    tags: ['#协议', '#Agent', '#战略', '#竞争', '#企业应用'],
+    accuracyScore: 93,
+    timelinessScore: 92,
+    utilityScore: 96,
+    totalScore: 94,
+    recommendReason: '企业Agent协议标准之争是2026 AI产业格局重塑核心事件 1) 五巨头联盟掌控全球多数企业数据和工作流——若推出连贯协议，企业提供MCP之外的可信替代；2) 但五家公司委员会协调出快速连贯协议在企业软件史上几乎没有先例——MCP的18个月先发优势比新闻稿看起来大；3) 同时所有主要lab（含OpenAI/Anthropic）都是Linux Foundation Agentic AI Foundation成员——市场上刀光剑影，基金会里和气生财；4) 对低代码AI PM意味Agent协议选择增加：MCP vs 企业联盟协议 vs 自建——需评估供应商锁定风险；5) 协议之争听起来枯燥但上次两个（TCP/IP和HTP）决定了谁拥有互联网——Agent连接标准控制者将获未来十年企业AI部署默认地位。',
+    perspectives: {
+      pm: '企业Agent协议标准之争是低代码平台2026最关键架构决策之一 1) 五巨头联盟掌控Salesforce CRM+ServiceNow ITSM+Snowflake数据+Google/Microsoft云——若推出统一协议，企业Agent可原生接入主流数据源和工作流，不必绕道MCP；2) MCP的18个月先发优势+开源生态+41%企业采用率意味先发壁垒极高——五巨头协议需提供MCP无法覆盖的企业级能力才能差异化；3) 低代码AI平台必须做"协议双适配"——同时支持MCP和企业联盟协议，否则可能被企业客户排除；4) 同时关注Google已将MCP写入Agent Development Kit——意味Google可能"两条腿走路"；5) PM应提前评估：你的Agent技术栈是否被单一协议锁定？',
+      investor: '五巨头Agent协议联盟是2026企业AI"管道层"投资格局分水岭 1) 协议控制者=企业AI部署的"默认入口"——类比TCP/IP和HTP决定了互联网所有者，Agent协议标准将定义未来十年企业AI市场格局；2) Salesforce+ServiceNow+Snowflake collectively touch most of the world enterprise data——若联盟协议落地，Anthropic/OpenAI在企业数据接入上被边缘化风险上升；3) 但五公司委员会出快速连贯协议在企业软件史无先例——协调成本或导致"纸面联盟"实际落地慢于预期；4) MCP先发优势+Anthropic品牌势能意味"协议之战"或持续2-3年而非速决——长期利好提供跨协议适配层的中间件公司；5) Linux Foundation Agentic AI Foundation是所有玩家的"公共地面"——最终标准或由基金会而非市场联盟决定。',
+      brand: 'Agent协议之战是2026 AI品牌"基础设施叙事"最强话题——品牌人抄作业：1) "你的Agent连接什么标准"将取代"你的Agent用什么模型"成为B端决策点——品牌叙事从模型层切换到协议层；2) 五巨头联盟=incumbents品牌联合体 vs Anthropic MCP=challenger品牌——两类品牌叙事都有传播价值；3) 内容营销产出"MCP vs 企业联盟协议：Agent标准选择指南"——B端协议选择焦虑是2026 H2最强流量入口；4) 低代码平台品牌定位："我们是协议中立的"——不绑定单一标准是最强信任资产；5) 反思：你的AI产品品牌是否过度绑定单一协议/模型？多协议适配是2026 H2标配。',
+      beginner: 'Google、微软、Salesforce等五家大公司联合搞了一套新的AI Agent后端连接标准，想跟Anthropic的MCP（一种让AI工具连接外部数据的协议，已经成为行业默认标准18个月了）竞争。简单说就是：谁控制了Agent怎么连接企业数据的"管道标准"，谁就能在未来十年占据企业AI市场的默认地位——就像当年谁控制了互联网协议谁就控制了互联网一样。'
+    },
+    createdAt: '2026-07-15T01:00:00Z'
+  },
+  {
+    id: '20260715-02',
+    date: '2026-07-15',
+    title: 'Meta发布Muse Spark 1.1自主Agent模型：原生多子代理协调+激进定价，Meta双倍算力投资后首份对外AI能力产品化答卷',
+    summary: 'BuildFastWithAI 7/13报道，Meta发布Muse Spark 1.1，专为自主agent、软件开发和工具使用设计。支持多子代理协调运行长链条多步骤任务。继上周双倍算力承诺（Samsung供应+$10亿Alberta基地）后，Meta正从自有应用转向对外销售AI能力。',
+    source: 'Meta',
+    sourceUrl: 'https://www.buildfastwithai.com/blogs/ai-news-today-july-13-2026',
+    tags: ['#发布', '#模型', '#Agent', '#竞争'],
+    accuracyScore: 91,
+    timelinessScore: 93,
+    utilityScore: 93,
+    totalScore: 92,
+    recommendReason: 'Meta Muse Spark 1.1是Meta从社交AI转向企业Agent市场的战略信号 1) 原生多子代理协调意味Meta选择了Kimi K2.6流行的"主agent调度N个子agent"架构——低代码Agent平台需关注是否内化编排还是留给框架；2) Meta上周双倍算力承诺意味Muse Spark激进定价有算力支撑；3) Meta此前agent模型在长程任务可靠性上翻过车——独立eval未出，PM需谨慎评估；4) 激进定价+开源路线若延续意味Meta可能复制Lama策略降维打击agent市场；5) PM应关注Muse Spark是否提供BYOK或自托管选项。',
+    perspectives: {
+      pm: 'Meta Muse Spark 1.1原生多子代理协调是2026 Agent架构趋势关键验证点 1) internal dispatch（模型内化子agent调度）vs LangGraph/自定义调度器——若Muse Spark内化编排可可靠性，低代码Agent平台可大幅简化并行度配置复杂度；2) Meta此前agent模型长程任务可靠性不佳——PM需等独立eval再决策；3) 激进定价+Meta双倍算力承诺意味agent市场价格战即将到来——低代码平台token成本下降是利好；4) 若Muse Spark延续Lama开源路线意味Meta降维打击agent市场——自托管agent模型成为现实选项；5) PM应关注Muse Spark是否支持BYOK和自托管。',
+      investor: 'Muse Spark 1.1是Meta AI对外商业化战略首份答卷 1) Meta双倍算力承诺意味AI基础设施投资从自家应用切换到对外销售——Meta AI收入模型从zero到正；2) 激进定价策略意味Meta可能复制Lama开源降维打击——对OpenAI/Anthropic的agent定价造成下行压力；3) Meta此前frontier模型在开发者mindshare上落后御三家——Muse Spark聚焦agent niche是差异化策略；4) 多子代理协调架构是agent token消耗放大器——ARPU上行空间打开；5) 关键风险：Meta agent模型历史可靠性不佳+独立eval未出。',
+      brand: 'Muse Spark 1.1是Meta AI品牌从社交AI切换到企业Agent的关键节点——品牌人抄作业：1) Meta品牌叙事从AI for social good切换到AI for enterprise agents——品牌定位多元化是降低政策风险的策略；2) 多子代理协调是绝佳可视化素材——60秒视频胜过10篇稿；3) Meta双倍算力承诺是品牌实力信号——有算力支撑激进定价比单纯说便宜更有说服力；4) 内容营销产出Muse Spark vs GPT-5.6 vs Claude Agent任务横评——agent能力横评是2026 H2最强流量入口；5) 反思：你的AI品牌是否还停留在对话能力？切换到多代理协同叙事。',
+      beginner: 'Meta（Facebook母公司）发布了一个新的AI模型叫Muse Spark 1.1，专门用来做自主AI助手（agent）。它的特点是能让一个主AI助手同时调度很多小AI助手并行工作，完成复杂的多步骤任务。Meta最近投入了大量资金买算力（包括和三星合作、在加拿大阿尔伯塔建10亿美元的基地），这个模型是Meta从给自己用转向对外卖AI能力的第一步。'
+    },
+    createdAt: '2026-07-15T02:00:00Z'
+  },
+  {
+    id: '20260715-03',
+    date: '2026-07-15',
+    title: 'Cloudflare开放x402 Agent支付网关候补名单：基于HTP 402协议实现Agent机器对机器即时付费，重构Agent经济的收银台基础设施',
+    summary: 'BuildFastWithAI 7/13报道，Cloudflare开放x402 Monetization Gateway候补名单。基于x402协议（复活HTP 402 Payment Required状态码），让网站/AP/数据集对AI agent即时收费。Agent访问资源后接收机器可读价格，编程支付后继续访问，无需账号/AP key/人工结账。',
+    source: '其他',
+    sourceUrl: 'https://www.buildfastwithai.com/blogs/ai-news-today-july-13-2026',
+    tags: ['#Agent', '#发布', '#协议'],
+    accuracyScore: 90,
+    timelinessScore: 92,
+    utilityScore: 94,
+    totalScore: 92,
+    recommendReason: 'x402 Agent支付网关是2026 Agent经济基础设施关键拼图 1) Cloudflare代理全球约20%的web流量——若x402成为标准，Cloudflare自动成为Agent经济的收银台和收费站；2) 传统点击+广告经济已被AI生成搜索结果结构性破坏——x402机器付费是替代方案的首选候选；3) 对低代码AI PM意味Agent需内置支付能力：低代码平台需新增Agent预算控制+自动支付组件；4) 定价机制是关键变量：价格定在分级美分还是防御性高价决定Agent生态是丰富还是封闭；5) PM应关注x402与现有AP计费模式的兼容性。',
+    perspectives: {
+      pm: 'x402 Agent支付网关是低代码AI平台必须关注的新基础设施层 1) 当Agent代替人类浏览web时，传统广告+点击变现模式失效——x402让内容方按Agent访问收费，低代码平台需为Agent内置预算控制+自动支付能力；2) Agent访问后机器报价后编程支付后继续的无需账号流程意味低代码平台需重新设计Agent的资源访问pipeline；3) 价格发现机制是PM核心关注点：分级美分vs防御性高价——低代码平台需支持最高预算上限+多供应商比价策略；4) Cloudflare代理全球约20%流量意味x402可快速规模化——PM应提前适配而非观望；5) 你的Agent是否遇到了访问被拒需登录的困境？x402是结构性解决方案。',
+      investor: 'x402是Cloudflare从CDN升级到Agent经济收费站的战略支点 1) Cloudflare代理全球约20% web流量——若x402成为Agent机器付费标准，Cloudflare自动成为Agent经济收银台并抽成每笔交易；2) 传统广告+点击经济被AI生成搜索结构性破坏——内容方急需新变现模式，x402是成熟候选；3) 类比Stripe让人工在线支付变简单，x402让Agent机器支付变简单——若Agent经济规模达到预期，x402或成Agent经济的Stripe；4) 关键变量是定价机制：分级美分vs防御性高价决定Agent经济是丰富还是封闭；5) 关注x402协议是否开源+多供应商支持。',
+      brand: 'x402是2026 Agent经济品牌叙事基础设施层最强话题——品牌人抄作业：1) 你的内容如何向Agent收费将取代你的内容如何向人类收费成为媒体品牌新话题；2) Cloudflare品牌从CDN/web安全升级到Agent经济基础设施——品牌定位升级是市值催化剂；3) 内容营销产出x402 Agent付费时代内容方生存指南——媒体的变现焦虑是2026 H2最强流量入口；4) 低代码平台品牌定位我们支持Agent自动支付——Agent内置支付能力是新差异化锚点；5) 反思：你的产品是否还只面向人类用户？Agent用户是新增长点。',
+      beginner: 'Cloudflare（一家帮网站加速和保护的公司，全球约20%的网站流量经过它）开放了一个新功能的候补名单：叫x402支付网关。它让AI助手（Agent）访问网站或数据时可以自动付费——不需要人工注册账号或输入密码。简单说就是给AI助手装了个自动钱包，访问收费内容时自己就付钱了。这可能会改变整个互联网的赚钱方式：从人类看广告变成AI自动付费。'
+    },
+    createdAt: '2026-07-15T03:00:00Z'
+  },
+  {
+    id: '20260715-04',
+    date: '2026-07-15',
+    title: 'Goldman Sachs正式向客户推荐中国AI模型：DeepSeek/Kimi/GLM-5/Qwen占据全球开源Top5，80-90%能力+开源价格经济学不可忽视',
+    summary: 'BuildFastWithAI 7/13引用CNBC报道，Goldman Sachs发布分析向客户推荐具体中国AI模型。DeepSeek V4、Kimi K2.6、GLM-5、Qwen3.5占据全球open-weight前五中的四席。中国模型以80-90%的前沿能力+开源价格交付（DeepSeek约$0.44/M tokens vs GPT-5.6 Sol $30/M），68倍成本差距对高量低风险工作负载不可忽视。',
+    source: '其他',
+    sourceUrl: 'https://www.buildfastwithai.com/blogs/ai-news-today-july-13-2026',
+    tags: ['#企业应用', '#竞争', '#战略', '#模型'],
+    accuracyScore: 92,
+    timelinessScore: 91,
+    utilityScore: 95,
+    totalScore: 93,
+    recommendReason: 'Goldman Sachs推荐中国模型是2026企业AI采购逻辑分水岭 1) 华尔街最保守的银行formalize中国模型推荐——意味中国模型从好奇心切换到企业采购清单——合规和品牌接受度门槛已被跨越；2) 80-90%前沿能力+开源价格经济学对高量低风险工作负载不可忽视——$0.44 vs $30是68倍差距；3) 同期OpenAI/Anthropic/Google联合封锁中国lab蒸馏——美国资本同时防御和推荐中国AI；4) 对B端PM意味AI采购必须建立前沿+开源中国模型双层策略：前沿模型做高风险任务，中国开源模型做高量任务；5) Alibaba Qwen3.6-Max-Preview本月落地agentic coding改进——值得PM追踪评估。',
+    perspectives: {
+      pm: 'Goldman Sachs推荐中国模型是企业AI采购策略必须重视的信号 1) 华尔街最保守的银行formalize推荐意味合规门槛已被跨越——B端PM可更自言地在采购清单中加入中国开源模型作为高量任务选项；2) 低代码AI平台必须支持多模型路由：高风险任务路由到GPT-5.6/Claude，高量任务路由到DeepSeek/Qwen——68倍成本差距意味不支持的platform将被客户淘汰；3) Alibaba Qwen3.6-Max-Preview本月落地agentic coding改进——低代码coding场景的中国模型+agent组合值得追踪；4) 同期美国lab联合封锁中国lab蒸馏——PM需关注政策风险；5) 智谱创始人本周公开倡导frontier AI应广泛可及——品牌叙事值得关注。',
+      investor: 'Goldman Sachs推荐中国模型是2026 AI产业成本曲线关键信号 1) 华尔街formalize推荐意味中国open-weight模型进入主流企业采购清单——市场份额加速增长；2) 80-90%前沿能力+开源价格的经济学对OpenAI/Anthropic的定价权构成结构性压力——高量低风险工作负载将大规模迁移到中国模型；3) 但同期美国lab联合封锁中国lab蒸馏——意味美国frontier lab试图通过防蒸馏维持能力差距；4) 中国lab战略清晰：DeepSeek主打成本，Kimi主打agent，GLM-5主打企业，Qwen主打开源生态——差异化竞争；5) 关键风险：地缘政治+美国lab防蒸馏+合规政策——中国模型采购的政策折价需计入估值。',
+      brand: 'Goldman Sachs推荐中国AI模型是2026企业AI品牌采购叙事转折点——品牌人抄作业：1) 华尔街最保守银行formalize推荐意味中国AI模型品牌从地缘风险切换到理性采购选择——品牌污名化已被经济理性打破；2) 内容营销产出中国AI模型采购指南——企业采购焦虑是2026 H2最强流量入口；3) 低代码AI品牌定位我们支持多模型路由含中国开源模型——成本优化能力是新差异化锚点；4) 智谱创始人frontier AI应广泛可及品牌叙事值得关注——AI民主化的中国版本；5) 反思：你的AI产品是否还只绑定西方前沿模型？中国开源模型是成本优化必选项。',
+      beginner: '高盛（Goldman Sachs，华尔街最有名的投资银行）正式发布分析报告，建议客户使用中国开发的AI模型。原因很简单：中国的开源AI模型（如DeepSeek、Kimi、智谱GLM-5、阿里Qwen）能提供西方顶级模型80-90%的能力，但价格只有1/68（比如DeepSeek每百万token约$0.44，而GPT-5.6 Sol要$30）。对于大量的日常AI任务来说，这个性价比差距太大了。这说明中国的AI模型已经从被好奇的对象变成了正式的企业采购选项。'
+    },
+    createdAt: '2026-07-15T04:00:00Z'
+  },
+  {
+    id: '20260715-05',
+    date: '2026-07-15',
+    title: 'Anthropic Project Glasswing扩展至15国150组织：用受限Mythos模型自动发现+修补关键基础设施漏洞，防御性AI从概念验证走向规模化部署',
+    summary: 'BuildFastWithAI 7/13报道，Anthropic将Project Glasswing从50个初始合作伙伴扩展至15国150个组织。Glasswing使用受限Claude Mythos网络安全模型发现和修补关键代码库漏洞——覆盖公用设施、医院、金融系统和资源不足的开源项目。同期Five Eyes警告frontier AI将变革攻击性网络能力。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.buildfastwithai.com/blogs/ai-news-today-july-13-2026',
+    tags: ['#安全', '#Agent', '#企业应用', '#开源'],
+    accuracyScore: 93,
+    timelinessScore: 90,
+    utilityScore: 91,
+    totalScore: 91,
+    recommendReason: 'Project Glasswing 3倍扩展是防御性AI规模化部署标志事件 1) Five Eyes警告frontier AI将数月内变革攻击性网络能力——防御方必须用同等级模型以机器速度修补漏洞；2) 150个关键组织依赖单一供应商模型和披露管道——集中风险值得关注，但对比自主AI勒索替代方案，扩展Glasswing是正确权衡；3) 对低代码AI PM意味安全场景Agent从概念验证切换到规模化部署——低代码平台需考虑安全Agent作为产品线；4) 机器速度修补vs机器速度攻击是2026 AI安全核心叙事——低代码平台可借鉴自动漏洞发现+修补pipeline；5) Anthropic通过Glasswing建立B端安全信任资产——品牌价值巨大。',
+    perspectives: {
+      pm: 'Project Glasswing 3倍扩展是低代码AI平台安全Agent产品线的需求验证 1) 15国150组织（含公用设施/医院/金融）规模化部署意味AI自动发现+修补漏洞从概念验证切换到production——低代码平台应评估安全Agent作为垂直产品线的市场需求；2) 受限Mythos模型+组织审批门控的模式意味低代码平台若做安全Agent需设计类似的能力门控机制；3) 集中风险（150组织依赖单一vendor）意味市场需要第二/第三方选项——低代码平台若能提供中立安全Agent有差异化空间；4) 机器速度修补vs机器速度攻击意味低代码平台需为Agent内置安全扫描+自动修补pipeline；5) 首个自主AI勒索意味防御性AI不是可选项——PM应将安全Agent能力纳入产品路线图。',
+      investor: 'Project Glasswing扩张是Anthropic企业安全品牌+收入双增长信号 1) 150组织依赖Anthropic受限模型意味切换成本极高——企业客户粘性上升；2) Five Eyes警告意味防御性AI市场从可选切换到必需——TAM快速扩张；3) Anthropic通过Glasswing建立安全信任资产——品牌溢价支撑更高企业定价；4) 集中风险意味市场需要多供应商选项——利好second-mover；5) Mythos模型作为受限/门控产品意味Anthropic产品分层策略清晰：Claude通用+Mythos安全门控——不同层级不同定价。',
+      brand: 'Project Glasswing是2026 AI品牌安全信任叙事最强案例——品牌人抄作业：1) Anthropic通过用AI保护关键基础设施品牌叙事建立差异化定位——不只是最强的AI而是最值得信任的AI；2) 15国150组织规模化部署是最强社会价值品牌素材——胜过任何参数规模宣传；3) 机器速度修补vs机器速度攻击是绝佳品牌叙事框架：Anthropic是守护者而非武器商——品牌定位清晰；4) 内容营销产出Project Glasswing案例研究——真实impact story是最强信任钩子；5) 反思：你的AI品牌是否只有性能叙事？切换到安全+信任+社会价值叙事。',
+      beginner: 'Anthropic（Claude的开发商）把一个叫Project Glasswing的项目扩大了3倍——从50个合作组织扩展到15个国家的150个组织。这个项目用一个特别强大的AI模型（叫Mythos）来自动发现和修补重要软件系统中的安全漏洞——比如医院、电力公司、银行使用的软件。这是因为最近出现了首个完全自主的AI黑客勒索事件，防守方也需要用同样强大的AI来自动修补漏洞，速度要跟上AI攻击的速度。'
+    },
+    createdAt: '2026-07-15T05:00:00Z'
+  },
+
   // === 2026-07-14 (周一) ===
   {
     id: '20260714-01',
