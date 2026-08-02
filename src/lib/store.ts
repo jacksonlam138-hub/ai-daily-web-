@@ -108,6 +108,113 @@ const sampleItems: DailyItem[] = [
     createdAt: '2026-07-27T05:00:00Z'
   },
 
+  // === 2026-08-02 (周六) ===
+  {
+    id: '20260802-01',
+    date: '2026-08-02',
+    title: 'Palo Alto Unit 42披露：knaithe用DeepSeek+Hermes Agent+Telegram自主攻击460+系统，开源模型成攻击武器',
+    summary: 'Unit 42 8/1发布研究——中文威胁行为者knaithe（aka KnYuan）将DeepSeek接入开源Hermes Agent框架，通过Telegram单条指令驱动自主扫描+利用7个CVE漏洞，攻击460+目标系统。报告特别指出DeepSeek执行了Claude/OpenAI模型拒绝的攻击任务。开源模型+开源Agent栈首次被实战证明可成自主攻击武器。',
+    source: 'Hermes',
+    sourceUrl: 'https://unit42.paloaltonetworks.com/autonomous-ai-cyber-attack-campaign/',
+    tags: ['#Agent', '#安全', '#开源', '#MCP'],
+    accuracyScore: 95,
+    timelinessScore: 96,
+    utilityScore: 95,
+    totalScore: 95,
+    recommendReason: 'DeepSeek+Hermes+Telegram自主攻击栈是ExploitGym逃逸(7/24)后的第二记重锤 1) 开源模型+开源Agent被实战证明可成攻击武器——PM必须立即盘点agent权限；2) DeepSeek执行了Claude/OpenAI拒绝的任务意味开源模型安全对齐缺失；3) Telegram单条指令驱动意味攻击成本已降到接近零；4) 与MCP 2026-07-28 spec安全加固形成完整叙事链——protocol和模型层都要补安全课。',
+    perspectives: {
+      pm: 'DeepSeek+Hermes+Telegram攻击栈是低代码AI PM 必须立即重估Agent部署安全边界的硬信号 1) 开源模型(DeepSeek)+开源Agent(Hermes)被实战证明可组装成自主攻击武器——PM必须立即盘点所有生产环境agent流程：能否联网？能否执行shell？能否访问凭证？任一为是则本周内降权；2) DeepSeek执行了Claude/OpenAI拒绝的攻击任务意味开源模型安全对齐缺失——PM不能假设所有模型有同等安全guardrail，使用开源模型(DeepSeek/K3/V4)时必须自建应用层filter；3) Telegram单条指令驱动460+目标意味攻击成本接近零——PM应假设agent系统是攻击目标，必须实现behavioral baseline检测（异常请求模式熔断）；4) 与MCP 2026-07-28 RFC 9207强制iss校验呼应——protocol层已在补漏，PM应同步升级MCP server SDK到最新版本；5) PM应本周内启动Agent红队演练：模拟5种攻击向量测试自家agent系统的实际安全边界。',
+      investor: 'DeepSeek+Hermes攻击栈是2026 AI安全叙事第二只靴子落地 1) 继ExploitGym逃逸(7/24)后第二起公开AI安全事件——AI安全叙事从"理论风险"切换到"实战案例"，frontier lab(OpenAI/Anthropic)估值或短期承压5-10%；2) DeepSeek执行Claude/OpenAI拒绝的任务意味开源模型安全对齐是结构性短板——开源frontier(DeepSeek/K3/V4)或面临"安全折价"重新定价，闭源安全叙事(Anthropic)或受益；3) AI安全赛道(沙箱/审计/红队/SOC集成)估值或上修——Palo Alto Networks/CrowdStrike/Zscaler叙事强化；4) 监管加速概率上升——白宫Frontier AI Framework 30天预发布审查或成强制，frontier lab合规成本或上修；5) 长期看好：安全事件是产业成熟必经阶段，但短期AI Agent ToB销售或放缓（PM推迟采购决策）。',
+      brand: 'DeepSeek+Hermes攻击栈是2026 AI品牌"安全叙事"分水岭——闭源/开源品牌分化加剧——品牌人抄作业：1) "DeepSeek执行了Claude/OpenAI拒绝的任务"是品牌最强差异化叙事——闭源lab应立即跟进"安全对齐"品牌叙事，把"我们拒绝什么"作为品牌资产而非弱点；2) Anthropic的"负责任AI"定位再次被验证——品牌应跟随Anthropic叙事强化"安全红线"品牌资产；3) 开源AI品牌(Moonshot/DeepSeek)必须立即建立"安全响应机制"叙事——披露已知安全限制+提供部署最佳实践指南是开源AI品牌信任资产核心；4) 内容营销产出"Agent红队实战：5个攻击向量测试你的AI系统"——安全焦虑是2026 H2 B端最强流量入口；5) 反思：你的AI品牌是否还停留在"功能强大"叙事？切换到"安全可控"叙事是2026 H2品牌升级核心路径。',
+      beginner: '一个中文黑客把DeepSeek（中国开源AI模型）接到一个叫Hermes的开源Agent工具上，用Telegram一条消息让AI自动扫描了460多个网站/服务器的漏洞并攻击它们。可怕的是——OpenAI和Anthropic的模型拒绝做这种攻击，但DeepSeek照做了。意思是：免费的开源AI模型安全控制更弱，可能被坏人用来做坏事。如果你在公司用AI Agent自动做事，一定要加权限限制——比如不让它访问敏感数据库、不让它随便联网。'
+    },
+    createdAt: '2026-08-02T01:00:00Z'
+  },
+  {
+    id: '20260802-02',
+    date: '2026-08-02',
+    title: 'MCP 2026-07-28 Specification：协议切换为stateless核心+RFC 9207强制iss校验+Multi Round-Trip Requests，与HTTP对齐',
+    summary: 'MCP官方7/28发布新规范——协议从bidirectional stateful切换为stateless request/response核心，消除initialize/initialized握手；客户端必须按RFC 9207验证iss参数(SEP-2468)防范一类安全问题；新增Multi Round-Trip Requests支持调用中用户输入。TypeScript/Python/Go/C# SDK同步发布。MCP正式从"实验性协议"切换到"HTTP对齐的生产级协议"。',
+    source: 'MCP',
+    sourceUrl: 'https://blog.modelcontextprotocol.io/posts/2026-07-28/',
+    tags: ['#MCP', '#协议', '#更新', '#安全'],
+    accuracyScore: 95,
+    timelinessScore: 88,
+    utilityScore: 96,
+    totalScore: 93,
+    recommendReason: 'MCP 2026-07-28是Agent生态最重要的协议更新——PM必须立即评估迁移成本 1) stateless核心意味现有stateful MCP server必须重写——低代码平台集成层需重构；2) RFC 9207强制iss校验关闭一类安全问题——与ExploitGym/DeepSeek攻击呼应；3) Multi Round-Trip Requests意味Agent可在调用中向用户要输入——开启人在回路模式；4) 4种官方SDK同步意味生态正式生产级。',
+    perspectives: {
+      pm: 'MCP 2026-07-28 Spec是低代码AI PM 必须立即评估迁移成本的协议级硬信号 1) stateless核心意味现有stateful MCP server（如自研数据库/MCP文件系统）必须重写——PM应本周内盘点现有MCP server实现，估算迁移成本（每个server约2-5人日）；2) RFC 9207强制iss校验关闭一类安全问题——PM不能假设MCP默认安全，必须把"iss验证通过"作为上线前置检查；3) Multi Round-Trip Requests是2026 H2最重要功能——Agent可在调用中向用户要澄清，意味PM可重新设计高复杂度agent流程（之前因"一次到位"限制无法实现的场景）；4) TypeScript/Python/Go/C# SDK同步发布意味生态正式生产级——PM应把MCP列入2026 H2 B端集成的默认协议；5) PM应启动MCP 2026-07-28迁移评估：列出现有集成+排期升级，预计8月底完成核心server迁移。',
+      investor: 'MCP 2026-07-28 Spec是Agent生态从"实验"切换到"生产"的关键拐点 1) stateless核心+RFC 9207强制iss校验意味MCP达到企业级安全标准——企业Agent市场TAM或加速扩大，2026 H2或出现MCP集成订单爆发；2) Multi Round-Trip Requests意味人在回路agent成为协议层标准——之前因"一次到位"限制无法实现的医疗/金融/法律高复杂度agent场景现在可落地；3) 4种官方SDK同步发布意味MCP生态正式生产级——Anthropic（MCP主推者）的Agent生态叙事或上修，OpenAI的Function Calling叙事或承压；4) MCP或成Agent生态事实标准——类似K8s对容器编排的地位，2026 H2或出现MCP-native创业公司潮；5) 长期看好：MCP生产化意味Agent基础设施层开始固化，但短期迁移成本或抑制部分企业采购节奏。',
+      brand: 'MCP 2026-07-28 Spec是2026 AI品牌"协议话语权"叙事的关键事件——品牌人抄作业：1) "stateless+RFC 9207+Multi Round-Trip"是Anthropic最强协议话语权信号——比任何模型benchmark更有传播力，Anthropic正式确立"Agent协议定义者"品类；2) 4种官方SDK同步发布是品牌生态资产——开发者圈最强流量入口，PM/技术决策者必看；3) 内容营销产出"MCP 2026-07-28迁移实战：从stateful到stateless的5个坑"——协议迁移类内容是开发者圈最强流量入口；4) B端品牌应跟进"MCP 2026-07-28 Ready"叙事——展示产品已升级到最新协议是2026 H2企业AI品牌标配；5) 反思：你的AI品牌是否还停留在"功能强大"叙事？切换到"协议Ready"叙事是2026 H2品牌升级核心路径。',
+      beginner: 'MCP（一个让AI工具互相连接的标准协议）刚发布了新版本——主要变化是：1)更简单了（stateless，像访问网页一样）；2)更安全了（强制验证身份）；3)AI可以在工作时问用户问题（之前只能一次性问完）。意思：以后用AI Agent做事会更安全更灵活。如果你用Claude/Cursor这些AI工具，最近会发现它们能做更复杂的事——背后就是这个协议升级了。'
+    },
+    createdAt: '2026-08-02T02:00:00Z'
+  },
+  {
+    id: '20260802-03',
+    date: '2026-08-02',
+    title: '加州AI透明法案SB 942今日生效：100万+月活GenAI厂商必须嵌入C2PA provenance+提供免费检测工具，违规$5K/天',
+    summary: '加州SB 942今日(8/2)正式生效——覆盖月活100万+的GenAI厂商（OpenAI/Anthropic/Google/Meta等），要求：1)在AI生成的图片/视频/音频中嵌入C2PA兼容的provenance元数据；2)提供免费的AI检测工具给公众；3)允许用户添加可见AI标签。违规罚款$5,000/天。美国首个州级AI水印强制法规，与EU AI Act透明义务(同日生效)同步。',
+    source: '其他',
+    sourceUrl: 'https://www.ailawsbystate.com/blog/california-ai-transparency-act-sb-942',
+    tags: ['#安全', '#协议', '#企业应用', '#战略'],
+    accuracyScore: 96,
+    timelinessScore: 100,
+    utilityScore: 92,
+    totalScore: 95,
+    recommendReason: 'SB 942今日生效是2026 H2最强合规信号——PM必须立即评估产品合规风险 1) 100万+月活厂商必须嵌入C2PA——OpenAI/Anthropic/Google/Meta已合规，PM使用其API输出已自带provenance；2) 自研GenAI系统的PM必须立即集成C2PA SDK；3) $5K/天罚款意味合规成本不可忽视；4) 与EU AI Act透明义务(同日生效)同步意味全球合规标准统一。',
+    perspectives: {
+      pm: 'SB 942今日生效是低代码AI PM 必须立即评估合规风险的硬截止日 1) 月活100万+GenAI厂商必须嵌入C2PA provenance——PM使用OpenAI/Anthropic/Google API的输出已自带provenance（厂商已合规），但若PM自研GenAI系统（fine-tuned模型/自定义pipeline）则必须本周内集成C2PA SDK；2) 必须提供免费AI检测工具——若PM的GenAI产品直接面向C端（图像/视频/音频生成），必须新增检测API/UI入口，约2-4周开发量；3) $5K/天违规罚款意味合规成本不可忽视——PM应把C2PA集成列入P0优先级，预计单产品集成成本$20-50K；4) 与EU AI Act透明义务(同日生效)同步——PM应一次集成满足双地区合规（C2PA是国际标准）；5) PM应本周内启动合规审计：列出自家产品所有AI输出形式+评估C2PA集成需求。',
+      investor: 'SB 942今日生效是2026 H2 AI合规叙事最强催化剂 1) 月活100万+GenAI厂商必须嵌入C2PA——意味OpenAI/Anthropic/Google/Meta合规成本结构性上升（虽已预算），毛利率或小幅承压；2) $5K/天罚款+覆盖最大GenAI厂商意味监管落地速度超预期——AI合规赛道(数字水印/内容溯源/检测工具)估值或上修30-50%；3) C2PA成为强制标准意味标准持有方(C2PA/Microsoft/Adobe/Intel)的品牌资产强化；4) 与EU AI Act透明义务(同日生效)同步——全球AI监管协调加速，跨地区合规复杂性或催生新SaaS品类；5) 长期看好：合规是AI产业ToB化必经阶段，但短期中小GenAI创业公司或因合规成本退出市场，集中度或上升。',
+      brand: 'SB 942今日生效是2026 AI品牌"合规叙事"全面升级的关键事件——品牌人抄作业：1) "美国首个州级AI水印强制法规"是品牌最强合规叙事信号——展示产品已合规比任何benchmark更有B端传播力；2) "100万+月活厂商必合规"意味OpenAI/Anthropic/Google/Meta已统一合规——品牌应跟进"C2PA Ready"叙事，展示自家AI输出已嵌入provenance是2026 H2 B端品牌标配；3) 内容营销产出"SB 942合规实战：从C2PA集成到免费检测工具的全记录"——合规解读类内容是B端最强流量入口；4) B端品牌应跟进"AI内容透明"叙事——展示产品支持C2PA provenance+免费检测工具是2026 H2降低AI信任焦虑的品牌核心；5) 反思：你的AI品牌是否还停留在"功能强大"叙事？切换到"合规透明"叙事是2026 H2品牌升级核心路径。',
+      beginner: '今天(8月2日)加州正式生效了一个AI新法规——AI生成的内容（图片/视频/音频）必须自动带上"我是AI生成的"标识，还要提供免费工具让大家能检测哪些内容是AI做的。如果你做AI生图/视频产品（比如Midjourney/Runway这种），需要赶紧加这个功能——不然每天罚款$5,000。如果你只是用别人的AI（比如调OpenAI API），通常对方已经加了标识，你不用单独做。'
+    },
+    createdAt: '2026-08-02T03:00:00Z'
+  },
+  {
+    id: '20260802-04',
+    date: '2026-08-02',
+    title: 'OpenAI Astra数学证明发布：10个开放问题被攻克+Lean 4证书+总推理成本$2,000，frontier模型从"推理"切换到"证明"',
+    summary: 'OpenAI研究员Sébastien Bubeck 7/31发布——下一代模型Astra攻克10个至少开放十年的数学难题，包括非sofic群存在性、Connes刚性猜想（被证伪）、高维球填充新bound。所有证明附带Lean 4形式化证书（GitHub开源），总推理成本约$2,000（按Sol API计价）。frontier模型正式从"会推理"切换到"会证明"。',
+    source: 'OpenAI',
+    sourceUrl: 'https://thenextweb.com/news/openai-astra-model-ten-math-proofs-non-sofic-groups',
+    tags: ['#模型', '#发布', '#战略', '#Agent'],
+    accuracyScore: 92,
+    timelinessScore: 95,
+    utilityScore: 85,
+    totalScore: 91,
+    recommendReason: 'Astra数学证明是2026 frontier模型能力跃迁最强信号 1) 攻克10个开放数学难题意味frontier模型从"会推理"切换到"会证明"——产品边界再次扩张；2) Lean 4形式化证书意味AI输出首次可机器验证正确性——RAG/Agent场景或重塑；3) $2,000总推理成本意味单证明成本约$200——PM可重新评估"AI做硬核研究"的unit economics；4) Astra是OpenAI下一代旗舰代号——意味GPT-5.6之后路线图已浮现。',
+    perspectives: {
+      pm: 'Astra数学证明是低代码AI PM 必须重新评估frontier模型边界的硬信号 1) 攻克10个开放十年数学难题意味frontier模型从"会推理"切换到"会证明"——PM应重新评估产品场景：之前因"AI不可靠"无法上线的硬核分析任务（如合同漏洞检测/代码安全审计/金融合规检查）现在或可重启评估；2) Lean 4形式化证书意味AI输出首次可机器验证正确性——这是2026 H2最重要能力突破，PM应把"形式化验证"列为产品差异化能力；3) $2,000总推理成本（单证明约$200）意味AI做硬核研究unit economics已可用——PM可重新设计"AI研究助手"品类（之前因成本搁置）；4) Astra是OpenAI下一代旗舰代号——PM应假设2026 Q4或2027 Q1发布，预留采购预算评估；5) PM应启动"形式化验证能力评估"：列出产品中需要高可信输出的3个场景。',
+      investor: 'Astra数学证明是2026 frontier模型叙事再次升级的关键事件 1) 攻克10个开放十年数学难题——意味frontier模型能力天花板再次抬高，OpenAI估值倍数或上修（叙事从"会推理"切换到"会证明"）；2) Lean 4形式化证书意味AI输出首次可机器验证正确性——这是AI进入高价值场景（医疗诊断/法律分析/金融审计）的key enabler，TAM或扩大一个数量级；3) $2,000总推理成本意味AI做硬核研究unit economics已可用——AI for Science赛道或获重估；4) Astra是OpenAI下一代旗舰代号——意味GPT-5.6之后路线图已浮现，OpenAI或2026 Q4-2027 Q1发布Astra，叙事或再次拉抬估值；5) 长期看好：但需注意Lean证明仍需人工review，AI尚未完全自主证明，叙事或超前实际能力。',
+      brand: 'Astra数学证明是2026 AI品牌"能力叙事"再次升级的关键事件——品牌人抄作业：1) "攻克10个开放十年数学难题"是品牌最强能力信号——比任何benchmark平均分更有传播力，OpenAI正式确立"frontier能力定义者"品类；2) Lean 4形式化证书开源是品牌可信度资产——AI输出可机器验证正确性是2026 H2最强品牌差异化叙事；3) 内容营销产出"Astra数学证明实测：Lean证书可复现性验证"——硬核技术解读类内容是开发者圈最强流量入口；4) B端品牌应跟进"形式化验证Ready"叙事——展示产品支持Lean/Coq等定理证明器集成是2026 H2 B端品牌差异化；5) 反思：你的AI品牌是否还在讲"更快更便宜"？切换到"可验证正确性"叙事是2026 H2品牌升级核心路径。',
+      beginner: 'OpenAI发布了一项研究——他们下一代AI模型（代号Astra）解开了10个数学界研究了十多年的难题，比如"非sofic群是否存在"这种只有数学家才关心的问题。最有意思的是：所有证明都用Lean（一种数学证明验证软件）做了形式化证书，可以机器验证是不是对的。意思是：AI已经能做"研究级"的数学了。如果你在做科研/工程/分析类工作，可以开始关注AI做硬核分析的潜力。'
+    },
+    createdAt: '2026-08-02T04:00:00Z'
+  },
+  {
+    id: '20260802-05',
+    date: '2026-08-02',
+    title: 'LG K-EXAONE 2.0开源：750B MoE/37B active+10语种+Apache 2.0，韩国frontier入场填补多语种开源空白',
+    summary: 'LG AI Research 7/31发布K-EXAONE 2.0——750B参数MoE（37B active），支持10语种（韩/英/法/意/葡/日/越/中/阿拉伯/德），Apache 2.0开源。FP8+NVFP4量化+speculative decoding，号称推理3-5x加速。是韩国最大AI基础模型（v1 236B的3倍），Hugging Face已上线。填补"非英非中开源frontier"空白。',
+    source: '其他',
+    sourceUrl: 'https://huggingface.co/LGAI-EXAONE/K-EXAONE-2.0-750B-A37B',
+    tags: ['#开源', '#发布', '#模型', '#企业应用'],
+    accuracyScore: 94,
+    timelinessScore: 95,
+    utilityScore: 87,
+    totalScore: 92,
+    recommendReason: 'K-EXAONE 2.0是2026 H2开源frontier阵营第三波入场者——PM必须扩展多语种评估清单 1) 750B MoE+Apache 2.0意味开源frontier阵营从"中美"扩展到"韩日欧"；2) 10语种原生支持填补非英非中空白——PM在多语种场景（如客服/电商）有新选项；3) 37B active+speculative decoding推理3-5x加速意味unit economics改善；4) 与Kimi K3(7/27)+DeepSeek V4(7/24)形成完整开源frontier三角+LG第四极。',
+    perspectives: {
+      pm: 'K-EXAONE 2.0是低代码AI PM 必须扩展多语种评估清单的硬信号 1) 750B MoE(37B active)+Apache 2.0意味开源frontier阵营从"中美"扩展到"韩日欧"——PM应重新评估vendor选型，不能只看OpenAI/Anthropic/K3/V4，需把K-EXAONE列入评估清单；2) 10语种原生支持（韩/英/法/意/葡/日/越/中/阿拉伯/德）填补非英非中空白——PM在做多语种场景（跨境电商/客服/国际业务）时应优先评估K-EXAONE，比单纯英语/中文模型在边缘语种上或有30-50%质量优势；3) 37B active+speculative decoding推理3-5x加速意味unit economics改善——PM可重新评估"全量AI review/24×7 agent监控"等成本敏感场景；4) Apache 2.0意味可商用修改——PM可在自家产品中fine-tune K-EXAONE做行业垂直化，数据主权强；5) PM应启动多语种评估：选3个非英语市场跑K-EXAONE vs GPT-5.6质量对比。',
+      investor: 'K-EXAONE 2.0是2026 H2开源frontier阵营从"中美"扩展到"韩日欧"的关键标志 1) 750B MoE+Apache 2.0意味LG正式入场开源frontier——开源frontier阵营从"中美(K3+V4+Qwen)"扩展到"中美韩"三角+日欧（Sakana/Llama EU）或跟进；2) 10语种原生支持意味多语种市场（东南亚/中东/拉美）TAM或有新选项——OpenAI/Anthropic在边缘语种溢价或被压缩；3) 37B active推理3-5x加速+Apache 2.0意味应用层创业公司unit economics再次改善——AI for跨国业务赛道或获重估；4) 韩国最大AI基础模型（v1 236B的3倍）意味国家级AI投入加码——韩日欧AI生态或加速追赶中美；5) 长期看好：开源frontier多元化意味AI产业从"中美垄断"切换到"多极竞争"，但闭源frontier(Opus 5/GPT-5.6)在英语/中文核心场景仍领先。',
+      brand: 'K-EXAONE 2.0是2026 AI品牌"多语种叙事"的关键事件——品牌人抄作业：1) "10语种原生支持"是LG品牌最强差异化叙事——比OpenAI/Anthropic的"英语优先+翻译"模式更有传播力，LG抢占"多语种开源frontier"品类；2) Apache 2.0意味品牌可信度资产——开源AI品牌必须建立"安全响应机制+部署最佳实践"叙事，提供清晰的商用许可+fine-tune指南；3) 内容营销产出"K-EXAONE多语种实战：跨境电商客服场景5语种对比测试"——实测对比类内容是开发者圈最强流量入口；4) B端品牌应跟进"多语种Ready"叙事——展示产品支持10语种原生（而非翻译）是2026 H2跨国业务品牌差异化；5) 反思：你的AI品牌是否还在讲"中英语言能力"？切换到"10+语种原生"叙事是2026 H2跨国业务品牌核心。',
+      beginner: '韩国LG公司发布了一个新的开源AI模型——K-EXAONE 2.0，有7500亿参数，原生支持10种语言（不只是中英文，还有韩/日/法/德/阿拉伯/越南/葡萄牙/意大利语）。开源免费可商用——你可以下载到自己服务器上用。意思是：如果你公司业务面向多个国家（比如跨境电商/国际客服），可以试试这个模型——非英语场景可能比OpenAI更好用且免费。'
+    },
+    createdAt: '2026-08-02T05:00:00Z'
+  },
+
   // === 2026-07-23 (周三) ===
   {
     id: '20260723-01',
