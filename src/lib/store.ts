@@ -6822,6 +6822,112 @@ const sampleItems: DailyItem[] = [
     },
     createdAt: '2026-08-12T05:00:00Z'
   },
+  // === 2026-08-14 (周四) ===
+  {
+    id: '20260814-01',
+    date: '2026-08-14',
+    title: 'DeepSeek V4-Pro-0813正式GA：1.6万亿参数/38.4万token输出/SWE-bench 80.6%，开源frontier编码agent再升级',
+    summary: 'DeepSeek 8/12-13发布V4-Pro-0813正式版——1.6万亿参数MoE（~49B active），38.4万token最大输出，SWE-bench Verified 80.6%（开源最高），$0.435/$0.87每百万token定价。相比4月preview版在agent工作流（多步编码/工具调用/网安任务）有显著提升。V4-Flash已于7/31率先GA。',
+    source: '其他',
+    sourceUrl: 'https://www.gmicloud.ai/en/blog/deepseek-v4-pro-steps-out-of-preview-the-0813-build-is-live',
+    tags: ['#发布', '#模型', '#Agent', '#开源'],
+    accuracyScore: 93,
+    timelinessScore: 97,
+    utilityScore: 93,
+    totalScore: 94,
+    recommendReason: 'V4-Pro-0813是开源frontier编码agent的又一次进化——38.4万token输出+80.6% SWE-bench意味长程编码任务已可实战 1) $0.435/$0.87定价比Opus 5便宜6-29倍——unit economics持续改写；2) agent工作流显著提升意味多步工具调用已成熟；3) 与Gemini 3.7 Flash（同日发布）形成开源vs闭源直接竞争。',
+    perspectives: {
+      pm: 'DeepSeek V4-Pro-0813 GA是低代码AI PM必须立即重新评估编码agent采购清单的硬信号。(1) SWE-bench 80.6%开源最高+38.4万token输出意味长程编码任务（全量PR review/多文件重构）已可实战——PM应把V4-Pro-0813接入低代码平台的代码生成/调试/重构模块跑PoC；(2) $0.435/$0.87定价比Opus 5（$5/$25）便宜6-29倍——PM应重算token成本假设，之前因成本搁置的全量代码库AI review/24×7 agent监控或可重启；(3) agent工作流（多步编码/工具调用/网安任务）显著提升意味V4-Pro已可处理复杂工具链调用——PM应评估在低代码平台中用V4-Pro驱动multi-step agent而非简单chat completion；(4) 但高风险决策路径仍需闭源frontier兜底——PM应分层：编码/工具调用用V4-Pro，决策/推理用Opus 5。',
+      investor: 'V4-Pro-0813 GA是2026 H2开源frontier编码能力系统性超越闭源的又一证据。(1) SWE-bench 80.6%开源最高——意味OpenAI/Anthropic在编码场景的溢价或被进一步压缩，闭源lab估值倍数承压；(2) $0.435/$0.87定价比闭源frontier便宜6-29倍——应用层创业公司unit economics持续改善，应用层估值或获重估；(3) 与Gemini 3.7 Flash同日发布意味8月模型发布节奏空前——AI lab竞争白热化，token价格地板或继续下压；(4) DeepSeek已在Vercel AI Gateway达22.6% token volume份额——开源frontier商业化已验证，DeepSeek估值或进一步上修。',
+      brand: 'V4-Pro-0813 GA是DeepSeek品牌叙事从"中国低价模型"切换到"开源frontier编码之王"的关键事件——品牌人抄作业：1) "SWE-bench 80.6%开源最高"是品牌最强品类定义——比综合benchmark分数更有传播力，DeepSeek正式确立"开源编码frontier"品类领导者；2) "38.4万token输出"是品牌最强差异化信号——超长输出能力比任何PPT更有说服力；3) 内容营销产出"V4-Pro-0813 vs Opus 5实测：30个复杂agent任务对比"——实测对比类内容是开发者圈最强流量入口；4) B端品牌应跟进"开源frontier编码Ready"叙事——展示产品支持V4-Pro-0813是2026 H2降低vendor lock-in焦虑的品牌标配；5) 反思：你的AI品牌还在用闭源模型撑门面？开源frontier编码能力已系统性超越闭源。',
+      beginner: '中国公司DeepSeek发布了新版本AI模型V4-Pro-0813——它能写代码修bug的任务得分80.6%，是开源模型里最高的。最长能输出38万字，价格也很便宜。意思是：免费开源的AI模型写代码已经很厉害了。你可以试试用DeepSeek V4-Pro（在chat.deepseek.com或通过API）让它帮你写代码或修bug，看看效果是不是够用。'
+    },
+    createdAt: '2026-08-14T01:00:00Z'
+  },
+  {
+    id: '20260814-02',
+    date: '2026-08-14',
+    title: 'Google Gemini 3.7 Flash发布：3周迭代周期+编码/agent工作流优化+$0.75/$3.75定价，Gemini Spark主力驱动',
+    summary: 'Google DeepMind 8/13发布Gemini 3.7 Flash——距3.6 Flash仅3周。聚焦编码调试/issue解决/agent工作流。Gemini Spark即日起由3.7 Flash驱动。Introductory pricing $0.75/$3.75每百万token至年底。3周迭代周期为Google史上最短，但顶级旗舰模型仍delayed。',
+    source: 'Google',
+    sourceUrl: 'https://www.reuters.com/business/google-unveils-gemini-37-flash-ai-model-coding-agent-workflows-2026-08-13/',
+    tags: ['#发布', '#模型', '#Agent'],
+    accuracyScore: 93,
+    timelinessScore: 98,
+    utilityScore: 88,
+    totalScore: 93,
+    recommendReason: 'Gemini 3.7 Flash 3周迭代节奏+编码/agent定位是Google flash层加速信号 1) 3周周期意味Google flash层已进入持续交付模式——PM需持续跟进；2) $0.75/$3.75定价比V4-Pro-0813贵但仍低于Opus 5——中端编码agent有竞争力；3) 旗舰模型仍delayed与flash高频发布形成反差——Google frontier叙事承压。',
+    perspectives: {
+      pm: 'Gemini 3.7 Flash是低代码AI PM需关注Google flash层持续交付节奏的信号。(1) 3周迭代周期为Google史上最短——PM应建立Google flash层的持续跟踪机制，每3周评估是否升级低代码平台的Gemini集成版本；(2) 聚焦编码调试/issue解决意味Google在垂直场景优化flash——PM应评估Gemini 3.7 Flash在debugging/代码审查场景的性能，或可替代部分Opus 5调用降本；(3) $0.75/$3.75 introductory pricing至年底——PM应锁定introductory价格做成本测算，但需预算年底涨价后的成本跳升；(4) Gemini Spark由3.7 Flash驱动意味Google agent平台已升级——PM应关注Gemini Spark的agent能力是否可用于低代码场景。',
+      investor: 'Gemini 3.7 Flash 3周迭代节奏是Google AI研发产能信号但旗舰delayed形成叙事矛盾。(1) 3周周期为史上最短——意味Google flash层研发产能充沛，但旗舰模型仍delayed意味Google在frontier层仍有瓶颈；(2) $0.75/$3.75定价与V4-Pro-0813（$0.435/$0.87）和Opus 5（$5/$25）形成三角——Google在中端市场有定价权，但面临DeepSeek低价挤压；(3) Gemini Spark由3.7 Flash驱动意味Google agent平台已商业化——agent API收入或成新增长线；(4) 频繁flash发布但旗舰delayed意味Google在"高频中端"vs"低频旗舰"路线上有矛盾——估值叙事或分化。',
+      brand: 'Gemini 3.7 Flash 3周迭代是Google品牌叙事"快速交付"vs"旗舰delayed"的矛盾事件——品牌人抄作业：1) "3周迭代"是品牌最快交付节奏信号——比任何承诺更有说服力，Google抢占"flash层最快交付"品类；2) 但旗舰delayed是品牌叙事矛盾——高频flash发布+旗舰跳票形成"Google做中端很快但做不到顶级"的叙事风险；3) 内容营销产出"Gemini 3.7 Flash vs DeepSeek V4-Pro-0813编码实测"——同日发布的竞品对比是流量炸弹；4) B端品牌应跟进"多模型flash集成"叙事——展示产品支持快速迭代的flash模型是2026 H2品牌标配；5) 反思：你的AI品牌是否过度承诺"旗舰即将发布"？交付节奏比承诺更有品牌价值。',
+      beginner: 'Google今天发布了新AI模型Gemini 3.7 Flash——距离上一个版本才3周，迭代速度很快。主要提升了写代码和自动执行任务的能力。价格也不贵（$0.75/$3.75每百万token）。意思是：Google在中端模型上发版越来越快了。如果你用Google的AI工具（比如Gemini app），可能会感受到它在写代码和回答问题上变好了。去gemini.google.com试试看。'
+    },
+    createdAt: '2026-08-14T02:00:00Z'
+  },
+  {
+    id: '20260814-03',
+    date: '2026-08-14',
+    title: 'Anthropic洽谈$60亿收购以色列AI基础设施公司Decart：Nvidia投资+IPO前最大并购，AI infra军备竞赛升温',
+    summary: 'Reuters/Bloomberg 8/13报道，Anthropic正在洽谈以约$60亿收购以色列Nvidia投资的AI基础设施创业公司Decart——较3个月前估值溢价50%。为Anthropic潜在最大收购，发生在IPO准备期。Decart专注AI推理优化/infra。意味Anthropic从纯模型公司向"模型+infra"垂直整合转型。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.reuters.com/technology/anthropic-talks-buy-decart-ai-source-says-2026-08-13/',
+    tags: ['#融资', '#战略', '#竞争'],
+    accuracyScore: 93,
+    timelinessScore: 97,
+    utilityScore: 87,
+    totalScore: 92,
+    recommendReason: '$60亿Decart收购是Anthropic从"纯模型公司"切换到"模型+infra垂直整合"的标志 1) IPO前最大并购意味Anthropic正在做资产储备+战略叙事；2) Decart推理优化能力意味Anthropic在降本——与DeepSeek低价压力直接应对；3) Nvidia-backed意味AI infra赛道获芯片巨头背书。',
+    perspectives: {
+      pm: 'Anthropic $60亿Decart收购是低代码AI PM需关注"模型公司向infra垂直整合"趋势的信号。(1) Anthropic从纯模型公司向"模型+infra"转型意味AI vendor边界模糊化——PM应评估是否把infra层（推理优化/部署/监控）也纳入Anthropic采购清单，降低多vendor复杂度；(2) Decart专注推理优化意味Anthropic在积极降本——与DeepSeek $0.435/$0.87低价压力直接应对，PM应期待Anthropic后续定价或下修；(3) IPO前最大并购意味Anthropic在做战略叙事+资产储备——PM应关注Anthropic IPO后的产品路线图是否有infra层新产品（如自建推理网关）；(4) Nvidia投资Decart意味芯片巨头在AI infra生态布局——PM应关注Nvidia是否推动Decart+Anthropic的GPU优化方案。',
+      investor: 'Anthropic $60亿Decart收购是2026 AI infra军备竞赛升温+IPO前资产储备的标志事件。(1) $60亿较3个月前估值溢价50%——意味AI infra标的估值正在快速膨胀，Anthropic用溢价锁定战略资产，AI infra赛道或获重估；(2) IPO前最大并购意味Anthropic在做pre-IPO叙事储备——"模型+infra垂直整合"或提升IPO估值倍数；(3) Decart推理优化能力意味Anthropic在积极应对DeepSeek低价压力——垂直整合或改善毛利率，Anthropic估值或上修；(4) Nvidia投资Decart意味AI infra赛道获芯片巨头背书——Nvidia生态从"卖芯片"扩展到"投infra"。',
+      brand: 'Anthropic $60亿Decart收购是品牌叙事从"负责任AI模型公司"切换到"全栈AI平台"的关键事件——品牌人抄作业：1) "$60亿最大收购"是品牌最强战略转型信号——比任何产品发布更有叙事冲击力，Anthropic正式进入"全栈AI平台"品类；2) "IPO前最大并购"是品牌最强pre-IPO叙事——投资者和客户都在看Anthropic能否从"模型公司"升级为"平台公司"；3) 内容营销产出"Anthropic全栈之路：从Claude到$60亿infra收购"——战略转型类内容是B端最强流量入口；4) B端品牌应跟进"全栈AI Ready"叙事——展示产品支持模型+infra一体化采购是2026 H2品牌差异化；5) 反思：你的AI品牌是否还停留在"我们用XX模型"？全栈整合能力是2026 H2品牌升级核心。',
+      beginner: '做Claude的AI公司Anthropic正在谈一个大事——花大约60亿美元买下一家叫Decart的以色列公司。Decart是做AI基础设施的（帮AI跑得更快更省钱的），之前Nvidia（做AI芯片的公司）也投资了它。意思是：Anthropic想从"只做AI模型"变成"既做模型又做基础设施"的全能选手。如果你公司用Claude API，未来可能会看到Anthropic推出更多基础设施服务——比如帮你自己部署AI的服务。'
+    },
+    createdAt: '2026-08-14T03:00:00Z'
+  },
+  {
+    id: '20260814-04',
+    date: '2026-08-14',
+    title: 'OpenAI任命Wiz总裁Dali Rajic为新CRO：9个月内第二任，从Google系挖人补enterprise销售短板',
+    summary: 'OpenAI 8/13宣布任命Dali Rajic为Chief Revenue Officer——Rajic此前为Wiz（Alphabet旗下网安公司）总裁兼COO。9个月内OpenAI第二任CRO（前任Denise Dresser上任仅9个月即被替换）。意味OpenAI enterprise销售组织频繁换帅，企业收入增长承压，IPO前急需补齐B端销售能力。',
+    source: 'OpenAI',
+    sourceUrl: 'https://www.bloomberg.com/news/articles/2026-08-13/openai-hires-new-chief-revenue-officer-after-less-than-a-year',
+    tags: ['#战略', '#竞争'],
+    accuracyScore: 92,
+    timelinessScore: 96,
+    utilityScore: 82,
+    totalScore: 90,
+    recommendReason: 'CRO 9个月内两度换帅是OpenAI enterprise销售能力承压的信号 1) 从Wiz（Alphabet网安子公司）挖人意味OpenAI从Google系补B端销售基因；2) Dresser上任仅9个月被替换意味enterprise revenue未达预期；3) IPO前CRO频繁变动是投资者关注风险点。',
+    perspectives: {
+      pm: 'OpenAI CRO 9个月内二度换帅是低代码AI PM需关注vendor enterprise销售稳定性的信号。(1) 9个月两任CRO意味OpenAI enterprise销售组织不稳定——PM应评估OpenAI企业销售支持质量（SLA/技术支持/定价谈判）是否会因组织变动而波动；(2) 从Wiz（Alphabet网安公司）挖人意味OpenAI在补B端销售短板——Wiz是B2B销售标杆，Rajic或推动OpenAI enterprise销售体系专业化；(3) IPO前换CRO意味OpenAI enterprise收入是IPO估值核心驱动——PM应关注OpenAI是否推出更多enterprise-focused产品（如ChatGPT Enterprise增强版）来支撑收入目标；(4) PM应据此评估多vendor策略——不应过度依赖单一vendor的enterprise支持。',
+      investor: 'OpenAI CRO 9个月两度换帅是IPO前enterprise收入增长承压的明确信号。(1) Denise Dresser上任仅9个月被替换——意味OpenAI enterprise revenue未达内部预期，IPO估值或面临"销售执行力风险折价"；(2) 从Wiz（被Google/Alphabet收购的网安公司）挖人意味OpenAI从Google系补B端基因——但跨界（网安→AI）的销售方法论迁移或有磨合期；(3) IPO前CRO频繁变动是投资者关注风险点——意味OpenAI enterprise收入story不够solid，招股书或需重点披露；(4) 但Rajic有Wiz高速增长经验——若成功复制，OpenAI enterprise收入或加速。',
+      brand: 'OpenAI CRO 9个月两度换帅是品牌叙事"enterprise收入增长承压"的警示——品牌人抄作业：1) "9个月二度换帅"是品牌最强组织不稳定信号——比任何财报更有说服力，意味OpenAI enterprise销售能力仍是短板；2) "从Wiz挖人"是品牌最强B端补短板动作——Wiz是B2B销售标杆，但跨界迁移叙事需验证；3) 内容营销产出"OpenAI enterprise销售能力分析：为什么CRO频繁换帅"——组织分析类内容是B端最强流量入口；4) B端品牌应谨慎对待"OpenAI enterprise合作伙伴"叙事——vendor组织不稳定意味品牌背书有风险；5) 反思：你的AI品牌是否过度绑定OpenAI enterprise叙事？多vendor hedge是2026 H2品牌风险管理核心。',
+      beginner: 'OpenAI（做ChatGPT的公司）又换了负责赚钱的高管——这是9个月内第二次换人了。新来的负责人叫Dali Rajic，之前在一家叫Wiz的网络安全公司当总裁。意思是：OpenAI在企业客户销售方面遇到了困难，需要更有经验的人来帮忙。如果你公司正在考虑买OpenAI的企业版服务，可以关注一下他们的销售团队是否稳定——频繁换高管可能影响服务质量和定价谈判。'
+    },
+    createdAt: '2026-08-14T04:00:00Z'
+  },
+  {
+    id: '20260814-05',
+    date: '2026-08-14',
+    title: 'ChatGPT Ads扩展至5国（英/墨/巴/日/韩）：免费+Go层用户开始看广告，OpenAI从纯订阅模式切换到广告商业化',
+    summary: 'OpenAI 8/11宣布ChatGPT Ads扩展至UK/Mexico/Brazil/Japan/South Korea——8/10发布广告投放政策。广告出现在免费+Go层用户的回答底部，基于对话上下文定向（非关键词），明确标注。意味OpenAI从纯订阅模式切换到广告商业化——ChatGPT正式成为广告平台。',
+    source: 'OpenAI',
+    sourceUrl: 'https://openai.com/index/testing-ads-in-chatgpt/',
+    tags: ['#战略', '#竞争'],
+    accuracyScore: 94,
+    timelinessScore: 92,
+    utilityScore: 88,
+    totalScore: 91,
+    recommendReason: 'ChatGPT Ads 5国扩展是2026 AI商业化模式重大转型——从纯订阅切换到广告 1) 对话上下文定向意味新型"conversational advertising"品类诞生；2) 免费+Go层覆盖意味OpenAI用户基数变现——1B WAU是广告库存基础；3) 对Google search广告和Meta social广告形成直接竞争——AI广告市场或重新洗牌。',
+    perspectives: {
+      pm: 'ChatGPT Ads 5国扩展是低代码AI PM必须关注"conversational advertising"新品类的信号。(1) 对话上下文定向（非关键词）意味新型广告模式——PM应评估低代码平台是否有conversational场景可植入广告（如AI助手回答中推荐SaaS工具），开辟ad-based revenue stream；(2) 免费+Go层覆盖意味OpenAI在用广告收入补贴免费用户成本——PM应关注ad-supported AI是否成为低代码平台的新定价层（free+ads/Pro no ads/Enterprise no ads）；(3) 5国扩展意味OpenAI ads已验证可规模化——PM应评估ChatGPT Ads是否可作为低代码平台的用户获取渠道（在ChatGPT回答中投放产品广告）；(4) 但广告或影响ChatGPT回答质量——PM应关注用户对ads-in-chat的接受度，评估是否影响采购决策。',
+      investor: 'ChatGPT Ads 5国扩展是OpenAI商业化模式从"纯订阅"切换到"订阅+广告"的标志——估值逻辑或重估。(1) ChatGPT ~1B WAU是广告库存基础——若ARPU达到Google search水平的1/3，广告收入或达$100-200亿/年，OpenAI估值或上修；(2) 对话上下文定向意味"conversational advertising"新品类——对Google search广告和Meta social广告形成直接竞争，AI广告市场或重新洗牌；(3) 免费+Go层ads意味OpenAI在用广告补贴免费用户——unit economics改善，IPO story更强；(4) 但用户对ads-in-chat的接受度是关键变量——若用户流失，估值或面临"广告反噬"风险。',
+      brand: 'ChatGPT Ads 5国扩展是2026 AI品牌"商业化叙事"从"工具"切换到"广告平台"的拐点——品牌人抄作业：1) "5国扩展"是品牌最强规模化信号——比US-only测试更有传播力，OpenAI正式进入"AI广告平台"品类；2) "对话上下文定向"是品牌最强差异化——与传统关键词广告区隔，"conversational advertising"是新品类定义；3) 内容营销产出"ChatGPT Ads vs Google Ads vs Meta Ads：广告主该怎么选"——广告平台对比类内容是B端最强流量入口；4) 品牌应立即评估是否在ChatGPT Ads投放——early adopter或获低成本流量红利；5) 反思：你的AI品牌是否还在只投Google/Meta ads？ChatGPT Ads是2026 H2新的流量入口。',
+      beginner: 'OpenAI开始在ChatGPT里放广告了——现在英国、墨西哥、巴西、日本、韩国的免费用户会在AI回答的底部看到广告。广告是根据你聊天的内容来推的（不是像Google那样靠搜的关键词）。意思是：OpenAI开始用广告赚钱了，不再只靠卖会员。如果你想推广自己的产品，可以关注一下ChatGPT Ads——这是一个新的广告渠道，可能比Google广告更精准。'
+    },
+    createdAt: '2026-08-14T05:00:00Z'
+  },
 ]
 
 let dailyItems: DailyItem[] = [...sampleItems]
