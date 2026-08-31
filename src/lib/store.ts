@@ -6928,6 +6928,218 @@ const sampleItems: DailyItem[] = [
     },
     createdAt: '2026-08-14T05:00:00Z'
   },
+  // === 2026-08-25 (周二) ===
+  {
+    id: '20260825-01',
+    date: '2026-08-25',
+    title: 'DeepSeek发布V4-Flash-Vision-Exp：开源frontier补齐视觉短板，ALE/ZeroBench超Claude Opus 4.8超10分，输入成本再降73%',
+    summary: 'DeepSeek 8/24发布V4-Flash-Vision-Exp实验版——在V4-Flash（284B MoE/13B active）基础上新增视觉理解能力。ALE与ZeroBench基准超Claude Opus 4.8达10+分，HCA/CSA压缩技术使输入成本降低73%。实验性发布，正式版待验证。',
+    source: '其他',
+    sourceUrl: 'https://unrot.co/blogs/today-top-ai-news-august-24-2026',
+    tags: ['#发布', '#模型', '#开源', '#竞争'],
+    accuracyScore: 92,
+    timelinessScore: 95,
+    utilityScore: 92,
+    totalScore: 93,
+    recommendReason: 'V4-Flash-Vision补齐了开源frontier最后一块视觉短板 1) ALE/ZeroBench超Opus 4.8达10+分——开源模型首次在视觉基准系统性领先闭源frontier；2) HCA/CSA压缩使输入成本再降73%——多模态token成本结构被改写；3) 实验版发布节奏意味DeepSeek视觉管线已成熟，正式版或加速跟进。',
+    perspectives: {
+      pm: 'DeepSeek V4-Flash-Vision-Exp是低代码AI PM必须立即评估多模态能力采购清单的信号。(1) 开源模型首次在视觉基准（ALE/ZeroBench）系统性领先闭源frontier超10分——PM应重新评估低代码平台的视觉理解模块（截图转页面/表单识别/图表理解）是否可切换到开源方案降本；(2) HCA/CSA压缩使输入成本再降73%——PM应重算多模态token成本假设，之前因图像token成本搁置的批量文档理解/截图批量分析场景或可重启；(3) 实验版（Exp）定位意味能力尚未稳定——PM应以PoC方式接入验证，生产环境等正式版；(4) 视觉+Agent组合意味"看图做事"的agent场景（UI自动化测试/设计稿转代码）已具备模型基础——PM应规划vision-driven agent功能路线。',
+      investor: 'V4-Flash-Vision-Exp是2026 H2开源多模态frontier能力追平并反超闭源的标志事件。(1) 视觉基准超Opus 4.8达10+分——意味闭源lab在多模态层的溢价或被压缩，与文本层的DeepSeek效应重演，闭源lab估值倍数进一步承压；(2) 输入成本再降73%——多模态应用层unit economics持续改善，vision-heavy应用（文档AI/设计工具/质检）创业公司估值或获重估；(3) 284B MoE/13B active的推理成本结构——意味开源多模态可平民化部署，边缘/私有化场景打开；(4) 实验版先行策略意味DeepSeek发布节奏已进入"持续交付"模式——开源frontier迭代速度或持续快于闭源。',
+      brand: 'V4-Flash-Vision-Exp是DeepSeek品牌叙事从"开源编码之王"扩展到"开源多模态frontier"的关键事件——品牌人抄作业：1) "视觉基准超Opus 4.8超10分"是品牌最强品类定义——开源首次在视觉层领先，比综合benchmark更有传播力；2) "输入成本再降73%"是品牌最强差异化信号——成本叙事比能力叙事更能撬动B端决策；3) 内容营销产出"V4-Flash-Vision实测：截图转低代码页面 vs Opus 4.8"——实测对比类内容是开发者圈最强流量入口；4) B端品牌应跟进"开源多模态Ready"叙事——展示产品支持V4-Flash-Vision是2026 H2降低vendor lock-in焦虑的品牌标配；5) 反思：你的AI品牌还把多模态当闭源专属卖点？开源视觉frontier已经登顶。',
+      beginner: '中国公司DeepSeek发了一个新AI模型V4-Flash-Vision-Exp——它现在"能看图了"。在几个测试图片理解的考试里，它比Claude的最强模型还高出10分以上，而且处理图片的费用降了73%。现在还是实验版（可能不太稳定）。意思是：免费开源的AI看图能力也超过大厂付费模型了。你可以去chat.deepseek.com试试传图片让它分析。'
+    },
+    createdAt: '2026-08-25T01:00:00Z'
+  },
+  {
+    id: '20260825-02',
+    date: '2026-08-25',
+    title: '智谱发布GLM-5.3：743B编码模型+百万上下文，CyberGym 84.5%登顶；匿名模型Ox Alpha被99%置信度识别即GLM-5.3',
+    summary: '智谱8/24发布GLM-5.3——743B参数（与5.2同架构），编码能力+50%，100万token上下文，CyberGym 84.5%超Mythos 5（83.8%），Terminal-Bench开源第一。同期研究者Ben Davis以99%置信度指纹识别匿名刷榜模型Ox Alpha即GLM-5.3——其DeepSWE 80%碾压Fable 5的65%与GPT-5.6 Sol的52%。8/27前免费，Hermes Agent与Zed已路由生产流量。',
+    source: '智谱',
+    sourceUrl: 'https://unrot.co/blogs/today-top-ai-news-august-24-2026',
+    tags: ['#发布', '#模型', '#Agent', '#安全'],
+    accuracyScore: 93,
+    timelinessScore: 96,
+    utilityScore: 92,
+    totalScore: 94,
+    recommendReason: 'GLM-5.3+Ox Alpha双事件是国产编码模型的"能力登顶+匿名刷榜被扒"组合拳 1) CyberGym 84.5%+Terminal-Bench开源第一——GLM-5.3在编码与网安双场景登顶；2) Ox Alpha被99%置信度识别意味匿名刷榜时代结束——模型指纹识别成为新透明度机制；3) DeepSWE 80% vs GPT-5.6 Sol 52%——国产模型在真实软件工程任务上拉开28分差距；4) 8/27前免费+Hermes/Zed生产路由——生态采用已在路上。',
+    perspectives: {
+      pm: '智谱GLM-5.3发布+Ox Alpha身份曝光是低代码AI PM需同时关注"能力选项"与"benchmark透明度"的双重信号。(1) 编码+50%、100万上下文、DeepSWE 80%——PM应把GLM-5.3纳入编码agent候选清单，国内部署/合规场景（数据不出境）下是首选之一；(2) CyberGym 84.5%登顶意味网安任务能力已超闭源frontier——PM可评估用GLM-5.3做代码安全扫描/漏洞分析类功能；(3) Ox Alpha被指纹识别意味"匿名刷榜"不再可行——PM选型时应要求vendor提供可验证的身份与复现路径，benchmark可信度成为采购评估维度；(4) 8/27前免费窗口——PM应立即安排PoC测试窗口锁定评估数据。',
+      investor: 'GLM-5.3+Ox Alpha事件是2026 H2国产大模型在编码frontier正面超越闭源的标志。(1) DeepSWE 80% vs GPT-5.6 Sol 52%、Fable 5 65%——真实软件工程任务28分差距意味编码场景的闭源溢价或被重估；(2) 匿名刷榜被99%置信度识别意味benchmark生态透明度提升——好模型藏不住、差模型装不了，行业信息效率改善利好真能力公司；(3) Hermes Agent与Zed已路由生产流量——生态采用先于营收，GLM商业化路径（API+开源双轨）或加速；(4) 智谱连续两代（5.2→5.3）同架构快速迭代——研发产能信号强，国产模型公司估值或获重估。',
+      brand: 'GLM-5.3+Ox Alpha是智谱品牌"能力登顶"与"匿名刷榜被扒"的双刃事件——品牌人抄作业：1) "CyberGym 84.5%登顶+Terminal-Bench开源第一"是品牌最强品类定义——智谱正式确立"编码+网安双料开源之王"品类；2) Ox Alpha身份曝光对智谱是"暗度陈仓被识破"的叙事风险——品牌应主动正面回应"我们就是Ox Alpha"把争议转为实力证明；3) 内容营销产出"GLM-5.3 vs GPT-5.6 Sol：20个真实编码任务实测"——实测对比是开发者圈最强流量入口；4) B端品牌应跟进"国产编码模型Ready"叙事——合规场景支持GLM-5.3是2026 H2国内品牌差异化；5) 反思：你的AI品牌是否还在匿名刷榜？透明度时代能力造假成本远高于收益。',
+      beginner: '中国的智谱AI发布了新模型GLM-5.3——特别擅长写代码，能一次读100万字的代码库，在编程和安全测试里都拿了第一。有意思的是：之前有个匿名模型"Ox Alpha"在各种排行榜上悄悄刷分，被研究人员以99%的把握认出来就是智谱的GLM-5.3。意思是：这个模型确实很强，强到藏都藏不住。8月27日之前免费用，你可以去智谱开放平台试试。'
+    },
+    createdAt: '2026-08-25T02:00:00Z'
+  },
+  {
+    id: '20260825-03',
+    date: '2026-08-25',
+    title: 'Anthropic三连击：Sonnet 5价格永久冻结$2/$10取消涨价、招募Google TPU元老Amir Salek、Broadcom SPV募$60-100亿供定制芯片',
+    summary: '8/24多条Anthropic动态：1) Sonnet 5定价永久冻结在$2/$10每百万token——正式取消9/1涨价计划，FT/Ramp支出数据显示Fable 5份额停滞在11%而Opus 5企业支出反超；2) 招募Google TPU创始人Amir Salek加入James Bradbury算力团队；3) Broadcom正通过SPV募集$60-100亿债务为Anthropic定制芯片租赁融资——继6月$35B合作与$2.5亿Fractile订单后，2028年20GW算力目标推进中。',
+    source: 'Anthropic',
+    sourceUrl: 'https://unrot.co/blogs/today-top-ai-news-august-24-2026',
+    tags: ['#战略', '#算力', '#竞争'],
+    accuracyScore: 92,
+    timelinessScore: 94,
+    utilityScore: 88,
+    totalScore: 91,
+    recommendReason: 'Anthropic单日三连击展示"定价防守+人才掠夺+算力军备"三位一体战略 1) Sonnet 5价格永久冻结意味AI lab定价战进入"涨价即失血"阶段——Fable 5停滞11%是直接诱因；2) TPU元老Salek加盟意味Anthropic自研芯片路线加速——对Nvidia依赖或有对冲；3) Broadcom SPV $60-100亿债务融资创新——AI算力资本开支开始表外化。',
+    perspectives: {
+      pm: 'Anthropic三连击是低代码AI PM需重新锁定Claude定价假设与vendor风险评估的信号。(1) Sonnet 5永久冻结$2/$10——PM应立即把9月涨价预算假设回滚，成本模型按当前价格长期化；(2) Fable 5支出份额停滞11%而Opus 5企业反超——意味企业真实工作负载在向更强模型迁移，PM选型时应以Opus 5为锚评估复杂任务；(3) TPU元老Salek加盟+Broadcom SPV $60-100亿——Anthropic算力自建路线激进，但债务驱动的capex或带来长期供应稳定性风险，PM应保持多vendor策略对冲；(4) 涨价计划可取消意味定价承诺非刚性——PM合同谈判时应争取价格保护条款。',
+      investor: 'Anthropic三连击是2026 H2 AI lab"定价战+算力军备"双线竞争白热化的标志。(1) 永久冻结Sonnet 5价格意味AI lab已失去涨价能力——DeepSeek/开源压力下token价格进入单向下行通道，闭源lab毛利率叙事承压；(2) Fable 5停滞11%——Google中端模型在企业支出份额未能突破，与flash层高频发布形成反差，Google AI变现叙事或有裂缝；(3) Broadcom SPV $60-100亿债务融资意味AI算力capex开始表外化——金融机构深度介入AI供应链，算力金融化是2026新主题；(4) TPU元老加盟意味Anthropic走Google同款自研路线——2028年20GW目标若兑现，算力成本或成护城河。',
+      brand: 'Anthropic三连击是品牌叙事"定价诚意+算力雄心"的组合拳——品牌人抄作业：1) "永久冻结价格、取消涨价"是品牌最强定价诚意信号——比任何折扣都有说服力，直接回应"AI服务只会越来越贵"的用户焦虑；2) "TPU元老加盟"是品牌最强人才叙事——挖角芯片传奇人物比发新闻稿更有传播力；3) 内容营销产出"Anthropic算力帝国：$35B合作+$100亿SPV+20GW路线图"——算力军备类内容是投资圈最强流量入口；4) B端品牌应跟进"价格锁定承诺"叙事——在涨价预期弥漫的AI市场，价格确定性是2026 H2最强差异化；5) 反思：你的AI品牌是否在酝酿涨价？Anthropic证明了涨价即失血的市场现实。',
+      beginner: '做Claude的Anthropic今天有三条大新闻：1) 本来说9月1日要涨价的Sonnet 5模型，宣布永久不涨了——因为竞争太激烈，涨价客户就跑了；2) 从Google挖来了当年设计TPU芯片（Google的AI芯片）的大牛，要自己搞芯片；3) 拉Broadcom（芯片公司）一起募600-1000亿美元建AI算力。意思是：AI公司之间的竞争已经打到"价格+芯片"层面了。如果你公司在用Claude API，短期不用担心涨价了。'
+    },
+    createdAt: '2026-08-25T03:00:00Z'
+  },
+  {
+    id: '20260825-04',
+    date: '2026-08-25',
+    title: '阿里港股配售募资102亿美元：香港史上最大规模follow-on，募资全部投向全栈AI（芯片设计/算力基建/Qwen）',
+    summary: '8/23阿里巴巴完成800亿港元（约$102亿）港股配售——7.1亿股、折价3.6%，为香港史上最大规模primary follow-on。募资100%投向AI全栈：芯片设计、算力基础设施与Qwen模型研发。国内大厂AI资本开支竞赛在DeepSeek生态崛起后再升级。',
+    source: '阿里',
+    sourceUrl: 'https://unrot.co/blogs/today-top-ai-news-august-24-2026',
+    tags: ['#融资', '#战略', '#算力'],
+    accuracyScore: 94,
+    timelinessScore: 93,
+    utilityScore: 85,
+    totalScore: 91,
+    recommendReason: '$102亿全栈AI配售是国内大厂AI capex竞赛升级的标志 1) 香港史上最大follow-on意味资本市场对国内AI叙事的定价权争夺——中概AI资产获巨额增量资金；2) 募资100%投向芯片设计+算力+Qwen——阿里明确"模型公司+算力公司"双重身份；3) 折价仅3.6%意味机构需求强劲——AI叙事获二级市场真金白银背书。',
+    perspectives: {
+      pm: '阿里$102亿全栈AI配售是低代码AI PM需关注国内AI供给端capex周期的信号。(1) 募资100%投向芯片/算力/Qwen——意味国内模型API供给能力与降价空间将继续扩大，PM做国内场景选型时应把Qwen生态（百炼/DashScope）的长期成本优势纳入评估；(2) 芯片设计投入意味阿里在构建"算力自给"能力——国内合规部署场景（数据不出境）的模型供给稳定性提升，PM可放心规划国内AI功能路线图；(3) 香港史上最大follow-on意味二级市场为国内AI叙事定价——PM所在公司若做AI功能，融资/估值环境或改善；(4) capex竞赛升级意味算力供给过剩风险在累积——PM应警惕2027年后国内AI服务价格战进一步加剧对vendor生存的影响。',
+      investor: '阿里$102亿配售是2026 H2国内AI capex竞赛从"利润再投入"升级到"股权融资"的标志。(1) 香港史上最大primary follow-on、折价仅3.6%——意味机构对国内AI资产的配置需求强劲，中概AI估值或获系统性重估；(2) 募资100%投向芯片设计+算力+Qwen——阿里明确对标"Google模式"（模型+自研算力），护城河叙事升级；(3) 股权融资做capex（而非纯债务/经营现金流）意味AI投入强度已超内生造血能力——回报周期拉长，但赢家通吃逻辑强化；(4) 与Anthropic同日的Broadcom $60-100亿融资对照——中美AI算力军备同步升级，算力基建（光模块/液冷/数据中心）产业链景气度延续。',
+      brand: '阿里$102亿配售是品牌叙事从"电商公司"彻底切换到"AI+算力公司"的资本宣言——品牌人抄作业：1) "香港史上最大follow-on"是品牌最强资本背书——比任何品牌广告都有说服力，阿里正式以AI资产身份重新定价；2) "募资100%投向AI"是品牌最强战略聚焦信号——清晰的全栈叙事（芯片+算力+Qwen）比多元化故事更能赢得投资者；3) 内容营销产出"阿里AI全栈地图：从平头哥芯片到Qwen模型"——全栈能力地图类内容是B端最强流量入口；4) B端品牌应跟进"国产全栈AI Ready"叙事——与阿里云深度绑定展示是2026 H2国内市场品牌差异化；5) 反思：你的品牌叙事还停留在阿里的电商时代？资本市场已按AI公司为它定价。',
+      beginner: '阿里巴巴在香港股市一次性融资了约102亿美元（约800亿港元）——这是香港股市历史上最大规模的一次增发。融来的钱全部用来做AI：设计芯片、建算力中心、研发Qwen大模型。意思是：阿里在告诉所有人，它以后是一家AI公司，不只是电商公司。如果你关注股票，可以留意阿里在AI上的投入什么时候开始赚钱。'
+    },
+    createdAt: '2026-08-25T04:00:00Z'
+  },
+  {
+    id: '20260825-05',
+    date: '2026-08-25',
+    title: '工信部+国家数据局启动"模数共振"行动：2026数据-模型-场景全链条协同，AI赋能新型工业化',
+    summary: '8/25工信部与国家数据局联合印发通知——启动2026"模数共振"行动，推动数据要素与模型能力全链条协同：高质量数据集建设、模型落地场景开放、AI赋能新型工业化。国内AI政策从"单点补贴"转向"数据×模型×场景"系统化推进，为低代码平台打开政企落地窗口。',
+    source: '其他',
+    sourceUrl: 'https://k.sina.com.cn/article_7857201856_1d45362c001908ksji.html',
+    tags: ['#企业应用', '#协议', '#战略'],
+    accuracyScore: 90,
+    timelinessScore: 97,
+    utilityScore: 86,
+    totalScore: 90,
+    recommendReason: '"模数共振"是国内AI政策从"补模型"转向"数据×模型×场景系统化"的标志 1) 两部委联合行动意味AI落地已上升为跨部门协同工程——政策确定性增强；2) 高质量数据集建设直指国内模型短板——数据基建或成新开支重点；3) 场景开放+新型工业化意味制造业AI改造获政策通道——低代码平台是天然承接工具。',
+    perspectives: {
+      pm: '"模数共振"行动是低代码AI PM必须立即研究的政策红利信号。(1) "数据×模型×场景"全链条协同意味政策从补模型转向补落地——低代码平台作为"场景承接工具"正好卡在政策着力点上，PM应梳理制造业/工业场景模板库抢占先机；(2) 高质量数据集建设意味政企客户将获得数据治理预算——PM可把RAG/知识库功能与客户数据集建设捆绑销售；(3) 新型工业化AI赋能意味制造业改造窗口打开——PM应针对工业场景（设备运维/质检/供应链）做行业化封装；(4) 两部委联合意味后续或有配套资金/试点名单——PM应跟踪试点城市与行业清单，提前布局投标。',
+      investor: '"模数共振"是国内AI投资主线从"模型层"向"数据层+应用层"扩散的政策信号。(1) 高质量数据集建设成为国家行动——数据服务/数据治理公司或获新订单周期，数据要素板块或迎重估；(2) 场景开放意味应用层（工业AI/低代码/agent）获政策通道——落地能力强的应用公司估值或改善；(3) 与阿里$102亿全栈配售同周出现——"国家政策+巨头capex"双轮驱动，国内AI产业链景气度系统性上行；(4) 但政策驱动的订单兑现节奏通常滞后2-4个季度——投资者应关注后续试点名单与采购招标作为验证信号。',
+      brand: '"模数共振"是2026国内AI品牌叙事的"政策关键词"——品牌人抄作业：1) "模数共振"是官方定义的新品类词汇——品牌应第一时间把它写进方案与白皮书，抢占政策话语红利；2) "数据×模型×场景"是品牌最强方法论叙事——比单纯讲模型能力更贴合政企客户语言；3) 内容营销产出"模数共振行动解读：制造企业如何申报AI场景试点"——政策解读类内容是政企圈最强流量入口；4) B端品牌应跟进"新型工业化AI Ready"叙事——展示产品与两部委行动的对齐关系是2026 H2政企市场品牌差异化；5) 反思：你的AI品牌还在讲纯技术叙事？政企市场需要政策对齐叙事。',
+      beginner: '今天工信部和国家数据局（两个政府部门）联合发了一个文件，叫"模数共振"行动——大意是：让"数据"和"模型"（AI）配合起来，在真实工厂和企业场景里落地用起来，特别是帮传统制造业升级。意思是：政府开始系统地推动AI在实体经济里应用了。如果你在传统行业工作，可以关注公司会不会有AI改造的相关项目或补贴。'
+    },
+    createdAt: '2026-08-25T05:00:00Z'
+  },
+  // === 2026-08-28 (周五) ===
+  {
+    id: '20260828-01',
+    date: '2026-08-28',
+    title: '智谱官宣匿名模型Ox Alpha即GLM-5.3-Flash：320B-A18B多模态MIT开源，$0.15/$0.50定价智能指数持平Claude Opus 4.8',
+    summary: 'Z.ai 8/26晚官宣空降模型Ox Alpha即GLM-5.3-Flash——320B-A18B MoE，1M token多模态上下文（文本/图像/视频输入），MIT协议权重上架HuggingFace，可在国产芯片运行。API定价$0.15/$0.50每百万token（约旗舰1/10、Opus 4.8的1/40），AA智能指数57分持平Opus 4.8，匿名测试周曾登顶两个编码平台最常用模型。',
+    source: '智谱',
+    sourceUrl: 'https://www.bloomberg.com/news/articles/2026-08-26/china-s-z-ai-made-ox-alpha-stealth-model-that-rivals-deepseek',
+    tags: ['#发布', '#开源', '#模型', '#Agent'],
+    accuracyScore: 94,
+    timelinessScore: 97,
+    utilityScore: 94,
+    totalScore: 95,
+    recommendReason: 'Ox Alpha=GLM-5.3-Flash官宣是"匿名刷榜→官方开源"的完整闭环 1) $0.15/$0.50+MIT开源意味开源frontier价格地板再下探；2) 智能指数持平Opus 4.8+匿名周登顶编码平台意味真实负载已验证；3) 国产芯片可跑意味国内私有化部署无算力障碍。',
+    perspectives: {
+      pm: 'Ox Alpha=GLM-5.3-Flash官宣开源是低代码AI PM必须立即纳入选型清单的信号。(1) $0.15/$0.50每百万token+MIT开源——成本约为Opus 4.8的1/40，PM应把低代码平台的高频调用模块（表单生成/意图识别/批量文档处理）切到GLM-5.3-Flash跑PoC；(2) AA智能指数57分持平Opus 4.8+匿名周登顶两个编码平台——真实用户负载已验证，PM可直接进生产评估而非纸面对比；(3) 1M多模态上下文+可在国产芯片运行——数据不出境场景的私有化部署无算力障碍，政企客户方案多一个首选项；(4) MIT协议可商用改造——PM应同步评估基于它蒸馏/微调定制小模型的路线。',
+      investor: 'GLM-5.3-Flash官宣是"匿名验证→官方开源"新品打法的标杆案例。(1) 匿名空降OpenRouter屠榜再官宣——用真实用户负载替代自宣benchmark，获客成本趋零，智谱品牌溢价或上修；(2) $0.15/$0.50定价直接对标DeepSeek V4-Flash——国内开源价格战进入Flash层贴身肉搏，闭源lab中端模型溢价进一步承压；(3) MIT+HuggingFace+国产芯片三件套——"全球开源+国产算力"双叙事获Bloomberg等国际报道背书，智谱港股估值或获重估；(4) 开源frontier迭代以"天"为单位——中国模型公司研发产能优势或成估值新锚。',
+      brand: 'Ox Alpha揭晓是智谱品牌"悬念营销+实力证明"的教科书案例——品牌人抄作业：1) "匿名屠榜→官宣身份"是品牌最强悬念结构——先让实力说话再揭面纱，比发布会自宣可信10倍；2) "MIT开源+国产芯片可跑"是品牌最强信任组合——开放协议消除商用顾虑，国产算力消除断供焦虑；3) 内容营销产出"GLM-5.3-Flash vs DeepSeek V4-Flash vs Opus 4.8：50个真实任务实测"——同价位实测对比是开发者圈最强流量入口；4) B端品牌应跟进"开源Flash Ready"叙事——展示高频场景已切换低成本开源模型是2026 H2降本叙事标配；5) 反思：你的品牌还在用发布会宣布能力？先让用户匿名用起来再官宣，是能力自信的最高表达。',
+      beginner: '中国的智谱AI揭晓了一个"惊喜"：最近一周在编程平台悄悄登顶的神秘模型"Ox Alpha"，其实就是它家新发的GLM-5.3-Flash——看图、看视频、读100万字长文都行，还免费开源（谁都能免费下载部署），价格约为Claude同类的1/40。你可以去HuggingFace网站搜"GLM-5.3-Flash"下载，或到智谱开放平台直接试用。'
+    },
+    createdAt: '2026-08-28T01:00:00Z'
+  },
+  {
+    id: '20260828-02',
+    date: '2026-08-28',
+    title: '阿里发布Qwen3.8-Flash：125B MoE开源权重预览Qwen4架构，对标DeepSeek V4-Flash打Flash层价格战',
+    summary: '阿里8/26发布Qwen3.8-Flash（部分渠道称Flash-Next）——约125B参数MoE开源权重（另有FP8版本），上架ModelScope，官方明示预览下一代Qwen4架构。继8/3 Qwen3.8-Max（2.4T）与Qwen3.8-27B后本月第三次开源投放，定位直接对标DeepSeek V4-Flash的价格带，暂无第三方基准。',
+    source: '阿里',
+    sourceUrl: 'https://www.bloomberg.com/news/articles/2026-08-26/alibaba-releases-smaller-cost-effective-qwen-ai-model',
+    tags: ['#发布', '#开源', '#模型', '#竞争'],
+    accuracyScore: 93,
+    timelinessScore: 96,
+    utilityScore: 89,
+    totalScore: 92,
+    recommendReason: 'Qwen3.8-Flash是阿里8月"Max→27B→Flash"三级开源投放的收官 1) 官方明示预览Qwen4架构——用Flash做下一代公测，迁移评估应提前；2) 对标V4-Flash意味国内开源价格战下移到Flash层；3) 本月三次密集投放意味Qwen生态卡位意图明确。',
+    perspectives: {
+      pm: 'Qwen3.8-Flash是低代码AI PM需关注的"Qwen4架构公测"信号。(1) 官方明示Flash预览下一代Qwen4架构——现在用Flash跑PoC等于提前适配下一代，PM应把Qwen4迁移评估提前启动，架构切换成本或大幅降低；(2) 125B MoE开源（含FP8版本）+对标V4-Flash定价——高频低成本场景（批量分类/信息抽取/简单问答）的国产开源选项再加一员，PM应做V4-Flash vs Qwen3.8-Flash横向评测；(3) 阿里本月Max(2.4T)→27B→Flash三级投放——PM应建立Qwen全尺寸选型矩阵，按任务复杂度分层调用控成本；(4) 暂无第三方benchmark——选型时应以自建eval结果为准，勿直接采信官方定位。',
+      investor: 'Qwen3.8-Flash完成阿里8月开源三级投放，Qwen生态卡位意图明确。(1) 一个月内Max→27B→Flash密集投放——阿里把开源当分发渠道的策略已定型，Qwen超20万派生模型的生态护城河或再加深，阿里AI叙事或获重估；(2) 直接对标DeepSeek V4-Flash——国内开源价格战从旗舰层下移到Flash层，模型API毛利率或加速见底，应用层创业公司持续受益；(3) 用开源Flash公测Qwen4架构——研发验证风险外部化，Qwen4正式发布的市场预期或提前发酵；(4) OpenRouter用量Top5全为中国模型——中国开源阵营全球份额逻辑持续兑现。',
+      brand: 'Qwen3.8-Flash是阿里"开源即分发"品牌打法的延续——品牌人抄作业：1) "预览Qwen4架构"是品牌最强预期管理话术——发布Flash同时在为Qwen4造势，一次投放两层传播；2) "对标DeepSeek V4-Flash"是借力打力——绑定最强竞对做参照系，省掉自证成本；3) 内容营销产出"Qwen3.8全家桶选型指南：Max/27B/Flash怎么选"——选型指南类内容是开发者圈最强转化入口；4) B端品牌应跟进"全尺寸矩阵Ready"叙事——展示按任务复杂度分层调度模型的能力是2026 H2降本叙事标配；5) 反思：你的品牌还在按"发布日"做传播节奏？按"生态卡位"设计节奏才是开源时代的品牌逻辑。',
+      beginner: '阿里巴巴发布新开源AI模型Qwen3.8-Flash——个头适中、免费用，官方说它会提前用上下一代Qwen4的设计（相当于拿小模型当试验田）。意思是：阿里在密集地铺开源模型矩阵，让开发者离不开Qwen生态。如果你用通义千问App，后面会感觉它悄悄变强；开发者可去ModelScope网站搜名字下载。'
+    },
+    createdAt: '2026-08-28T02:00:00Z'
+  },
+  {
+    id: '20260828-03',
+    date: '2026-08-28',
+    title: '日本三大行重获Anthropic Mythos 5访问：6月出口管制全球冻结后首次向海外金融机构解禁',
+    summary: 'Reuters/Nikkei 8/27-28报道，日本三大行重获Anthropic Mythos 5访问——6月美国商务部因越狱报告与出口管制令Fable 5/Mythos 5全球冻结，先恢复美国境内精选机构（网安防御/基础设施），现首次扩展至海外金融机构。OpenAI同周向日本银行开放顶级模型，美日AI同盟分发格局深化。',
+    source: 'Anthropic',
+    sourceUrl: 'https://asia.nikkei.com/business/technology/artificial-intelligence/japan-s-top-banks-regain-access-to-anthropic-s-mythos-ai-after-us-freeze',
+    tags: ['#安全', '#战略', '#企业应用'],
+    accuracyScore: 93,
+    timelinessScore: 96,
+    utilityScore: 88,
+    totalScore: 92,
+    recommendReason: 'Mythos解冻日本三大行是frontier模型"地缘化分发"首例 1) 从全球冻结到选择性解禁——最强模型访问成为政府间筹码；2) 海外金融机构首次获批意味高风险场景（网安/金融）供给恢复；3) 出口管制常态化意味跨国AI产品需把模型可用性纳入地缘风险设计。',
+    perspectives: {
+      pm: 'Mythos解冻日本三大行是frontier模型"地缘化分发"对PM合规策略的直接冲击。(1) 最强模型访问已成政府间谈判筹码——PM做全球产品应把"模型可用性"当作地缘风险变量纳入架构设计，关键市场准备双vendor甚至双法域备份；(2) 6月全球冻结→8月选择性解禁——海外企业获frontier模型的窗口随时可能开关，PM的跨国AI功能上线排期应预留合规审查缓冲；(3) 金融/网安高风险场景首批恢复——意味此类场景已通过美方审查先例，PM可参照其合规框架准备自己的申报材料；(4) OpenAI同周对日开放顶级模型——美系厂商对日策略趋同，PM在日本市场选型应对比两家条件再锁定。',
+      investor: 'Mythos对日解禁是frontier模型"出口管制常态化"叙事的首个正面拐点。(1) 从6月全球冻结到8月对日选择性解禁——管制逻辑从"一刀切"转向"盟友白名单"，Anthropic海外企业收入通道重开，估值或修复此前管制折价；(2) 日本三大行+美方精选机构首批获释——金融场景ARPU最高的客户群率先回流，Anthropic企业收入质量或改善；(3) 美日AI同盟深化+OpenAI同步开放——美国frontier厂商集体把日本当海外第一站，日本企业AI支出或加速，日股AI集成商或受益；(4) 管制成为AI竞争新维度——具备"管制友好"叙事的厂商（本土化部署/开源权重）或获估值溢价。',
+      brand: 'Mythos解禁是Anthropic品牌"负责任AI"叙事的关键修复事件——品牌人抄作业：1) "冻结-整改-解禁"完整闭环是品牌最强合规叙事——比从未出事更有说服力，证明审查机制真实运转；2) "首批解禁给日本银行"是品牌最强信任背书——全球最挑剔的金融监管客户替你盖章；3) 内容营销产出"frontier模型出口管制全景：企业如何设计模型可用性预案"——合规风险类内容是B端金融圈最强流量入口；4) B端品牌应慎用"全球可用"话术——地缘变量下应改为"分区域可用性矩阵"的透明表达；5) 反思：你的AI品牌把合规当成本还是当资产？管制时代的合规记录就是品牌资产。',
+      beginner: '今年6月，美国政府曾以安全理由要求AI公司Anthropic把它最强的"Mythos"模型在全球停用。现在解禁了——日本三大银行最先重新拿到使用权，可以用来找系统漏洞、防黑客。意思是：最强的AI给谁用，已经变成国家层面谈判的事。如果你在银行或大企业，可以留意公司何时开通最新AI的内部通知。'
+    },
+    createdAt: '2026-08-28T03:00:00Z'
+  },
+  {
+    id: '20260828-04',
+    date: '2026-08-28',
+    title: 'OpenAI Jalapeno推理芯片Hot Chips亮相：SemiAnalysis实测每瓦多干1.5-1.9倍活、延迟低1.7-3.6倍于Blackwell，2026年底部署',
+    summary: 'Hot Chips 8/25，OpenAI首颗自研推理芯片Jalapeno详细数据亮相——SemiAnalysis实测对比Nvidia Blackwell：每瓦多完成1.5-1.9倍工作、延迟低1.7-3.6倍（GPT-OSS 120B/DeepSeek R1/Kimi K2.5负载）。与Broadcom/Celestica联合开发；对比Nvidia下代Vera Rubin大致打平。2026年底小规模部署、2027年扩大。',
+    source: 'OpenAI',
+    sourceUrl: 'https://unrot.co/blogs/today-top-ai-news-august-27-2026',
+    tags: ['#算力', '#战略', '#竞争'],
+    accuracyScore: 90,
+    timelinessScore: 90,
+    utilityScore: 87,
+    totalScore: 89,
+    recommendReason: 'Jalapeno硬数据是OpenAI从"租算力"转向"自研算力"的首次实测验证 1) 每瓦1.5-1.9倍产出意味推理成本结构或被改写；2) Broadcom+Celestica合研复刻Google TPU路线；3) 但Vera Rubin对比打平——领先窗口可能只有一代，2027年放量才是真考验。',
+    perspectives: {
+      pm: 'Jalapeno硬数据是低代码AI PM需重估"推理成本长期曲线"的信号。(1) 每瓦1.5-1.9倍产出+延迟低1.7-3.6倍——若2027年放量，OpenAI API单位成本或系统性下探，PM的3年成本模型应加入"自研芯片红利"变量而非线性外推当前价格；(2) 与Broadcom/Celestica合研复刻Google TPU路线——OpenAI对Nvidia依赖下降，未来或有"芯片-模型协同优化"的低价档，PM应关注OpenAI成本导向产品线；(3) SemiAnalysis提示Vera Rubin对比大致打平——领先窗口可能只有一代，PM不应假设OpenAI成本优势永久；(4) 2026年底才小规模部署——短期API价格不受影响，本年度预算无需调整。',
+      investor: 'Jalapeno是OpenAI"算力自主"叙事从PPT进入实测阶段的关键节点。(1) SemiAnalysis第三方实测1.5-1.9倍能效——自研芯片路线首次获硬验证，OpenAI毛利率改善叙事或获重估，Nvidia在OpenAI的订单份额预期或下修；(2) 复刻Google TPU路线（Broadcom+Celestica）——AI lab自研芯片已成行业标配动作，Broadcom定制芯片业务订单能见度延长，估值或上修；(3) Vera Rubin对比打平——Nvidia下一代仍守住成本竞争力，AI算力双寡头格局或维持，不宜过度看空Nvidia；(4) 2026底小规模/2027放量——兑现节奏是关键变量，量产良率与HBM供应是主要风险。',
+      brand: 'Jalapeno亮相是OpenAI品牌从"模型公司"升维到"系统公司"的关键一步——品牌人抄作业：1) Hot Chips上台讲芯片是品牌最强身份宣言——模型公司讲算力就是宣告"我们不是租算力的"，与Google/Amazon并列系统级玩家；2) "每瓦多干1.9倍活"是品牌最强工程叙事——具体倍数+第三方实测比任何愿景都有说服力；3) 内容营销产出"OpenAI算力自主路线图：从租微软到Jalapeno放量"——算力自主类内容是投资圈+开发者圈双流量入口；4) B端品牌应谨慎蹭"自研芯片"热词——无实测数据支撑的算力叙事在2026年已无传播价值；5) 反思：你的品牌叙事还停在应用层？系统级能力（算力/数据/协议）才是2026年AI品牌的护城河叙事。',
+      beginner: 'OpenAI（做ChatGPT的公司）自己设计的第一款AI芯片"Jalapeno"公布了测试成绩：干同样的活，耗电约为现在Nvidia主流芯片的一半，速度还快好几倍。自己造芯片是为了不被芯片商卡脖子，长期还能省钱。今年年底先小范围用。意思是：AI公司也开始拼芯片了，以后用AI的费用大概率越来越低。'
+    },
+    createdAt: '2026-08-28T04:00:00Z'
+  },
+  {
+    id: '20260828-05',
+    date: '2026-08-28',
+    title: 'Google搜索AI Mode切换至Gemini 3.7 Flash驱动，Ask Gemini进驻Google Chat：搜索级流量养模型',
+    summary: 'Google将搜索AI Mode推理切换至Gemini 3.7 Flash——DeepSWE v1.1 65.3%/FrontierCode 43.6%，1M上下文，价格锁定至2026年底（2027年元旦翻倍）。8/26 Ask Gemini进驻Google Chat（促销限额至10/1）。搜索级真实流量成为Google新模型的生产验证场与分发矩阵。',
+    source: 'Google',
+    sourceUrl: 'https://unrot.co/blogs/today-top-ai-news-august-27-2026',
+    tags: ['#更新', '#模型', '#Agent'],
+    accuracyScore: 90,
+    timelinessScore: 94,
+    utilityScore: 85,
+    totalScore: 89,
+    recommendReason: 'AI Mode切换3.7 Flash是Google"自有流量养模型"战略落地 1) 搜索是全球最大推理负载——3.7 Flash等于通过生产级压测，选型优先级可上调；2) 价格锁定至年底用确定性抢企业迁移窗口；3) Ask Gemini进驻Chat意味Workspace分发矩阵成型。',
+    perspectives: {
+      pm: 'AI Mode切换3.7 Flash是Google"自有流量养新模型"策略的落地样本。(1) 搜索是全球最大推理负载——3.7 Flash要扛真实海量流量验证，PM可把它视为"经过生产级压测"的模型，中端场景选型优先级上调；(2) 价格锁定至2026年底、2027年元旦翻倍——PM做Google系集成应锁定当前价格测算，并把翻价时点写进预算日历；(3) Ask Gemini进驻Google Chat（8/26上线，限额至10/1）——Workspace分发矩阵成型，PM做企业协作场景的AI入口设计可参考其"对话即入口"模式；(4) DeepSWE 65.3%/FrontierCode 43.6%——编码能力进入第一梯队，PM可评估3.7 Flash承接编码类工单降本。',
+      investor: 'AI Mode切换3.7 Flash是Google"分发优势变现"的常规操作但信号积极。(1) 搜索流量直接喂养新模型——3.7 Flash获全球最大推理负载的实战验证与成本摊薄，Google单位推理成本或持续优于无分发厂商，"分发护城河"叙事再获确认；(2) 价格锁定至年底+2027翻倍——用确定性抢企业迁移窗口，2027年Google AI毛利率或有改善空间；(3) Ask Gemini进驻Chat——Workspace席位变现通道打开，企业AI收入或成新增长线；(4) 旗舰延迟+Flash高频的节奏矛盾仍在——Google frontier叙事需旗舰兑现来修复，估值分化风险未消。',
+      brand: 'AI Mode切换3.7 Flash是Google"自来水式"模型分发的品牌教科书——品牌人抄作业：1) "搜索流量养模型"是品牌最强分发叙事——不开发布会，直接把新模型放进十亿级用户的搜索里，部署即发布；2) "价格锁定至年底"是品牌最强迁移邀请——用确定性对冲企业换模型的转换成本焦虑；3) 内容营销产出"Ask Gemini vs ChatGPT：企业AI入口之争"——入口战争类内容是B端最强流量入口；4) B端品牌应学习"场景嵌入"打法——把AI放进用户已有工作流比独立App获客成本低一个量级；5) 反思：你的AI功能还在等用户"打开新入口"？嵌进存量场景才是2026年AI分发的正确姿势。',
+      beginner: 'Google把搜索引擎里的AI问答模式换成了最新模型Gemini 3.7 Flash，还在Google Chat（类似企业微信）里加了"Ask Gemini"助手——上班聊天时就能直接问AI。意思是：Google正把所有自家产品都装上最新AI。你可以试试在google.com搜索时点"AI Mode"，或在Google Chat里找Ask Gemini按钮体验。'
+    },
+    createdAt: '2026-08-28T05:00:00Z'
+  },
 ]
 
 let dailyItems: DailyItem[] = [...sampleItems]
