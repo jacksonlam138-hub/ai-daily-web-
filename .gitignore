@@ -54,3 +54,8 @@ src/templates/xiaohongshu/filled-*.html
 public/cards/*.png
 public/cards/*.jpg
 .env*.local
+
+# Private AIHOT cache and local browser verification artefacts
+/.local/
+/.playwright-cli/
+/output/
