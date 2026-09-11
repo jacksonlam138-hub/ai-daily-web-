@@ -1,10 +1,10 @@
 import Nav from './Nav'
 import RoleViewer from './RoleViewer'
-import { displayDate } from '@/lib/reading-reports'
+import { displayDate, getReadingSource } from '@/lib/reading-reports'
 import type { ReadingReport } from '@/types/reading'
 
-export function ReadingFooter({ provider = 'mixed' }: { provider?: 'aihot' | 'legacy' | 'mixed' }) {
-  return <footer className="reading-footer"><span>{provider === 'legacy' ? '历史来源与分析已保留' : <>精选来源 <a href="https://aihot.news" target="_blank" rel="noopener noreferrer">AIHOT</a>{provider === 'mixed' ? ' · 含历史日报' : ''}</>} · 角色解读 AI Daily</span></footer>
+export function ReadingFooter({ provider = getReadingSource() }: { provider?: 'aihot' | 'legacy' }) {
+  return <footer className="reading-footer"><span>{provider === 'legacy' ? '自主采集' : <>精选来源 <a href="https://aihot.news" target="_blank" rel="noopener noreferrer">AIHOT</a></>} · 角色解读 AI Daily</span></footer>
 }
 
 export default function ReadingPage({ report, title }: { report: ReadingReport; title: string }) {
@@ -29,7 +29,7 @@ export default function ReadingPage({ report, title }: { report: ReadingReport; 
               })}
             </nav>
             <div className="reading-source-note">
-              {report.provider === 'aihot' ? <p>精选来自 <a href={report.sourceUrl} target="_blank" rel="noopener noreferrer">AIHOT</a><br />数字生命卡兹克的 AI 资讯站</p> : <p>历史日报<br />沿用原有来源与角色分析</p>}
+              {report.provider === 'aihot' ? <p>精选来自 <a href={report.sourceUrl} target="_blank" rel="noopener noreferrer">AIHOT</a><br />数字生命卡兹克的 AI 资讯站</p> : <p>自主采集<br />原始来源筛选与角色分析</p>}
               <p>角色解读由 AI 生成，仅在相关时出现。</p>
               {report.windowStart && report.windowEnd && <p className="reading-window">覆盖 {windowLabel(report.windowStart)}<br />至 {windowLabel(report.windowEnd)}（北京）</p>}
             </div>

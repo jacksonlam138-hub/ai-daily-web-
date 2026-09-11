@@ -4,7 +4,7 @@ import "./reading.css";
 
 export const metadata: Metadata = {
   title: "AI 日报",
-  description: "AIHOT 每日精选，结合产品、设计、品牌等角色视角，只在相关时给出 AI 解读。",
+  description: "每日 AI 资讯精选，结合产品、设计、品牌等角色视角，只在相关时给出 AI 解读。",
 };
 
 export const viewport: Viewport = {

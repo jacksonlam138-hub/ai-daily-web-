@@ -1,0 +1,7 @@
+# Only application code and original collected news belong in public deployments.
+.local/
+output/
+.playwright-cli/
+.env*
+scripts/
+.claude/

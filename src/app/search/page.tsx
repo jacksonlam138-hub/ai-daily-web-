@@ -17,7 +17,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
       <input id="news-query" type="search" name="q" defaultValue={query} placeholder="关键词、产品或来源" maxLength={200} />
       <button type="submit">搜索</button>
     </form>
-    {query ? <><p className="reading-results">“{query}” · {results.length} 条结果</p>{results.length ? <RoleViewer items={results} /> : <p className="reading-empty">没有找到相关消息，试试其他关键词。</p>}</> : <p className="reading-empty">搜索 AIHOT 精选，也搜索你保存的历史日报。</p>}
+    {query ? <><p className="reading-results">“{query}” · {results.length} 条结果</p>{results.length ? <RoleViewer items={results} /> : <p className="reading-empty">没有找到相关消息，试试其他关键词。</p>}</> : <p className="reading-empty">搜索当前数据源的精选与往期内容。</p>}
     <ReadingFooter />
   </main></>
 }
