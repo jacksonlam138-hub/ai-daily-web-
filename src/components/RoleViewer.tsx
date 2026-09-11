@@ -3,6 +3,7 @@
 import { useSyncExternalStore } from 'react'
 import { readingRoles } from '@/types/reading'
 import type { ReadingItem, ReadingRole } from '@/types/reading'
+import { splitPerspective } from '@/lib/reading-copy'
 
 type View = ReadingRole | 'overview'
 let sessionView: View = 'pm'
@@ -47,13 +48,20 @@ export default function RoleViewer({ items }: { items: ReadingItem[] }) {
       <div className="reading-list">
         {items.map((item, index) => {
           const perspective = view === 'overview' ? undefined : item.perspectives?.[view]
+          const insight = splitPerspective(perspective ?? '')
           return (
             <article key={item.id} id={`news-${item.id}`} className="reading-article">
               <a className="reading-card" href={item.sourceUrl} target="_blank" rel="noopener noreferrer" aria-label={`${item.title}（新标签页打开原文）`}>
                 <p className="reading-meta"><span>{String(index + 1).padStart(2, '0')}</span><span>{item.category}</span><span className="reading-source">{item.source}</span></p>
                 <h2>{item.title}</h2>
                 {item.summary && <p className="reading-summary">{item.summary}</p>}
-                {perspective && <div className="reading-insight"><span>{roleLabel}视角 <small>AI 解读</small></span><p>{perspective}</p></div>}
+                {insight.points.length > 0 && <div className="reading-insight">
+                  <span>【{roleLabel}视角】<small>AI 解读</small></span>
+                  {insight.intro && <p>{insight.intro}</p>}
+                  <ol>{insight.points.map((point, index) => <li key={index}>
+                    {point.title && <strong>{point.title}：</strong>}{point.text}
+                  </li>)}</ol>
+                </div>}
               </a>
             </article>
           )

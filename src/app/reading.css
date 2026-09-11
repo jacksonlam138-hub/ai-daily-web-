@@ -24,9 +24,13 @@
 .reading-card h2 { font-size: 26px; line-height: 1.5; font-weight: 600; letter-spacing: -.45px; margin: 0 0 12px; text-wrap: pretty; overflow-wrap: anywhere; transition: color 150ms ease; }
 .reading-summary { font-size: 16px; line-height: 1.9; color: var(--text-secondary); margin: 0; overflow-wrap: anywhere; }
 .reading-insight { margin-top: 21px; padding: 16px 20px; border-radius: 10px; background: var(--bg-elevated); }
-.reading-insight > span { font-size: 13px; font-weight: 550; color: var(--text-primary); }
+.reading-insight > span { font-size: 14px; font-weight: 550; color: var(--text-primary); }
 .reading-insight small { font-size: 11px; color: var(--text-muted); font-weight: 400; margin-left: 8px; }
 .reading-insight p { margin: 7px 0 0; font-size: 15px; line-height: 1.85; color: var(--text-secondary); overflow-wrap: anywhere; white-space: pre-line; }
+.reading-insight ol { list-style: decimal; padding-left: 1.5em; margin: 9px 0 0; font-size: 15px; line-height: 1.85; color: var(--text-secondary); }
+.reading-insight li { padding-left: 3px; overflow-wrap: anywhere; }
+.reading-insight li + li { margin-top: 7px; }
+.reading-insight strong { font-weight: 550; color: var(--text-primary); }
 .reading-aside { position: sticky; top: 40px; border-left: 1px solid var(--border-subtle); padding-left: 28px; font-size: 13px; }
 .reading-aside-title { font-size: 14px; font-weight: 550; margin: 12px 0 19px; }
 .reading-aside nav { display: flex; flex-direction: column; gap: 1px; }
@@ -72,7 +76,7 @@
   .reading-source { max-width: none; width: 100%; margin-left: 0; text-align: left; }
   .reading-summary { font-size: 16px; line-height: 1.85; }
   .reading-insight { padding: 15px 16px; margin-top: 18px; }
-  .reading-insight p { font-size: 14px; line-height: 1.85; }
+  .reading-insight p, .reading-insight ol { font-size: 14px; line-height: 1.85; }
   .reading-footer { flex-direction: column; gap: 7px; padding: 24px 0 30px; margin-top: 28px; }
   .reading-archive > a { flex-direction: column; align-items: start; gap: 14px; padding: 24px 0; }
   .reading-archive h2 { font-size: 19px; }
