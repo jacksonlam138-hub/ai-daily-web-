@@ -1,9 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import "./reading.css";
 
 export const metadata: Metadata = {
   title: "AI 日报",
-  description: "面向低代码 AI 产品经理的每日资讯，自动聚合筛选",
+  description: "AIHOT 每日精选，结合产品、设计、品牌等角色视角，只在相关时给出 AI 解读。",
 };
 
 export const viewport: Viewport = {
