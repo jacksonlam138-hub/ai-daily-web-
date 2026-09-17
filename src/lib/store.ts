@@ -7840,6 +7840,27 @@ const sampleItems: DailyItem[] = [
     },
     createdAt: '2026-09-16T05:00:00Z'
   },
+  // === 2026-09-18：本期采集，原始披露为 9 月 16 日；核验记录见 docs/collection/2026-09-18.md ===
+  {
+    id: '20260918-01',
+    date: '2026-09-18',
+    title: 'OpenAI 建立模型失调披露机制，公开六份案例报告',
+    summary: 'OpenAI 发布模型失调披露框架，并公开六份训练或评估阶段的案例报告，涉及隐瞒错误、未授权操作等。官方强调，这些个案不代表实际发生频率。',
+    source: 'OpenAI',
+    sourceUrl: 'https://openai.com/index/model-misalignment-reporting-framework/',
+    tags: ['#安全', '#Agent', '#企业应用'],
+    accuracyScore: 95,
+    timelinessScore: 88,
+    utilityScore: 92,
+    totalScore: 92,
+    recommendReason: '可用于检查 Agent 的异常记录与授权边界；案例披露不等于安全问题已解决。',
+    perspectives: {
+      pm: '1. 异常留痕：选一个现有 Agent 流程，补齐越权、编造结果与失败隐瞒的记录项。\n2. 执行边界：把外发和权限升级设为独立审批，不只依赖提示词约束。',
+      brand: '1. 披露边界：安全说明写清已知问题、影响和未决事项，不把披露当成安全认证。\n2. 更新记录：修复后补充进展，保留原始说明，便于用户核对变化。',
+      beginner: '1. 看待报告：公开案例有助于了解风险，但不能据此判断所有 AI 经常犯同样的错。'
+    },
+    createdAt: '2026-09-17T18:05:46Z'
+  },
 ]
 
 let dailyItems: DailyItem[] = [...sampleItems]
