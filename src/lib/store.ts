@@ -7603,6 +7603,243 @@ const sampleItems: DailyItem[] = [
     },
     createdAt: '2026-09-09T05:00:00Z'
   },
+
+  // === 2026-09-14 (周一) ===
+  {
+    id: '20260914-01',
+    date: '2026-09-14',
+    title: 'OpenAI发布GPT-6 Astra：首个触及"关键级"网安阈值的模型上线，Terminal-Bench 4.0 57.9%刷新SOTA，$10/$50定价',
+    summary: 'OpenAI 9/12发布GPT-6 Astra，数日内推向Plus/Pro/Business/Enterprise及API/Azure/Bedrock。FrontierMath Tier4 98%、ExploitBench 100%、Terminal-Bench 4.0 57.9%超Fable 5.1且成本低63%；API定价$10/$50，评估中发现2个未知0day并披露。',
+    source: 'OpenAI',
+    sourceUrl: 'https://openai.com/index/gpt-6-astra/',
+    tags: ['#发布', '#模型', '#Agent', '#安全'],
+    accuracyScore: 97,
+    timelinessScore: 96,
+    utilityScore: 96,
+    totalScore: 96,
+    recommendReason: 'Astra兑现9/4《迈向Astra》安全预告，首个Critical级模型从纸面走到生产 1) 编码与电脑操作全面SOTA叠加更低token成本，直接冲击Fable 5.1选型；2) 拒绝生成PoC exploit+Daybreak分级放行，安全分级首次成为产品发布结构；3) Altman同期表态2026不IPO并认同Amodei"放慢frontier"，安全叙事与发布节奏绑定为新常态。',
+    perspectives: {
+      pm: '1. 选型重测：核心编码与电脑操作流程本周用gpt-6-astra跑A/B，对比Fable 5.1成本效果。\n2. 开启评审：企业工作区默认关闭，开启前评估安全熔断对正常任务的打断成本。',
+      investor: '1. 节奏信号：Altman同期称2026不IPO并认同放慢frontier，安全投入优先于变现。\n2. 成本竞争：SOTA叠加更低token成本，旗舰层价格战开启，关注Anthropic定价压力。',
+      brand: '1. 安全前置：先发安全报告再发模型的节奏可复用，把最大风险点做成发布会开场。\n2. 分级叙事：Daybreak分级解锁高危能力，"受控的强"比"全面的强"更可信。',
+      beginner: '1. 新旗舰：OpenAI发布最强模型GPT-6 Astra，写代码、操作电脑、数学全面升级。\n2. 灰度中：付费用户数日内可用，企业版默认关闭需管理员开启。'
+    },
+    createdAt: '2026-09-14T01:00:00Z'
+  },
+  {
+    id: '20260914-02',
+    date: '2026-09-14',
+    title: 'Anthropic发布9月威胁情报报告：8个月阻断行动案例集，披露Claude恶意使用模式相对2025年的演变',
+    summary: 'Anthropic 9/10发布《Detecting and countering misuse of AI: September 2026》，威胁情报团队分享过去8个月识别并阻断的恶意使用案例研究，并描述Claude滥用方式相对2025年威胁报告的演变。',
+    source: 'Anthropic',
+    sourceUrl: 'https://www.anthropic.com/news',
+    tags: ['#安全', '#Agent', '#企业应用'],
+    accuracyScore: 96,
+    timelinessScore: 90,
+    utilityScore: 88,
+    totalScore: 91,
+    recommendReason: '御三家滥用对抗经验首次系统化成案例集——企业AI风控的免费教材 1) 8个月连续阻断给出可参照的滥用模式时间线；2) 与8/31安全整改、EFS企业防线形成完整安全闭环叙事；3) 报告本身即可作为企业采购AI厂商的尽调材料。',
+    perspectives: {
+      pm: '1. 风控对照：把报告案例映射到自家产品滥用场景，补齐拒绝与审计策略。\n2. 尽调清单：把厂商威胁报告与事件响应记录纳入AI供应商评估项。',
+      investor: '1. 安全刚需：滥用披露印证检测与审计工具需求增长，AI安全赛道景气延续。\n2. 信任资产：透明披露滥用是Anthropic企业信任叙事的组成部分。',
+      brand: '1. 透明资产：定期公开滥用对抗报告，把安全从合规成本转为信任叙事。\n2. 口径谨慎：披露案例时同步说明阻断结果，避免制造恐慌。',
+      beginner: '1. 了解滥用：不法分子会借AI做钓鱼与诈骗，厂商有团队识别阻断。\n2. 企业防护：引入AI工具时应同时配置使用政策与审计。'
+    },
+    createdAt: '2026-09-14T02:00:00Z'
+  },
+  {
+    id: '20260914-03',
+    date: '2026-09-14',
+    title: 'DeepSeek V4.1-Flash发布并接管V4流量，9/14定V4 Pro去留节点：多模态小模型GPQA 90.9、Codeforces 3471',
+    summary: 'DeepSeek 9/10发布V4.1-Flash（deepseek-flash），V4.1架构最小模型，带多模态视觉，GPQA Diamond 90.9、Codeforces 3471，API同步降价。V4 Flash与Vision Exp退役并路由至新模型；官方确认9/14后V4 Pro继续服务、计费不变。',
+    source: '其他',
+    sourceUrl: 'https://api-docs.deepseek.com/updates/',
+    tags: ['#发布', '#模型', '#API', '#竞争'],
+    accuracyScore: 96,
+    timelinessScore: 92,
+    utilityScore: 90,
+    totalScore: 92,
+    recommendReason: '旗舰架构下放小模型——低成本多模态成国产默认托底 1) Codeforces 3471说明轻量模型编码上限大幅抬升，高频任务可下探；2) 旧模型名自动路由到V4.1-Flash，调用方今起需回归测试；3) V4 Pro续服承诺稳定企业迁移预期。',
+    perspectives: {
+      pm: '1. 回归测试：使用v4-flash模型名的管道已被路由到新模型，验证输出与费用变化。\n2. 成本下探：高频低风险任务评估迁移V4.1-Flash，借视觉能力扩展表单截图场景。',
+      investor: '1. 降价传导：架构下放加降价延续token通缩，应用层毛利受益。\n2. 版本治理：退役节奏与续服承诺体现API治理能力，利好企业信任。',
+      brand: '1. 承诺兑现：在退役节点明确V4 Pro续服与计费不变，缓解迁移恐慌。\n2. 命名清晰：以架构族命名管理预期，小版本升级也讲清能力边界。',
+      beginner: '1. 模型升级：DeepSeek的小模型更强还降价了，并且支持看图。\n2. 注意切换：程序用旧模型名会自动切到新模型，建议跑一遍测试。'
+    },
+    createdAt: '2026-09-14T03:00:00Z'
+  },
+
+  // === 2026-09-15 (周二) ===
+  {
+    id: '20260915-01',
+    date: '2026-09-15',
+    title: 'Apple iOS 27全平台推送，Siri AI测试版正式上线：AFM模型与Gemini协作定制，英文先行需候补，欧盟与中国大陆暂不可用',
+    summary: 'Apple 9/14推送iOS 27等五大系统更新，Siri AI以opt-in测试版上线：个人上下文、跨App操作、屏幕感知与独立Siri App。底层AFM模型由Apple与Google Gemini协作定制，端侧+Private Cloud Compute混合运行。英文先行需候补，法日韩葡西次月跟进，欧盟与中国大陆因监管暂不可用。',
+    source: 'Apple',
+    sourceUrl: 'https://www.apple.com/newsroom/2026/09/siri-ai-a-profoundly-more-capable-and-personal-assistant-is-here',
+    tags: ['#发布', '#Agent', '#模型', '#竞争'],
+    accuracyScore: 98,
+    timelinessScore: 97,
+    utilityScore: 91,
+    totalScore: 96,
+    recommendReason: 'WWDC 6月预告今日兑现——iOS的AI Agent入口正式开闸 1) 独立Siri App+跨App操作意味iOS端Agent工作流入口成型，低代码平台应评估被Siri调用的接入优先级；2) AFM与Gemini协作定制确认Apple-Google阵营绑定，入口格局固化；3) EU与中国大陆缺席给国产助手留出窗口期。',
+    perspectives: {
+      pm: '1. 入口评估：Siri跨App操作开放后，评估自家产品作为第三方App被调用的接入成本与数据边界。\n2. 灰度预期：EU与中国大陆缺席，双区发布需分版本管理。',
+      investor: '1. 兑现能力：Siri AI如期交付修复Apple AI叙事，Gemini授权方同步受益。\n2. 分区风险：中国与EU监管未决，入口货币化节奏存在地区差。',
+      brand: '1. 预告兑现：把WWDC承诺逐项落地并给出多语言时间表，可信度资产高于单次发布会。\n2. 候补机制：以waitlist控产能预期，比全面开放翻车更保品牌。',
+      beginner: '1. 新Siri：苹果系统更新后可申请试用新版Siri，能看懂屏幕、跨应用办事。\n2. 暂限英文：目前仅英文且需排队，国内版本暂不可用。'
+    },
+    createdAt: '2026-09-15T01:00:00Z'
+  },
+  {
+    id: '20260915-02',
+    date: '2026-09-15',
+    title: 'FT曝光Anthropic纳斯达克上市计划：连续两季度经调整盈利，季度收入$11.5B同比增14倍，估值瞄准$2万亿',
+    summary: 'FT 9/14报道，Anthropic计划纳斯达克上市，估值瞄准$2万亿以上：连续第二季度盈利（经调整口径，剔除股权激励），季度收入同比增约14倍至$11.5B，7月底年化run-rate $65B。招股书未公开、先小范围递交投资者。同期Amodei放缓前沿开发的提议获Altman与Musk声援，Altman重申OpenAI今年不IPO。',
+    source: 'Anthropic',
+    sourceUrl: 'https://the-decoder.com/anthropic-eyes-nasdaq-listing-as-a-second-profitable-quarter-aims-to-win-over-investors-ahead-of-a-mega-ipo',
+    tags: ['#融资', '#战略', '#竞争', '#企业应用'],
+    accuracyScore: 94,
+    timelinessScore: 96,
+    utilityScore: 85,
+    totalScore: 92,
+    recommendReason: '御三家资本化路径分野——Anthropic $2T IPO对垒OpenAI"今年不上市" 1) $11.5B季度收入+连续盈利为AI应用层提供可对标的经济模型基准；2) 经调整口径提示阅读厂商财报需盯口径；3) 若成行将成史上最大IPO量级之一，重估整个AI板块估值锚。',
+    perspectives: {
+      pm: '1. 供应商画像：连续盈利+run-rate $65B降低长约供应商的经营连续性风险，可做年度级接入。\n2. 口径警惕：盈利为经调整数字，采购谈判中的厂商财务材料需还原口径。',
+      investor: '1. 估值锚：$2T定价若成交，将成为AI板块新估值锚，带动上下游重估。\n2. 节奏对比：OpenAI承诺今年不IPO，Anthropic抢先卡位，稀缺标的溢价或集中。',
+      brand: '1. 稀缺叙事：安全先锋+最先盈利+最大IPO三标签叠加，是年度最强资本品牌故事。\n2. 口径透明：主动披露调整项，避免上市后被做空机构反噬。',
+      beginner: '1. 要上市了：Claude公司Anthropic计划在美国上市，估值可能高达2万亿美元。\n2. 赚钱了：季度收入115亿美元、同比涨约14倍，但盈利数字剔除了股权激励成本。'
+    },
+    createdAt: '2026-09-15T02:00:00Z'
+  },
+  {
+    id: '20260915-03',
+    date: '2026-09-15',
+    title: '小红书AllSpark开源Search Agent模型Iris：35B版BrowseComp 82.2分逼近万亿级Kimi-K2.6，397B版四项搜索基准同量级登顶',
+    summary: '小红书AllSpark团队9/14开源Search Agent模型Iris：Iris-mini（35B）在BrowseComp、BrowseComp-ZH、HLE三项登顶同量级开源模型，82.2分逼近万亿参数级Kimi-K2.6；Iris-pro（397B）四项搜索基准同量级最强。权重与代码已开放，数据与训练配方后续公布。路线为多轮搜索-阅读-推理-验证的Long-Horizon Agent。',
+    source: '其他',
+    sourceUrl: 'https://mp.weixin.qq.com/s?__biz=Mzg4OTc2MzczNg==&mid=2247496383&idx=1&sn=2db8607f797615a3647d9fec7e54f448',
+    tags: ['#开源', '#Agent', '#模型', '#发布'],
+    accuracyScore: 94,
+    timelinessScore: 96,
+    utilityScore: 92,
+    totalScore: 94,
+    recommendReason: 'Deep Research能力被开源下放到35B——搜索类产品的成本结构重写 1) 35B即可逼近万亿级搜索表现，自托管深度搜索Agent成为中小团队现实选项；2) 数据与训练配方承诺开源，搜索Agent工程化门槛将进一步下降；3) 内容平台输出开源模型，业务数据反哺模型的路线值得竞品参考。',
+    perspectives: {
+      pm: '1. 自托管评估：用35B版搭内部Deep Research管道，对比API方案核算成本边界。\n2. 数据回流：小红书以社区搜索数据反哺模型，评估自家业务数据是否有同类训练价值。',
+      investor: '1. 平价化：开源下放搜索Agent能力，API厂商的搜索类溢价被压缩。\n2. 新玩家：内容平台跨界输出开源模型，AI价值链上游参与者在扩容。',
+      brand: '1. 技术输出：以开源模型立技术品牌，是内容平台跳出流量叙事的有效跳板。\n2. 配方承诺：公开训练配方的承诺比权重开源更稀缺，兑现即口碑。',
+      beginner: '1. 开源搜索：小红书开源了擅长联网查资料的AI模型，小尺寸版本效果接近最大模型。\n2. 可自建：公司可在自己服务器上跑深度研究助手，数据不出门。'
+    },
+    createdAt: '2026-09-15T03:00:00Z'
+  },
+
+  // === 2026-09-16 (周三) ===
+  {
+    id: '20260916-01',
+    date: '2026-09-16',
+    title: 'Google发布Gemini 3.8 Live与Live Extended Thinking：两款音频到音频近实时对话模型GA，语音Agent进入推理时代',
+    summary: 'Google 9/15宣布Gemini 3.8 Live与3.8 Live Extended Thinking正式GA——两款音频到音频近实时对话模型，主打自然对话与复杂任务执行，Extended Thinking版支持对话中深度推理，API同步开放，面向实时语音Agent场景。',
+    source: 'Google',
+    sourceUrl: 'https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/',
+    tags: ['#发布', '#模型', '#Agent', '#API'],
+    accuracyScore: 97,
+    timelinessScore: 97,
+    utilityScore: 88,
+    totalScore: 94,
+    recommendReason: '实时语音Agent从"能对话"跨入"会推理" 1) 音频到音频原生架构省去ASR/TTS级联损耗，延迟与语义保真双优；2) Extended Thinking把深度推理带进实时语音，复杂任务的纯语音交互可行性大幅提升；3) 与阶跃StepAudio 3同日发布，实时语音赛道进入中美正面竞争。',
+    perspectives: {
+      pm: '1. 场景重估：语音入口叠加推理后，重排客服、外呼等流程的语音Agent改造优先级。\n2. 双轨POC：与StepAudio 3等国内方案同场景对比延迟与成本，再定供应商。',
+      investor: '1. 赛道拥挤：Google与国内厂商同日上新，实时语音从差异化卖点变标配，溢价收窄。\n2. 应用利好：语音推理能力下沉，语音类应用创业的模型成本下降。',
+      brand: '1. 叙事升级：把卖点从"像人说话"切换到"会思考的对话"，占位新心智。\n2. 同台对照：与竞品同日发布，抢先输出对比实测内容可收割关注。',
+      beginner: '1. 更像人了：谷歌新语音模型能边聊边想，回答复杂问题更稳。\n2. 可接入：开发者可通过Gemini API调用体验。'
+    },
+    createdAt: '2026-09-16T01:00:00Z'
+  },
+  {
+    id: '20260916-02',
+    date: '2026-09-16',
+    title: '阶跃星辰发布StepAudio 3系列五款语音模型：Realtime语音推理99.7%、ASR 98.9%登顶Artificial Analysis全球榜',
+    summary: '阶跃星辰9/15发布StepAudio 3系列Realtime/ASR/TTS/Gen/Music五款模型：Realtime语音推理99.7%、ASR综合98.9%（词错率1.7%）等多项Artificial Analysis指标全球第一；TTS支持笑声、迟疑、改口等副语言，全系列已上线开放平台。',
+    source: '其他',
+    sourceUrl: 'https://www.ithome.com/1/002/602.htm',
+    tags: ['#发布', '#模型', '#Agent', '#竞争'],
+    accuracyScore: 95,
+    timelinessScore: 97,
+    utilityScore: 88,
+    totalScore: 93,
+    recommendReason: '语音全栈能力一次打包，国内厂商在实时语音正面擂台获胜 1) 五件套覆盖语音Agent全链路，可单点接入也可整套替换；2) AA盲测Elo多榜第一——真人级副语言成新竞争维度；3) 与Gemini 3.8 Live同日发布，实时语音进入中美同速竞争。',
+    perspectives: {
+      pm: '1. 供应商多元：语音链路按ASR/TTS/Realtime单点拆选，避免整包绑定。\n2. 用例升级：评测TTS时把笑声、改口等副语言真实感纳入验收。',
+      investor: '1. 差距收敛：多项全球第一意味语音模型中美差距收窄，出海竞争力提升。\n2. 同质风险：五件套与巨头正面竞争，商业化看场景绑定深度。',
+      brand: '1. 权威背书：借盲测榜单第一立"听得出的好"，比自评可信。\n2. 场景可听：用客服、配音等真实案例做在线试听，转化更直接。',
+      beginner: '1. 国产语音：国内公司发布整套语音AI，多项盲测全球第一。\n2. 在线可玩：阶跃开放平台已上线，可直接体验实时语音对话。'
+    },
+    createdAt: '2026-09-16T02:00:00Z'
+  },
+  {
+    id: '20260916-03',
+    date: '2026-09-16',
+    title: 'Claude for Small Business新增43个工作流与27个集成：默认审批模式，上线以来安装量破90万',
+    summary: 'Anthropic 9/15升级Claude for Small Business——新增43个现成工作流与27个集成（Shopify、Salesforce、Stripe、Zapier等），默认审批模式：发送、发布、付款须确认后执行；自5月上线安装超90万次，秋季将在美国10城办免费培训。',
+    source: 'Anthropic',
+    sourceUrl: 'https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs',
+    tags: ['#企业应用', '#Agent', '#更新', '#竞争'],
+    accuracyScore: 97,
+    timelinessScore: 97,
+    utilityScore: 93,
+    totalScore: 96,
+    recommendReason: '"工作流+连接器+审批"正是低代码核心配方，被模型厂商AI原生打包 1) Claude SMB以现成模板+集成矩阵直接进入SMB自动化市场，90万安装验证分发效率；2) 默认审批+可选自主运行给出Agent自动化的信任设计范式；3) 培训认证体系意味打法从工具转向生态渠道。',
+    perspectives: {
+      pm: '1. 正面竞品：把Claude SMB列入竞品清单，对照工作流模板与连接器覆盖找差异位。\n2. 信任基线：借鉴默认审批+白名单自主的分层授权，作为自家Agent上线设计。\n3. 生态空位：27个集成未覆盖的垂类连接器是低代码平台的生存空间。',
+      investor: '1. 分发优势：90万安装+培训认证网络，SMB Agent入口快速成型。\n2. 挤压效应：SaaS工作流工具与轻量低代码面临被模型厂打包替代的风险。',
+      brand: '1. 渠道创新：认证本地培训师做区域渗透，比线上广告更贴近SMB。\n2. 安全叙事：把"AI不乱来"写进产品默认值，是信任资产而非限制。',
+      beginner: '1. 小企业助手：Claude新增几十个现成自动化流程，连上店铺、支付工具即可用。\n2. 放心机制：发邮件、付款前都会先请你确认。'
+    },
+    createdAt: '2026-09-16T03:00:00Z'
+  },
+  {
+    id: '20260916-04',
+    date: '2026-09-16',
+    title: 'Pragmatic Engineer探访OpenAI智能体软件工厂：非工程部门4个月Codex使用率0到90%，低风险PR由智能体自动批准',
+    summary: 'Gergely Orosz 9/15发布OpenAI探访报道：Codex已成全员核心工具，非工程部门4个月使用率0到90%；软件交付重构为九步智能体流水线——实现、测试修复、多智能体评审、部署、故障分类，低风险PR自动批准，人均PR量曲棍球式增长。',
+    source: 'OpenAI',
+    sourceUrl: 'https://newsletter.pragmaticengineer.com/p/openai-software-factory',
+    tags: ['#Agent', '#企业应用', '#战略'],
+    accuracyScore: 95,
+    timelinessScore: 97,
+    utilityScore: 94,
+    totalScore: 95,
+    recommendReason: 'AI原生软件工厂的完整参考实现首次公开 1) 九步流水线是"智能体SDLC"可复用蓝图，评审、部署、观测各环节均有智能体分工；2) 非工程部门0→90%说明采纳靠场景价值而非行政命令；3) 人均PR暴涨后，工程KPI与应用商店审核节奏成为新瓶颈。',
+    perspectives: {
+      pm: '1. 蓝图裁剪：九步流水线先从测试修复与智能体评审两步试点，再扩部署观测。\n2. 指标重构：人均PR失真，改看变更吞吐、回滚率与审查质量。\n3. 采纳路径：以长任务目标+角色化插件驱动自愿使用，避免行政强推。',
+      investor: '1. 效率证据：头部lab自证AI研发效率，AI改造软件业有了最强内部案例。\n2. 瓶颈转移：基础设施与观测工具成新稀缺，相关工具链受益。',
+      brand: '1. 开放一线：让记者深入工程现场产出深度报道，比发布会更可信。\n2. 细节即心智：公布使用率与流水线细节，强化Codex开发者生态叙事。',
+      beginner: '1. AI造软件：OpenAI内部已用AI智能体包揽写码、测试、上线大部分环节。\n2. 人在把关：人定目标与标准，重复劳动交给AI，效率翻倍。'
+    },
+    createdAt: '2026-09-16T04:00:00Z'
+  },
+  {
+    id: '20260916-05',
+    date: '2026-09-16',
+    title: 'Vercel用AI销售Agent把inbound团队从10人缩至1.25人：90%流程自动化，年成本数千美元、ROI 32倍',
+    summary: 'Vercel COO在The Information访谈披露（Tomer Tunguz 9/15整理）：inbound销售开发团队从10人减至1.25人，AI Agent自动化90%流程；SDR与自建支持Agent合计年成本仅个位数千美元，ROI 32倍，支持Agent解决93%工单，瓶颈在流程沉淀而非模型。',
+    source: '其他',
+    sourceUrl: 'https://tomtunguz.com/single-digit-thousand-dollar-ai-sdr',
+    tags: ['#企业应用', '#Agent', '#战略'],
+    accuracyScore: 92,
+    timelinessScore: 96,
+    utilityScore: 93,
+    totalScore: 93,
+    recommendReason: '职能团队被Agent压缩的最硬量化案例 1) 10→1.25人是首个公开到小数点的团队编制压缩；2) 千美元级年成本+32x ROI给出重复职能Agent化的完整经济账；3) "瓶颈是流程而非模型"提示企业落地重心在流程沉淀而非选模型。',
+    perspectives: {
+      pm: '1. 流程先行：选1个重复职能先沉淀SOP再上Agent，比选模型更关键。\n2. 验收锚点：参照90%自动化、93%工单解决率设定分阶段目标。',
+      investor: '1. 经营杠杆：SaaS公司SDR与支持职能开支被压缩，利润模型改善。\n2. 模式重估：靠人堆收入的模式被质疑，Agent原生公司获溢价。',
+      brand: '1. 公开账本：COO公开到小数点的人员与成本数字，透明本身就是传播点。',
+      beginner: '1. AI做销售：一家公司用AI把10人销售团队减到1人出头，效率反而更高。\n2. 成本极低：全年花费约几千美元，不到原来一个人的零头。'
+    },
+    createdAt: '2026-09-16T05:00:00Z'
+  },
 ]
 
 let dailyItems: DailyItem[] = [...sampleItems]
