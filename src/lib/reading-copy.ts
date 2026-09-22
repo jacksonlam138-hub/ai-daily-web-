@@ -1,3 +1,9 @@
+export function sourceLabel(source: string, sourceUrl: string): string {
+  if (source.trim() && source !== '其他') return source
+  try { return new URL(sourceUrl).hostname.replace(/^www\./, '') || '原始来源' }
+  catch { return '原始来源' }
+}
+
 function point(value: string) {
   const text = value.trim().replace(/[；;]+$/, '').trim()
   const labelled = text.match(/^([^：:\n]{1,12})[：:](?!\/\/)\s*([\s\S]+)$/)
