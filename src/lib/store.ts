@@ -1,6 +1,44 @@
 import { DailyItem, DailyReport, Statistics, SourceType, getSourceCategory } from '@/types'
 
 const sampleItems: DailyItem[] = [
+  // === 2026-09-22：采集日；原始日期及交叉核验见 docs/collection/2026-09-22.md ===
+  {
+    id: '20260922-01',
+    date: '2026-09-22',
+    title: '小米发布 MiMo-V2.6，开放模型权重',
+    summary: '小米发布 MiMo-V2.6 系列并开放权重。Pro 支持文字、图像、音频和视频输入，输出文字；官方平台同步提供模型 API。',
+    source: '其他',
+    sourceUrl: 'https://mimo.mi.com/docs/en-US/updates/model',
+    tags: ['#发布', '#模型', '#开源', '#Agent'],
+    accuracyScore: 95,
+    timelinessScore: 98,
+    utilityScore: 90,
+    totalScore: 94,
+    recommendReason: '多模态输入与开放权重增加了选型空间；是否值得切换，应由真实任务和部署成本决定。',
+    perspectives: {
+      pm: '1. 场景试测：选一条含图片或视频的业务流程，对比 Pro 的识别准确性与返工量。\n2. 部署核算：开放权重不等于低成本自托管，先核算显存、推理成本与运维投入。',
+      beginner: '1. 能力边界：能读图片和视频，不代表能直接生成图片或视频；先从现有材料问答试起。'
+    },
+    createdAt: '2026-09-22T08:03:02Z'
+  },
+  {
+    id: '20260922-02',
+    date: '2026-09-22',
+    title: 'Grok 4.7 发布，面向编程与知识工作',
+    summary: 'Grok 4.7 已发布，支持文字和图像输入，主打编程与知识工作。标准 API 每百万输入、输出 token 分别为 2、6 美元。',
+    source: '其他',
+    sourceUrl: 'https://x.ai/news/grok-4-7',
+    tags: ['#发布', '#模型', '#API', '#Agent'],
+    accuracyScore: 95,
+    timelinessScore: 95,
+    utilityScore: 90,
+    totalScore: 94,
+    recommendReason: '为编程与办公流程增加一个候选模型；评测应同时记录任务完成质量、耗时和总成本。',
+    perspectives: {
+      pm: '1. 迁移回归：用现有代码任务对比正确率、耗时与总账单，不只比较每 token 价格。\n2. 执行审批：长任务仍需保留测试与人工审批，模型自检不等于执行可靠。'
+    },
+    createdAt: '2026-09-22T08:03:02Z'
+  },
   // === 2026-07-27 (周日) ===
   {
     id: '20260727-01',
